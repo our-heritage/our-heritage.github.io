@@ -1,3 +1,113 @@
 //
 // Characters
 //
+
+// Acordeon
+
+.acordion-content{
+  background: #f7f7f7;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.block{
+  color: #fff;
+  padding-top: 5px;
+  box-shadow: 0 1px 2px #ccc;
+}
+
+.block input[type='radio']:checked ~ .info{
+  height: 250px;
+  transition: .9s;
+}
+
+.block1 {
+  background-color: #B4B4B4;
+}
+
+.block2 {
+  background-color: #CECCCC;
+}
+
+.block3 {
+  background-color: #B4B4B4;
+}
+
+.block4 {
+  background-color: #CECCCC;
+}
+
+input[type='radio']{
+  width: 100%;
+  display: none;
+}
+
+label{
+  width: 450px;
+  max-width: 100%;
+  cursor: pointer;
+  text-align: right;
+}
+
+span{
+  font-family: 'Arial';
+  font-weight: bold;
+  display: block;
+  padding-right: 4%;
+  padding-bottom: 100px;
+  margin: 0;
+  cursor: pointer;
+  margin-right: 4%;
+}
+
+.info{
+  background: #fff;
+  color: #222;
+  width: 100%;
+  height: 0;
+  padding-left: 15px;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: .6s;
+}
+
+.close {
+    float: right;
+    width: 25px;
+    height: 25px;
+    padding-left: 100%;
+    margin-right: 4%;
+    margin-top: 2%;
+} 
+
+.left-close{
+  height:25px;
+width:2px;
+margin-left:12px;
+background-color:black;
+transform: rotate(45deg);
+-ms-transform: rotate(45deg); /* IE 9 */
+-webkit-transform: rotate(45deg); /* Safari and Chrome */
+Z-index:1;
+}
+
+.right-close {
+height:25px;
+width:2px;
+
+background-color:black;
+transform: rotate(90deg);
+-ms-transform: rotate(90deg); /* IE 9 */
+-webkit-transform: rotate(90deg); /* Safari and Chrome */
+Z-index:2;
+}
+
+::selection{
+  background: #222;
+  color: #fff;
+}
+
+
+
+// Fin Acordeon 
