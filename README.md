@@ -1,3 +1,2 @@
-# Our Heritage.github.io
-
+# Our Heritage
 Demo Prototipo de Videojuego Our Heritage
