@@ -1,0 +1,82 @@
+// 
+// Estilos para los elementos base y footer
+//
+
+body {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background: url("../img/logo.png") no-repeat;
+  background-size: cover;
+  width: 190px;
+  height: 79px;
+  margin: 200px auto 80px auto;
+}
+
+h1 a {
+  color: transparent;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+h4 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #000;
+}
+
+p {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+span {
+  font-weight: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+footer {
+  background: $background-post;
+  overflow: hidden;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+section {
+  overflow: hidden;
+  padding: 5%;
+}

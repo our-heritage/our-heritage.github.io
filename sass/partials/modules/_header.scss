@@ -1,0 +1,36 @@
+//
+// Header
+//
+
+header {
+	background-color: #d2d2d2;
+	overflow: hidden;
+	max-height: 500px;
+  padding-bottom: 40px;
+}
+
+header p{
+  text-align: center;
+}
+
+.play {
+	background: url("../img/play.png") no-repeat;
+  background-size: cover;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+  display: block;
+}
+
+.lang-select {
+	float: right;
+	margin: 20px;
+}
+
+.lang-select li{
+	display: inline-block;
+}
+
+.main-nav {
+	display: none;
+}

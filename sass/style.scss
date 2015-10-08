@@ -1,0 +1,21 @@
+//
+// Estilos para RWD Blog.
+//
+
+//
+// Parciales
+//
+
+// Parciales base
+@import "partials/variables";
+@import "partials/placeholders";
+@import "partials/base";
+@import "partials/layout";
+
+// Módulos
+@import "partials/modules/nav";
+@import "partials/modules/header";
+@import "partials/modules/about";
+@import "partials/modules/history";
+@import "partials/modules/characters";
+@import "partials/modules/gallery";
