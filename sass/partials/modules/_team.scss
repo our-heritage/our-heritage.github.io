@@ -1,0 +1,70 @@
+// 
+// Team
+//
+
+.team-copy {
+  width: 500px;
+  margin-left: 22px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.team-logo img, .spon-list img {
+  width: 100%;
+}
+
+.team-logo {
+  width: 40%;
+  max-width: 288px;
+  display: inline-block;
+  @media (min-width: 1024px) {
+    width: inherit;
+  }
+}
+
+.fairplay {
+  float: left;
+  @media (min-width: 1024px) {
+    float: inherit;
+  }
+}
+
+.cetav {
+  float: right;
+  @media (min-width: 1024px) {
+    float: inherit;
+  }
+}
+
+.team {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 780px;
+  @media (min-width: 1024px) {
+    max-width: 990px;
+  }
+}
+
+.spon-list {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 670px;
+  margin-top: 20px;
+  @media (min-width: 1024px) {
+    max-width: 990px;
+    margin-top: 35px;
+  }
+}
+
+.spon-list li {
+  display: inline-block;
+  max-width: 158px;
+  width: 23.5%;
+}
+
+#hidden {
+  display: none;
+  @media (min-width: 1024px) {
+    display: inline-block;
+  }
+}

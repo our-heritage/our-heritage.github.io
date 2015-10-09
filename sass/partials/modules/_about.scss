@@ -15,10 +15,21 @@
 }
 
 .content-about {
-  position: absolute;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
-.content-about p{
+.content-about p, .content-about h3{
 	width: 85%;
-	max-width: 480px;
+  max-width: 439px;
+  position: absolute;
+  padding: 20px;
+  @media (min-width: 1024px) {
+    position: inherit;
+    padding: inherit;
+  }
+}
+
+.content-about p {
+  margin-top: 45px;
 }

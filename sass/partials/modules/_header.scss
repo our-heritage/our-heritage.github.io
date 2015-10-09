@@ -7,6 +7,10 @@ header {
 	overflow: hidden;
 	max-height: 500px;
   padding-bottom: 40px;
+  @media (min-width: 1024px) {
+    max-height: 700px;
+    padding-bottom: 80px;
+  }
 }
 
 header p{
@@ -24,7 +28,7 @@ header p{
 
 .lang-select {
 	float: right;
-	margin: 20px;
+	margin: 2% 3%;
 }
 
 .lang-select li{

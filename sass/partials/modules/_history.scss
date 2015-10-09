@@ -1,6 +1,11 @@
 //
 // Estilos de Recent Project
 //
+.history {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
 
 .content-history {
 	max-width: 600px;

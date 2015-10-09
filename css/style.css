@@ -9,6 +9,9 @@ h1 {
   width: 190px;
   height: 79px;
   margin: 200px auto 80px auto; }
+  @media (min-width: 1024px) {
+    h1 {
+      margin: 150px auto; } }
 
 h1 a {
   color: transparent; }
@@ -18,7 +21,8 @@ h2 {
 
 h3 {
   font-size: 28px;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0; }
 
 h4 {
   margin: 0;
@@ -51,25 +55,31 @@ button {
   background: none;
   border: none; }
 
-footer {
-  background: #BE9583;
-  overflow: hidden; }
-
-footer p {
-  font-weight: bold; }
-
 section {
   overflow: hidden;
   padding: 5%; }
 
 .main-nav {
   display: none; }
+  @media (min-width: 1024px) {
+    .main-nav {
+      display: block;
+      margin: 2% 3%; } }
+
+@media (min-width: 1024px) {
+  .main-nav li {
+    display: inline-block;
+    font-size: 20px; } }
 
 header {
   background-color: #d2d2d2;
   overflow: hidden;
   max-height: 500px;
   padding-bottom: 40px; }
+  @media (min-width: 1024px) {
+    header {
+      max-height: 700px;
+      padding-bottom: 80px; } }
 
 header p {
   text-align: center; }
@@ -84,7 +94,7 @@ header p {
 
 .lang-select {
   float: right;
-  margin: 20px; }
+  margin: 2% 3%; }
 
 .lang-select li {
   display: inline-block; }
@@ -100,20 +110,36 @@ header p {
   margin: 20px auto; }
 
 .content-about {
-  position: absolute; }
+  max-width: 480px;
+  margin: 0 auto; }
+
+.content-about p, .content-about h3 {
+  width: 85%;
+  max-width: 439px;
+  position: absolute;
+  padding: 20px; }
+  @media (min-width: 1024px) {
+    .content-about p, .content-about h3 {
+      position: inherit;
+      padding: inherit; } }
 
 .content-about p {
-  width: 85%;
-  max-width: 480px; }
+  margin-top: 45px; }
+
+@media (min-width: 1024px) {
+  .history {
+    display: none; } }
 
 .content-history {
   max-width: 600px;
   margin: 20px auto; }
 
 .acordion-content {
-  background: #f7f7f7;
   max-width: 100%;
   margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .acordion-content {
+      display: none; } }
 
 .block {
   color: #fff;
@@ -210,6 +236,9 @@ span {
 .section-slider {
   width: 100%;
   padding: 0; }
+  @media (min-width: 1024px) {
+    .section-slider {
+      display: none; } }
 
 .slider {
   width: 100%;
@@ -231,5 +260,63 @@ span {
 
 .first {
   display: block; }
+
+.team-copy {
+  width: 500px;
+  margin-left: 22px;
+  margin-bottom: 10px;
+  overflow: hidden; }
+
+.team-logo img, .spon-list img {
+  width: 100%; }
+
+.team-logo {
+  width: 40%;
+  max-width: 288px;
+  display: inline-block; }
+  @media (min-width: 1024px) {
+    .team-logo {
+      width: inherit; } }
+
+.fairplay {
+  float: left; }
+  @media (min-width: 1024px) {
+    .fairplay {
+      float: inherit; } }
+
+.cetav {
+  float: right; }
+  @media (min-width: 1024px) {
+    .cetav {
+      float: inherit; } }
+
+.team {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 780px; }
+  @media (min-width: 1024px) {
+    .team {
+      max-width: 990px; } }
+
+.spon-list {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 670px;
+  margin-top: 20px; }
+  @media (min-width: 1024px) {
+    .spon-list {
+      max-width: 990px;
+      margin-top: 35px; } }
+
+.spon-list li {
+  display: inline-block;
+  max-width: 158px;
+  width: 23.5%; }
+
+#hidden {
+  display: none; }
+  @media (min-width: 1024px) {
+    #hidden {
+      display: inline-block; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,9 +5,11 @@
 // Acordeon
 
 .acordion-content{
-  background: #f7f7f7;
   max-width: 100%;
   margin: 0 auto;
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
 
 .block{

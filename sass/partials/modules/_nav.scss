@@ -1,3 +1,14 @@
 .main-nav {
 	display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    margin: 2% 3%;
+  }
+}
+
+.main-nav li{
+  @media (min-width: 1024px) {
+    display: inline-block;
+    font-size: 20px;
+  }
 }
