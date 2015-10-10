@@ -113,3 +113,102 @@ Z-index:2;
 
 
 // Fin Acordeon 
+// Characters Desktop
+
+.characters-wrapper {
+  overflow: hidden;
+  width: 100%;
+  h1{
+    margin:0 auto;
+    width: 45%;
+  }
+}
+
+.main-char-nav {
+  position: absolute;
+  width: 80%;
+  z-index: 1;
+}
+
+.char-details {
+  background-color: #5F5F5F;
+  overflow: hidden;
+  padding-top: 3%;
+  position: absolute;
+  width: 80%;
+  z-index:2;
+}
+
+.char-nav {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.char-nav button {
+  background-color: inherit;
+  border: none;
+  width: 20%;
+}
+
+.char-nav img {
+  width: 80%;
+}
+
+
+.character {
+  margin: 0 2%;
+}
+
+
+
+.details {
+  overflow: hidden;
+  padding: 5% 5% 0;
+}
+
+.details img {
+  float: left;
+  height: 200px;
+  margin: 10px;
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+.controls {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.controls img {
+  border-radius:50%; 
+  height: 40px;
+  width: 40px;
+}
+
+.exit {
+  position:absolute;
+  display: block;
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+.back{
+  position: absolute;
+  left: 0px;
+  top: 200px;
+}
+
+.foward {
+  position: absolute;
+  right: 0px;
+  top: 200px;
+}
+
+.hidden {
+  visibility: hidden;
+}

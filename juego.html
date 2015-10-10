@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Juego</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+	    <ul class="lang-select">
+	      <li class="selected"><a href="/en/" data-lang="EN">ES</a></li>
+	      <li><a href="/fr/" data-lang="FR">EN</a></li>
+	      <li><a href="/de/" data-lang="DE">FR</a></li>
+	      <li><a href="/ja/" data-lang="JA">DE</a></li>
+	    </ul>
+	    <nav class="main-nav">
+	      <ul>
+	        <li class="logo"><img src="img/logo.png"></li>
+	        <li><a href="#">Inicio</a></li>
+	        <li><a href="#">Juego</a></li>
+	      </ul>
+	    </nav>
+	</header>
+	<nav class="game-nav">
+		<ul class="list-game">
+			<li class="list-game-item"><a href="#history">Historia</a></li>
+			<li class="list-game-item"><a href="#characters">Personajes</a></li>
+			<li class="list-game-item"><a href="#container">Galería</a></li>
+		</ul>
+	</nav>
+	<div class="game-wrapper">
+		<section class="section-history" id="history">
+			<h2 class="title-history">¡En busca de fotos!</h2>
+			<p class="paragraph-history">Amy es una niña que vive con sus padres y abuelo. En la escuela le asignaron una tarea sobre hacer un collage de fotografías. En el proceso de recolectar fotos, Amy empieza a interactuar con su entorno desarrollando poco a poco una historia con un final fuerte y sorprendente, que dejará a todos reflexionar sobre el problema del cambio climático.</p>
+		</section>
+		<section class="section-character" id="characters">
+			<div class="characters-wrapper">
+		 		<h1>Clickea cualquier personaje</h1>
+		 		<nav class="main-char-nav char-nav">
+		 			<button  class="character" onclick="detailsGenerator(0)"> <!-- Ingresar llamado de funcion -->
+		 				<img src="img/characters/amy.png">
+		 				<h2>Amy</h2>
+		 			</button>
+
+		 			<button  class="character" onclick="detailsGenerator(1)"> <!-- Ingresar llamado de funcion -->
+		 				<img src="img/characters/mom.png">
+		 				<h2>Mom</h2>
+		 			</button>
+
+		 			<button  class="character" onclick="detailsGenerator(2)"> <!-- Ingresar llamado de funcion -->
+		 				<img src="img/characters/dad.png">
+		 				<h2>Dad</h2>
+		 			</button>
+
+		 			<button  class="character" onclick="detailsGenerator(3)"> <!-- Ingresar llamado de funcion -->
+		 				<img src="img/characters/gramps.png">
+		 				<h2>Gramps</h2>
+		 			</button>
+		 		</nav>
+
+		 		<div class="char-details hidden" id="char_details">
+		 			<div class="details" id="details">
+		 			</div>
+			 		
+			 			<a href="#char_details" class="exit" onclick="displayer('hide')"><img src="img/icons/close.png"></a>
+			 			<a href="#char_details" class="back" onclick="slider('left')"><img src="img/icons/previous.png"></a>
+			 			<a href="#char_details" class="foward" onclick="slider('right')"><img src="img/icons/next.png"></a>
+
+			 		<nav class="char-nav">
+			 			<button  class="character" onclick="detailsGenerator(0)"> <!-- Ingresar llamado de funcion -->
+			 				<img src="img/characters/AH.png" >
+			 				<h2>Amy</h2>
+			 			</button>
+
+			 			<button  class="character" onclick="detailsGenerator(1)"> <!-- Ingresar llamado de funcion -->
+			 				<img src="img/characters/MH.png" >
+			 				<h2>Mom</h2>
+			 			</button>
+
+			 			<button  class="character" onclick="detailsGenerator(2)"> <!-- Ingresar llamado de funcion -->
+			 				<img src="img/characters/DH.png" >
+			 				<h2>Dad</h2>
+			 			</button>
+
+			 			<button  class="character" onclick="detailsGenerator(3)"> <!-- Ingresar llamado de funcion -->
+			 				<img src="img/characters/GH.png" >
+			 				<h2>Gramps</h2>
+			 			</button>
+			 		</nav>
+		 		</div>
+	 		</div>
+		</section>
+		<section class="section-gallery" id="gallery">
+			<div id="container"></div>
+			<div id="show-fullimage" class="popup"></div>
+		</section>
+	</div>
+	
+ 	<script type="text/javascript" src="js/jquery.js"></script>
+ 	<script type="text/javascript" src="js/juego.js"></script>
+</body>
+</html>
