@@ -49,6 +49,7 @@ function slider(direction){
 		detailsGenerator(position);
 	}
 }
+
 var Gallery = (function(){
 	var imgs_array = "";
 	var index = 0;
