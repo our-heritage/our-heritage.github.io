@@ -106,29 +106,51 @@ header p {
 .about {
   margin: 0 auto; }
 
-.about-img {
+.about li {
+  margin: 1rem 0;
+  max-width: 450px;
   width: 100%;
-  max-width: 480px;
   height: 254px;
-  display: block;
-  margin: 20px auto; }
+  position: relative; }
+
+.about .image > :first-child {
+  position: relative;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+  width: 100%; }
+
+.image img {
+  max-width: none;
+  position: absolute;
+  right: 0; }
 
 .content-about {
-  max-width: 480px;
-  margin: 0 auto; }
-
-.content-about p, .content-about h3 {
-  width: 85%;
-  max-width: 439px;
+  bottom: 0;
+  left: 0;
   position: absolute;
-  padding: 20px; }
-  @media (min-width: 1024px) {
-    .content-about p, .content-about h3 {
-      position: inherit;
-      padding: inherit; } }
+  right: 0;
+  top: 0; }
 
-.content-about p {
-  margin-top: 45px; }
+.content-about h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 2rem;
+  position: relative;
+  transition-duration: 1s;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  z-index: 3; }
+
+.image {
+  max-width: 480px;
+  height: 254px;
+  margin: 20px auto;
+  position: relative;
+  transition: opacity 1s ease-in-out;
+  z-index: 1; }
+
+.about .image:hover > :first-child {
+  opacity: 0; }
 
 .game-nav {
   position: fixed; }
@@ -526,3 +548,5 @@ ul.gallery li img {
   @media (min-width: 1024px) {
     #hidden {
       display: inline-block; } }
+
+/*# sourceMappingURL=style.css.map */
