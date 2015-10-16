@@ -1,4 +1,4 @@
-// 
+//
 // Team
 //
 
@@ -41,7 +41,20 @@
   margin: 0 auto;
   max-width: 780px;
   @media (min-width: 1024px) {
-    max-width: 990px;
+    max-width: 1100px;
+  }
+}
+
+.team-and{
+  font-size: 40px;
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  padding-top: 28px;
+  @media (min-width: 1024px) {
+    padding-top: 0;
+    height: 95px;
+    vertical-align: bottom;
   }
 }
 
