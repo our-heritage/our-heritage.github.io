@@ -63,9 +63,19 @@ section {
 .background-juego {
   background: #d2d2d2; }
 
+.mobil-game-wrapper {
+  display: block; }
+  @media (min-width: 768px) {
+    .mobil-game-wrapper {
+      display: none; } }
+
 .game-wrapper {
   width: 85%;
-  margin-left: 200px; }
+  margin-left: 200px;
+  display: none; }
+  @media (min-width: 768px) {
+    .game-wrapper {
+      display: block; } }
 
 .main-nav {
   display: block; }
@@ -202,7 +212,11 @@ header p {
       opacity: 1; } }
 
 .game-nav {
-  position: fixed; }
+  position: fixed;
+  display: none; }
+  @media (min-width: 768px) {
+    .game-nav {
+      display: block; } }
 
 .list-game {
   width: 200px;

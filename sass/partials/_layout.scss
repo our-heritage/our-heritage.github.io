@@ -6,4 +6,8 @@
 .game-wrapper{
 	width:85%;
 	margin-left:200px;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
 }

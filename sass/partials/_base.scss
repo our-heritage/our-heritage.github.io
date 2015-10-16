@@ -79,3 +79,10 @@ section {
 .background-juego{
   background: #d2d2d2;
 }
+
+.mobil-game-wrapper{
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
