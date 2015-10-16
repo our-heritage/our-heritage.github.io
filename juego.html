@@ -3,23 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Juego</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body class="background-juego">
 	<header>
-	    <ul class="lang-select">
-	      <li class="selected"><a href="/en/" data-lang="EN">ES</a></li>
-	      <li><a href="/fr/" data-lang="FR">EN</a></li>
-	      <li><a href="/de/" data-lang="DE">FR</a></li>
-	      <li><a href="/ja/" data-lang="JA">DE</a></li>
-	    </ul>
-	    <nav class="main-nav">
-	      <ul>
-	        <li class="logo"><img src="img/logo.png"></li>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="juego.html">Juego</a></li>
-	      </ul>
-	    </nav>
+			<ul class="lang-select">
+				<li class="selected"><a href="/en/" data-lang="EN">ES</a></li>
+				<li><a href="/fr/" data-lang="FR">EN</a></li>
+				<li><a href="/de/" data-lang="DE">FR</a></li>
+				<li><a href="/ja/" data-lang="JA">DE</a></li>
+			</ul>
+			<nav class="main-nav">
+				<ul>
+					<li class="logo"><img src="img/logo.png"></li>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="juego.html">Juego</a></li>
+				</ul>
+			</nav>
 	</header>
 	<nav class="game-nav">
 		<ul class="list-game">
@@ -39,67 +39,67 @@
 		</section>
 		<section class="section-character" id="characters">
 			<div class="characters-wrapper">
-		 		<nav class="main-char-nav char-nav">
-		 			<button  class="character" onclick="detailsGenerator(0)"> <!-- Ingresar llamado de funcion -->
-		 				<img src="img/characters/amy.png">
-		 				<h2>Amy</h2>
-		 			</button>
+				<nav class="main-char-nav char-nav">
+					<button  class="character" onclick="detailsGenerator(0)"> <!-- Ingresar llamado de funcion -->
+						<img src="img/characters/amy.png">
+						<h2>Amy</h2>
+					</button>
 
-		 			<button  class="character" onclick="detailsGenerator(1)"> <!-- Ingresar llamado de funcion -->
-		 				<img src="img/characters/mom.png">
-		 				<h2>Mom</h2>
-		 			</button>
+					<button  class="character" onclick="detailsGenerator(1)"> <!-- Ingresar llamado de funcion -->
+						<img src="img/characters/mom.png">
+						<h2>Mom</h2>
+					</button>
 
-		 			<button  class="character" onclick="detailsGenerator(2)"> <!-- Ingresar llamado de funcion -->
-		 				<img src="img/characters/dad.png">
-		 				<h2>Dad</h2>
-		 			</button>
+					<button class="character" onclick="detailsGenerator(2)"> <!-- Ingresar llamado de funcion -->
+						<img src="img/characters/dad.png">
+						<h2>Dad</h2>
+					</button>
 
-		 			<button  class="character" onclick="detailsGenerator(3)"> <!-- Ingresar llamado de funcion -->
-		 				<img src="img/characters/gramps.png">
-		 				<h2>Gramps</h2>
-		 			</button>
-		 		</nav>
+					<button  class="character" onclick="detailsGenerator(3)"> <!-- Ingresar llamado de funcion -->
+						<img src="img/characters/gramps.png">
+						<h2>Gramps</h2>
+					</button>
+				</nav>
 
-		 		<div class="char-details hidden" id="char_details">
-		 			<div class="details" id="details">
-		 			</div>
-			 		
-			 			<a href="#char_details" class="exit" onclick="displayer('hide')"><img src="img/icons/close.png"></a>
-			 			<a href="#char_details" class="back" onclick="slider('left')"><img src="img/icons/previous.png"></a>
-			 			<a href="#char_details" class="foward" onclick="slider('right')"><img src="img/icons/next.png"></a>
+				<div class="char-details hidden" id="char_details">
+					<div class="details" id="details">
+					</div>
 
-			 		<nav class="char-nav">
-			 			<button  class="character" onclick="detailsGenerator(0)"> <!-- Ingresar llamado de funcion -->
-			 				<img src="img/characters/AH.png" >
-			 				<h2>Amy</h2>
-			 			</button>
+						<a href="#char_details" class="exit" onclick="displayer('hide')"><img src="img/icons/close.png"></a>
+						<a href="#char_details" class="back" onclick="slider('left')"><img src="img/icons/previous.png"></a>
+						<a href="#char_details" class="foward" onclick="slider('right')"><img src="img/icons/next.png"></a>
 
-			 			<button  class="character" onclick="detailsGenerator(1)"> <!-- Ingresar llamado de funcion -->
-			 				<img src="img/characters/MH.png" >
-			 				<h2>Mom</h2>
-			 			</button>
+					<nav class="char-nav">
+						<button class="character" onclick="detailsGenerator(0)"> <!-- Ingresar llamado de funcion -->
+							<img src="img/characters/AH.png" >
+							<h2>Amy</h2>
+						</button>
 
-			 			<button  class="character" onclick="detailsGenerator(2)"> <!-- Ingresar llamado de funcion -->
-			 				<img src="img/characters/DH.png" >
-			 				<h2>Dad</h2>
-			 			</button>
+						<button class="character" onclick="detailsGenerator(1)"> <!-- Ingresar llamado de funcion -->
+							<img src="img/characters/MH.png" >
+							<h2>Mom</h2>
+						</button>
 
-			 			<button  class="character" onclick="detailsGenerator(3)"> <!-- Ingresar llamado de funcion -->
-			 				<img src="img/characters/GH.png" >
-			 				<h2>Gramps</h2>
-			 			</button>
-			 		</nav>
-		 		</div>
-	 		</div>
+						<button class="character" onclick="detailsGenerator(2)"> <!-- Ingresar llamado de funcion -->
+							<img src="img/characters/DH.png" >
+							<h2>Dad</h2>
+						</button>
+
+						<button class="character" onclick="detailsGenerator(3)"> <!-- Ingresar llamado de funcion -->
+							<img src="img/characters/GH.png" >
+							<h2>Gramps</h2>
+						</button>
+					</nav>
+				</div>
+			</div>
 		</section>
 		<section class="section-gallery" id="gallery">
-			<div id="container"></div>
-			<div id="show-fullimage" class="popup"></div>
+			<div id="container" class="container"></div>
+			<div id="show-fullimage" class="modal"></div>
 		</section>
 	</div>
-	
- 	<script type="text/javascript" src="js/jquery.js"></script>
- 	<script type="text/javascript" src="js/juego.js"></script>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/juego.js"></script>
 </body>
 </html>

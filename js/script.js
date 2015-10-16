@@ -46,11 +46,11 @@ function sliderSwipe(){
                 title=(num+1)+'/'+item.length;
                 num=num+1;
                 cont=cont+1;
-            }     
-        } 
-        document.getElementById("counter").innerHTML='<p class="title">'+title+'</p>'; 
+            }
+        }
+        document.getElementById("counter").innerHTML='<p class="title">'+title+'</p>';
         e.preventDefault()
-    }, false)   
+    }, false)
      document.getElementById("counter").innerHTML='<p class="title">'+title+'</p>';
 };
 sliderSwipe();
