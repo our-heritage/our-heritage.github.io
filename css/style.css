@@ -67,16 +67,19 @@ section {
   margin-left: 200px; }
 
 .main-nav {
-  display: none; }
-  @media (min-width: 1024px) {
+  display: block; }
+  @media (min-width: 768px) {
     .main-nav {
-      display: block;
       margin: 2% 3%; } }
 
-@media (min-width: 1024px) {
-  .main-nav li {
+.main-nav li {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 15px; }
+  .main-nav li a {
+    height: 80px;
     display: inline-block;
-    font-size: 20px; } }
+    vertical-align: middle; }
 
 header {
   background-color: #d2d2d2;
@@ -136,6 +139,12 @@ header p {
   top: 0;
   height: 254px;
   max-width: 480px; }
+
+.content-about p:nth-child(3) {
+  display: none; }
+  @media (min-width: 768px) {
+    .content-about p:nth-child(3) {
+      display: block; } }
 
 .content-about h3 {
   font-size: 2rem;

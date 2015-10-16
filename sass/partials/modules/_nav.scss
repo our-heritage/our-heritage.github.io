@@ -1,14 +1,20 @@
 .main-nav {
-	display: none;
-  @media (min-width: 1024px) {
-    display: block;
+	display: block;
+  @media (min-width: 768px) {
     margin: 2% 3%;
   }
 }
 
 .main-nav li{
-  @media (min-width: 1024px) {
+	display: inline-block;
+  font-size: 20px;
+  margin-right: 15px;
+  a{
+    height: 80px;
     display: inline-block;
-    font-size: 20px;
+    vertical-align: middle;
+  }
+  @media (min-width: 1024px) {
+    
   }
 }

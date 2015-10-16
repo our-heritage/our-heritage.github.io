@@ -38,6 +38,13 @@
   max-width: 480px;
 }
 
+.content-about p:nth-child(3) {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
 .content-about h3{
   font-size: 2rem;
   font-weight: bold;
