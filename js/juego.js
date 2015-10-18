@@ -24,6 +24,16 @@ var imgs_array = "";
 		});
 })(window);
 
+// ACORDION //////////////////////////////////////////////////////////////////////////////////
+function closeInfoAcordion(){
+    //var close = document.getElementById('close'+i);
+  $('.close').click(function() {
+    var input_radio = this.parentNode.parentNode.firstChild.nextSibling;
+    input_radio.checked = false;
+  });
+}
+closeInfoAcordion();
+
 // GALLERIA //////////////////////////////////////////////////////////////////////////////////
 function printImgs(){
 	var listDisplay = "";
