@@ -1,3 +1,5 @@
+// Gallery / Swipe //////////////////////////////////////////////////////////////////////////////////
+
 var content_swipe = document.getElementById('slideshow');
 var item=document.getElementsByClassName('slider-content');
 var size_item=item.length-1;
