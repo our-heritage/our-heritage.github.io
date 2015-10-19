@@ -40,7 +40,7 @@ function printImgs(){
 	for(var i = 0; i < imgs_array.length; i++){
 		listDisplay += '<li class="pic-'+imgs_array[i].number+'" onclick="showModal('+imgs_array[i].number+')"><img src="'+imgs_array[i].img+'"></li>';
 	}
-	document.getElementById("container").innerHTML = '<ul class="gallery">'+listDisplay+'</ul>';
+	document.getElementById("gallery-container").innerHTML = '<ul class="gallery">'+listDisplay+'</ul>';
 }
 
 function showModal(number){
@@ -48,7 +48,7 @@ function showModal(number){
 	document.getElementsByClassName("modal")[0].style.display = "block";
 	for(var i = 0; i < imgs_array.length; i++){
 		if(number == imgs_array[i].number){
-			full_image = '<div class="previous" onclick="previous()"></div><img id="full-picture" class="full-picture" src="'+imgs_array[i].img+'"><div class="exit" onclick="closeModal()"></div><div class="next" onclick="next()"></div>';
+			full_image = '<img src="img/icons/previous.png" class="previous" onclick="previous()"><img src="'+imgs_array[i].img+'" id="full-picture" class="full-picture"><img src="img/icons/close.png" class="exit" onclick="closeModal()"><img src="img/icons/next.png" class="next" onclick="next()">';
 		}
 	}
 	document.getElementById("show-fullimage").innerHTML = full_image;
