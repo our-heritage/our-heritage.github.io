@@ -30,7 +30,7 @@ function printImgs(){
 	for(var i = 0; i < imgs_array.length; i++){
 		listDisplay += '<li class="pic-'+imgs_array[i].number+'" onclick="showModal('+imgs_array[i].number+')"><img src="'+imgs_array[i].img+'"></li>';
 	}
-	document.getElementById("container").innerHTML = '<ul class="gallery">'+listDisplay+'</ul>';
+	document.getElementById("gallery-container").innerHTML = '<ul class="gallery">'+listDisplay+'</ul>';
 }
 
 function showModal(number){
