@@ -48,6 +48,8 @@
 
 .section-gallery {
 	margin-bottom: 100px;
+  max-width: 1158px;
+  margin: 0 auto;
 }
 
 .container {
@@ -176,27 +178,27 @@
 
 .previous {
 	background: url(../img/icons/previous.png) no-repeat;
-	height: 64px;
+	height: 50px;
 	left: 25px;
 	position: absolute;
 	top: 40%;
-	width: 64px;
+	width: 50px;
 }
 
 .exit {
 	background: url(../img/icons/close.png) no-repeat;
-	height: 64px;
+	height: 40px;
 	position: absolute;
 	right: 25px;
 	top: 25px;
-	width: 64px;
+	width: 40px;
 }
 
 .next {
 	background: url(../img/icons/next.png) no-repeat;
-	height: 64px;
+	height: 50px;
 	position: absolute;
 	right: 25px;
 	top: 40%;
-	width: 64px;
+	width: 50px;
 }

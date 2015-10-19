@@ -13,7 +13,7 @@ h1 {
   background-size: cover;
   width: 190px;
   height: 79px;
-  margin: 200px auto 80px auto;
+  margin: 150px auto 80px auto;
   @media (min-width: 1024px) {
     margin: 150px auto;
   }
@@ -71,6 +71,13 @@ button {
   background: none;
   border: none;
 }
+
+button:focus, button:active, button:focus:active {
+  box-shadow: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+}
+
 section {
   overflow: hidden;
   padding:5%;
