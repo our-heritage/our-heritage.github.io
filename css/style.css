@@ -8,7 +8,7 @@ h1 {
   background-size: cover;
   width: 190px;
   height: 79px;
-  margin: 200px auto 80px auto; }
+  margin: 150px auto 80px auto; }
   @media (min-width: 1024px) {
     h1 {
       margin: 150px auto; } }
@@ -56,6 +56,11 @@ button {
   background: none;
   border: none; }
 
+button:focus, button:active, button:focus:active {
+  box-shadow: none;
+  outline: 0;
+  -webkit-box-shadow: none; }
+
 section {
   overflow: hidden;
   padding: 5%; }
@@ -78,10 +83,17 @@ section {
       display: block; } }
 
 .main-nav {
-  display: block; }
+  display: block;
+  margin: 5% 3%; }
   @media (min-width: 768px) {
     .main-nav {
       margin: 2% 3%; } }
+
+.logo img {
+  display: none; }
+  @media (min-width: 768px) {
+    .logo img {
+      display: inline-block; } }
 
 .main-nav li {
   display: inline-block;
@@ -124,17 +136,20 @@ header p {
   margin: 0 auto; }
   @media (min-width: 768px) {
     .about {
-      max-width: 1100px; }
+      width: 49%; }
       .about .right {
         float: right; }
       .about .left {
         float: left; } }
+  @media (min-width: 1100px) {
+    .about {
+      width: 1100px; } }
 
 .about li {
   margin: 0 auto;
   max-width: 450px;
   width: 100%;
-  height: 254px;
+  height: 260px;
   position: relative; }
   @media (min-width: 768px) {
     .about li {
@@ -149,7 +164,7 @@ header p {
   transition: opacity 1s ease-in-out;
   z-index: 1;
   width: 100%;
-  height: 254px; }
+  height: 260px; }
   @media (min-width: 768px) {
     .about .about-image > :first-child {
       position: initial;
@@ -163,12 +178,9 @@ header p {
   right: 0; }
 
 .about-content {
-  bottom: 0;
-  left: 0;
   position: absolute;
-  right: 0;
   top: 0;
-  height: 254px;
+  height: 260px;
   max-width: 480px; }
   @media (min-width: 768px) {
     .about-content {
@@ -185,14 +197,11 @@ header p {
   font-weight: bold;
   padding: 1rem;
   position: relative;
-  transition-duration: 1s;
-  transition-property: color;
-  transition-timing-function: ease-in-out;
   z-index: 3; }
 
 .about-image {
   max-width: 480px;
-  height: 254px;
+  height: 260px;
   margin: 20px auto;
   position: relative;
   transition: opacity 1s ease-in-out;
@@ -330,46 +339,54 @@ span {
 
 .characters-wrapper {
   overflow: hidden;
-  width: 100%; }
+  width: 900px;
+  height: 540px;
+  margin: 0 auto; }
 
 .main-char-nav {
-  width: 80%;
-  z-index: 1; }
+  width: 900px;
+  height: 540px;
+  background-image: url("../img/characters/family-photo.png");
+  z-index: 1;
+  box-sizing: border-box; }
 
 .char-details {
   background-color: #5F5F5F;
   overflow: hidden;
-  padding-top: 3%;
   position: absolute;
-  width: 80%;
-  margin-top: -600px;
+  width: 900px;
+  margin-top: -540px;
   z-index: 2; }
 
 .char-nav {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   padding: 2% 0; }
 
-.char-nav button {
-  background-color: inherit;
-  border: none;
-  width: 20%; }
+.char-details .char-nav {
+  text-align: center; }
 
-.char-nav img {
-  width: 80%; }
+.char-nav-character {
+  margin: 0 5%; }
+
+.char-nav-character h2 {
+  font-size: 1rem; }
 
 .character {
-  margin: 0 2%; }
+  padding: 0 2%;
+  margin-left: 20px;
+  height: 450px;
+  background-color: inherit;
+  border: none;
+  width: 19%; }
 
 .details {
   overflow: hidden;
-  padding: 5% 5% 0; }
+  padding: 5% 8% 0 8%; }
 
 .details img {
   float: left;
-  height: 200px;
-  margin: 10px;
-  width: 300px; }
+  margin: 0 8%; }
 
 .hidden {
   display: none; }
@@ -437,7 +454,9 @@ span {
   display: block; }
 
 .section-gallery {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  max-width: 1158px;
+  margin: 0 auto; }
 
 .container {
   height: auto;
@@ -548,27 +567,27 @@ span {
 
 .previous {
   background: url(../img/icons/previous.png) no-repeat;
-  height: 64px;
+  height: 50px;
   left: 25px;
   position: absolute;
   top: 40%;
-  width: 64px; }
+  width: 50px; }
 
 .exit {
   background: url(../img/icons/close.png) no-repeat;
-  height: 64px;
+  height: 40px;
   position: absolute;
   right: 25px;
   top: 25px;
-  width: 64px; }
+  width: 40px; }
 
 .next {
   background: url(../img/icons/next.png) no-repeat;
-  height: 64px;
+  height: 50px;
   position: absolute;
   right: 25px;
   top: 40%;
-  width: 64px; }
+  width: 50px; }
 
 .team-copy {
   width: 500px;
