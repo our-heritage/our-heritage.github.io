@@ -63,6 +63,13 @@
   }
 }
 
+.about-content p{
+  font-size: 15px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
 .about-content p:nth-child(3) {
   display: none;
   @media (min-width: 768px) {
