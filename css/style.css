@@ -383,6 +383,10 @@ span {
 .first {
   display: block; }
 
+.gallery-container {
+  margin: 0 auto;
+  width: 80%; }
+
 .gallery {
   list-style: none;
   text-align: center; }

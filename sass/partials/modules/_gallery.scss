@@ -46,6 +46,11 @@
 
 // Gallery Desktop
 
+.gallery-container {
+	margin: 0 auto;
+	width: 80%;
+}
+
 .gallery {
 	list-style: none;
 	text-align: center;
@@ -108,7 +113,7 @@
 	margin-left: -10px;
 	margin-top: -75px;
 	-moz-transform: rotate(15deg);
-	-webkit-transform: rotate(15deg);	
+	-webkit-transform: rotate(15deg);
 }
 
 .gallery .pic-7 {
