@@ -8,12 +8,15 @@
 </head>
 <body>
 	<header>
-    <ul class="lang-select">
-      <li class="selected"><a href="/en/" data-lang="EN">ES</a></li>
-      <li><a href="/fr/" data-lang="FR">EN</a></li>
-      <li><a href="/de/" data-lang="DE">FR</a></li>
-      <li><a href="/ja/" data-lang="JA">DE</a></li>
-    </ul>
+    <div class="content-lang">
+      <ul class="list-lang" id="list-lang">
+            <li class="list-lang-item" id="close"><button onclick="MenuLang.hideMenu()">X</button></li>
+            <li class="list-lang-item selected"><a href="#">EN</a></li>
+            <li class="list-lang-item"><a href="es.html">ES</a></li>
+            <li class="list-lang-item"><a href="fr.html">FR</a></li>
+            <li class="list-lang-item"><a href="de.html">DE</a></li>
+        </ul>
+    </div>
     <nav class="main-nav">
       <ul>
         <li class="logo"><img src="img/logo.png"></li>
@@ -79,5 +82,6 @@
   <footer>
 
   </footer>
+  <script type="text/javascript" src="js/lang.js"></script>
 </body>
 </html>
