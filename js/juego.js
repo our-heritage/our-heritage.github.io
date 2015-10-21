@@ -6,7 +6,7 @@ var galleryData = '';
 var charactersData = '';
 
 //HTML Elements ***********************************************************************
-var target = $(".gallery");
+var target = $(".gallery-imgs");
 var galleryBtn = target.children("li");
 var character_btn = $('.character_btn');
 var overall_char_container = $('#char_details');
