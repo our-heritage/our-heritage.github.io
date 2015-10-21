@@ -1,110 +1,133 @@
+//Global Variables ***********************************************************************
+var char_id = 0;
 var index = 0;
 var position = 0;
-var overal_details = document.getElementById('char_details');
-var details = document.getElementById('details');
+var galleryData = '';
 var charactersData = '';
-var imgs_array = "";
 
-//On window load
-(function(window){
-	$.ajax({
-		type:'GET',
-		url: 'js/game-data.json',
-		dataType:'json',
+//HTML Elements ***********************************************************************
+var target = $(".gallery");
+var galleryBtn = target.children("li");
+var character_btn = $('.character_btn');
+var overall_char_container = $('#char_details');
+var char_desktop = $('#characters_desktop');
+var char_mobile = $('#characters_mobile');
+var individual_details = $('#details');
 
-			success: function(data) {
-				charactersData = data.Characters;
-				imgs_array = data.Gallery;
-				printImgs();
-			},
+// var char_desktop_content = char_desktop.html();
+// var char_mobile_content = char_mobile.html();
 
-			error: function(data){
-				console.log("ERROR: Seems to be there's a problem with the information we want to pull up");
-			}
-		});
-})(window);
+//Enquire Usage ***********************************************************************
+enquire.register('(min-width: 768px)', {
+    match: function() {
+        console.log('match');
+        init();
+        desktopVersion();
+        // char_mobile.html('');
+        //    char_desktop.html(char_desktop_content);
+    },
 
-// ACORDION //////////////////////////////////////////////////////////////////////////////////
-function closeInfoAcordion(){
-    //var close = document.getElementById('close'+i);
-  $('.close').click(function() {
-    var input_radio = this.parentNode.parentNode.firstChild.nextSibling;
-    input_radio.checked = false;
-  });
-}
-closeInfoAcordion();
+    unmatch: function() {
+        console.log('unmatch');
+        galleryBtn.off('click');
+        character_btn.off('click');
+        // char_mobile.html(char_mobile_content);
+        // char_desktop.html('');
+    }
+});
+//Json data ***********************************************************************
+function init() {
+    $.ajax({
+        type: 'GET',
+        url: 'js/game-data.json',
+        dataType: 'json',
 
-// GALLERIA //////////////////////////////////////////////////////////////////////////////////
-function printImgs(){
-	var listDisplay = "";
-	for(var i = 0; i < imgs_array.length; i++){
-		listDisplay += '<li class="pic-'+imgs_array[i].number+'" onclick="showModal('+imgs_array[i].number+')"><img src="'+imgs_array[i].img+'"></li>';
-	}
-	document.getElementById("gallery-container").innerHTML = '<ul class="gallery">'+listDisplay+'</ul>';
-}
+        success: function(data) {
+            charactersData = data.Characters;
+            galleryData = data.Gallery;
+        },
 
-function showModal(number){
-	var full_image = "";
-	document.getElementsByClassName("modal")[0].style.display = "block";
-	for(var i = 0; i < imgs_array.length; i++){
-		if(number == imgs_array[i].number){
-			full_image = '<img src="img/icons/previous.png" class="previous" onclick="previous()"><img src="'+imgs_array[i].img+'" id="full-picture" class="full-picture"><img src="img/icons/close.png" class="exit" onclick="closeModal()"><img src="img/icons/next.png" class="next" onclick="next()">';
-		}
-	}
-	document.getElementById("show-fullimage").innerHTML = full_image;
+        error: function(data) {;
+            console.log("ERROR: Seems to be there's a problem with the information we want to pull up");
+        }
+    });
 }
 
-function previous(){
-	index--;
-		if (index < 0) {
-			index = imgs_array.length-1;
-		}
-		document.getElementById("full-picture").setAttribute("src", imgs_array[index].img);
+// Desktop Version ***********************************************************************
+
+function desktopVersion() {
+    //CHARACTERS ***********************************************************************
+    character_btn.on("click", function() {
+        char_id = $(this).attr('id');
+        position = char_id;
+        detailsGenerator(position);
+
+        $("#left").on("click", function() {
+            char_id--;
+            if (char_id == -1) {
+                char_id = 3;
+            }
+            detailsGenerator(char_id);
+        });
+
+        $("#right").on("click", function() {
+            char_id++;
+            if (char_id == 4) {
+                char_id = 0;
+            }
+            detailsGenerator(char_id);
+        });
+
+        $('#hide').on("click", function() {
+            displayer('hide');
+        });
+
+        function detailsGenerator(position) {
+            var content = "<img src=" + charactersData[position].img + "> <h2>" + charactersData[position].name + "</h2><p>" + charactersData[position].history + "</p>";
+            individual_details.html(content);
+            displayer('show');
+        }
+
+        function displayer(option) {
+            if (option == 'show') {
+                overall_char_container.removeClass('hidden');
+            } else {
+                overall_char_container.addClass('hidden');
+            }
+        }
+    });
+    //GALLERY ***********************************************************************
+    galleryBtn.on("click", function() {
+        var number = this.id;
+        var full_image = '';
+        $('.modal').css("display", "block");
+
+        for (var i = 0; i < galleryData.length; i++) {
+            if (number == galleryData[i].number) {
+                full_image = "<img src='img/icons/previous.png' class='previous' id='previous'><img id='full-picture' class='full-picture' src='" + galleryData[i].img + "'><img src='img/icons/close.png' class='exit' id='closePopUp'></div><img class='next' src='img/icons/next.png' id='next'>";
+            }
+        }
+        $('#show-fullimage').html(full_image);
+
+        $("#previous").on("click", function() {
+            index--;
+            if (index < 0) {
+                index = galleryData.length - 1;
+            }
+            $('#full-picture').attr("src", galleryData[index].img);
+        });
+
+        $("#next").on("click", function() {
+            index++;
+            if (index >= galleryData.length) {
+                index = 0;
+            }
+            $('#full-picture').attr("src", galleryData[index].img);
+        });
+
+        $("#closePopUp").on("click", function() {
+            $('.modal').css("display", "none");
+        });
+    });
 }
-
-function closeModal(){
-	document.getElementsByClassName("modal")[0].style.display = "none";
-}
-
-function next(){
-	index++;
-		if (index >= imgs_array.length) {
-			index = 0;
-		}
-		document.getElementById("full-picture").setAttribute("src", imgs_array[index].img);
-}
-
-
-//CHARACTERS ///////////////////////////////////////////////////////////////////
-
-function detailsGenerator(new_position) {
-	console.log('hola personajes');
-	position = new_position;
-	var content = "<img src="+charactersData[position].img+"> <h2>"+charactersData[position].name+ "</h2><p>"+charactersData[position].history+"</p>";
-	details.innerHTML = content;
-	displayer('show');
-}
-
-function displayer(option) {
-	if(option == 'show') {
-		overal_details.classList.remove('hidden');
-	} else {
-		overal_details.classList.add('hidden');
-	}
-}
-
-function slider(direction){
-	if(direction == 'left'){
-		position--;
-		if(position == -1){
-			position = 3 ;
-		}
-		detailsGenerator(position);
-	} else {
-		position++ ;
-		if (position == 4) {
-			position = 0;
-		}
-		detailsGenerator(position);
-	}
-}
+// Mobile Version
