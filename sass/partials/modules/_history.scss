@@ -1,19 +1,22 @@
 //
 // Estilos de Recent Project
 //
+
 .history {
-  @media (min-width: 1024px) {
-    display: none;
-  }
+	@media (min-width: 1024px) {
+		display: none;
+	}
 }
 
 .content-history {
+	margin: 20px auto;
 	max-width: 600px;
-    margin: 20px auto;
 }
-//History 
-.section-history{
-	width: 30%;
-	margin: 50px auto;
+
+//History
+
+.section-history {
 	border: 1px solid;
+	margin: 50px auto;
+	width: 30%;
 }

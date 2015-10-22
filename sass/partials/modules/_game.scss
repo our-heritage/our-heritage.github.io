@@ -1,14 +1,16 @@
-.game-nav{
+.game-nav {
+	display: none;
 	position:fixed;
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-  }
+	@media (min-width: 768px) {
+		display: block;
+	}
 }
-.list-game{
-	width:200px;
-	text-align:center;
+
+.list-game {
+	text-align: center;
+	width: 200px;
 }
-.list-game-item{
-	margin:20px
+
+.list-game-item {
+	margin: 20px
 }

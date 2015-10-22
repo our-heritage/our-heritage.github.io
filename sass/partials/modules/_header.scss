@@ -4,26 +4,20 @@
 
 header {
 	background-color: #d2d2d2;
+	height: auto;
 	overflow: hidden;
-	max-height: 500px;
-  padding-bottom: 40px;
-  @media (min-width: 1024px) {
-    max-height: 700px;
-    padding-bottom: 80px;
-  }
+	padding-bottom: 40px;
+	@media (min-width: 1024px) {
+		padding-bottom: 80px;
+	}
 }
 
-header p{
-  text-align: center;
+header p {
+	text-align: center;
 }
 
-.play {
-	background: url("../img/play.png") no-repeat;
-  background-size: cover;
-  width: 55px;
-  height: 55px;
-  margin: 15px auto;
-  display: block;
+.lang-select li {
+	display: inline-block;
 }
 
 .lang-select {
@@ -31,6 +25,11 @@ header p{
 	margin: 2% 3%;
 }
 
-.lang-select li{
-	display: inline-block;
+.play {
+	background: url("../img/play.png") no-repeat;
+	background-size: cover;
+	display: block;
+	height: 55px;
+	margin: 15px auto;
+	width: 55px;
 }
