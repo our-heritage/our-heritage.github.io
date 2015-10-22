@@ -79,16 +79,13 @@ footer a {
 .background-juego {
   background: #d2d2d2; }
 
-.mobil-game-wrapper {
-  display: block; }
-  @media (min-width: 768px) {
-    .mobil-game-wrapper {
-      display: none; } }
-
 @media (min-width: 768px) {
   .game-wrapper {
     width: 85%;
-    margin-left: 200px; } }
+    margin-left: 13%; } }
+@media (min-width: 1024px) {
+  .game-wrapper {
+    margin-left: 6%; } }
 
 .main-nav {
   display: block;
@@ -358,17 +355,14 @@ header p {
 .list-game-item {
   margin: 20px; }
 
-@media (min-width: 1024px) {
-  .history {
-    display: none; } }
-
 .content-history {
   max-width: 600px;
   margin: 20px auto; }
 
 .section-history {
-  width: 30%;
-  margin: 50px auto;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
   border: 1px solid; }
 
 .acordion-content {

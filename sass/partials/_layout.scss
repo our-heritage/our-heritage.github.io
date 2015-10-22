@@ -6,6 +6,9 @@
 .game-wrapper{
   @media (min-width: 768px) {
     width:85%;
-    margin-left:200px;
+    margin-left: 13%;
+  }
+  @media (min-width: 1024px) {
+    margin-left: 6%;
   }
 }
