@@ -2,107 +2,103 @@
 // Estilos para los elementos base y footer
 //
 
-body {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+@mixin font-size($size) {
+	font-size: $size + px;
+	font-size: ($size / 10) + rem;
 }
 
-h1 {
-  background: url("../img/logo.png") no-repeat;
-  background-size: cover;
-  width: 190px;
-  height: 79px;
-  margin: 150px auto 80px auto;
-  @media (min-width: 1024px) {
-    margin: 150px auto;
-  }
+html {
+	box-sizing: border-box;
 }
 
-h1 a {
-  color: transparent;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 28px;
-  font-weight: normal;
-  margin: 0;
-}
-
-h4 {
-  margin: 0;
-  font-size: 25px;
-  font-weight: normal;
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #000;
-}
-
-p {
-  font-size: 18px;
-  font-weight: normal;
-  margin: 10px 0;
-}
-
-span {
-  font-weight: normal;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  display: block;
-  list-style-type: none;
-  margin: 0;
+	color: #000;
+	text-decoration: none;
 }
 
 button {
-  background: none;
-  border: none;
+	background: none;
+	border: none;
 }
 
-button:focus, button:active, button:focus:active {
-  box-shadow: none;
-  outline: 0;
-  -webkit-box-shadow: none;
-}
-
-section {
-  overflow: hidden;
-  padding:5%;
+button:active,
+button:focus,
+button:focus:active {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	outline: 0;
 }
 
 footer {
-  padding: 3% 0 2% 0;
-  background-color: #d2d2d2;
-  overflow: hidden;
-  text-align: center;
+	background-color: #d2d2d2;
+	overflow: hidden;
+	padding: 3% 0 2% 0;
+	text-align: center;
 }
 
-footer a{
-  border: 1px solid #000;
-  display: inline-block;
-  padding: 2px 5px;
+footer a {
+	border: 1px solid #000;
+	display: inline-block;
+	padding: 2px 5px;
 }
 
-.background-juego{
-  background: #d2d2d2;
+h1 {
+	background: url("../img/logo.png") no-repeat;
+	background-size: cover;
+	height: 80px;
+	margin: 150px auto 80px auto;
+	width: 190px;
+	@media (min-width: 1024px) {
+		margin: 150px auto;
+	}
+}
+
+h1 a {
+	color: transparent;
+}
+
+h2 {
+	text-align: center;
+	@include font-size(20);
+}
+
+h3 {
+	@include font-size(18);
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+}
+
+p {
+	@include font-size(10);
+}
+
+section {
+	overflow: hidden;
+	padding: 5% 0;
+}
+
+.background-juego {
+	background: #d2d2d2;
 }
 
 .mobil-game-wrapper{
-  display: block;
-  @media (min-width: 768px) {
-    display: none;
-  }
+	display: block;
+	@media (min-width: 768px) {
+		display: none;
+	}
 }
