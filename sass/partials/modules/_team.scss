@@ -18,14 +18,13 @@
 
 .spon-list li {
 	display: inline-block;
-	max-width: 158px;
-	width: 23.5%;
+	margin-right: 25px;
 }
 
 .spon-list {
 	margin: 0 auto;
 	margin-top: 20px;
-	max-width: 670px;
+	max-width: 90%;
 	overflow: hidden;
 	text-align: center;
 	@media (min-width: 1024px) {

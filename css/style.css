@@ -442,7 +442,7 @@ section {
   padding: 5% 0; }
 
 .background-juego {
-  background: #d2d2d2; }
+  background-image: url(../img/desktop-background.jpg); }
 
 .mobil-game-wrapper {
   display: block; }
@@ -647,6 +647,7 @@ header p {
   z-index: 3; }
 
 .about-content p {
+  margin: 0 15px;
   font-size: 9px;
   font-size: 0.9rem; }
   @media (min-width: 768px) {
@@ -670,12 +671,12 @@ header p {
       position: initial; } }
 
 .about-image img {
+  max-height: 292px;
   max-width: none;
   position: absolute;
   right: 0; }
 
 .about-image {
-  height: 260px;
   margin: 20px auto;
   max-width: 480px;
   position: relative;
@@ -730,6 +731,7 @@ header p {
   max-width: 600px; }
 
 .section-history {
+  background-color: #FFF;
   border: 1px solid;
   margin: 50px auto;
   width: 85%;
@@ -780,16 +782,16 @@ span {
   padding-top: 5px; }
 
 .block1 {
-  background-color: #B4B4B4; }
+  background: url(../img/characters/head-amy.png) left bottom no-repeat #494949; }
 
 .block2 {
-  background-color: #CECCCC; }
+  background: url(../img/characters/head-grandpa.png) left bottom no-repeat #494949; }
 
 .block3 {
-  background-color: #B4B4B4; }
+  background: url(../img/characters/head-mom.png) left bottom no-repeat #494949; }
 
 .block4 {
-  background-color: #CECCCC; }
+  background: url(../img/characters/head-dad.png) left bottom no-repeat #494949; }
 
 .close {
   height: 25px;
@@ -1092,13 +1094,12 @@ span {
 
 .spon-list li {
   display: inline-block;
-  max-width: 158px;
-  width: 23.5%; }
+  margin-right: 25px; }
 
 .spon-list {
   margin: 0 auto;
   margin-top: 20px;
-  max-width: 670px;
+  max-width: 90%;
   overflow: hidden;
   text-align: center; }
   @media (min-width: 1024px) {

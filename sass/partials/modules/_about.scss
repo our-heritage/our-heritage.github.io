@@ -40,6 +40,7 @@
 }
 
 .about-content p {
+	margin: 0 15px;
 	@include font-size(9);
 	@media (min-width: 768px) {
 		@include font-size(10);
@@ -64,13 +65,13 @@
 }
 
 .about-image img {
+	max-height: 292px;
 	max-width: none;
 	position: absolute;
 	right: 0;
 }
 
 .about-image {
-	height: 260px;
 	margin: 20px auto;
 	max-width: 480px;
 	position: relative;
