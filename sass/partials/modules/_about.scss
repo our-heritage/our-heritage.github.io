@@ -93,10 +93,14 @@
 	z-index: 1;
 	@media (min-width: 768px){
 		height: initial;
+    padding-top: 60px;
 		position: initial;
 		transition: initial;
-		z-index: initial;
+		z-index: initial; 
 	}
+  @media (min-width: 1024px) {
+    padding-top: 0; 
+  }
 	&:hover {
 		opacity: 0;
 		@media (min-width: 768px) {

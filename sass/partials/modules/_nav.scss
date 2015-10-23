@@ -29,7 +29,7 @@
 
 .content-lang {
 	float: right;
-	margin: 3% 25%;
+	margin: 3% 22%;
 	@media(min-width: 768px){
 		margin: 2% 3%;
 	}
@@ -50,14 +50,6 @@
 .list-lang-item a {
 	color: #515151;
 	text-decoration: none;
-	@include font-size(10);
-}
-
-.list-lang-item button {
-	color: #515151;
-	border: none;
-	margin: 0;
-	padding: 0;
 	@include font-size(10);
 }
 
@@ -106,26 +98,32 @@
 	}
 }
 
-.lang-close {
-	@media(min-width: 768px){
-		display: none;
-	}
+.button-close{
+    background: #fff;
+    border: 3px solid #515151;
+    position: absolute;
+    @include font-size(10);
+    padding: 8px 15px;
+    
+    @media(min-width: 768px){
+        display: none;
+    }
 }
 
 .position0 {
-	top: 0;
-}
-
-.position1 {
 	top: 55px;
 }
 
-.position2 {
+.position1 {
 	top: 110px;
 }
 
-.position3 {
+.position2 {
 	top: 165px;
+}
+
+.position3 {
+	top: 220px;
 	-moz-transform: rotate(-10deg);
 	-ms-transform: rotate(-10deg);
 	-webkit-transform: rotate(-10deg);
