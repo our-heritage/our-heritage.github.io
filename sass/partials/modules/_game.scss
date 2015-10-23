@@ -1,16 +1,8 @@
-.game-nav {
-	display: none;
-	position:fixed;
-	@media (min-width: 768px) {
-		display: block;
-	}
-}
 
 .list-game {
 	text-align: center;
-	width: 200px;
 }
 
 .list-game-item {
-	margin: 20px
+	margin: 20px 40px;
 }

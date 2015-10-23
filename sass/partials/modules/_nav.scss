@@ -24,6 +24,22 @@
 }
 
 //
+// Estilos para el menu de Juegos
+//
+
+.game-nav {
+  display: none;
+  position:fixed;
+  @media (min-width: 768px) {
+    display: block;
+    & a {
+      font-family: $text-serif;
+      @include font-size(16);
+    }
+  }
+}
+
+//
 // Estilos para el menu de idiomas
 //
 

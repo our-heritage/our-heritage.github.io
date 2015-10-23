@@ -18,7 +18,9 @@
 
 .about {
 	margin: 0 auto;
+  padding: 0 5%;
 	@media (min-width: 768px) {
+    padding: 0;
 		width: 480px;
 		.right {
 			float: right;
@@ -37,10 +39,10 @@
 	padding: 1rem;
 	position: relative;
 	z-index: 3;
+  color: #000;
 }
 
 .about-content p {
-	margin: 0 15px;
 	@include font-size(9);
 	@media (min-width: 768px) {
 		@include font-size(10);
@@ -76,8 +78,10 @@
 	max-width: 480px;
 	position: relative;
 	transition: opacity 1s ease-in-out;
+  overflow: hidden;
 	z-index: 1;
 	@media (min-width: 768px) {
+    overflow: inherit;
 		height: initial;
 		margin: 0;
 		position: initial;
@@ -90,9 +94,9 @@
 	height: 260px;
 	position: relative;
 	transition: opacity 1s ease-in-out;
-	width: 100%;
 	z-index: 1;
 	@media (min-width: 768px){
+    width: 100%;
 		height: initial;
     padding-top: 60px;
 		position: initial;

@@ -478,6 +478,17 @@ section {
     height: 80px;
     vertical-align: middle; }
 
+.game-nav {
+  display: none;
+  position: fixed; }
+  @media (min-width: 768px) {
+    .game-nav {
+      display: block; }
+      .game-nav a {
+        font-family: "Finger Paint", serif;
+        font-size: 16px;
+        font-size: 1.6rem; } }
+
 .content-lang {
   float: right;
   margin: 3% 22%; }
@@ -599,6 +610,9 @@ header {
 header p {
   text-align: center; }
 
+.header-juego {
+  background: transparent; }
+
 .lang-select li {
   display: inline-block; }
 
@@ -628,9 +642,11 @@ header p {
       margin: 50px 0; } }
 
 .about {
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 5%; }
   @media (min-width: 768px) {
     .about {
+      padding: 0;
       width: 480px; }
       .about .right {
         float: right; }
@@ -644,10 +660,10 @@ header p {
   margin: 0;
   padding: 1rem;
   position: relative;
-  z-index: 3; }
+  z-index: 3;
+  color: #000; }
 
 .about-content p {
-  margin: 0 15px;
   font-size: 9px;
   font-size: 0.9rem; }
   @media (min-width: 768px) {
@@ -681,9 +697,11 @@ header p {
   max-width: 480px;
   position: relative;
   transition: opacity 1s ease-in-out;
+  overflow: hidden;
   z-index: 1; }
   @media (min-width: 768px) {
     .about-image {
+      overflow: inherit;
       height: initial;
       margin: 0;
       position: initial;
@@ -694,10 +712,10 @@ header p {
   height: 260px;
   position: relative;
   transition: opacity 1s ease-in-out;
-  width: 100%;
   z-index: 1; }
   @media (min-width: 768px) {
     .about .about-image > :first-child {
+      width: 100%;
       height: initial;
       padding-top: 60px;
       position: initial;
@@ -712,33 +730,25 @@ header p {
       .about .about-image > :first-child:hover {
         opacity: 1; } }
 
-.game-nav {
-  display: none;
-  position: fixed; }
-  @media (min-width: 768px) {
-    .game-nav {
-      display: block; } }
-
 .list-game {
-  text-align: center;
-  width: 200px; }
+  text-align: center; }
 
 .list-game-item {
-  margin: 20px; }
+  margin: 20px 40px; }
 
 .content-history {
   margin: 20px auto;
   max-width: 600px; }
 
 .section-history {
-  background-color: #FFF;
-  border: 1px solid;
+  background-color: #fff2de;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
   margin: 50px auto;
   width: 85%;
   padding: 3%; }
   @media (min-width: 768px) {
     .section-history {
-      width: 55%;
+      width: 46%;
       padding: 4%;
       min-width: 590px; } }
 
@@ -782,16 +792,20 @@ span {
   padding-top: 5px; }
 
 .block1 {
-  background: url(../img/characters/head-amy.png) left bottom no-repeat #494949; }
+  background: url(../img/characters/head-amy.png) no-repeat #8E8A8A;
+  background-position: 21px 42px; }
 
 .block2 {
-  background: url(../img/characters/head-grandpa.png) left bottom no-repeat #494949; }
+  background: url(../img/characters/head-grandpa.png) no-repeat #8E8A8A;
+  background-position: 21px 42px; }
 
 .block3 {
-  background: url(../img/characters/head-mom.png) left bottom no-repeat #494949; }
+  background: url(../img/characters/head-mom.png) no-repeat #8E8A8A;
+  background-position: 21px 42px; }
 
 .block4 {
-  background: url(../img/characters/head-dad.png) left bottom no-repeat #494949; }
+  background: url(../img/characters/head-dad.png) no-repeat #8E8A8A;
+  background-position: 21px 42px; }
 
 .close {
   height: 25px;
@@ -838,7 +852,8 @@ span {
   height: 540px;
   margin: 0 auto;
   overflow: hidden;
-  width: 900px; }
+  width: 900px;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4); }
   .characters-wrapper .hidden {
     display: none; }
 
@@ -849,7 +864,8 @@ span {
   z-index: 1; }
 
 .char-details {
-  background-color: #5F5F5F;
+  background-color: #D7AE83;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
   margin-top: -695px;
   overflow: hidden;
   position: absolute;
