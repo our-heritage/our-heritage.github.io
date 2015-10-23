@@ -23,13 +23,20 @@
 }
 
 .spon-list {
-	overflow: hidden;
 	margin: 0 auto;
-	max-width: 670px;
 	margin-top: 20px;
+	max-width: 670px;
+	overflow: hidden;
+	text-align: center;
 	@media (min-width: 1024px) {
-		max-width: 990px;
 		margin-top: 35px;
+		max-width: 990px;
+	}
+	.hidden {
+		display: none;
+		@media (min-width: 1024px) {
+			display: inline-block;
+		}
 	}
 }
 
@@ -45,14 +52,20 @@
 	@media (min-width: 1024px) {
 		max-width: 1100px;
 	}
+	.hidden {
+		display: none;
+		@media (min-width: 1024px) {
+			display: inline-block;
+		}
+	}
 }
 
 .team-and {
-	font-size: 40px;
 	display: inline-block;
 	text-align: center;
-	width: 80px;
+	width: 64px;
 	padding-top: 28px;
+	@include font-size(20);
 	@media (min-width: 1024px) {
 		padding-top: 0;
 		height: 95px;
@@ -73,12 +86,5 @@
 	display: inline-block;
 	@media (min-width: 1024px) {
 		width: inherit;
-	}
-}
-
-#hidden {
-	display: none;
-	@media (min-width: 1024px) {
-		display: inline-block;
 	}
 }

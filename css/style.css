@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint|Muli);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -356,6 +357,13 @@ td,
 th {
   padding: 0; }
 
+/*
+#2DCDE5; //celeste
+#24C29F; //turquesa
+#F37C50; //naranja
+#D7AE83; //beige
+#363434; //negro
+*/
 html {
   box-sizing: border-box; }
 
@@ -366,6 +374,7 @@ html {
 
 a {
   color: #000;
+  font-family: "Muli", sans-serif;
   text-decoration: none; }
 
 button {
@@ -404,11 +413,13 @@ h1 a {
   color: transparent; }
 
 h2 {
+  font-family: "Finger Paint", serif;
   text-align: center;
   font-size: 20px;
   font-size: 2rem; }
 
 h3 {
+  font-family: "Finger Paint", serif;
   font-size: 18px;
   font-size: 1.8rem; }
 
@@ -422,6 +433,7 @@ li {
   margin: 0; }
 
 p {
+  font-family: "Muli", sans-serif;
   font-size: 10px;
   font-size: 1rem; }
 
@@ -458,8 +470,9 @@ section {
 
 .main-nav li {
   display: inline-block;
-  font-size: 20px;
-  margin-right: 15px; }
+  margin-right: 15px;
+  font-size: 12px;
+  font-size: 1.2rem; }
   .main-nav li a {
     display: inline-block;
     height: 80px;
@@ -485,15 +498,17 @@ section {
 
 .list-lang-item a {
   color: #515151;
-  font-size: 1.5rem;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 10px;
+  font-size: 1rem; }
 
 .list-lang-item button {
   color: #515151;
   border: none;
-  font-size: 30px;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 10px;
+  font-size: 1rem; }
 
 .list-lang-item {
   background: #fff;
@@ -764,6 +779,13 @@ span {
 .block4 {
   background-color: #CECCCC; }
 
+.close {
+  float: right;
+  height: 25px;
+  margin: 5% 0;
+  padding-left: 100%;
+  width: 25px; }
+
 .info {
   background: #fff;
   box-sizing: border-box;
@@ -775,13 +797,6 @@ span {
   padding: 0 15px;
   transition: max-height 0.9s ease-in-out;
   width: 100%; }
-
-.close {
-  float: right;
-  height: 25px;
-  margin: 5% 0;
-  padding-left: 100%;
-  width: 25px; }
 
 .left-close {
   background-color: black;
@@ -811,6 +826,8 @@ span {
   margin: 0 auto;
   overflow: hidden;
   width: 900px; }
+  .characters-wrapper .hidden {
+    display: none; }
 
 .main-char-nav {
   background-image: url("../img/characters/family-photo.png");
@@ -878,9 +895,6 @@ span {
   position: absolute;
   right: 0px;
   top: 200px; }
-
-.hidden {
-  display: none; }
 
 @media (min-width: 768px) {
   .section-gallery h2 {
@@ -1064,14 +1078,20 @@ span {
   width: 23.5%; }
 
 .spon-list {
-  overflow: hidden;
   margin: 0 auto;
+  margin-top: 20px;
   max-width: 670px;
-  margin-top: 20px; }
+  overflow: hidden;
+  text-align: center; }
   @media (min-width: 1024px) {
     .spon-list {
-      max-width: 990px;
-      margin-top: 35px; } }
+      margin-top: 35px;
+      max-width: 990px; } }
+  .spon-list .hidden {
+    display: none; }
+    @media (min-width: 1024px) {
+      .spon-list .hidden {
+        display: inline-block; } }
 
 .team-logo img,
 .spon-list img {
@@ -1084,13 +1104,19 @@ span {
   @media (min-width: 1024px) {
     .team {
       max-width: 1100px; } }
+  .team .hidden {
+    display: none; }
+    @media (min-width: 1024px) {
+      .team .hidden {
+        display: inline-block; } }
 
 .team-and {
-  font-size: 40px;
   display: inline-block;
   text-align: center;
-  width: 80px;
-  padding-top: 28px; }
+  width: 64px;
+  padding-top: 28px;
+  font-size: 20px;
+  font-size: 2rem; }
   @media (min-width: 1024px) {
     .team-and {
       padding-top: 0;
@@ -1110,11 +1136,5 @@ span {
   @media (min-width: 1024px) {
     .team-logo {
       width: inherit; } }
-
-#hidden {
-  display: none; }
-  @media (min-width: 1024px) {
-    #hidden {
-      display: inline-block; } }
 
 /*# sourceMappingURL=style.css.map */

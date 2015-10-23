@@ -62,6 +62,14 @@ span {
 	background-color: #CECCCC;
 }
 
+.close {
+	float: right;
+	height: 25px;
+	margin: 5% 0;
+	padding-left: 100%;
+	width: 25px;
+}
+
 .info {
 	background: #fff;
 	box-sizing: border-box;
@@ -73,14 +81,6 @@ span {
 	padding: 0 15px;
 	transition: max-height 0.9s ease-in-out;
 	width: 100%;
-}
-
-.close {
-	float: right;
-	height: 25px;
-	margin: 5% 0;
-	padding-left: 100%;
-	width: 25px;
 }
 
 .left-close {
@@ -111,6 +111,9 @@ span {
 	margin: 0 auto;
 	overflow: hidden;
 	width: 900px;
+	.hidden {
+		display: none;
+	}
 }
 
 .main-char-nav {
@@ -191,8 +194,4 @@ span {
 	position: absolute;
 	right: 0px;
 	top: 200px;
-}
-
-.hidden {
-	display: none;
 }
