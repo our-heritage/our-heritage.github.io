@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Juego</title>
+  <title>Our Heritage</title>
 </head>
 <body class="background-juego">
 	<header>
-      <div class="content-lang">
+    <div class="content-lang">
       <ul class="list-lang" id="list-lang">
             <li class="list-lang-item lang-close" id="close"><button onclick="MenuLang.hideMenu()">X</button></li>
             <li class="list-lang-item selected"><a href="#">EN</a></li>
@@ -21,15 +21,15 @@
 				<ul>
 					<li class="logo"><img src="img/logo.png"></li>
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="juego.html">Juego</a></li>
+					<li><a href="#">Juego</a></li>
 				</ul>
 			</nav>
 	</header>
 	<nav class="game-nav">
 		<ul class="list-game">
 			<li class="list-game-item"><a href="#history">Historia</a></li>
-			<li class="list-game-item"><a href="#characters">Personajes</a></li>
-			<li class="list-game-item"><a href="#container">Galería</a></li>
+			<li class="list-game-item"><a href="#characters_desktop">Personajes</a></li>
+			<li class="list-game-item"><a href="#gallery">Galería</a></li>
 		</ul>
 	</nav>
 	<div class="game-wrapper">
@@ -63,11 +63,11 @@
         <div class="info">
           <div class="close">
             <div class="left-close">
-                <div class="right-close"></div>
+              <div class="right-close"></div>
             </div>
           </div>
           <p>Un hombre de 70 años que pasó casi toda su vida negando el cambio climático, quién
-              después de ver y experimentar las consecuencias desastrosas entró en razón. Su lenguaje corporal refleja su frustración y arrepentimiento sobre el estado actual del mundo.</p>
+          después de ver y experimentar las consecuencias desastrosas entró en razón. Su lenguaje corporal refleja su frustración y arrepentimiento sobre el estado actual del mundo.</p>
           <p>Cuando habla con Amy intenta ser jovial y optimista, pero a veces su vergüenza sale a la luz. Con el resto de la familia se porta distante y amargado. Aun así, ama y cuida mucho a su familia. No es realmente conservador, pero le cuesta salirse de su zona de confort.</p>
         </div>
       </div>
@@ -116,29 +116,27 @@
         </nav>
 
         <div class="char-details hidden" id="char_details">
-          <div class="details" id="details">
-          </div>
-            <a href="#char_details" class="exit" id='hide'><img src="img/icons/close.png"></a>
-            <a href="#char_details" class="back" id='left'><img src="img/icons/previous.png"></a>
-            <a href="#char_details" class="foward" id='right'><img src="img/icons/next.png"></a>
-
+          <div class="details" id="details"></div>
+          <a href="#char_details" class="exit" id='hide'><img src="img/icons/close.png"></a>
+          <a href="#char_details" class="back" id='left'><img src="img/icons/previous.png"></a>
+          <a href="#char_details" class="foward" id='right'><img src="img/icons/next.png"></a>
           <nav class="char-nav">
-            <button  class="char-nav-character" id="0"> <!-- Ingresar llamado de funcion -->
+            <button class="char-nav-character" id="0"> <!-- Ingresar llamado de funcion -->
               <img src="img/characters/head-amy.png" >
               <h2>Amy</h2>
             </button>
 
-            <button  class="char-nav-character" id="1"> <!-- Ingresar llamado de funcion -->
+            <button class="char-nav-character" id="1"> <!-- Ingresar llamado de funcion -->
               <img src="img/characters/head-mom.png" >
               <h2>Mom</h2>
             </button>
 
-            <button  class="char-nav-character" id="2"> <!-- Ingresar llamado de funcion -->
+            <button class="char-nav-character" id="2"> <!-- Ingresar llamado de funcion -->
               <img src="img/characters/head-grandpa.png" >
               <h2>Dad</h2>
             </button>
 
-            <button  class="char-nav-character" id="3"> <!-- Ingresar llamado de funcion -->
+            <button class="char-nav-character" id="3"> <!-- Ingresar llamado de funcion -->
               <img src="img/characters/head-dad.png" >
               <h2>Gramps</h2>
             </button>
@@ -184,9 +182,9 @@
 		</section>
   </div>
   <footer>
-  <p>Juega y descubre la experiencia climática del 2015</p>
-  <p>Este sitio fue desarrollo por <a href="#">Team Game Jam</a></p>
-  <p>© 2015 Our Heritage</p>
+    <p>Juega y descubre la experiencia climática del 2015</p>
+    <p>Este sitio fue desarrollo por <a href="#">Team Game Jam</a></p>
+    <p>© 2015 Our Heritage</p>
   </footer>
   <script type="text/javascript" src="js/enquire.min.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
