@@ -9,7 +9,9 @@
 <body class="background-juego">
   <header class="header-juego">
     <div class="content-lang">
-      <button class="button-close" id="close">X</button>
+      <svg class="close-lang" height="45px" width="45px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+        <polygon points="40.21,38.178 22.102,20.069 40.139,2.032 38.105,0 20.069,18.037 2.104,0.072 0.072,2.105 18.037,20.069 0,38.106 2.033,40.139 20.069,22.103 38.178,40.211 "/>
+      </svg>
       <ul class="list-lang" id="list-lang">
             <li class="list-lang-item selected"><a href="#">EN</a></li>
             <li class="list-lang-item"><a href="es.html">ES</a></li>
@@ -25,7 +27,7 @@
       </ul>
     </nav>
 	</header>
-	<nav class="game-nav">
+	<nav class="game-nav game-nav-tablet">
 		<ul class="list-game">
 			<li class="list-game-item"><a href="#history">Historia</a></li>
 			<li class="list-game-item"><a href="#characters_desktop">Personajes</a></li>
@@ -42,62 +44,50 @@
 			<p>¿Qué planeta le estamos heredando a nuestras futuras generaciones?</p>
 		</section>
 
-    <div class="acordion-content">
+    <ul class="taps-character">
       <h2>Personajes</h2>
-      <div class="block block1">
-        <input type="radio" name="amy" id="amy"/>
-        <label for="amy"><span>Amy</span></label>
-        <div class="info">
-          <div class="close">
-            <div class="left-close">
-              <div class="right-close"></div>
-            </div>
-          </div>
+      <li>
+        <h3 class="tap-amy">Amy</h3>
+        <div class="tap-info">
+          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+            <polygon points="40.21,38.178 22.102,20.069 40.139,2.032 38.105,0 20.069,18.037 2.104,0.072 0.072,2.105 18.037,20.069 0,38.106 2.033,40.139 20.069,22.103 38.178,40.211 "/>
+          </svg>
           <p>Una niña de 8 años. Es linda, dulce y optimista. Amy es muy inteligente, pero puesto que no sabe cómo fue el mundo en el pasado, es más bien ingenua en comprender lo mal que está el mundo en realidad.</p>
           <p>Aunque Amy está llena de energía y ambiciones, el espacio y libertad restringidos han desarrollado su gusto por la literatura y otras ficciones, como programas de televisión.Tiene un carácter dulce con su familia y amigos, pero se vuelve apasionada y seria cuando está en “modo aventura”.</p>
         </div>
-      </div>
-      <div class="block block2">
-        <input type="radio" name="abuelo" id="abuelo"/>
-        <label for="abuelo"><span>Abuelo</span></label>
-        <div class="info">
-          <div class="close">
-            <div class="left-close">
-              <div class="right-close"></div>
-            </div>
-          </div>
+      </li>
+      <li>
+        <h3 class="tap-grandpa">Gramps</h3>
+        <div class="tap-info">
+          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+            <polygon points="40.21,38.178 22.102,20.069 40.139,2.032 38.105,0 20.069,18.037 2.104,0.072 0.072,2.105 18.037,20.069 0,38.106 2.033,40.139 20.069,22.103 38.178,40.211 "/>
+          </svg>
           <p>Un hombre de 70 años que pasó casi toda su vida negando el cambio climático, quién
           después de ver y experimentar las consecuencias desastrosas entró en razón. Su lenguaje corporal refleja su frustración y arrepentimiento sobre el estado actual del mundo.</p>
           <p>Cuando habla con Amy intenta ser jovial y optimista, pero a veces su vergüenza sale a la luz. Con el resto de la familia se porta distante y amargado. Aun así, ama y cuida mucho a su familia. No es realmente conservador, pero le cuesta salirse de su zona de confort.</p>
         </div>
-      </div>
-      <div class="block block3">
-        <input type="radio" name="mama" id="mama" />
-        <label for="mama"><span>Mamá</span></label>
-        <div class="info">
-          <div class="close">
-            <div class="left-close">
-              <div class="right-close"></div>
-            </div>
-          </div>
+      </li>
+      <li>
+        <h3 class="tap-mom">Mom</h3>
+        <div class="tap-info">
+          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+            <polygon points="40.21,38.178 22.102,20.069 40.139,2.032 38.105,0 20.069,18.037 2.104,0.072 0.072,2.105 18.037,20.069 0,38.106 2.033,40.139 20.069,22.103 38.178,40.211 "/>
+          </svg>
           <p>Activista ambiental de 35 años. Siempre tuvo claro que los malos hábitos de la humanidad hacia el medio ambiente fueron un tema de negligencia, no de destino</p>
           <p>Es segura de sí misma y tiene una actitud optimista hacia la posibilidad de cambio y el progreso. Es mucho más seria que su esposo, pero a menudo se ríen y juegan juntos. Aunque puede parecer una rata de biblioteca, es realista y una líder natural.Es miembro activo de varios grupos conservacionistas y dirige varios de ellos. Aunque el mundo no es lo que era, no se ha dado por vencida, intenta proteger el planeta dentro de sus posibilidades.</p>
         </div>
-      </div>
-      <div class="block block4">
-        <input type="radio" name="papa" id="papa" />
-        <label for="papa"><span>Papá</span></label>
-        <div class="info">
-            <div class="close">
-              <div class="left-close">
-                <div class="right-close"></div>
-              </div>
-            </div>
+      </li>
+      <li>
+        <h3 class="tap-dad">Dad</h3>
+        <div class="tap-info">
+          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+            <polygon points="40.21,38.178 22.102,20.069 40.139,2.032 38.105,0 20.069,18.037 2.104,0.072 0.072,2.105 18.037,20.069 0,38.106 2.033,40.139 20.069,22.103 38.178,40.211 "/>
+          </svg>
             <p>Ingeniero retirado de 40 años. Dedicó su carrera profesional a la ingeniería estructural. Al contrario de su padre, si creyó en el cambio climático desde joven, pero para él, el mundo estaba demasiado dañado y lo único que se podía hacer era prepararse para el futuro.</p>
             <p>Aunque renunció a su trabajo, continúa diseñando conceptos y productos para el movimiento ambientalista de su esposa. Como esposo comprensivo, apoya a su esposa en sus esfuerzos políticos y sociales, aunque lo hace más para mejorar el mundo para su hija que por ser un apasionado ecologista. Es simpático y compasivo, aunque le gusta más ahondar en su trabajo que en cualquier otra cosa.</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
 
 		<section class="section-character" id="characters_desktop">
       <div class="characters-wrapper">
@@ -117,7 +107,9 @@
 
         <div class="char-details hidden" id="char_details">
           <div class="details" id="details"></div>
-          <a href="#char_details" class="exit" id='hide'><img src="img/icons/close.png"></a>
+          <svg class="close-details" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+            <polygon points="40.21,38.178 22.102,20.069 40.139,2.032 38.105,0 20.069,18.037 2.104,0.072 0.072,2.105 18.037,20.069 0,38.106 2.033,40.139 20.069,22.103 38.178,40.211 "/>
+          </svg>
           <a href="#char_details" class="back" id='left'><img src="img/icons/previous.png"></a>
           <a href="#char_details" class="foward" id='right'><img src="img/icons/next.png"></a>
           <nav class="char-nav">
@@ -187,7 +179,7 @@
     <p>© 2015 Our Heritage</p>
   </footer>
   <script type="text/javascript" src="js/enquire.min.js"></script>
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="js/juego.js"></script>
   <script type="text/javascript" src="js/swipe.js"></script>
 </body>
