@@ -1,6 +1,4 @@
-//
 // Estilos para los elementos base y footer
-//
 
 @mixin font-size($size) {
 	font-size: $size + px;
@@ -11,6 +9,11 @@ html {
 	box-sizing: border-box;
 }
 
+* {
+	padding: 0;
+	margin: 0;
+}
+
 *,
 *:before,
 *:after {
@@ -18,8 +21,8 @@ html {
 }
 
 a {
-	color: #000;
 	font-family: $text-sans;
+	color: #000;
 	text-decoration: none;
 }
 
@@ -32,12 +35,12 @@ button:active,
 button:focus,
 button:focus:active {
 	box-shadow: none;
-	-webkit-box-shadow: none;
 	outline: 0;
 }
 
 footer {
 	background-color: #d2d2d2;
+	margin-top: 50px;
 	overflow: hidden;
 	padding: 3% 0 2% 0;
 	text-align: center;
@@ -53,7 +56,7 @@ h1 {
 	background: url("../img/logo.png") no-repeat;
 	background-size: cover;
 	height: 80px;
-	margin: 150px auto 80px auto;
+	margin: 50px auto;
 	width: 190px;
 	@media (min-width: 1024px) {
 		margin: 150px auto;
@@ -65,35 +68,30 @@ h1 a {
 }
 
 h2 {
-	font-family: $text-serif;
-	text-align: center;
 	@include font-size(20);
+	font-family: $text-serif;
+	margin: 30px 0;
+	text-align: center;
 }
 
 h3 {
-	font-family: $text-serif;
 	@include font-size(18);
-}
-
-ul {
-	margin: 0;
-	padding: 0;
+	font-family: $text-serif;
 }
 
 li {
 	display: block;
 	list-style-type: none;
-	margin: 0;
 }
 
 p {
-	font-family: $text-sans;
 	@include font-size(10);
+	font-family: $text-sans;
+	margin-bottom: 16px;
 }
 
 section {
 	overflow: hidden;
-	padding: 5% 0;
 }
 
 .background-juego {
@@ -103,6 +101,7 @@ section {
 .mobil-game-wrapper{
 	display: block;
 	@media (min-width: 768px) {
+		/* High-end resolutions */
 		display: none;
 	}
 }

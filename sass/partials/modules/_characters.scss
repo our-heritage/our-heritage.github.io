@@ -1,7 +1,3 @@
-//
-// Characters
-//
-
 // Characters Mobile
 
 input[type='radio'] {
@@ -18,12 +14,10 @@ label {
 
 span {
 	cursor: pointer;
-	font-family: 'Arial';
-	font-weight: bold;
 	display: block;
-	padding-right: 4%;
-	padding-bottom: 100px;
-	margin: 0;
+	font-family: $text-serif;
+	font-weight: bold;
+	padding: 0 4% 100px 0;
 	margin-right: 4%;
 }
 
@@ -31,6 +25,7 @@ span {
 	margin: 0 auto;
 	max-width: 100%;
 	@media (min-width: 768px) {
+		/* High-end resolutions */
 		display: none;
 	}
 }
@@ -48,22 +43,22 @@ span {
 
 .block1 {
 	background: url(../img/characters/head-amy.png) no-repeat #8E8A8A;
-  background-position: 21px 42px;
+  	background-position: 20px 53px;
 }
 
 .block2 {
 	background: url(../img/characters/head-grandpa.png) no-repeat #8E8A8A;
-  background-position: 21px 42px;
+  	background-position: 20px 53px;
 }
 
 .block3 {
 	background: url(../img/characters/head-mom.png) no-repeat #8E8A8A;
-  background-position: 21px 42px;
+  	background-position: 20px 53px;
 }
 
 .block4 {
 	background: url(../img/characters/head-dad.png) no-repeat #8E8A8A;
-  background-position: 21px 42px;
+  	background-position: 20px 25px;
 }
 
 .close {
@@ -75,14 +70,13 @@ span {
 
 .info {
 	background: #fff;
-	box-sizing: border-box;
 	color: #222;
 	display: block;
 	height: auto;
 	max-height: 0;
 	overflow: hidden;
 	padding: 0 15px;
-	transition: max-height 0.9s ease-in-out;
+	transition: max-height .9s ease-in-out;
 	width: 100%;
 }
 
@@ -90,9 +84,9 @@ span {
 	background-color: black;
 	height: 25px;
 	margin-left: 12px;
-	transform: rotate(45deg);
 	-ms-transform: rotate(45deg); /* IE 9 */
-	-webkit-transform: rotate(45deg); /* Safari and Chrome */
+	-webkit-transform: rotate(45deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+	transform: rotate(45deg); /* IE 10, Fx 16+, Op 12.1+ */
 	width: 2px;
 	z-index: 1;
 }
@@ -100,9 +94,9 @@ span {
 .right-close {
 	background-color: black;
 	height: 25px;
-	transform: rotate(90deg);
 	-ms-transform: rotate(90deg); /* IE 9 */
-	-webkit-transform: rotate(90deg); /* Safari and Chrome */
+	-webkit-transform: rotate(90deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+	transform: rotate(90deg); /* IE 10, Fx 16+, Op 12.1+ */
 	width: 2px;
 	z-index: 2;
 }
@@ -110,11 +104,11 @@ span {
 // Characters Desktop
 
 .characters-wrapper {
+	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
 	height: 540px;
 	margin: 0 auto;
 	overflow: hidden;
 	width: 900px;
-  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
 	.hidden {
 		display: none;
 	}
@@ -129,12 +123,12 @@ span {
 
 .char-details {
 	background-color: #D7AE83;
-  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
+  	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
 	margin-top: -695px;
 	overflow: hidden;
 	position: absolute;
 	width: 900px;
-	z-index:2;
+	z-index: 2;
 }
 
 .char-nav {
@@ -178,13 +172,13 @@ span {
 }
 
 .details {
+	height: 518px;
 	overflow: hidden;
 	padding: 5% 8% 0 8%;
-  height: 518px;
 }
 
 .back {
-	left: 0px;
+	left: 0;
 	position: absolute;
 	top: 200px;
 }
@@ -198,7 +192,7 @@ span {
 
 .foward {
 	position: absolute;
-	right: 0px;
+	right: 0;
 	top: 200px;
 }
 

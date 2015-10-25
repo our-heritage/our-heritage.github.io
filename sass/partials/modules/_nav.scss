@@ -1,72 +1,101 @@
+.logo {
+	float: left;
+}
+
+.main-nav ul {
+	@media (min-width: 768px) {
+		height: 178px;
+	}
+}
+
 .main-nav {
 	display: block;
 	margin: 5% 0;
 	@media (min-width: 768px) {
-		margin: 2% 3%;
+		/* High-end resolutions */
+		margin: 2% 4%;
 	}
 }
 
 .logo img {
 	display: none;
 	@media (min-width: 768px) {
+		/* High-end resolutions */
 		display: inline-block;
 	}
 }
 .main-nav li {
-	display: inline-block;
-	margin-right: 15px;
 	@include font-size(12);
+	display: inline-block;
+	margin-left: 15px;
+	line-height: 89px;
 	a {
 		display: inline-block;
-		height: 80px;
-		vertical-align: middle;
 	}
 }
 
-//
 // Estilos para el menu de Juegos
-//
 
 .game-nav {
-  display: none;
-  position:fixed;
-  @media (min-width: 768px) {
-    display: block;
-    & a {
-      font-family: $text-serif;
-      @include font-size(16);
-    }
-  }
+	position: fixed;
+	& a {
+	    @include font-size(16);
+	    font-family: $text-serif;
+	}
+	@media only screen and (max-width: 1279px) {
+	  	/* High-end resolutions */
+		background-color: #FFF;
+		display: block;
+		left: 0;
+		margin-top: 130px;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+  	}
+  	@media only screen and (max-width: 640px) {
+		display: none;
+  	}
 }
 
-//
+.list-game {
+	text-align: center;
+}
+
+.list-game-item {
+	margin: 20px 40px;
+	@media (min-width: 768px) {
+		display: inline-block;
+  	}
+  	@media (min-width: 1280px) {
+		display: block;
+  	}
+}
+
 // Estilos para el menu de idiomas
-//
 
 .content-lang {
 	float: right;
-	margin: 3% 22%;
+	margin: 4% 22%;
 	@media(min-width: 768px){
-		margin: 2% 3%;
+		/* High-end resolutions */
+		margin: 2% 4%;
 	}
 }
 
 .list-lang {
-		list-style: none;
-		position: absolute;
-		width: 0;
-		z-index: 1;
+	list-style: none;
+	position: absolute;
+	z-index: 1;
 	@media(min-width: 768px){
-		display:block;
-		position: initial;
-		width: 100%;
+		/* High-end resolutions */
+		position: inherit;
 	}
 }
 
 .list-lang-item a {
+	@include font-size(10);
 	color: #515151;
 	text-decoration: none;
-	@include font-size(10);
 }
 
 .list-lang-item {
@@ -83,45 +112,44 @@
 	-webkit-transition: all 1s;
 	transition: all 1s;
 	@media(min-width: 768px){
+		/* High-end resolutions */
 		display:inline-block;
-		position: initial;
+		position: inherit;
 	}
 }
 
 .list-lang li:first-child + li {
-	-moz-transform: rotate(10deg);
-	-ms-transform: rotate(10deg);
-	-webkit-transform: rotate(10deg);
-	transform: rotate(10deg);
+	-ms-transform: rotate(10deg); /* IE 9 */
+	-webkit-transform: rotate(10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+	transform: rotate(10deg); /* IE 10, Fx 16+, Op 12.1+ */
 	@media(min-width: 768px){
-		-moz-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
+		/* High-end resolutions */
+		-ms-transform: rotate(0deg); /* IE 9 */
+		-webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+		transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
 	}
 }
 
 .list-lang li:last-child {
-	-moz-transform: rotate(10deg);
-	-ms-transform: rotate(10deg);
-	-webkit-transform: rotate(10deg);
-	transform: rotate(10deg);
+	-ms-transform: rotate(10deg); /* IE 9 */
+	-webkit-transform: rotate(10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+	transform: rotate(10deg); /* IE 10, Fx 16+, Op 12.1+ */
 	@media(min-width: 768px){
-		-moz-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
+		/* High-end resolutions */
+		-ms-transform: rotate(0deg); /* IE 9 */
+		-webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+		transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
 	}
 }
 
-.button-close{
+.button-close {
+	@include font-size(10);
     background: #fff;
     border: 3px solid #515151;
     position: absolute;
-    @include font-size(10);
     padding: 8px 15px;
-    
-    @media(min-width: 768px){
+    @media(min-width: 768px) {
+    	/* High-end resolutions */
         display: none;
     }
 }
@@ -140,15 +168,14 @@
 
 .position3 {
 	top: 220px;
-	-moz-transform: rotate(-10deg);
-	-ms-transform: rotate(-10deg);
-	-webkit-transform: rotate(-10deg);
-	transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg); /* IE 9 */
+	-webkit-transform: rotate(-10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+	transform: rotate(-10deg); /* IE 10, Fx 16+, Op 12.1+ */
 	@media(min-width:768px){
-		-moz-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
+		/* High-end resolutions */
+		-ms-transform: rotate(0deg); /* IE 9 */
+		-webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+		transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
 	}
 }
 

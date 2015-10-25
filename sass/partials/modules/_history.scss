@@ -1,6 +1,4 @@
-//
 // Estilos de Historia
-//
 
 .content-history {
 	margin: 20px auto;
@@ -9,19 +7,20 @@
 
 //History
 
+.section-history h2 {
+  padding-bottom: 25px;
+}
+
 .section-history {
   background-color: rgb(255, 242, 222);
-  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
 	margin: 50px auto;
   width: 85%;
   padding: 3%;
   @media (min-width: 768px) {
-  	width: 46%;
-    padding: 4%;
+    /* High-end resolutions */
     min-width: 590px;
+    padding: 4%;
+    width: 46%;
   }
-}
-
-.section-history h2 {
-  padding-bottom: 25px;
 }

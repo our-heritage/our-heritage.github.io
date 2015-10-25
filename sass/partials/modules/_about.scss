@@ -1,6 +1,4 @@
-//
 // About
-//
 
 .about li {
 	height: 260px;
@@ -9,8 +7,8 @@
 	position: relative;
 	width: 100%;
 	@media (min-width: 768px) {
+		/* High-end resolutions */
 		height: 290px;
-		box-sizing: border-box;
 		max-width: 1100px;
 		margin: 50px 0;
 	}
@@ -18,9 +16,10 @@
 
 .about {
 	margin: 0 auto;
-  padding: 0 5%;
+  	padding: 0 5%;
 	@media (min-width: 768px) {
-    padding: 0;
+		/* High-end resolutions */
+   		padding: 0;
 		width: 480px;
 		.right {
 			float: right;
@@ -35,16 +34,15 @@
 }
 
 .about-content h3 {
-	margin: 0;
-	padding: 1rem;
+	padding: 16px;
 	position: relative;
 	z-index: 3;
-  color: #000;
 }
 
 .about-content p {
 	@include font-size(9);
 	@media (min-width: 768px) {
+		/* High-end resolutions */
 		@include font-size(10);
 	}
 }
@@ -52,6 +50,7 @@
 .about-content p:nth-child(3) {
 	display: none;
 	@media (min-width: 768px) {
+		/* High-end resolutions */
 		display: block;
 	}
 }
@@ -62,53 +61,51 @@
 	position: absolute;
 	top: 0;
 	@media (min-width: 768px) {
-		position: initial;
+		/* High-end resolutions */
+		position: inherit;
 	}
 }
 
 .about-image img {
 	max-height: 292px;
-	max-width: none;
 	position: absolute;
 	right: 0;
 }
 
 .about-image {
-	margin: 20px auto;
 	max-width: 480px;
-	position: relative;
-	transition: opacity 1s ease-in-out;
-  overflow: hidden;
-	z-index: 1;
+	@media only screen and (max-width: 768px) {
+		margin: 20px auto;
+		position: relative;
+		transition: opacity 1s ease-in-out;
+  		overflow: hidden;
+		z-index: 1;
+	}
 	@media (min-width: 768px) {
-    overflow: inherit;
-		height: initial;
 		margin: 0;
-		position: initial;
-		transition: initial;
-		z-index: initial;
 	}
 }
 
 .about .about-image>:first-child {
 	height: 260px;
 	position: relative;
-	transition: opacity 1s ease-in-out;
-	z-index: 1;
-	@media (min-width: 768px){
-    width: 100%;
-		height: initial;
-    padding-top: 60px;
-		position: initial;
-		transition: initial;
-		z-index: initial; 
+	@media only screen and (max-width: 768px) {
+		transition: opacity 1s ease-in-out;
+		z-index: 1;
 	}
-  @media (min-width: 1024px) {
-    padding-top: 0; 
-  }
+	@media (min-width: 768px){
+		/* High-end resolutions */
+    	padding-top: 60px;
+		width: 100%;
+	}
+  	@media (min-width: 1024px) {
+  		/* High-end resolutions */
+    	padding-top: 0; 
+  	}
 	&:hover {
 		opacity: 0;
 		@media (min-width: 768px) {
+			/* High-end resolutions */
 			opacity: 1;
 		}
 	}

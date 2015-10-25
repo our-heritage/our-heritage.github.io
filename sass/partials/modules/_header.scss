@@ -1,6 +1,4 @@
-//
 // Header
-//
 
 header {
 	background-color: #d2d2d2;
@@ -8,6 +6,7 @@ header {
 	overflow: hidden;
 	padding-bottom: 40px;
 	@media (min-width: 1024px) {
+		/* High-end resolutions */
 		padding-bottom: 80px;
 	}
 }
@@ -17,7 +16,7 @@ header p {
 }
 
 .header-juego {
-  background: transparent;
+  	background: transparent;
 }
 
 .lang-select li {
