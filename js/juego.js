@@ -10,31 +10,44 @@ var target = $(".gallery-imgs");
 var galleryBtn = target.children("li");
 var character_btn = $('.character_btn');
 var overall_char_container = $('#char_details');
-var char_desktop = $('#characters_desktop');
-var char_mobile = $('#characters_mobile');
 var individual_details = $('#details');
+var tap_character = $('.taps-character h3');
+var close_tap = $('.close-tap');
+var close_nav_lang = $('.close-lang');
+var list_lang_item = $(".list-lang-item");
+var list_lang = $("#list-lang");
 
-// var char_desktop_content = char_desktop.html();
-// var char_mobile_content = char_mobile.html();
 
-//Enquire Usage ***********************************************************************
-enquire.register('(min-width: 768px)', {
+//smaller viewports ***********************************************************************
+enquire.register('(max-width: 766px)', {
     match: function() {
-        console.log('match');
-        init();
-        desktopVersion();
-        // char_mobile.html('');
-        //    char_desktop.html(char_desktop_content);
+        console.log('smaller');
+        smallerViewports();
     },
 
     unmatch: function() {
-        console.log('unmatch');
-        galleryBtn.off('click');
-        character_btn.off('click');
-        // char_mobile.html(char_mobile_content);
-        // char_desktop.html('');
+        console.log('unmatch smaller');
+        close_tap.off('click');
+        close_nav_lang.off('click');
+        list_lang.off('click');
     }
 });
+
+//larger viewports ***********************************************************************
+enquire.register('(min-width: 768px)', {
+    match: function() {
+        console.log('larger');
+        init();
+        largerViewports();
+    },
+
+    unmatch: function() {
+        console.log('unmatch larger');
+        galleryBtn.off('click');
+        character_btn.off('click');
+    }
+});
+
 //Json data ***********************************************************************
 function init() {
     $.ajax({
@@ -53,9 +66,9 @@ function init() {
     });
 }
 
-// Desktop Version ***********************************************************************
+// larger viewports ***********************************************************************
 
-function desktopVersion() {
+function largerViewports() {
 
   // nav-scroll ///////////////////////////////////////////////////////////////////////////////////
 
@@ -87,7 +100,7 @@ function desktopVersion() {
             detailsGenerator(char_id);
         });
 
-        $('#hide').on("click", function() {
+        $('.close-details').on("click", function() {
             displayer('hide');
         });
 
@@ -139,19 +152,30 @@ function desktopVersion() {
         });
     });
 }
-// Mobile Version
+
+
+// smaller Viewports ***********************************************************************
+
+function smallerViewports() {
 
 // Close Tag ///////////////////////////////////////////////////////////////////////////////////
 
-  $('.close').click(function() {
-    var input_radio = this.parentNode.parentNode.firstChild.nextSibling;
-    input_radio.checked = false;
+  tap_character.on("click", function() {
+    if ($(this).next().hasClass( "expand-tap-info" )) {
+      $(this).next().removeClass('expand-tap-info');
+    }else {
+      $(".tap-info").removeClass('expand-tap-info');
+      $(this).next().addClass('expand-tap-info');
+    }
+  });
+
+  close_tap.on("click", function() {
+    $(".tap-info").removeClass('expand-tap-info');
   });
 
 // Lang ///////////////////////////////////////////////////////////////////////////////////
 
-  var list_lang_item = $(".list-lang-item");
-  $("#list-lang").click(function(){
+  list_lang.on("click", function() {
     for (var i = 0; i < list_lang_item.length; i++) {
       list_lang_item.addClass(function( i ) {
         return "list-lang-item position" + i;
@@ -159,7 +183,7 @@ function desktopVersion() {
     };
   });
 
-  $("#close").click(function(){
+  close_nav_lang.on("click", function() {
     for (var m = 0; m < list_lang_item.length; m++) {
       list_lang_item.removeClass(function( m ) {
         return "list-lang-item position"+m;
@@ -167,3 +191,4 @@ function desktopVersion() {
       list_lang_item.addClass("list-lang-item")
     };
   });
+}
