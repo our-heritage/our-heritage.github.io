@@ -471,7 +471,7 @@ section {
 
 .main-nav {
   display: block;
-  margin: 5% 0; }
+  margin: 0 5%; }
   @media (min-width: 768px) {
     .main-nav {
       margin: 2% 4%; } }
@@ -749,9 +749,6 @@ header p {
   position: relative;
   transition: opacity 1s ease-in-out;
   z-index: 1; }
-  @media (min-width: 360px) {
-    .about-image > :first-child {
-      width: 100%; } }
   .about-image > :first-child:hover {
     opacity: 0; }
     @media (min-width: 768px) {
