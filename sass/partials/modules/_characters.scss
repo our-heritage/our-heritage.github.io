@@ -1,74 +1,52 @@
 // Characters Mobile
 
-input[type='radio'] {
-	display: none;
-	width: 100%;
-}
-
-label {
-	cursor: pointer;
-	max-width: 100%;
-	text-align: right;
-	width: 450px;
-}
-
-span {
-	cursor: pointer;
-	display: block;
-	font-family: $text-serif;
-	font-weight: bold;
-	padding: 0 4% 100px 0;
-	margin-right: 4%;
-}
-
-.acordion-content {
+.taps-character {
 	margin: 0 auto;
 	max-width: 100%;
+  & li {
+    border-bottom: 1px solid #ccc;
+    background-color: #8E8A8A;
+  }
+  h3 {
+    cursor: pointer;
+    font-family: "Finger Paint", serif;
+    text-align: right;
+    padding-bottom: 100px;
+    margin-right: 4%
+  }
 	@media (min-width: 768px) {
-		/* High-end resolutions */
 		display: none;
 	}
 }
 
-.block input[type='radio']:checked ~ .info {
-	height: 100%;
-	max-height: 480px;
+.tap-amy {
+	background: url(../img/characters/head-amy.png) no-repeat;
+  background-position: 20px 53px;
 }
 
-.block {
-	box-shadow: 0 1px 2px #ccc;
-	color: #fff;
-	padding-top: 5px;
+.tap-grandpa {
+	background: url(../img/characters/head-grandpa.png) no-repeat;
+  background-position: 20px 53px;
 }
 
-.block1 {
-	background: url(../img/characters/head-amy.png) no-repeat #8E8A8A;
-  	background-position: 20px 53px;
+.tap-mom {
+	background: url(../img/characters/head-mom.png) no-repeat;
+  background-position: 20px 53px;
 }
 
-.block2 {
-	background: url(../img/characters/head-grandpa.png) no-repeat #8E8A8A;
-  	background-position: 20px 53px;
+.tap-dad {
+	background: url(../img/characters/head-dad.png) no-repeat;
+  background-position: 20px 25px;
 }
 
-.block3 {
-	background: url(../img/characters/head-mom.png) no-repeat #8E8A8A;
-  	background-position: 20px 53px;
+.close-tap{
+  fill: #000;
+  margin: 5% 0;
+  float: right;
 }
 
-.block4 {
-	background: url(../img/characters/head-dad.png) no-repeat #8E8A8A;
-  	background-position: 20px 25px;
-}
 
-.close {
-	height: 25px;
-	margin: 5% 0;
-	padding-left: 90%;
-	width: 25px;
-}
-
-.info {
+.tap-info {
 	background: #fff;
 	color: #222;
 	display: block;
@@ -78,27 +56,15 @@ span {
 	padding: 0 15px;
 	transition: max-height .9s ease-in-out;
 	width: 100%;
+  & p{
+    margin: 16px 0;
+    width: 90%;
+  }
 }
 
-.left-close {
-	background-color: black;
-	height: 25px;
-	margin-left: 12px;
-	-ms-transform: rotate(45deg); /* IE 9 */
-	-webkit-transform: rotate(45deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-	transform: rotate(45deg); /* IE 10, Fx 16+, Op 12.1+ */
-	width: 2px;
-	z-index: 1;
-}
-
-.right-close {
-	background-color: black;
-	height: 25px;
-	-ms-transform: rotate(90deg); /* IE 9 */
-	-webkit-transform: rotate(90deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-	transform: rotate(90deg); /* IE 10, Fx 16+, Op 12.1+ */
-	width: 2px;
-	z-index: 2;
+.expand-tap-info {
+  height: 100%;
+  max-height: 480px;
 }
 
 // Characters Desktop
@@ -183,7 +149,9 @@ span {
 	top: 200px;
 }
 
-.exit {
+.close-details {
+  cursor:pointer;
+  fill: #fff;
 	position: absolute;
 	right: 2%;
 	top: 2%;

@@ -12,7 +12,6 @@
 	display: block;
 	margin: 5% 0;
 	@media (min-width: 768px) {
-		/* High-end resolutions */
 		margin: 2% 4%;
 	}
 }
@@ -20,7 +19,6 @@
 .logo img {
 	display: none;
 	@media (min-width: 768px) {
-		/* High-end resolutions */
 		display: inline-block;
 	}
 }
@@ -37,13 +35,13 @@
 // Estilos para el menu de Juegos
 
 .game-nav {
-	position: fixed;
+    display: none;
 	& a {
 	    @include font-size(16);
 	    font-family: $text-serif;
 	}
-	@media only screen and (max-width: 1279px) {
-	  	/* High-end resolutions */
+	@media only screen and (min-width: 768px) and (max-width: 1280px) {
+        position: fixed;
 		background-color: #FFF;
 		display: block;
 		left: 0;
@@ -52,8 +50,9 @@
 		width: 100%;
 		z-index: 2;
   	}
-  	@media only screen and (max-width: 640px) {
-		display: none;
+  	@media only screen and (min-width: 1280px) {
+        display: block;
+		position: fixed;
   	}
 }
 
@@ -77,7 +76,6 @@
 	float: right;
 	margin: 4% 22%;
 	@media(min-width: 768px){
-		/* High-end resolutions */
 		margin: 2% 4%;
 	}
 }
@@ -87,7 +85,6 @@
 	position: absolute;
 	z-index: 1;
 	@media(min-width: 768px){
-		/* High-end resolutions */
 		position: inherit;
 	}
 }
@@ -112,7 +109,6 @@
 	-webkit-transition: all 1s;
 	transition: all 1s;
 	@media(min-width: 768px){
-		/* High-end resolutions */
 		display:inline-block;
 		position: inherit;
 	}
@@ -142,14 +138,13 @@
 	}
 }
 
-.button-close {
-	@include font-size(10);
-    background: #fff;
+.close-lang {
     border: 3px solid #515151;
+    cursor: pointer;
     position: absolute;
-    padding: 8px 15px;
+    padding: 2px 5px;
+    fill: #000;
     @media(min-width: 768px) {
-    	/* High-end resolutions */
         display: none;
     }
 }
