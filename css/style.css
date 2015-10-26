@@ -602,7 +602,7 @@ section {
   cursor: pointer;
   position: absolute;
   padding: 2px 5px;
-  fill: #000; }
+  stroke: #000; }
   @media (min-width: 768px) {
     .close-lang {
       display: none; } }
@@ -808,7 +808,7 @@ header p {
   background-position: 20px 25px; }
 
 .close-tap {
-  fill: #000;
+  stroke: #000;
   margin: 5% 0;
   float: right; }
 
@@ -836,8 +836,9 @@ header p {
   margin: 0 auto;
   overflow: hidden;
   width: 900px; }
-  .characters-wrapper .hidden {
-    display: none; }
+
+.hidden {
+  display: none; }
 
 .main-char-nav {
   background-image: url("../img/characters/family-photo.png");
@@ -899,7 +900,7 @@ header p {
 
 .close-details {
   cursor: pointer;
-  fill: #fff;
+  stroke: #fff;
   position: absolute;
   right: 2%;
   top: 2%;
@@ -1077,7 +1078,7 @@ header p {
 
   .modal {
     background-color: rgba(0, 0, 0, 0.8);
-    display: none;
+    display: block;
     height: 100%;
     left: 0;
     position: fixed;
@@ -1086,20 +1087,24 @@ header p {
     width: 100%;
     z-index: 999; }
     .modal .exit {
+      cursor: pointer;
       position: absolute;
       right: 2%;
       top: 5%;
-      width: 40px; }
+      width: 40px;
+      stroke: #fff; }
     .modal .full-picture {
       height: 80%;
       margin: 5% auto;
       max-width: 80%;
       text-align: center; }
     .modal .next {
+      cursor: pointer;
       position: absolute;
       right: 2%;
       top: 50%; }
     .modal .previous {
+      cursor: pointer;
       left: 2%;
       position: absolute;
       top: 50%; } }
