@@ -121,15 +121,14 @@ function largerViewports() {
     //GALLERY ***********************************************************************
     galleryBtn.on("click", function() {
         var number = this.id;
-        var full_image = '';
-        $('.modal').css("display", "block");
-
+        
         for (var i = 0; i < galleryData.length; i++) {
             if (number == galleryData[i].number) {
-                full_image = "<img src='img/icons/previous.png' class='previous' id='previous'><img id='full-picture' class='full-picture' src='" + galleryData[i].img + "'><img src='img/icons/close.png' class='exit' id='closePopUp'></div><img class='next' src='img/icons/next.png' id='next'>";
+              $('#full-picture').attr("src", galleryData[i].img);
             }
         }
-        $('#show-fullimage').html(full_image);
+
+        $('#show-fullimage').removeClass('hidden').addClass('modal');
 
         $("#previous").on("click", function() {
             index--;
@@ -148,7 +147,7 @@ function largerViewports() {
         });
 
         $("#closePopUp").on("click", function() {
-            $('.modal').css("display", "none");
+            $('#show-fullimage').removeClass('modal').addClass('hidden');
         });
     });
 }
