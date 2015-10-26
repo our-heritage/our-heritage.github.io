@@ -1,5 +1,24 @@
+// Principal navigation
+
+.logo img {
+	display: none;
+	@media (min-width: 768px) {
+		display: inline-block;
+	}
+}
+
 .logo {
 	float: left;
+}
+
+.main-nav li {
+	@include font-size(12);
+	display: inline-block;
+	line-height: 89px;
+	margin-left: 15px;
+	a {
+		display: inline-block;
+	}
 }
 
 .main-nav ul {
@@ -16,44 +35,28 @@
 	}
 }
 
-.logo img {
-	display: none;
-	@media (min-width: 768px) {
-		display: inline-block;
-	}
-}
-.main-nav li {
-	@include font-size(12);
-	display: inline-block;
-	margin-left: 15px;
-	line-height: 89px;
-	a {
-		display: inline-block;
-	}
-}
-
-// Estilos para el menu de Juegos
+// Game navigation
 
 .game-nav {
-    display: none;
+	display: none;
 	& a {
-	    @include font-size(16);
-	    font-family: $text-serif;
+		@include font-size(16);
+		font-family: $text-serif;
 	}
 	@media only screen and (min-width: 768px) and (max-width: 1280px) {
-    position: fixed;
 		background-color: #FFF;
 		display: block;
 		left: 0;
 		margin-top: 130px;
+		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 2;
-  	}
-  	@media only screen and (min-width: 1280px) {
-        display: block;
+	}
+	@media only screen and (min-width: 1280px) {
+		display: block;
 		position: fixed;
-  	}
+	}
 }
 
 .list-game {
@@ -64,18 +67,18 @@
 	margin: 20px 40px;
 	@media (min-width: 768px) {
 		display: inline-block;
-  	}
-  	@media (min-width: 1280px) {
+	}
+	@media (min-width: 1280px) {
 		display: block;
-  	}
+	}
 }
 
-// Estilos para el menu de idiomas
+// Languages navigation
 
 .content-lang {
 	float: right;
 	margin: 4% 22%;
-	@media(min-width: 768px){
+	@media(min-width: 768px) {
 		margin: 2% 4%;
 	}
 }
@@ -84,7 +87,7 @@
 	list-style: none;
 	position: absolute;
 	z-index: 1;
-	@media(min-width: 768px){
+	@media(min-width: 768px) {
 		position: inherit;
 	}
 }
@@ -118,7 +121,7 @@
 	-ms-transform: rotate(10deg); /* IE 9 */
 	-webkit-transform: rotate(10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
 	transform: rotate(10deg); /* IE 10, Fx 16+, Op 12.1+ */
-	@media(min-width: 768px){
+	@media(min-width: 768px) {
 		/* High-end resolutions */
 		-ms-transform: rotate(0deg); /* IE 9 */
 		-webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
@@ -139,14 +142,14 @@
 }
 
 .close-lang {
-    border: 3px solid #515151;
-    cursor: pointer;
-    position: absolute;
-    padding: 2px 5px;
-    stroke: #000;
-    @media(min-width: 768px) {
-        display: none;
-    }
+	border: 3px solid #515151;
+	cursor: pointer;
+	position: absolute;
+	padding: 2px 5px;
+	stroke: #000;
+	@media(min-width: 768px) {
+		display: none;
+	}
 }
 
 .position0 {
@@ -166,7 +169,7 @@
 	-ms-transform: rotate(-10deg); /* IE 9 */
 	-webkit-transform: rotate(-10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
 	transform: rotate(-10deg); /* IE 10, Fx 16+, Op 12.1+ */
-	@media(min-width:768px){
+	@media(min-width:768px) {
 		/* High-end resolutions */
 		-ms-transform: rotate(0deg); /* IE 9 */
 		-webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */

@@ -462,8 +462,23 @@ section {
     margin-left: 200px;
     width: 85%; } }
 
+.logo img {
+  display: none; }
+  @media (min-width: 768px) {
+    .logo img {
+      display: inline-block; } }
+
 .logo {
   float: left; }
+
+.main-nav li {
+  font-size: 12px;
+  font-size: 1.2rem;
+  display: inline-block;
+  line-height: 89px;
+  margin-left: 15px; }
+  .main-nav li a {
+    display: inline-block; }
 
 @media (min-width: 768px) {
   .main-nav ul {
@@ -476,21 +491,6 @@ section {
     .main-nav {
       margin: 2% 4%; } }
 
-.logo img {
-  display: none; }
-  @media (min-width: 768px) {
-    .logo img {
-      display: inline-block; } }
-
-.main-nav li {
-  font-size: 12px;
-  font-size: 1.2rem;
-  display: inline-block;
-  margin-left: 15px;
-  line-height: 89px; }
-  .main-nav li a {
-    display: inline-block; }
-
 .game-nav {
   display: none; }
   .game-nav a {
@@ -499,11 +499,11 @@ section {
     font-family: "Finger Paint", serif; }
   @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .game-nav {
-      position: fixed;
       background-color: #FFF;
       display: block;
       left: 0;
       margin-top: 130px;
+      position: fixed;
       top: 0;
       width: 100%;
       z-index: 2; } }
@@ -684,8 +684,8 @@ header p {
   @media (min-width: 768px) {
     .about li {
       height: 290px;
-      max-width: 1100px;
-      margin: 50px 0; } }
+      margin: 50px 0;
+      max-width: 1100px; } }
 
 .about {
   margin: 0 auto;
@@ -703,9 +703,12 @@ header p {
       width: 1024px; } }
 
 .about-content h3 {
-  padding: 16px;
+  padding: 16px 0;
   position: relative;
   z-index: 3; }
+  @media (min-width: 1100px) {
+    .about-content h3 {
+      padding-bottom: 16px; } }
 
 .about-content p {
   font-size: 9px;
@@ -726,6 +729,9 @@ header p {
   max-width: 480px;
   position: absolute;
   top: 0; }
+  @media only screen and (max-width: 768px) {
+    .about-content {
+      padding: 0 16px 16px 16px; } }
   @media (min-width: 768px) {
     .about-content {
       position: inherit; } }
@@ -766,8 +772,8 @@ header p {
   background-color: #fff2de;
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
   margin: 50px auto;
-  width: 85%;
-  padding: 3%; }
+  padding: 3%;
+  width: 85%; }
   @media (min-width: 768px) {
     .section-history {
       /* High-end resolutions */
@@ -784,9 +790,9 @@ header p {
   .taps-character h3 {
     cursor: pointer;
     font-family: "Finger Paint", serif;
-    text-align: right;
+    margin-right: 4%;
     padding-bottom: 100px;
-    margin-right: 4%; }
+    text-align: right; }
   @media (min-width: 768px) {
     .taps-character {
       display: none; } }
@@ -794,6 +800,10 @@ header p {
 .tap-amy {
   background: url(../img/characters/head-amy.png) no-repeat;
   background-position: 20px 53px; }
+
+.tap-dad {
+  background: url(../img/characters/head-dad.png) no-repeat;
+  background-position: 20px 25px; }
 
 .tap-grandpa {
   background: url(../img/characters/head-grandpa.png) no-repeat;
@@ -803,14 +813,10 @@ header p {
   background: url(../img/characters/head-mom.png) no-repeat;
   background-position: 20px 53px; }
 
-.tap-dad {
-  background: url(../img/characters/head-dad.png) no-repeat;
-  background-position: 20px 25px; }
-
 .close-tap {
-  stroke: #000;
+  float: right;
   margin: 5% 0;
-  float: right; }
+  stroke: #000; }
 
 .tap-info {
   background: #fff;
@@ -830,12 +836,48 @@ header p {
   height: 100%;
   max-height: 480px; }
 
+.character {
+  background-color: inherit;
+  border: none;
+  height: 450px;
+  margin-left: 20px;
+  padding: 0 2%;
+  width: 19%; }
+
 .characters-wrapper {
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
   height: 540px;
   margin: 0 auto;
   overflow: hidden;
   width: 900px; }
+
+.char-details {
+  background-color: #D7AE83;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
+  margin-top: -540px;
+  overflow: hidden;
+  position: absolute;
+  width: 900px;
+  z-index: 2; }
+
+.char-details .char-nav {
+  text-align: center; }
+
+.char-nav {
+  margin: 0 auto;
+  padding: 2% 0; }
+
+.char-nav-character {
+  margin: 0 5%; }
+
+.details img {
+  float: left;
+  margin: 0 8%; }
+
+.details {
+  height: 515px;
+  overflow: hidden;
+  padding: 5% 8% 0 8%; }
 
 .hidden {
   display: none; }
@@ -846,52 +888,21 @@ header p {
   width: 900px;
   z-index: 1; }
 
-.char-details {
-  background-color: #D7AE83;
-  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
-  margin-top: -695px;
-  overflow: hidden;
-  position: absolute;
-  width: 900px;
-  z-index: 2; }
-
-.char-nav {
-  margin: 0 auto;
-  padding: 2% 0;
-  text-align: left; }
-
-.char-details .char-nav {
-  text-align: center; }
-
-.char-nav-character {
-  margin: 0 5%; }
-
-.character {
-  background-color: inherit;
-  border: none;
-  height: 450px;
-  margin-left: 20px;
-  padding: 0 2%;
-  width: 19%; }
+.section-character {
+  display: none; }
+  @media (min-width: 768px) {
+    .section-character {
+      display: inherit; } }
 
 .controls img {
   border-radius: 50%;
   height: 40px;
   width: 40px; }
 
-.details img {
-  float: left;
-  margin: 0 8%; }
-
 .controls {
   overflow: hidden;
   position: absolute;
   width: 100%; }
-
-.details {
-  height: 518px;
-  overflow: hidden;
-  padding: 5% 8% 0 8%; }
 
 .back {
   left: 0;
@@ -900,9 +911,9 @@ header p {
 
 .close-details {
   cursor: pointer;
-  stroke: #fff;
   position: absolute;
   right: 2%;
+  stroke: #fff;
   top: 2%;
   width: 40px; }
 
@@ -910,12 +921,6 @@ header p {
   position: absolute;
   right: 0;
   top: 200px; }
-
-.section-character {
-  display: none; }
-  @media (min-width: 768px) {
-    .section-character {
-      display: inherit; } }
 
 @media (min-width: 768px) {
   .section-gallery h2 {
@@ -1090,9 +1095,9 @@ header p {
       cursor: pointer;
       position: absolute;
       right: 2%;
+      stroke: #fff;
       top: 5%;
-      width: 40px;
-      stroke: #fff; }
+      width: 40px; }
     .modal .full-picture {
       height: 80%;
       margin: 5% auto;
@@ -1144,14 +1149,15 @@ header p {
         /* High-end resolutions */
         display: inline-block; } }
 
-.team-logo img,
-.spon-list img {
+.spon-list img,
+.team-logo img {
   width: 100%; }
 
 .team {
   overflow: hidden;
   margin: 0 auto;
-  max-width: 780px; }
+  max-width: 780px;
+  text-align: center; }
   @media (min-width: 1024px) {
     .team {
       /* High-end resolutions */
@@ -1168,24 +1174,25 @@ header p {
   font-size: 2rem;
   display: inline-block;
   text-align: center;
-  width: 64px;
-  padding-top: 28px; }
+  padding-top: 28px;
+  width: 64px; }
   @media (min-width: 1024px) {
     .team-and {
       /* High-end resolutions */
-      padding-top: 0;
       height: 95px;
+      padding-top: 0;
       vertical-align: bottom; } }
 
 .team-copy {
-  width: 500px;
   margin: 0 0 10px 22px;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: left;
+  width: 500px; }
 
 .team-logo {
-  width: 40%;
+  display: inline-block;
   max-width: 288px;
-  display: inline-block; }
+  width: 40%; }
   @media (min-width: 1024px) {
     .team-logo {
       /* High-end resolutions */
