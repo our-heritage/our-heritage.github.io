@@ -123,9 +123,9 @@ function largerViewports() {
 
     function detailsGenerator(position){
         var curr_id = char_containers[position].id;
-        var char_img = char_imgs_container[position].img;
+        var char_img = "<img src="+char_imgs_container[position].img+">";
         var char_text = $('#'+curr_id).html();
-        details.html( char_img +'<h2>'+ curr_id +'</h2>'+ char_text );
+        details.html( char_img +'<h3>'+ curr_id +'</h3>'+ char_text );
         displayer('show');
     }
 
