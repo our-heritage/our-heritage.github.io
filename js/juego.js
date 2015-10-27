@@ -8,13 +8,11 @@ var size_item = '';
 var title = '';
 var cont = 0;
 var num = 1;
+var current_char ="";
 
 //HTML Elements ***********************************************************************
 var target = $(".gallery-imgs");
 var galleryBtn = target.children("li");
-var character_btn = $('.character_btn');
-var overall_char_container = $('#char_details');
-var individual_details = $('#details');
 var tap_character = $('.taps-character h3');
 var close_tap = $('.close-tap');
 var close_nav_lang = $('.close-lang');
@@ -23,6 +21,11 @@ var list_lang = $("#list-lang");
 var item=$(".slider-content");
 var content_swipe = $("#gallery-container");
 var counter =  $("#counter");
+var char_btn = $('.char_btn');
+var overall_char_container = $('#char_details');
+var details = $('#details');
+var char_containers = $('.tap-info');
+
 
 //smaller viewports ***********************************************************************
 enquire.register('(max-width: 766px)', {
@@ -50,7 +53,7 @@ enquire.register('(min-width: 768px)', {
     unmatch: function() {
         console.log('unmatch larger');
         galleryBtn.off('click');
-        character_btn.off('click');
+        char_btn_btn.off('click');
     }
 });
 
@@ -62,7 +65,7 @@ function init() {
         dataType: 'json',
 
         success: function(data) {
-            charactersData = data.Characters;
+            char_imgs_container = data.Characters;
             galleryData = data.Gallery;
         },
 
@@ -85,45 +88,55 @@ function largerViewports() {
     return false;
   });
     //CHARACTERS ***********************************************************************
-    character_btn.on("click", function() {
-        char_id = $(this).attr('id');
-        position = char_id;
-        detailsGenerator(position);
+    char_btn.on("click", function() {
+        chosen = $(this).attr('value');
 
-        $("#left").on("click", function() {
-            char_id--;
-            if (char_id == -1) {
-                char_id = 3;
-            }
-            detailsGenerator(char_id);
-        });
+        for(var i = 0; i < char_containers.length; i++){
+            current_char = char_containers[i].id;
 
-        $("#right").on("click", function() {
-            char_id++;
-            if (char_id == 4) {
-                char_id = 0;
-            }
-            detailsGenerator(char_id);
-        });
-
-        $('.close-details').on("click", function() {
-            displayer('hide');
-        });
-
-        function detailsGenerator(position) {
-            var content = "<img src=" + charactersData[position].img + "> <h2>" + charactersData[position].name + "</h2><p>" + charactersData[position].history + "</p>";
-            individual_details.html(content);
-            displayer('show');
-        }
-
-        function displayer(option) {
-            if (option == 'show') {
-                overall_char_container.removeClass('hidden');
-            } else {
-                overall_char_container.addClass('hidden');
+            if (chosen == current_char) {
+                position = i;
+                detailsGenerator(i);
             }
         }
     });
+
+    $(".left").on("click", function() {
+        position --;
+        if(position == -1){
+            position = 3 ;
+        }
+        detailsGenerator(position);
+    });
+
+    $(".right").on("click", function() {
+        position++;
+        if (position == 4) {
+            position = 0;
+        }
+        detailsGenerator(position);
+    });
+
+    $('#hide').on("click",function(){
+        displayer('hide');
+    });
+
+    function detailsGenerator(position){
+        var curr_id = char_containers[position].id;
+        var char_img = char_imgs_container[position].img;
+        var char_text = $('#'+curr_id).html();
+        details.html( char_img +'<h2>'+ curr_id +'</h2>'+ char_text );
+        displayer('show');
+    }
+
+    function displayer(option) {
+        if (option == 'show') {
+            overall_char_container.removeClass('hidden');
+        } else {
+            overall_char_container.addClass('hidden');
+        }
+    }
+
     //GALLERY ***********************************************************************
     galleryBtn.on("click", function() {
         var number = this.id;

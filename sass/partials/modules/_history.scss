@@ -1,22 +1,26 @@
+// Estilos de Historia
+
 .content-history {
 	margin: 20px auto;
 	max-width: 600px;
 }
 
+//History
+
 .section-history h2 {
-	padding-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .section-history {
-	background-color: rgb(255, 242, 222);
-	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+  background-color: rgb(255, 242, 222);
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
 	margin: 50px auto;
-	padding: 3%;
-	width: 85%;
-	@media (min-width: 768px) {
-		/* High-end resolutions */
-		min-width: 590px;
-		padding: 4%;
-		width: 46%;
-	}
+  width: 85%;
+  padding: 3%;
+  @media (min-width: 768px) {
+    /* High-end resolutions */
+    min-width: 590px;
+    padding: 4%;
+    width: 46%;
+  }
 }

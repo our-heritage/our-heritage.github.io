@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Our Heritage</title>
 </head>
 <body class="background-juego">
@@ -20,36 +20,36 @@
             <li class="list-lang-item"><a href="de.html">DE</a></li>
         </ul>
     </div>
-			<nav class="main-nav">
+      <nav class="main-nav">
       <a class="logo" href="#"><img src="img/logo.png"></a>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="juego.html">Juego</a></li>
       </ul>
     </nav>
-	</header>
-	<nav class="game-nav game-nav-tablet">
-		<ul class="list-game">
-			<li class="list-game-item"><a href="#history">Historia</a></li>
-			<li class="list-game-item"><a href="#characters_desktop">Personajes</a></li>
-			<li class="list-game-item"><a href="#gallery">Galería</a></li>
-		</ul>
-	</nav>
-	<div class="game-wrapper">
-		<section class="section-history" id="history">
-			<h2 class="title-history">Una búsqueda entre recuerdos</h2>
-			<p>Amy es una niña que vive con sus padres y abuelo en un edificio de apartamentos en el año 2050. A ella le gusta mucho explorar y conocer nuevos lugares, le interesa saber más sobre el pasado y los lugares que su familia visitó.</p>
-			<p>Para completar su "misión" de hacer un collage para su clase de arte, deberá recolectar fotografías sobre diferentes sitios.</p>
-			<p>Sin embargo, el cambio climático ha afectado drásticamente, tanto al mundo natural como a los seres humanos, por lo que las restricciones para salir al exterior y los toques de queda la frustran mucho.</p>
-			<p>Descubre los diferentes eventos que involucran la familia de Amy y como cada uno representa una manera distinta de pensar sobre el cambio climático.</p>
-			<p>¿Qué planeta le estamos heredando a nuestras futuras generaciones?</p>
-		</section>
+  </header>
+  <nav class="game-nav game-nav-tablet">
+    <ul class="list-game">
+      <li class="list-game-item"><a href="#history">Historia</a></li>
+      <li class="list-game-item"><a href="#characters_desktop">Personajes</a></li>
+      <li class="list-game-item"><a href="#gallery">Galería</a></li>
+    </ul>
+  </nav>
+  <div class="game-wrapper">
+    <section class="section-history" id="history">
+      <h2 class="title-history">Una búsqueda entre recuerdos</h2>
+      <p>Amy es una niña que vive con sus padres y abuelo en un edificio de apartamentos en el año 2050. A ella le gusta mucho explorar y conocer nuevos lugares, le interesa saber más sobre el pasado y los lugares que su familia visitó.</p>
+      <p>Para completar su "misión" de hacer un collage para su clase de arte, deberá recolectar fotografías sobre diferentes sitios.</p>
+      <p>Sin embargo, el cambio climático ha afectado drásticamente, tanto al mundo natural como a los seres humanos, por lo que las restricciones para salir al exterior y los toques de queda la frustran mucho.</p>
+      <p>Descubre los diferentes eventos que involucran la familia de Amy y como cada uno representa una manera distinta de pensar sobre el cambio climático.</p>
+      <p>¿Qué planeta le estamos heredando a nuestras futuras generaciones?</p>
+    </section>
 
     <ul class="taps-character">
       <h2>Personajes</h2>
       <li>
         <h3 class="tap-amy">Amy</h3>
-        <div class="tap-info">
+        <div class="tap-info" id="amy">
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
             <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
@@ -60,7 +60,7 @@
       </li>
       <li>
         <h3 class="tap-grandpa">Gramps</h3>
-        <div class="tap-info">
+        <div class="tap-info" id="gramps">
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
             <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
@@ -72,7 +72,7 @@
       </li>
       <li>
         <h3 class="tap-mom">Mom</h3>
-        <div class="tap-info">
+        <div class="tap-info" id="mom">
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
             <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
@@ -83,7 +83,7 @@
       </li>
       <li>
         <h3 class="tap-dad">Dad</h3>
-        <div class="tap-info">
+        <div class="tap-info" id="dad">
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
             <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
@@ -94,57 +94,48 @@
       </li>
     </ul>
 
-		<section class="section-character" id="characters_desktop">
-      <div class="characters-wrapper">
-        <nav class="main-char-nav char-nav">
-          <button  class="character character_btn" id="0"> <!-- Ingresar llamado de funcion -->
-          </button>
-
-          <button  class="character character_btn" id="1"> <!-- Ingresar llamado de funcion -->
-          </button>
-
-          <button  class="character character_btn" id="3"> <!-- Ingresar llamado de funcion -->
-          </button>
-
-          <button  class="character character_btn" id="2"> <!-- Ingresar llamado de funcion -->
-          </button>
-        </nav>
-
-        <div class="char-details hidden" id="char_details">
-          <div class="details" id="details"></div>
-          <svg class="close-details" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+    <section class="section-character">
+    <div class="characters-wrapper">
+        <div class="main-char-selection char-selection">
+          <button class="char_btn" value="amy"></button>
+          <button class="char_btn" value="mom"></button>
+          <button class="char_btn" value="dad"></button>
+          <button class="char_btn" value="gramps"></button>
+        </div>
+      <div class="char-details hidden" id="char_details">
+          <svg id="hide" class="close-details" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
             <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
           </svg>
-          <a href="#char_details" class="back" id='left'><img src="img/icons/previous.png"></a>
-          <a href="#char_details" class="foward" id='right'><img src="img/icons/next.png"></a>
-          <nav class="char-nav">
-            <button class="character_btn char-nav-character" id="0"> <!-- Ingresar llamado de funcion -->
-              <img src="img/characters/head-amy.png" >
-              <h2>Amy</h2>
-            </button>
+          <img class="back left" src="img/icons/previous.png"></a>
+          <img class="foward right" src="img/icons/next.png"></a>
 
-            <button class="character_btn char-nav-character" id="1"> <!-- Ingresar llamado de funcion -->
-              <img src="img/characters/head-mom.png" >
-              <h2>Mom</h2>
-            </button>
+        <div class="details" id="details">
+        </div>
 
-            <button class="character_btn char-nav-character" id="2"> <!-- Ingresar llamado de funcion -->
-              <img src="img/characters/head-dad.png" >
-              <h2>Dad</h2>
-            </button>
-
-            <button class="character_btn char-nav-character" id="3"> <!-- Ingresar llamado de funcion -->
-              <img src="img/characters/head-grandpa.png" >
-              <h2>Gramps</h2>
-            </button>
-          </nav>
+        <div class="char-selection">
+          <button class="char_btn preview-char" value="amy">
+            <img src="img/characters/head-amy.png" >
+            <h2>Amy</h2>
+          <button class="char_btn preview-char" value="mom">
+            <img src="img/characters/head-mom.png" >
+            <h2>Mom</h2>
+          </button>
+          <button class="char_btn preview-char" value="dad">
+            <img src="img/characters/head-dad.png" >
+            <h2>Dad</h2>
+          </button>
+          <button class="char_btn preview-char" value="gramps">
+            <img src="img/characters/head-grandpa.png" >
+            <h2>Gramps</h2>
+          </button>
         </div>
       </div>
     </section>
-		<section class="section-gallery" id="gallery">
+
+    <section class="section-gallery" id="gallery">
       <h2>Galería</h2>
-			<div id="gallery-container" class="gallery-container">
+      <div id="gallery-container" class="gallery-container">
         <ul id="slider" class="gallery-imgs">
           <li class="slider-content first pic-1" id="1">
             <img src="img/gallery/1.jpg" class="slider-image">
@@ -176,7 +167,7 @@
         </ul>
       </div>
       <div id="counter" class="content-counter"></div>
-			<div id="show-fullimage" class="hidden">
+      <div id="show-fullimage" class="hidden">
         <img src="img/icons/previous.png" class="previous" id="previous">
         <img id="full-picture" class="full-picture" src="">
         <svg class="close-details" id="closePopUp" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
@@ -185,7 +176,7 @@
         </svg>
         <img class="next" src="img/icons/next.png" id="next">
       </div>
-		</section>
+    </section>
   </div>
   <footer>
     <p>Juega y descubre la experiencia climática del 2050</p>

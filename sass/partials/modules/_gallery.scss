@@ -173,14 +173,14 @@
 		top: 0;
 		width: 100%;
 		z-index: 999;
-
+    
 		.exit {
-			cursor: pointer;
+      cursor: pointer;
 			position: absolute;
 			right: 2%;
-			stroke: #fff;
 			top: 5%;
 			width: 40px;
+      stroke: #fff;
 		}
 
 		.full-picture {
@@ -191,14 +191,14 @@
 		}
 
 		.next {
-			cursor: pointer;
+      cursor: pointer;
 			position: absolute;
 			right: 2%;
 			top: 50%;
 		}
 
 		.previous {
-			cursor: pointer;
+      cursor: pointer;
 			left: 2%;
 			position: absolute;
 			top: 50%;
