@@ -4,6 +4,10 @@ var index = 0;
 var position = 0;
 var galleryData = '';
 var charactersData = '';
+var size_item = '';
+var title = '';
+var cont = 0;
+var num = 1;
 
 //HTML Elements ***********************************************************************
 var target = $(".gallery-imgs");
@@ -16,7 +20,9 @@ var close_tap = $('.close-tap');
 var close_nav_lang = $('.close-lang');
 var list_lang_item = $(".list-lang-item");
 var list_lang = $("#list-lang");
-
+var item=$(".slider-content");
+var content_swipe = $("#gallery-container");
+var counter =  $("#counter");
 
 //smaller viewports ***********************************************************************
 enquire.register('(max-width: 766px)', {
@@ -190,4 +196,41 @@ function smallerViewports() {
       list_lang_item.addClass("list-lang-item")
     };
   });
+
+// Gallery /////////////////////////////////////////////////////////////////////////////////
+
+size_item=item.length-1;
+title = "1/"+item.length;
+  content_swipe.on("swiperight",function(){
+    if(cont == 0){
+        $('.first').removeClass("first");
+        $(".slider-content:last").addClass("first");
+        title=(item.length)+'/'+item.length;
+        num=item.length;
+        cont=size_item;
+    }else{
+        $(".first").removeClass("first").prev(".slider-content").addClass("first");
+        title=(num-1)+'/'+item.length;
+        num=num-1;
+        cont=cont-1;
+    }
+    $(".title").text(title); 
+  });
+  content_swipe.on("swipeleft",function(){
+    if(cont==size_item){
+        $('.first').removeClass("first");
+        $(".slider-content:first").addClass("first");
+        title='1/'+item.length;
+        num=1;
+        cont=0;
+    }else{
+        $(".first").removeClass("first").next(".slider-content").addClass("first");
+        title=(num+1)+'/'+item.length;
+        num=num+1;
+        cont=cont+1;
+    }
+    $(".title").text(title); 
+  });
+  counter.append('<p class="title">'+title+'</p>');
+
 }
