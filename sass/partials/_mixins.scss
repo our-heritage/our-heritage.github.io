@@ -11,3 +11,18 @@
 		}
 	}
 }
+
+@mixin team-color-scheme($color) {
+	background-color: $color;
+    .team-member {
+        background-color: darken($color, 10%);
+    }
+	
+	.team-member-information {
+		background: $color;
+	}
+
+    .team-member-information a {
+        color: lighten($color, 20%);
+    }
+}

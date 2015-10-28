@@ -81,7 +81,7 @@ function largerViewports() {
 
   // nav-scroll ///////////////////////////////////////////////////////////////////////////////////
 
-  $('.game-nav a').click(function(){  
+  $('.game-nav a').click(function(){
     $('html, body').stop().animate({
       scrollTop: $( $(this).attr('href') ).offset().top - -10
     }, 800);
@@ -140,7 +140,7 @@ function largerViewports() {
     //GALLERY ***********************************************************************
     galleryBtn.on("click", function() {
         var number = this.id;
-        
+
         for (var i = 0; i < galleryData.length; i++) {
             if (number == galleryData[i].number) {
               $('#full-picture').attr("src", galleryData[i].img);
@@ -227,7 +227,7 @@ title = "1/"+item.length;
         num=num-1;
         cont=cont-1;
     }
-    $(".title").text(title); 
+    $(".title").text(title);
   });
   content_swipe.on("swipeleft",function(){
     if(cont==size_item){
@@ -242,7 +242,7 @@ title = "1/"+item.length;
         num=num+1;
         cont=cont+1;
     }
-    $(".title").text(title); 
+    $(".title").text(title);
   });
   counter.append('<p class="title">'+title+'</p>');
 
