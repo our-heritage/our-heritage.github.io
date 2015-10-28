@@ -11,8 +11,10 @@
 
 // Parciales base
 @import "partials/variables";
+@import "partials/mixins";
 @import "partials/base";
 @import "partials/layout";
+
 
 // Módulos
 @import "partials/modules/nav";
@@ -21,4 +23,5 @@
 @import "partials/modules/history";
 @import "partials/modules/characters";
 @import "partials/modules/gallery";
+@import "partials/modules/thanks";
 @import "partials/modules/team";

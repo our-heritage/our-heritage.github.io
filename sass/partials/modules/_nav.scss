@@ -186,3 +186,119 @@
 	background: #515151;
 	z-index: 3000;
 }
+
+/* Nav Creditos */
+
+.show-menu {
+	@include font-size(14);
+	background: none;
+	border: 1px solid $text-color;
+	color: $text-color;
+	font-family: $text-font;
+	margin: 20px 0;
+	padding: 10px 20px;
+
+	@media screen and (min-width: 1000px) {
+		display: none;
+	}
+
+	&:after {
+		content: url(../img/arrow-down.png);
+    	float: right;
+    	margin-left: 10px;
+	}
+}
+
+.header-nav {
+	background-color: $nav-back-color;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  z-index: 3;
+}
+
+.header-nav-content {
+	background-color: $nav-back-color;
+	background-size: cover;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    transition: height .5s linear;
+    -webkit-transition: height .5s linear;
+    -moz-transition: height .5s linear;
+    -ms-transition: height .5s linear;
+    -o-transition: height .5s linear;
+    width: 100%;
+
+    @media screen and (min-width: 1000px){
+		float: left;
+		height: 75px;
+    }
+}
+
+.expanded {
+	height: 270px
+}
+
+.header-nav-item {
+	border-bottom: 1px solid #f2f2f2;
+	padding: 10px 0;
+	width: 100%;
+
+	a {
+		@include font-size(18);
+		font-family: $text-font;
+
+		&:hover {
+			color: #f2f2f2;
+		}
+
+		@media screen and (min-width: 1000px) {
+			@include font-size(14);
+			display: block;
+			padding: 24px 0 13px;
+			height: 50%;
+			width: 100%;
+		}
+	}
+
+	@media screen and (min-width: 1000px) {
+		border: none;
+		float: left;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		width: 16.666%;
+	}
+}
+
+// Colores para los elementos de la navegación //
+.web-item {
+	@include nav-items-colors ($web-color);
+}
+
+.post-item {
+	@include nav-items-colors ($post-prod-color);
+}
+
+.anim-item {
+	@include nav-items-colors ($anim-color);
+}
+
+.admin-item {
+	@include nav-items-colors ($admin-color);
+}
+
+.collab-item {
+	@include nav-items-colors ($collab-color);
+}
+
+.fair-item {
+	@include nav-items-colors ($fair-color);
+}

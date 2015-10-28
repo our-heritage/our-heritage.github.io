@@ -1,12 +1,8 @@
 // Estilos para los elementos base y footer
 
-@mixin font-size($size) {
-	font-size: $size + px;
-	font-size: ($size / 10) + rem;
-}
-
 html {
 	box-sizing: border-box;
+	font-size: 10px;
 }
 
 * {
@@ -96,6 +92,11 @@ section {
 
 .background-juego {
 	background-image: url(../img/desktop-background.jpg);
+}
+
+.header-background {
+	background: url(../img/header.png) no-repeat center center;
+	background-size: contain;
 }
 
 .mobil-game-wrapper{
