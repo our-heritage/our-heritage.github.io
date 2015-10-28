@@ -62,7 +62,7 @@
     }
 
     .team-member-information {
-        bottom: 40%;
+        bottom: 0%;
         color: #fff;
         height: 100%;
         left: 0;
@@ -70,21 +70,21 @@
         position: absolute;
         right: 0;
         top: 0;
-        transform: translateY(122%);
+        transform: translateY(80%);
         transition: transform .35s ease-out;
         z-index: 2;
 
         h3 {
-            @include font-size(18);
+            @include font-size(16);
             display: block;
             font-family: $title-font;
-            padding: 5% 2% 12%;
+            padding: 0 0 10%;
             width: 100%;
         }
 
         p {
             box-sizing: border;
-            padding: 5% 2% 12%;
+            padding: 0 2% 8%;
             width: 80%;
         }
 
@@ -92,7 +92,8 @@
             @include font-size(14);
             display: block;
             font-family: $title-font;
-            padding: 5% 2% 12%;
+            padding: 0 2% 10%;
+            text-decoration: underline;
             width: 100%;
         }
     }
