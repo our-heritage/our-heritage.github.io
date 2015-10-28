@@ -1351,7 +1351,6 @@ header p {
       width: inherit; } }
 
 .team-section-wrapper {
-  margin: 0;
   width: 100%; }
   .team-section-wrapper h2 {
     font-size: 24px;
@@ -1405,14 +1404,15 @@ header p {
   .team-member:hover .team-member-information {
     transform: translateY(0); }
   .team-member .team-member-information {
-    bottom: 50%;
+    bottom: 40%;
     color: #fff;
+    height: 100%;
     left: 0;
     padding: 10px;
     position: absolute;
     right: 0;
     top: 0;
-    transform: translateY(100%);
+    transform: translateY(122%);
     transition: transform .35s ease-out;
     z-index: 2; }
     .team-member .team-member-information h3 {
@@ -1420,49 +1420,73 @@ header p {
       font-size: 1.8rem;
       display: block;
       font-family: "Finger Paint";
-      padding: 0 10%;
-      width: 80%; }
+      padding: 5% 2% 12%;
+      width: 100%; }
     .team-member .team-member-information p {
       box-sizing: border;
-      padding: 0 10%;
+      padding: 5% 2% 12%;
       width: 80%; }
     .team-member .team-member-information a {
-      color: white;
+      font-size: 14px;
+      font-size: 1.4rem;
       display: block;
       font-family: "Finger Paint";
-      padding: 0 0 0 10%;
+      padding: 5% 2% 12%;
       width: 100%; }
 
 .team-web-development {
   background-color: #C94F60; }
   .team-web-development .team-member {
     background-color: #af3647; }
+  .team-web-development .team-member-information {
+    background: #C94F60; }
+  .team-web-development .team-member-information a {
+    color: #e19da7; }
 
 .team-production {
-  background-color: #50A03B;
-  color: #202020; }
+  background-color: #50A03B; }
   .team-production .team-member {
     background-color: #3d7b2d; }
+  .team-production .team-member-information {
+    background: #50A03B; }
+  .team-production .team-member-information a {
+    color: #87cc75; }
 
 .team-animation {
   background-color: #19886E; }
   .team-animation .team-member {
     background-color: #115d4b; }
+  .team-animation .team-member-information {
+    background: #19886E; }
+  .team-animation .team-member-information a {
+    color: #2ed9b1; }
 
 .team-administration {
   background-color: #F37C50; }
   .team-administration .team-member {
     background-color: #f05820; }
+  .team-administration .team-member-information {
+    background: #F37C50; }
+  .team-administration .team-member-information a {
+    color: #fac3af; }
 
 .team-collaborators {
   background-color: #2583B3; }
   .team-collaborators .team-member {
     background-color: #1c6489; }
+  .team-collaborators .team-member-information {
+    background: #2583B3; }
+  .team-collaborators .team-member-information a {
+    color: #60b3de; }
 
 .team-fair-play {
   background-color: #D7AE83; }
   .team-fair-play .team-member {
     background-color: #cb955c; }
+  .team-fair-play .team-member-information {
+    background: #D7AE83; }
+  .team-fair-play .team-member-information a {
+    color: #f0e0d0; }
 
 .visible {
   display: block; }

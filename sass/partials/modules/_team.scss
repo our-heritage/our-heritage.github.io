@@ -1,5 +1,4 @@
 .team-section-wrapper {
-    margin: 0;
     width: 100%;
 
     h2 {
@@ -63,14 +62,15 @@
     }
 
     .team-member-information {
-        bottom: 50%;
+        bottom: 40%;
         color: #fff;
+        height: 100%;
         left: 0;
         padding: 10px;
         position: absolute;
         right: 0;
         top: 0;
-        transform: translateY(100%);
+        transform: translateY(122%);
         transition: transform .35s ease-out;
         z-index: 2;
 
@@ -78,72 +78,48 @@
             @include font-size(18);
             display: block;
             font-family: $title-font;
-            padding: 0 10%;
-            width: 80%;
+            padding: 5% 2% 12%;
+            width: 100%;
         }
 
         p {
             box-sizing: border;
-            padding: 0 10%;
+            padding: 5% 2% 12%;
             width: 80%;
         }
 
         a {
-            color: white;
+            @include font-size(14);
             display: block;
             font-family: $title-font;
-            padding: 0 0 0 10% ;
+            padding: 5% 2% 12%;
             width: 100%;
         }
     }
 }
 
 .team-web-development {
-    background-color: $web-color;
-    .team-member {
-        background-color: darken($web-color, 10%);
-    }
+    @include team-color-scheme($web-color);
 }
 
 .team-production {
-    background-color: $post-prod-color;
-
-    color: $text-color-dark;
-    .team-member {
-        background-color: darken($post-prod-color, 10%);
-    }
+     @include team-color-scheme($post-prod-color);
 }
 
 .team-animation {
-    background-color: $anim-color;
-
-    .team-member {
-        background-color: darken($anim-color, 10%);
-    }
+    @include team-color-scheme($anim-color);
 }
 
 .team-administration {
-    background-color: $admin-color;
-
-    .team-member {
-        background-color: darken($admin-color, 10%);
-    }
+    @include team-color-scheme($admin-color);
 }
 
 .team-collaborators {
-    background-color: $collab-color;
-
-    .team-member {
-        background-color: darken($collab-color, 10%);
-    }
+    @include team-color-scheme($collab-color);
 }
 
 .team-fair-play {
-    background-color: $fair-color;
-
-    .team-member {
-        background-color: darken($fair-color, 10%);
-    }
+    @include team-color-scheme($fair-color);
 }
 
 .visible{
