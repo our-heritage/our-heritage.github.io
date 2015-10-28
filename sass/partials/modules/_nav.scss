@@ -32,28 +32,28 @@
 	}
 }
 
-// Estilos para el menu de Juegos
+// Game menu styles
 
 .game-nav {
-    display: none;
+	display: none;
 	& a {
-	    @include font-size(16);
-	    font-family: $text-serif;
+		@include font-size(16);
+		font-family: $text-serif;
 	}
 	@media only screen and (min-width: 768px) and (max-width: 1280px) {
-    position: fixed;
 		background-color: #FFF;
 		display: block;
 		left: 0;
 		margin-top: 130px;
+		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 2;
-  	}
-  	@media only screen and (min-width: 1280px) {
-        display: block;
+	}
+	@media only screen and (min-width: 1280px) {
+		display: block;
 		position: fixed;
-  	}
+	}
 }
 
 .list-game {
@@ -64,13 +64,13 @@
 	margin: 20px 40px;
 	@media (min-width: 768px) {
 		display: inline-block;
-  	}
-  	@media (min-width: 1280px) {
+	}
+	@media (min-width: 1280px) {
 		display: block;
-  	}
+	}
 }
 
-// Estilos para el menu de idiomas
+// Languages menu styles
 
 .content-lang {
 	float: right;
@@ -139,14 +139,14 @@
 }
 
 .close-lang {
-    border: 3px solid #515151;
-    cursor: pointer;
-    position: absolute;
-    padding: 2px 5px;
-    stroke: #000;
-    @media(min-width: 768px) {
-        display: none;
-    }
+	border: 3px solid #515151;
+	cursor: pointer;
+	position: absolute;
+	padding: 2px 5px;
+	stroke: #000;
+	@media(min-width: 768px) {
+		display: none;
+	}
 }
 
 .position0 {
@@ -187,7 +187,7 @@
 	z-index: 3000;
 }
 
-/* Nav Creditos */
+/* Credits navigation */
 
 .show-menu {
 	@include font-size(14);
@@ -197,15 +197,13 @@
 	font-family: $text-font;
 	margin: 20px 0;
 	padding: 10px 20px;
-
-	@media screen and (min-width: 1000px) {
-		display: none;
-	}
-
 	&:after {
 		content: url(../img/arrow-down.png);
-    	float: right;
-    	margin-left: 10px;
+		float: right;
+		margin-left: 10px;
+	}
+	@media screen and (min-width: 1000px) {
+		display: none;
 	}
 }
 
@@ -216,29 +214,28 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-  z-index: 3;
+	z-index: 3;
 }
 
 .header-nav-content {
 	background-color: $nav-back-color;
 	background-size: cover;
-    height: 0;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    transition: height .5s linear;
-    -webkit-transition: height .5s linear;
-    -moz-transition: height .5s linear;
-    -ms-transition: height .5s linear;
-    -o-transition: height .5s linear;
-    width: 100%;
-
-    @media screen and (min-width: 1000px){
+	height: 0;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	transition: height .5s linear;
+	-webkit-transition: height .5s linear;
+	-moz-transition: height .5s linear;
+	-ms-transition: height .5s linear;
+	-o-transition: height .5s linear;
+	width: 100%;
+	@media screen and (min-width: 1000px){
 		float: left;
 		height: 75px;
-    }
+	}
 }
 
 .expanded {
@@ -249,15 +246,12 @@
 	border-bottom: 1px solid #f2f2f2;
 	padding: 10px 0;
 	width: 100%;
-
 	a {
 		@include font-size(18);
 		font-family: $text-font;
-
 		&:hover {
 			color: #f2f2f2;
 		}
-
 		@media screen and (min-width: 1000px) {
 			@include font-size(14);
 			display: block;
@@ -266,7 +260,6 @@
 			width: 100%;
 		}
 	}
-
 	@media screen and (min-width: 1000px) {
 		border: none;
 		float: left;
@@ -278,7 +271,8 @@
 	}
 }
 
-// Colores para los elementos de la navegación //
+// Navigation items colors
+
 .web-item {
 	@include nav-items-colors ($web-color);
 }

@@ -1,152 +1,137 @@
 .team-section-wrapper {
-    margin: 0;
-    width: 100%;
-
-    h2 {
-        @include font-size(24);
-        margin: 0;
-        padding: 20px 0;
-        text-align: center;
-        width: 100%;
-    }
+	margin: 0;
+	width: 100%;
+	h2 {
+		@include font-size(24);
+		margin: 0;
+		padding: 20px 0;
+		text-align: center;
+		width: 100%;
+	}
 }
 
 .team-content {
-    display: none;
-    overflow: hidden;
-    padding: 5% auto;
-    width: 100%;
+	display: none;
+	overflow: hidden;
+	padding: 5% auto;
+	width: 100%;
 }
 
 .team-details {
-    overflow: hidden;
-    width: 100%;
-
-    h2 {
-        @include font-size($title-mob-size);
-        color: $text-color-light;
-        font-family: $title-font;
-        margin: auto 5%;
-        text-align: left;
-    }
-
-    p {
-        @include font-size(18);
-        color: $text-color-light;
-        line-height: 1.6em;
-        margin: 5%;
-        padding-bottom: 5%;
-        width: 90%;
-    }
+	overflow: hidden;
+	width: 100%;
+	h2 {
+		@include font-size($title-mob-size);
+		color: $text-color-light;
+		font-family: $title-font;
+		margin: auto 5%;
+		text-align: left;
+	}
+	p {
+		@include font-size(18);
+		color: $text-color-light;
+		line-height: 1.6em;
+		margin: 5%;
+		padding-bottom: 5%;
+		width: 90%;
+	}
 }
 
 .team-member {
-    @include font-size(15);
-    box-sizing: border-box;
-    color: $text-color-light;
-    display: inline-block;
-    float: left;
-    overflow: hidden;
-    position: relative;
-    width: 50%;
-    z-index: 1;
-
-    img{
-        display: block;
-        min-width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    &:hover .team-member-information {
-        transform: translateY(0);
-    }
-
-    .team-member-information {
-        bottom: 50%;
-        color: white;
-        left: 0;
-        padding: 10px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: translateY(100%);
-        transition: transform .35s ease-out;
-        z-index: 2;
-
-        h3 {
-            @include font-size(18);
-            display: block;
-            font-family: $title-font;
-            padding: 0 10%;
-            width: 80%;
-        }
-
-        p {
-            box-sizing: border;
-            padding: 0 10%;
-            width: 80%;
-        }
-
-        a {
-            color: white;
-            display: block;
-            font-family: $title-font;
-            padding: 0 0 0 10% ;
-            width: 100%;
-        }
-    }
+	@include font-size(15);
+	box-sizing: border-box;
+	color: $text-color-light;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 50%;
+	z-index: 1;
+	img{
+		display: block;
+		min-width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+	&:hover .team-member-information {
+		transform: translateY(0);
+	}
+	.team-member-information {
+		bottom: 50%;
+		color: white;
+		left: 0;
+		padding: 10px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translateY(100%);
+		transition: transform .35s ease-out;
+		z-index: 2;
+		h3 {
+			@include font-size(18);
+			display: block;
+			font-family: $title-font;
+			padding: 0 10%;
+			width: 80%;
+		}
+		p {
+			box-sizing: border;
+			padding: 0 10%;
+			width: 80%;
+		}
+		a {
+			color: white;
+			display: block;
+			font-family: $title-font;
+			padding: 0 0 0 10% ;
+			width: 100%;
+		}
+	}
 }
 
 .team-web-development {
-    background-color: $web-color;
-    .team-member {
-        background-color: darken($web-color, 10%);
-    }
+	background-color: $web-color;
+	.team-member {
+		background-color: darken($web-color, 10%);
+	}
 }
 
 .team-production {
-    background-color: $post-prod-color;
-
-    color: $text-color-dark;
-    .team-member {
-        background-color: darken($post-prod-color, 10%);
-    }
+	background-color: $post-prod-color;
+	color: $text-color-dark;
+	.team-member {
+		background-color: darken($post-prod-color, 10%);
+	}
 }
 
 .team-animation {
-    background-color: $anim-color;
-
-    .team-member {
-        background-color: darken($anim-color, 10%);
-    }
+	background-color: $anim-color;
+	.team-member {
+		background-color: darken($anim-color, 10%);
+	}
 }
 
 .team-administration {
-    background-color: $admin-color;
-
-    .team-member {
-        background-color: darken($admin-color, 10%);
-    }
+	background-color: $admin-color;
+	.team-member {
+		background-color: darken($admin-color, 10%);
+	}
 }
 
 .team-collaborators {
-    background-color: $collab-color;
-
-    .team-member {
-        background-color: darken($collab-color, 10%);
-    }
+	background-color: $collab-color;
+	.team-member {
+		background-color: darken($collab-color, 10%);
+	}
 }
 
 .team-fair-play {
-    background-color: $fair-color;
-
-    .team-member {
-        background-color: darken($fair-color, 10%);
-    }
+	background-color: $fair-color;
+	.team-member {
+		background-color: darken($fair-color, 10%);
+	}
 }
 
 .visible{
-    display: block;
+	display: block;
 }
-

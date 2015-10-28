@@ -1,94 +1,94 @@
 // Team
 
 .cetav {
-  float: right;
-  @media (min-width: 1024px) {
-    /* High-end resolutions */
-    float: inherit;
-  }
+	float: right;
+	@media (min-width: 1024px) {
+		/* High-end resolutions */
+		float: inherit;
+	}
 }
 
 .fairplay {
-  float: left;
-  @media (min-width: 1024px) {
-    /* High-end resolutions */
-    float: inherit;
-  }
+	float: left;
+	@media (min-width: 1024px) {
+		/* High-end resolutions */
+		float: inherit;
+	}
 }
 
 .spon-list li {
-  display: inline-block;
-  margin-right: 25px;
+	display: inline-block;
+	margin-right: 25px;
 }
 
 .spon-list {
-  margin: 0 auto;
-  margin-top: 20px;
-  max-width: 90%;
-  overflow: hidden;
-  text-align: center;
-  @media (min-width: 1024px) {
-    /* High-end resolutions */
-    margin-top: 35px;
-    max-width: 990px;
-  }
-  .hidden {
-    display: none;
-    @media (min-width: 1024px) {
-      /* High-end resolutions */
-      display: inline-block;
-    }
-  }
+	margin: 0 auto;
+	margin-top: 20px;
+	max-width: 90%;
+	overflow: hidden;
+	text-align: center;
+	@media (min-width: 1024px) {
+		/* High-end resolutions */
+		margin-top: 35px;
+		max-width: 990px;
+	}
+	.hidden {
+	display: none;
+		@media (min-width: 1024px) {
+			/* High-end resolutions */
+			display: inline-block;
+		}
+	}
 }
 
 .team-logo img,
 .spon-list img {
-  width: 100%;
+	width: 100%;
 }
 
 .team {
-  overflow: hidden;
-  margin: 0 auto;
-  max-width: 780px;
-  @media (min-width: 1024px) {
-    /* High-end resolutions */
-    max-width: 1100px;
-  }
-  .hidden {
-    display: none;
-    @media (min-width: 1024px) {
-      /* High-end resolutions */
-      display: inline-block;
-    }
-  }
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 780px;
+	@media (min-width: 1024px) {
+		/* High-end resolutions */
+		max-width: 1100px;
+	}
+	.hidden {
+		display: none;
+		@media (min-width: 1024px) {
+			/* High-end resolutions */
+			display: inline-block;
+		}
+	}
 }
 
 .team-and {
-  @include font-size(20);
-  display: inline-block;
-  text-align: center;
-  width: 64px;
-  padding-top: 28px;
-  @media (min-width: 1024px) {
-    /* High-end resolutions */
-    padding-top: 0;
-    height: 95px;
-    vertical-align: bottom;
-  }
+	@include font-size(20);
+	display: inline-block;
+	padding-top: 28px;
+	text-align: center;
+	width: 64px;
+	@media (min-width: 1024px) {
+	/* High-end resolutions */
+	height: 95px;
+	padding-top: 0;
+	vertical-align: bottom;
+	}
 }
 
 .team-copy {
-  width: 500px;
-  margin: 0 0 10px 22px;
-  overflow: hidden;
+	margin: 0 0 10px 22px;
+	overflow: hidden;
+	width: 500px;
 }
 
 .team-logo {
-  width: 40%;
-  max-width: 288px;
-  display: inline-block;
-  @media (min-width: 1024px) {
-    /* High-end resolutions */
-    width: inherit;
-  }
+	display: inline-block;
+	max-width: 288px;
+	width: 40%;
+	@media (min-width: 1024px) {
+		/* High-end resolutions */
+		width: inherit;
+	}
 }

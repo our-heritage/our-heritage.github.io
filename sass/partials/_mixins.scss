@@ -1,11 +1,10 @@
 @mixin font-size($size) {
-  font-size: $size + px;
-  font-size: ($size / 10) + rem;
+	font-size: $size + px;
+	font-size: ($size / 10) + rem;
 }
 
 @mixin nav-items-colors($color) {
 	color: $color;
-
 	@media screen and (min-width: 1000px) {
 		&:hover {
 			background-color: $color;
