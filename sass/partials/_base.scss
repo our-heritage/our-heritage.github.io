@@ -2,6 +2,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: 10px;
 }
 
 * {
@@ -67,17 +68,17 @@ h2, h3, h4 {
 }
 
 h2 {
-	@include font-size(20);
+	@include font-size(30);
 	margin: 30px 0;
 	text-align: center;
 }
 
 h3 {
-	@include font-size(15);
+	@include font-size(26);
 }
 
 h4 {
-	@include font-size(12);
+	@include font-size(14);
 }
 
 li {
@@ -86,7 +87,7 @@ li {
 }
 
 p {
-	@include font-size(10);
+	@include font-size(16);
 	font-family: $text-sans;
 	margin-bottom: 16px;
 }

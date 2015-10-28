@@ -17,7 +17,6 @@
 	margin: 0 auto;
 	padding: 0 5%;
 	@media (min-width: 768px) {
-		padding: 0;
 		width: 480px;
 		.right {
 			float: right;
@@ -32,15 +31,15 @@
 }
 
 .about-content h3 {
-	padding: 16px;
+	padding-bottom: 16px;
 	position: relative;
 	z-index: 3;
 }
 
 .about-content p {
-	@include font-size(9);
+	@include font-size(14);
 	@media (min-width: 768px) {
-		@include font-size(10);
+		@include font-size(16);
 	}
 }
 

@@ -12,14 +12,14 @@
 	}
 }
 
-// mixin to color all team member sections. 
+// mixin to color all team member sections.
 
 @mixin team-color-scheme($color) {
 	background-color: $color;
     .team-member {
         background-color: darken($color, 10%);
     }
-	
+
 	.team-member-information {
 		background: $color;
 		opacity: .7;
