@@ -2,5 +2,9 @@
 **/.DS_Store/*
 **/.sass-cache/*
 **/.sass-cache
+**/node_modules
+**/style.css.map
+css/style.css.map
 styles/.sass-cache
 styles/.sass-cache/*
+
