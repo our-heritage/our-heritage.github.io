@@ -145,7 +145,7 @@
         @media (min-width: 480px) {
             h3 {
                 @include font-size(20);
-                padding: 0 2% 8%;
+                padding: 1% 4% 10%;
             }
 
             p, a{
@@ -157,7 +157,7 @@
         @media (min-width: 640px) {
             h3 {
                 @include font-size(26);
-                padding: 1% 2% 8%;
+                padding: 2% 2% 8%;
             }
 
             p, a{
@@ -166,11 +166,25 @@
             }
         }
 
+        @media (min-width: 768px) {
+            h3 {
+                @include font-size(32);
+                padding: 2% 2% 8%;
+            }
+        }
+
         @media (min-width: 1024px) {
             h3 {
                 @include font-size(22);
             }
         }
+
+        @media (min-width: 1366px) {
+            h3 {
+                @include font-size(30);
+            } 
+        }
+
     }
 
     @media (min-width: 1024px) {
