@@ -89,7 +89,7 @@ li {
 p {
 	@include font-size(16);
 	font-family: $text-sans;
-	margin-bottom: 16px;
+	padding-bottom: 16px;
 }
 
 section {
@@ -101,8 +101,15 @@ section {
 }
 
 .header-background {
-	background: url(../img/header.png) no-repeat center center;
-	background-size: contain;
+	background: url(../img/header.png) no-repeat center bottom;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-background {
+  background-color: #1e2631;
 }
 
 .mobil-game-wrapper{
