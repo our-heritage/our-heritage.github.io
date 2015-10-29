@@ -53,7 +53,7 @@ header p {
 	overflow: hidden;
 	padding: 150px 0 100px;
 	text-align: center;
-	h1 {
+	h2 {
 		@include font-size($title-mob-size);
 		border-top: 5px solid $header-title-border;
 		border-bottom: 5px solid $header-title-border;

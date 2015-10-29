@@ -472,7 +472,6 @@ section {
     /* High-end resolutions */
     margin: 0 auto;
     width: 85%; } }
-
 @media (min-width: 1280px) {
   .game-wrapper {
     /* High-end resolutions */
@@ -726,7 +725,7 @@ section {
         font-size: 14px;
         font-size: 1.4rem;
         display: block;
-        padding: 24px 0 13px;
+        padding: 24px 0 52px;
         height: 50%;
         width: 100%; } }
   @media screen and (min-width: 1000px) {
@@ -820,7 +819,7 @@ header p {
   overflow: hidden;
   padding: 150px 0 100px;
   text-align: center; }
-  .main-header h1 {
+  .main-header h2 {
     font-size: 24px;
     font-size: 2.4rem;
     border-top: 5px solid #c4c4c4;
@@ -831,7 +830,7 @@ header p {
     padding: 20px 0;
     width: 85%; }
     @media screen and (min-width: 1000px) {
-      .main-header h1 {
+      .main-header h2 {
         font-size: 60px;
         font-size: 6rem;
         width: 50%; } }
@@ -949,7 +948,6 @@ header p {
     transition: opacity 1s ease-in-out;
     overflow: hidden;
     z-index: 1; } }
-
 @media (min-width: 768px) {
   .about-image {
     margin: 0; } }
@@ -1194,6 +1192,7 @@ header p {
     list-style: none;
     margin: 0 auto;
     width: 80%; }
+
   .gallery-imgs li {
     background-color: #fff;
     border: 1px solid #fff;
@@ -1210,6 +1209,7 @@ header p {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
+
   .gallery-imgs .pic-1 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1217,6 +1217,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-2 {
     margin-top: 20px;
     -ms-transform: rotate(10deg);
@@ -1225,6 +1226,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(10deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-3 {
     left: 5px;
     margin-top: -25px;
@@ -1235,6 +1237,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-5deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-4 {
     margin-top: -10px;
     -ms-transform: rotate(-15deg);
@@ -1243,6 +1246,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-15deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-5 {
     position: relative;
     right: 15px;
@@ -1252,6 +1256,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-5deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-6 {
     left: 5px;
     position: relative;
@@ -1262,6 +1267,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(10deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-7 {
     margin-top: -40px;
     -ms-transform: rotate(5deg);
@@ -1270,6 +1276,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(5deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-8 {
     margin-top: 25px;
     -ms-transform: rotate(-10deg);
@@ -1278,6 +1285,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-9 {
     margin-top: -60px;
     -ms-transform: rotate(15deg);
@@ -1286,6 +1294,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(15deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .modal {
     background-color: rgba(0, 0, 0, 0.8);
     display: block;
@@ -1318,7 +1327,6 @@ header p {
       left: 2%;
       position: absolute;
       top: 50%; } }
-
 .cetav {
   float: right; }
   @media (min-width: 1024px) {
