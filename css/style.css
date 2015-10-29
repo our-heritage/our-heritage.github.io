@@ -1561,8 +1561,7 @@ header p {
   .team-web-development .team-member {
     background-color: #af3647; }
   .team-web-development .team-member-information {
-    background: #C94F60;
-    opacity: .7; }
+    background: rgba(201, 79, 96, 0.7); }
   .team-web-development .team-member-information a {
     color: #e19da7; }
 
@@ -1571,8 +1570,7 @@ header p {
   .team-production .team-member {
     background-color: #3d7b2d; }
   .team-production .team-member-information {
-    background: #50A03B;
-    opacity: .7; }
+    background: rgba(80, 160, 59, 0.7); }
   .team-production .team-member-information a {
     color: #87cc75; }
 
@@ -1581,8 +1579,7 @@ header p {
   .team-animation .team-member {
     background-color: #115d4b; }
   .team-animation .team-member-information {
-    background: #19886E;
-    opacity: .7; }
+    background: rgba(25, 136, 110, 0.7); }
   .team-animation .team-member-information a {
     color: #2ed9b1; }
 
@@ -1591,8 +1588,7 @@ header p {
   .team-administration .team-member {
     background-color: #f05820; }
   .team-administration .team-member-information {
-    background: #F37C50;
-    opacity: .7; }
+    background: rgba(243, 124, 80, 0.7); }
   .team-administration .team-member-information a {
     color: #fac3af; }
 
@@ -1601,8 +1597,7 @@ header p {
   .team-collaborators .team-member {
     background-color: #1c6489; }
   .team-collaborators .team-member-information {
-    background: #2583B3;
-    opacity: .7; }
+    background: rgba(37, 131, 179, 0.7); }
   .team-collaborators .team-member-information a {
     color: #60b3de; }
 
@@ -1611,8 +1606,7 @@ header p {
   .team-fair-play .team-member {
     background-color: #cb955c; }
   .team-fair-play .team-member-information {
-    background: #D7AE83;
-    opacity: .7; }
+    background: rgba(215, 174, 131, 0.7); }
   .team-fair-play .team-member-information a {
     color: #f0e0d0; }
 
