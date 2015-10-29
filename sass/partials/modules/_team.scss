@@ -37,6 +37,53 @@
         padding-bottom: 5%;
         width: 90%;
     }
+    
+    @media (min-width: 480px) {
+        float: left;
+        display: inline-block;
+        padding: 0;
+        width: 50%;
+        z-index: 1;
+
+        h2{
+            @include font-size(22); 
+            margin: 4% 5% 0;
+            padding: 0;
+            width: 90%;
+        }
+
+        p {
+            @include font-size(14);
+            margin: 8% 5% 0;
+            padding: 0;
+        }
+    }
+
+    @media (min-width: 640px) {
+        h2 {
+            @include font-size(28);
+        }
+
+        p {
+            @include font-size(18);
+            padding: 4% 0 0;
+        }
+    }  
+
+    @media (min-width: 1024px) {
+        width: 25%;
+
+        h2 {
+            @include font-size(26);
+            padding: 0 2%;
+        }
+
+        p {
+            @include font-size(15);
+            margin: 0 5%;
+            padding: 4% 2%;
+        }
+    }
 }
 
 .team-member {
@@ -70,32 +117,64 @@
         position: absolute;
         right: 0;
         top: 0;
-        transform: translateY(80%);
+        transform: translateY(78%);
         transition: transform .35s ease-out;
         z-index: 2;
 
         h3 {
-            @include font-size(16);
+            @include font-size(14);
             display: block;
             font-family: $title-font;
-            padding: 0 0 10%;
+            padding: 0 2% 10%;
             width: 100%;
         }
 
         p {
-            box-sizing: border;
             padding: 0 2% 8%;
-            width: 80%;
+            width: 90%;
         }
 
         a {
             @include font-size(14);
             display: block;
-            font-family: $title-font;
             padding: 0 2% 10%;
             text-decoration: underline;
             width: 100%;
         }
+
+        @media (min-width: 480px) {
+            h3 {
+                @include font-size(20);
+                padding: 0 2% 8%;
+            }
+
+            p, a{
+                @include font-size(18);
+                padding: 0 2% 2%;  
+            }
+        }
+
+        @media (min-width: 640px) {
+            h3 {
+                @include font-size(26);
+                padding: 1% 2% 8%;
+            }
+
+            p, a{
+                @include font-size(22);
+                padding: 4% 2%;  
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h3 {
+                @include font-size(22);
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        width: 25%; 
     }
 }
 
