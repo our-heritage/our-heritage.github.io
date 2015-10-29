@@ -75,7 +75,7 @@
 
         h2 {
             @include font-size(26);
-            padding: 0;
+            padding: 0 2%;
         }
 
         p {
@@ -163,6 +163,12 @@
             p, a{
                 @include font-size(22);
                 padding: 4% 2%;  
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h3 {
+                @include font-size(22);
             }
         }
     }

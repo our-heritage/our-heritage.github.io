@@ -1431,7 +1431,7 @@ header p {
       .team-details h2 {
         font-size: 26px;
         font-size: 2.6rem;
-        padding: 0; }
+        padding: 0 2%; }
       .team-details p {
         font-size: 15px;
         font-size: 1.5rem;
@@ -1503,6 +1503,10 @@ header p {
         font-size: 22px;
         font-size: 2.2rem;
         padding: 4% 2%; } }
+    @media (min-width: 1024px) {
+      .team-member .team-member-information h3 {
+        font-size: 22px;
+        font-size: 2.2rem; } }
   @media (min-width: 1024px) {
     .team-member {
       width: 25%; } }
