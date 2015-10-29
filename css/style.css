@@ -1407,16 +1407,36 @@ header p {
       width: 50%;
       z-index: 1; }
       .team-details h2 {
-        font-size: 26px;
-        font-size: 2.6rem;
+        font-size: 22px;
+        font-size: 2.2rem;
         margin: 4% 5% 0;
         padding: 0;
         width: 90%; }
       .team-details p {
         font-size: 14px;
         font-size: 1.4rem;
-        margin: 0 5%;
+        margin: 8% 5% 0;
         padding: 0; } }
+  @media (min-width: 640px) {
+    .team-details h2 {
+      font-size: 28px;
+      font-size: 2.8rem; }
+    .team-details p {
+      font-size: 18px;
+      font-size: 1.8rem;
+      padding: 4% 0 0; } }
+  @media (min-width: 1024px) {
+    .team-details {
+      width: 25%; }
+      .team-details h2 {
+        font-size: 26px;
+        font-size: 2.6rem;
+        padding: 0; }
+      .team-details p {
+        font-size: 15px;
+        font-size: 1.5rem;
+        margin: 0 5%;
+        padding: 4% 2%; } }
 
 .team-member {
   font-size: 15px;
@@ -1474,6 +1494,18 @@ header p {
         font-size: 18px;
         font-size: 1.8rem;
         padding: 0 2% 2%; } }
+    @media (min-width: 640px) {
+      .team-member .team-member-information h3 {
+        font-size: 26px;
+        font-size: 2.6rem;
+        padding: 1% 2% 8%; }
+      .team-member .team-member-information p, .team-member .team-member-information a {
+        font-size: 22px;
+        font-size: 2.2rem;
+        padding: 4% 2%; } }
+  @media (min-width: 1024px) {
+    .team-member {
+      width: 25%; } }
 
 .team-web-development {
   background-color: #C94F60; }

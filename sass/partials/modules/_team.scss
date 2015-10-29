@@ -46,7 +46,7 @@
         z-index: 1;
 
         h2{
-            @include font-size(26); 
+            @include font-size(22); 
             margin: 4% 5% 0;
             padding: 0;
             width: 90%;
@@ -54,11 +54,36 @@
 
         p {
             @include font-size(14);
-            margin: 0 5%;
+            margin: 8% 5% 0;
             padding: 0;
         }
     }
 
+    @media (min-width: 640px) {
+        h2 {
+            @include font-size(28);
+        }
+
+        p {
+            @include font-size(18);
+            padding: 4% 0 0;
+        }
+    }  
+
+    @media (min-width: 1024px) {
+        width: 25%;
+
+        h2 {
+            @include font-size(26);
+            padding: 0;
+        }
+
+        p {
+            @include font-size(15);
+            margin: 0 5%;
+            padding: 4% 2%;
+        }
+    }
 }
 
 .team-member {
@@ -128,6 +153,22 @@
                 padding: 0 2% 2%;  
             }
         }
+
+        @media (min-width: 640px) {
+            h3 {
+                @include font-size(26);
+                padding: 1% 2% 8%;
+            }
+
+            p, a{
+                @include font-size(22);
+                padding: 4% 2%;  
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        width: 25%; 
     }
 }
 
