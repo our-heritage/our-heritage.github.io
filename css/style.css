@@ -1087,7 +1087,7 @@ header p {
   z-index: 1; }
 
 .char-details {
-  background-color: #D7AE83;
+  background: #D7AE83;
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
   margin-top: -540px;
   overflow: hidden;
