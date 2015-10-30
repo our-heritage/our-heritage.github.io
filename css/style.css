@@ -892,6 +892,12 @@ header p {
   padding: 3%;
   position: relative;
   z-index: 3; }
+  @media only screen and (max-width: 767px) {
+    .about-content h3:after {
+      content: url(../img/more.png);
+      padding-right: 3%;
+      position: absolute;
+      right: 0; } }
   @media (min-width: 768px) {
     .about-content h3 {
       background-color: transparent;
@@ -933,7 +939,7 @@ header p {
         position: absolute;
         width: 480px;
         height: 261px;
-        border: 8px solid rgba(36, 194, 159, 0.28);
+        border: 8px solid rgba(36, 194, 159, 0.3);
         margin-top: 20px;
         margin-left: -20px; }
       .about-content.left:before {
@@ -941,7 +947,7 @@ header p {
         position: absolute;
         width: 480px;
         height: 261px;
-        border: 8px solid rgba(36, 194, 159, 0.28);
+        border: 8px solid rgba(36, 194, 159, 0.3);
         margin-top: 20px;
         margin-left: 24px; } }
 
