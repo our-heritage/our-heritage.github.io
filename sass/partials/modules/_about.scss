@@ -32,15 +32,24 @@
 }
 
 .about-content h3 {
-  background-color: rgba(243, 124, 80, 0.4);
+  background-color: rgba(243, 124, 80, .4);
   margin-bottom: 10px;
   padding: 3%;
 	position: relative;
 	z-index: 3;
+  &:after {
+    content: url(../img/more.png);
+    padding-right: 3%;
+    position: absolute;
+    right: 0;
+  }
   @media (min-width: 768px) {
     background-color: transparent;
     margin-bottom: 0;
     padding: 2% 4%;
+    &:after {
+      content: "";
+    }
   }
 }
 
@@ -68,12 +77,10 @@
 	position: absolute;
 	top: 0;
   @media (min-width: 768px) {
-    position: inherit;
-  }
-
-	@media (min-width: 1100px) {
-    background-color: $light-green;
 		position: inherit;
+ 	}
+	@media (min-width: 1100px) {
+		background-color: $light-green;
     &.left:before, &.right:before {
       content: "";
       position: absolute;
@@ -82,9 +89,11 @@
       border: 8px solid rgba(36, 194, 159, 0.28);
       margin-top: 35px;
     }
+
     &.right:before {
       margin-left: -20px;
     }
+
     &.left:before {
       margin-left: 24px;
     }
@@ -109,12 +118,12 @@
     &.right {
       left: -60px;
       z-index: 0;
-      @include image-transform(10deg);
+      @include image-transform(5deg);
     }
     &.left {
       left: 60px;
       z-index: 0;
-      @include image-transform(-10deg);
+      @include image-transform(-5deg);
     }
   }
 }

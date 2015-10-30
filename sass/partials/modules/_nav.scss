@@ -23,12 +23,18 @@
 	}
 }
 .main-nav li {
-	@include font-size(16);
+	@include font-size(20);
+  border: 3px solid $light-green;
 	display: inline-block;
-	margin-left: 15px;
-	line-height: 89px;
+  margin-left: 15px;
+  padding: 10px;
 	a {
+		color: #FFF;
 		display: inline-block;
+		font-family: $text-serif;
+		&:hover {
+			color: #24C29F;
+		}
 	}
 }
 
@@ -91,13 +97,13 @@
 
 .list-lang-item a {
 	@include font-size(14);
-	color: #515151;
+	color: #24C29F;
+	font-family: $text-serif;
 	text-decoration: none;
 }
 
 .list-lang-item {
-	background: #fff;
-	border: 3px solid #515151;
+	border: 3px solid $light-green;
 	cursor: pointer;
 	left: 0;
 	padding: 10px;
@@ -129,11 +135,12 @@
 }
 
 .close-lang {
-	border: 3px solid #515151;
+	background: rgba(0, 0, 0, .4);
+	border: 3px solid $light-green;
 	cursor: pointer;
 	position: absolute;
 	padding: 2px 5px;
-	stroke: #000;
+	stroke: $light-green;
 	@media(min-width: 768px) {
 		display: none;
 	}
@@ -168,7 +175,7 @@
 }
 
 .selected {
-	background: #515151;
+	background: #24C29F;
 	z-index: 3000;
 }
 

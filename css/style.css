@@ -447,6 +447,12 @@ p {
 section {
   overflow: hidden; }
 
+.background-juego {
+  background-image: url(../img/desktop-background.png);
+  -webkit-box-shadow: inset 0px 140px 211px -23px #3d3c3d;
+  -moz-box-shadow: inset 0px 140px 211px -23px #3d3c3d;
+  box-shadow: inset 0px 140px 211px -23px #3d3c3d; }
+
 .home-background {
   background-color: #1e2631; }
 
@@ -489,13 +495,18 @@ section {
       display: inline-block; } }
 
 .main-nav li {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 20px;
+  font-size: 2rem;
+  border: 3px solid #24C29F;
   display: inline-block;
   margin-left: 15px;
-  line-height: 89px; }
+  padding: 10px; }
   .main-nav li a {
-    display: inline-block; }
+    color: #FFF;
+    display: inline-block;
+    font-family: "Finger Paint", serif; }
+    .main-nav li a:hover {
+      color: #24C29F; }
 
 .game-nav {
   display: none; }
@@ -548,12 +559,12 @@ section {
 .list-lang-item a {
   font-size: 14px;
   font-size: 1.4rem;
-  color: #515151;
+  color: #24C29F;
+  font-family: "Finger Paint", serif;
   text-decoration: none; }
 
 .list-lang-item {
-  background: #fff;
-  border: 3px solid #515151;
+  border: 3px solid #24C29F;
   cursor: pointer;
   left: 0;
   padding: 10px;
@@ -602,11 +613,12 @@ section {
       /* IE 10, Fx 16+, Op 12.1+ */ } }
 
 .close-lang {
-  border: 3px solid #515151;
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px solid #24C29F;
   cursor: pointer;
   position: absolute;
   padding: 2px 5px;
-  stroke: #000; }
+  stroke: #24C29F; }
   @media (min-width: 768px) {
     .close-lang {
       display: none; } }
@@ -644,7 +656,7 @@ section {
   color: #fff; }
 
 .selected {
-  background: #515151;
+  background: #24C29F;
   z-index: 3000; }
 
 /* Credits navigation */
@@ -767,10 +779,9 @@ header {
   padding-bottom: 40px; }
 
 header p {
+  color: #FFF;
+  font-family: "Finger Paint", serif;
   text-align: center; }
-
-.background-juego {
-  background-image: url(../img/desktop-background.jpg); }
 
 .header-background {
   background: url(../img/header.png) no-repeat center bottom;
@@ -797,9 +808,9 @@ header p {
   background: url("../img/play.png") no-repeat;
   background-size: cover;
   display: block;
-  height: 55px;
+  height: 85px;
   margin: 15px auto;
-  width: 55px; }
+  width: 85px; }
 
 .main-header {
   background: url("../img/header-banner.jpg") no-repeat;
@@ -880,11 +891,18 @@ header p {
   padding: 3%;
   position: relative;
   z-index: 3; }
+  .about-content h3:after {
+    content: url(../img/more.png);
+    padding-right: 3%;
+    position: absolute;
+    right: 0; }
   @media (min-width: 768px) {
     .about-content h3 {
       background-color: transparent;
       margin-bottom: 0;
-      padding: 2% 4%; } }
+      padding: 2% 4%; }
+      .about-content h3:after {
+        content: ""; } }
 
 .about-content p {
   font-size: 14px;
@@ -914,8 +932,7 @@ header p {
       position: inherit; } }
   @media (min-width: 1100px) {
     .about-content {
-      background-color: #24C29F;
-      position: inherit; }
+      background-color: #24C29F; }
       .about-content.left:before, .about-content.right:before {
         content: "";
         position: absolute;
@@ -945,20 +962,20 @@ header p {
     .about-image.right {
       left: -60px;
       z-index: 0;
-      -ms-transform: rotate(10deg);
+      -ms-transform: rotate(5deg);
       /* IE 9 */
-      -webkit-transform: rotate(10deg);
+      -webkit-transform: rotate(5deg);
       /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: rotate(10deg);
+      transform: rotate(5deg);
       /* IE 10, Fx 16+, Op 12.1+ */ }
     .about-image.left {
       left: 60px;
       z-index: 0;
-      -ms-transform: rotate(-10deg);
+      -ms-transform: rotate(-5deg);
       /* IE 9 */
-      -webkit-transform: rotate(-10deg);
+      -webkit-transform: rotate(-5deg);
       /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: rotate(-10deg);
+      transform: rotate(-5deg);
       /* IE 10, Fx 16+, Op 12.1+ */ } }
 
 .about-image > :first-child {

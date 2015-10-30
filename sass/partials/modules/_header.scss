@@ -7,11 +7,9 @@ header {
 }
 
 header p {
+	color: #FFF;
+	font-family: $text-serif;
 	text-align: center;
-}
-
-.background-juego {
-  background-image: url(../img/desktop-background.jpg);
 }
 
 .header-background {
@@ -43,9 +41,9 @@ header p {
 	background: url("../img/play.png") no-repeat;
 	background-size: cover;
 	display: block;
-	height: 55px;
+	height: 85px;
 	margin: 15px auto;
-	width: 55px;
+	width: 85px;
 }
 
 // Header Creditos
