@@ -62,17 +62,22 @@
 	@media only screen and (min-width: 768px) and (max-width: 1280px) {
 		background-color: #FFF;
 		display: block;
-		left: 0;
-		margin-top: 130px;
-		position: fixed;
-		top: 0;
 		width: 100%;
-		z-index: 2;
 	}
 	@media only screen and (min-width: 1280px) {
 		display: block;
 		position: fixed;
 	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .list-game {
