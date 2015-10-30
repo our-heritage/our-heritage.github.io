@@ -404,16 +404,6 @@ footer a {
   display: inline-block;
   padding: 2px 5px; }
 
-h1 {
-  background: url("../img/logo.png") no-repeat;
-  background-size: cover;
-  height: 80px;
-  margin: 50px auto;
-  width: 190px; }
-  @media (min-width: 1024px) {
-    h1 {
-      margin: 150px auto; } }
-
 h1 a {
   color: transparent; }
 
@@ -474,8 +464,22 @@ section {
     margin-left: 200px;
     width: 85%; } }
 
-.logo {
-  float: left; }
+.logo-nav {
+  display: none; }
+  @media (min-width: 768px) {
+    .logo-nav {
+      float: left;
+      display: inline-block; } }
+
+.logo img {
+  width: 100%;
+  max-width: 664px;
+  max-height: 157px;
+  display: block;
+  margin: 4% auto; }
+  @media (min-width: 1024px) {
+    .logo img {
+      margin: 2% auto; } }
 
 @media (min-width: 768px) {
   .main-nav ul {
@@ -483,30 +487,29 @@ section {
 
 .main-nav {
   display: block;
-  margin: 0 5%; }
+  margin: 6% 5%; }
   @media (min-width: 768px) {
     .main-nav {
       margin: 2% 4%; } }
 
-.logo img {
-  display: none; }
-  @media (min-width: 768px) {
-    .logo img {
-      display: inline-block; } }
-
 .main-nav li {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   border: 3px solid #24C29F;
   display: inline-block;
   margin-left: 15px;
-  padding: 10px; }
+  padding: 3px; }
   .main-nav li a {
     color: #FFF;
     display: inline-block;
     font-family: "Finger Paint", serif; }
     .main-nav li a:hover {
       color: #24C29F; }
+  @media (min-width: 768px) {
+    .main-nav li {
+      font-size: 20px;
+      font-size: 2rem;
+      padding: 10px; } }
 
 .game-nav {
   display: none; }
@@ -543,7 +546,7 @@ section {
 
 .content-lang {
   float: right;
-  margin: 4% 22%; }
+  margin: 20px 100px; }
   @media (min-width: 768px) {
     .content-lang {
       margin: 2% 4%; } }
@@ -959,6 +962,9 @@ header p {
     .about-image {
       margin: 0; } }
   @media (min-width: 1100px) {
+    .about-image.right, .about-image.left {
+      background-color: #FFFEFE;
+      padding: 10px 10px 40px 10px; }
     .about-image.right {
       left: -60px;
       z-index: 0;
@@ -1380,8 +1386,8 @@ header p {
   @media (min-width: 1024px) {
     .spon-list {
       /* High-end resolutions */
-      margin-top: 35px;
-      max-width: 990px; } }
+      margin: 35px auto;
+      max-width: 1100px; } }
   .spon-list .hidden {
     display: none; }
     @media (min-width: 1024px) {
@@ -1391,7 +1397,7 @@ header p {
 
 .team-logo img,
 .spon-list img {
-  width: 100%; }
+  width: 60%; }
 
 .team {
   overflow: hidden;
@@ -1423,9 +1429,9 @@ header p {
       vertical-align: bottom; } }
 
 .team-copy {
-  margin: 0 0 10px 22px;
-  overflow: hidden;
-  width: 500px; }
+  margin: 0 auto;
+  max-width: 700px;
+  width: 80%; }
 
 .team-logo {
   display: inline-block;

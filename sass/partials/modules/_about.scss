@@ -115,6 +115,10 @@
 		margin: 0;
 	}
   @media (min-width: 1100px) {
+    &.right, &.left{
+      background-color: #FFFEFE;
+      padding: 10px 10px 40px 10px;
+    }
     &.right {
       left: -60px;
       z-index: 0;

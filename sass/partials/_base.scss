@@ -48,17 +48,6 @@ footer a {
 	padding: 2px 5px;
 }
 
-h1 {
-	background: url("../img/logo.png") no-repeat;
-	background-size: cover;
-	height: 80px;
-	margin: 50px auto;
-	width: 190px;
-	@media (min-width: 1024px) {
-		margin: 150px auto;
-	}
-}
-
 h1 a {
 	color: transparent;
 }
