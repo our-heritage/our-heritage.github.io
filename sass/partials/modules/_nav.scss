@@ -23,10 +23,11 @@
 	}
 }
 .main-nav li {
-	@include font-size(16);
+	@include font-size(20);
+  border: 3px solid $light-green;
 	display: inline-block;
-	margin-left: 15px;
-	line-height: 89px;
+  margin-left: 15px;
+  padding: 10px;
 	a {
 		color: #FFF;
 		display: inline-block;
@@ -102,8 +103,7 @@
 }
 
 .list-lang-item {
-	background: rgba(0, 0, 0, .4);
-	border: 3px solid #24C29F;
+	border: 3px solid $light-green;
 	cursor: pointer;
 	left: 0;
 	padding: 10px;
@@ -121,36 +121,26 @@
 }
 
 .list-lang li:first-child + li {
-	-ms-transform: rotate(10deg); /* IE 9 */
-	-webkit-transform: rotate(10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-	transform: rotate(10deg); /* IE 10, Fx 16+, Op 12.1+ */
+  @include image-transform(10deg);
 	@media(min-width: 768px){
-		/* High-end resolutions */
-		-ms-transform: rotate(0deg); /* IE 9 */
-		-webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-		transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
+    @include image-transform(0deg);
 	}
 }
 
 .list-lang li:last-child {
-	-ms-transform: rotate(10deg); /* IE 9 */
-	-webkit-transform: rotate(10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-	transform: rotate(10deg); /* IE 10, Fx 16+, Op 12.1+ */
+  @include image-transform(10deg);
 	@media(min-width: 768px){
-		/* High-end resolutions */
-		-ms-transform: rotate(0deg); /* IE 9 */
-		-webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-		transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
+    @include image-transform(0deg);
 	}
 }
 
 .close-lang {
 	background: rgba(0, 0, 0, .4);
-	border: 3px solid #24C29F;
+	border: 3px solid $light-green;
 	cursor: pointer;
 	position: absolute;
 	padding: 2px 5px;
-	stroke: #24C29F;
+	stroke: $light-green;
 	@media(min-width: 768px) {
 		display: none;
 	}
@@ -170,14 +160,9 @@
 
 .position3 {
 	top: 220px;
-	-ms-transform: rotate(-10deg); /* IE 9 */
-	-webkit-transform: rotate(-10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-	transform: rotate(-10deg); /* IE 10, Fx 16+, Op 12.1+ */
+  @include image-transform(-10deg);
 	@media(min-width:768px){
-		/* High-end resolutions */
-		-ms-transform: rotate(0deg); /* IE 9 */
-		-webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-		transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
+    @include image-transform(0deg);
 	}
 }
 
