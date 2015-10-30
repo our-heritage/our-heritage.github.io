@@ -4,11 +4,16 @@
 }
 
 .section-history h2 {
-	padding-bottom: 25px;
+	margin: 0;
+}
+
+.section-history p {
+	line-height: 22px;
+	padding: 18px 0 0 0;
 }
 
 .section-history {
-	background-color: rgb(255, 242, 222);
+	background-image: url("../img/paper-pattern.png");
 	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
 	margin: 50px auto;
 	padding: 3%;
