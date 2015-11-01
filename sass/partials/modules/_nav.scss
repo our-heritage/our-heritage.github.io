@@ -291,32 +291,20 @@
         margin: 0;
         padding: 0;
         text-align: center;
-        width: 16.666%;
+        width: 33.333%;
     }
 }
 
 // Navigation items colors
 
-.web-item {
-    @include nav-items-colors ($web-color);
-}
-
-.post-item {
-    @include nav-items-colors ($post-prod-color);
-}
-
-.anim-item {
-    @include nav-items-colors ($anim-color);
-}
-
-.admin-item {
-    @include nav-items-colors ($admin-color);
-}
-
-.collab-item {
-    @include nav-items-colors ($collab-color);
+.cetav-item {
+    @include nav-items-colors ($cetav-color);
 }
 
 .fair-item {
     @include nav-items-colors ($fair-color);
+}
+
+.advisors-item {
+    @include nav-items-colors ($advisors-color);
 }

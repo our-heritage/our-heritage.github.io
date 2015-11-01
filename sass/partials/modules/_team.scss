@@ -192,28 +192,16 @@
     }
 }
 
-.team-web-development {
-    @include team-color-scheme($web-color);
+.team-cetav {
+    @include team-color-scheme($cetav-color);
 }
 
-.team-production {
-     @include team-color-scheme($post-prod-color);
+.team-fair {
+     @include team-color-scheme($fair-color);
 }
 
-.team-animation {
-    @include team-color-scheme($anim-color);
-}
-
-.team-administration {
-    @include team-color-scheme($admin-color);
-}
-
-.team-collaborators {
-    @include team-color-scheme($collab-color);
-}
-
-.team-fair-play {
-    @include team-color-scheme($fair-color);
+.team-advisors {
+    @include team-color-scheme($advisors-color);
 }
 
 .visible{
