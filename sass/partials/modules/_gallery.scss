@@ -1,189 +1,185 @@
 // Gallery Mobile
-
 .section-gallery h2 {
-	@media (min-width: 768px) {
-		/* High-end resolutions */
-		display: none;
-	}
+    @media (min-width: 768px) {
+        /* High-end resolutions */
+        display: none;
+    }
 }
 
 .section-gallery img {
-	@media only screen and (max-width: 768px) {
-		height: auto;
-		max-width: 100%;
-	}
+    @media only screen and (max-width: 768px) {
+        height: auto;
+        max-width: 100%;
+    }
 }
 
 .section-gallery {
-	width: 100%;
-	@media (min-width: 768px) {
-		/* High-end resolutions */
-		padding: 60px;
-	}
+    width: 100%;
+
+    @media (min-width: 768px) {
+        /* High-end resolutions */
+        padding: 60px;
+    }
 }
 
 .gallery-imgs {
-	width: 100%;
-	@media (min-width: 768px) {
-		/* High-end resolutions */
-		list-style: none;
-		text-align: center;
-	}
+    width: 100%;
+
+    @media (min-width: 768px) {
+        /* High-end resolutions */
+        list-style: none;
+        text-align: center;
+    }
 }
 
 .slider-content {
-	@media only screen and (max-width: 768px) {
-		display: none;
-		width: 100%;
-	}
+    @media only screen and (max-width: 768px) {
+        display: none;
+        width: 100%;
+    }
 }
 
 .first {
-	@media only screen and (max-width: 768px) {
-		display: block;
-	}
+    @media only screen and (max-width: 768px) {
+        display: block;
+    }
 }
 
 .slider-image {
-	@media only screen and (max-width: 768px) {
-		height: 610px;
-		width: 100%;
-	}
+    @media only screen and (max-width: 768px) {
+        height: 610px;
+        width: 100%;
+    }
 }
 
 .content-counter {
-	@media (min-width: 768px) {
-		/* High-end resolutions */
-		display: none;
-	}
+    @media (min-width: 768px) {
+        /* High-end resolutions */
+        display: none;
+    }
 }
 
 .title {
-	text-align: center;
-	width: 100%;
+    text-align: center;
+    width: 100%;
 }
 
 // Gallery Desktop
-
 @media (min-width: 768px) {
-	/* High-end resolutions */
-	.gallery-container {
-		font-size: 0; /* Hack that removes white space */
-		list-style: none;
-		margin: 0 auto;
-		width: 80%;
-	}
+    /* High-end resolutions */
+    .gallery-container {
+        font-size: 0; /* Hack that removes white space */
+        list-style: none;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .gallery-imgs li {
+        background-color: #fff;
+        border: 1px solid #fff;
+        box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+        display: inline-block;
+        padding: 10px 10px 30px;
+        vertical-align: top;
+        width: 33%;
+        
+        @media (max-width: 1024px) {
+            padding: 5px 5px 15px;
+        }
+    }
 
-	.gallery-imgs li {
-		background-color: #fff;
-		border: 1px solid #fff;
-		box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-		display: inline-block;
-		padding: 10px 10px 30px 10px;
-		vertical-align: top;
-		width: 33%;
-		@media (max-width: 1024px) {
-			padding: 5px 5px 15px 5px;
-		}
-	}
+    .gallery-imgs li img {
+        height: auto;
+        max-width: 100%;
+    }
 
-	.gallery-imgs li img {
-		height: auto;
-		max-width: 100%;
-	}
+    // Scattered Pictures Style
+    .gallery-imgs .pic-1 {
+        @include image-transform(-10deg);
+    }
 
-	// Scattered Pictures Style
+    .gallery-imgs .pic-2 {
+        @include image-transform(10deg);
+        margin-top: 20px;
+    }
 
-	.gallery-imgs .pic-1 {
-		@include image-transform(-10deg);
-	}
+    .gallery-imgs .pic-3 {
+        @include image-transform(-5deg);
+        left: 5px;
+        margin-top: -25px;
+        position: relative;
+    }
 
-	.gallery-imgs .pic-2 {
-		margin-top: 20px;
-    @include image-transform(10deg);
-	}
+    .gallery-imgs .pic-4 {
+        @include image-transform(-15deg);
+        margin-top: -10px;
+    }
 
-	.gallery-imgs .pic-3 {
-		left: 5px;
-		margin-top: -25px;
-		position: relative;
-    @include image-transform(-5deg);
-	}
+    .gallery-imgs .pic-5 {
+        @include image-transform(-5deg);
+        position: relative;
+        right: 15px;
+    }
 
-	.gallery-imgs .pic-4 {
-		margin-top: -10px;
-    @include image-transform(-15deg);
-	}
+    .gallery-imgs .pic-6 {
+        @include image-transform(10deg);
+        left: 5px;
+        position: relative;
+        margin-top: -22px;
+    }
 
-	.gallery-imgs .pic-5 {
-		position: relative;
-		right: 15px;
-    @include image-transform(-5deg);
-	}
+    .gallery-imgs .pic-7 {
+        @include image-transform(5deg);
+        margin-top: -40px;
+    }
 
-	.gallery-imgs .pic-6 {
-		left: 5px;
-		position: relative;
-		margin-top: -22px;
-    @include image-transform(10deg);
-	}
+    .gallery-imgs .pic-8 {
+        @include image-transform(-10deg);
+        margin-top: 25px;
+    }
 
-	.gallery-imgs .pic-7 {
-		margin-top: -40px;
-    @include image-transform(5deg);
-	}
+    .gallery-imgs .pic-9 {
+        @include image-transform(15deg);
+        margin-top: -60px;
+    }
 
-	.gallery-imgs .pic-8 {
-		margin-top: 25px;
-    @include image-transform(-10deg);
-	}
+    // Gallery-Modal Desktop
+    .modal {
+        background-color: rgba(0, 0, 0, .8);
+        display: block;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        z-index: 999;
 
-	.gallery-imgs .pic-9 {
-		margin-top: -60px;
-    @include image-transform(15deg);
-	}
+        .exit {
+            cursor: pointer;
+            position: absolute;
+            right: 2%;
+            top: 5%;
+            stroke: #fff;
+            width: 40px;
+        }
+        .full-picture {
+            height: 80%;
+            margin: 5% auto;
+            max-width: 80%;
+            text-align: center;
+        }
+        .next {
+            cursor: pointer;
+            position: absolute;
+            right: 2%;
+            top: 50%;
+        }
 
-	// Gallery-Modal Desktop
-
-	.modal {
-		background-color: rgba(0, 0, 0, .8);
-		display: block;
-		height: 100%;
-		left: 0;
-		position: fixed;
-		text-align: center;
-		top: 0;
-		width: 100%;
-		z-index: 999;
-
-		.exit {
-			cursor: pointer;
-			position: absolute;
-			right: 2%;
-			top: 5%;
-			stroke: #fff;
-			width: 40px;
-		}
-
-		.full-picture {
-			height: 80%;
-			margin: 5% auto;
-			max-width: 80%;
-			text-align: center;
-		}
-
-		.next {
-			cursor: pointer;
-			position: absolute;
-			right: 2%;
-			top: 50%;
-		}
-
-		.previous {
-			cursor: pointer;
-			left: 2%;
-			position: absolute;
-			top: 50%;
-		}
-	}
+        .previous {
+            cursor: pointer;
+            left: 2%;
+            position: absolute;
+            top: 50%;
+        }
+    }
 }

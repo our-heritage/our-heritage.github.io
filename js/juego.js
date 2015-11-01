@@ -1,5 +1,16 @@
 //Global Variables ***********************************************************************
-var char_id = 0;
+// ToDo: 
+// * no ensuciar el global scope
+// * hay mucho uso del DOM, usar dom ready
+// * todas las variables que no se usan, no deberian estar declaradas
+// * usar nombres de variables relacionados con el objeto, por ejemplo, linea 18 no tiene sentido
+// * usar camelCase para nombrar las variables, ejem: charId, sizeItem, closeTap, etc
+// * usar comilla simple para los stings
+// * todo codigo que no necesiten borrarlo, incluidos los console.log
+// * ser consistentes con la identacion
+// * enquire puede registrar multiples queries, no como lo estan haciendo
+
+var char_id = 0; // no se usa en ningun lado
 var index = 0;
 var position = 0;
 var galleryData = '';

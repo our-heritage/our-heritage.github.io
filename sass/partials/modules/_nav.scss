@@ -1,5 +1,6 @@
 .logo-nav {
     display: none;
+
     @media (min-width: 768px) {
         display: inline-block;
         float: left;
@@ -13,6 +14,7 @@
     max-height: 157px;
     display: block;
     margin: 4% auto;
+
     @media (min-width: 1024px) {
         margin: 4% auto;
     }
@@ -27,6 +29,7 @@
 .main-nav {
     display: block;
     margin: 4% 0;
+
     @media (min-width: 768px) {
         margin: 4% 4%;
     }
@@ -38,38 +41,43 @@
     display: inline-block;
     margin-left: 10px;
     padding: 5px;
+
+    @media (min-width: 768px) { // mejor aqui, es mas facil saber a que elemento esta relacionado
+        @include font-size(20);
+        margin-left: 20px;
+        padding: 10px;
+    }
+    
     a {
         color: #FFF;
         display: inline-block;
         font-family: $text-serif;
         text-shadow: 0 0 10px #FFF;
         text-transform: uppercase;
+
         &:hover {
             color: #24C29F;
             text-shadow: 0 0 10px #24C29F;
         }
     }
-    @media (min-width: 768px) {
-        @include font-size(20);
-        margin-left: 20px;
-        padding: 10px;
-    }
 }
 
 // Game menu styles
-
 .game-nav {
     display: none;
+
     & a {
         @include font-size(30);
         font-family: $text-serif;
         text-transform: uppercase;
     }
+
     @media only screen and (min-width: 768px) and (max-width: 1280px) {
         background-color: #FFF;
         display: block;
         width: 100%;
     }
+
     @media only screen and (min-width: 1280px) {
         display: block;
         position: fixed;
@@ -92,6 +100,7 @@
 
 .list-game-item {
     margin: 20px 40px;
+
     @media (min-width: 768px) {
         display: inline-block;
     }
@@ -101,7 +110,6 @@
 }
 
 // Languages menu styles
-
 .content-lang {
     @media only screen and (max-width: 768px){
         margin-top: 4%;
@@ -111,7 +119,7 @@
     }
     @media(min-width: 768px){
         float: right;
-        margin: 4% 4%;
+        margin: 4%;
     }
 }
 
@@ -119,6 +127,7 @@
     list-style: none;
     position: absolute;
     z-index: 1;
+
     @media(min-width: 768px){
         position: inherit;
     }
@@ -145,6 +154,7 @@
     -o-transition: all 1s;
     -webkit-transition: all 1s;
     transition: all 1s;
+    
     @media(min-width: 768px){
         display:inline-block;
         position: inherit;
@@ -153,14 +163,16 @@
 
 .list-lang li:first-child + li {
     @include image-transform(10deg);
-    @media(min-width: 768px){
+
+    @media(min-width: 768px) {
         @include image-transform(0deg);
     }
 }
 
 .list-lang li:last-child {
     @include image-transform(10deg);
-    @media(min-width: 768px){
+
+    @media(min-width: 768px) {
         @include image-transform(0deg);
     }
 }
@@ -212,7 +224,6 @@
 }
 
 /* Credits navigation */
-
 .show-menu {
     @include font-size(14);
     background: none;
@@ -221,11 +232,13 @@
     font-family: $text-font;
     margin: 20px 0;
     padding: 10px 20px;
+    
     &:after {
         content: url(../img/arrow-down.png);
         float: right;
         margin-left: 10px;
     }
+
     @media screen and (min-width: 1000px) {
         display: none;
     }
@@ -256,6 +269,7 @@
     -ms-transition: height .5s linear;
     -o-transition: height .5s linear;
     width: 100%;
+    
     @media screen and (min-width: 1000px){
         float: left;
         height: 75px;
@@ -270,12 +284,15 @@
     border-bottom: 1px solid #f2f2f2;
     padding: 10px 0;
     width: 100%;
+    
     a {
         @include font-size(18);
         font-family: $text-font;
+        
         &:hover {
             color: #f2f2f2;
         }
+        
         @media screen and (min-width: 1000px) {
             @include font-size(14);
             display: block;
@@ -284,6 +301,7 @@
             width: 100%;
         }
     }
+    
     @media screen and (min-width: 1000px) {
         border: none;
         float: left;
@@ -296,7 +314,6 @@
 }
 
 // Navigation items colors
-
 .web-item {
     @include nav-items-colors ($web-color);
 }
