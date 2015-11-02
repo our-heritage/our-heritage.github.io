@@ -221,9 +221,9 @@ title = '1/'+item.length;
 function navgameScroll(){
     var waypoints = $('#game-nav').waypoint(function(direction) {
        if(direction === "down"){
-            $(".game-nav").addClass("stuck");
+            $(".game-nav").css({"position":"fixed", "top":0, "z-index":2});
        }else{
-            $(".game-nav").removeClass("stuck");
+            $(".game-nav").css("position","static");
        }
     }, {
         offset:5
