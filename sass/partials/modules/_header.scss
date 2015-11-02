@@ -1,97 +1,87 @@
 // Header
 header {
-    height: auto;
-    overflow: hidden;
-    padding-bottom: 40px;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 40px;
 }
 
 header p {
-    color: #FFF;
-    font-family: $text-serif;
-    text-align: center;
-    text-shadow: 0 0 10px #FFF;
-    text-transform: uppercase;
+	color: #FFF;
+	font-family: $text-serif;
+	text-align: center;
+	text-shadow: 0 0 10px #FFF;
+	text-transform: uppercase;
 }
 
 .header-background {
-  background: url(../img/header.png) no-repeat center bottom;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  @media (min-width: 1024px) {
-    height: 770px;
-    padding-bottom: 80px;
-  }
+	background: url(../img/header.png) no-repeat center bottom;
+	background-size: cover;
+
+	@media (min-width: 1024px) {
+		height: 770px;
+		padding-bottom: 80px;
+	}
 }
 
 .header-juego {
-    background: transparent;
+	background: transparent;
 }
 
 .lang-select li {
-    display: inline-block;
+	display: inline-block;
 }
 
 .lang-select {
-    float: right;
-    margin: 2% 3%;
+	float: right;
+	margin: 2% 3%;
 }
 
 .play {
-    background: url("../img/play.png") no-repeat;
-    background-size: cover;
-    display: block;
-    height: 85px;
-    margin: 15px auto;
-    width: 85px;
+	background: url("../img/play.png") no-repeat;
+	background-size: cover;
+	display: block;
+	height: 85px;
+	margin: 15px auto;
+	width: 85px;
 }
 
 // Header Creditos
 .main-header {
-    background: url("../img/header-banner.jpg") no-repeat;
-    -moz-background: url("../img/header-banner.jpg") no-repeat;
-    -webkit-background: url("../img/header-banner.jpg") no-repeat;
-    -o-background: url("../img/header-banner.jpg") no-repeat;
-    -ms-background: url("../img/header-banner.jpg") no-repeat; // estos prefix no tienen sentido, background es una propiedad soportada
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover; // estas seguros que estos prefix aplican?
-    overflow: hidden;
-    padding: 150px 0 100px;
-    text-align: center;
-    
-    h2 {
-        @include font-size($title-mob-size);
-        border-top: 5px solid $header-title-border;
-        border-bottom: 5px solid $header-title-border;
-        color: $title-color;
-        font-family: $title-font;
-        margin: 20px auto;
-        padding: 20px 0;
-        width: 85%;
-        
-        @media screen and (min-width: 1000px) {
-            @include font-size(60);
-            width: 75%;
-        }
-    }
+	background: url("../img/header-banner.jpg") no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	padding: 150px 0 100px;
+	text-align: center;
+
+	h2 {
+		@include font-size($title-mob-size);
+		border-top: 5px solid $header-title-border;
+		border-bottom: 5px solid $header-title-border;
+		color: $title-color;
+		font-family: $title-font;
+		margin: 20px auto;
+		padding: 20px 0;
+		width: 85%;
+
+		@media screen and (min-width: 1000px) {
+			@include font-size(60);
+			width: 75%;
+		}
+	}
 }
 
 .brief {
-    @include font-size(18);
-    background-color: rgba(255, 255, 255, .1);
-    box-sizing: border-box;
-    color: $text-color;
-    font-family: $text-font;
-    margin: 50px auto;
-    padding: 20px;
-    width: 85%;
+	@include font-size(18);
+	background-color: rgba(255, 255, 255, .1);
+	box-sizing: border-box;
+	color: $text-color;
+	font-family: $text-font;
+	margin: 50px auto;
+	padding: 20px;
+	width: 85%;
 
-    @media screen and (min-width: 1000px) {
-        @include font-size(24);
-        width: 40%;
-    }
+	@media screen and (min-width: 1000px) {
+		@include font-size(24);
+		width: 40%;
+	}
 }
