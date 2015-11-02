@@ -1,106 +1,101 @@
 // Estilos para los elementos base y footer
 html {
-    box-sizing: border-box;
-    font-size: 10px;
-}
-
-// ya cargaron normalize, esto esta sobrando
-* {
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
+	font-size: 10px;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 a {
-    color: #000;
-    font-family: $text-sans;
-    text-decoration: none;
+	color: #000;
+	font-family: $text-sans;
+	text-decoration: none;
 }
 
 button {
-    background: none;
-    border: none;
+	background: none;
+	border: none;
 }
 
 button:active,
 button:focus,
 button:focus:active {
-    box-shadow: none;
-    outline: 0;
+	box-shadow: none;
+	outline: 0;
 }
 
 footer {
-    background-color: #d2d2d2;
-    margin-top: 50px;
-    overflow: hidden;
-    padding: 3% 0 2% 0;
-    text-align: center;
+	background-color: #d2d2d2;
+	margin-top: 50px;
+	overflow: hidden;
+	padding: 3% 0 2% 0;
+	text-align: center;
 }
 
 footer a {
-    border: 1px solid #000;
-    display: inline-block;
-    padding: 2px 5px;
+	border: 1px solid #000;
+	display: inline-block;
+	padding: 2px 5px;
 }
 
 h1 a {
-    color: transparent;
+	color: transparent;
 }
 
 h2, h3, h4 {
-    font-family: $text-serif;
+	font-family: $text-serif;
+	margin: 0;
 }
 
 h2 {
-    @include font-size(30);
-    margin: 30px 0;
-    text-align: center;
+	@include font-size(30);
+	margin: 30px 0;
+	text-align: center;
 }
 
 h3 {
-    @include font-size(26);
+	@include font-size(26);
 }
 
 h4 {
-    @include font-size(14);
+	@include font-size(14);
 }
 
 li {
-    display: block;
-    list-style-type: none;
+	display: block;
+	list-style-type: none;
 }
 
 p {
-    @include font-size(16);
-    font-family: $text-sans;
-    padding-bottom: 16px;
+	@include font-size(16);
+	font-family: $text-sans;
+	padding-bottom: 16px;
+	margin: 0;
 }
 
 section {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .background-juego {
-    background-image: url(../img/desktop-background.png);
-    -webkit-box-shadow: inset 0px 140px 211px -23px rgba(61,60,61,1);
-    -moz-box-shadow: inset 0px 140px 211px -23px rgba(61,60,61,1);
-    box-shadow: inset 0px 140px 211px -23px rgba(61,60,61,1)
+	background-image: url(../img/desktop-background.png);
+	-webkit-box-shadow: inset 0px 140px 211px -23px rgba(61, 60, 61, 1);
+	-moz-box-shadow: inset 0px 140px 211px -23px rgba(61, 60, 61, 1);
+	box-shadow: inset 0px 140px 211px -23px rgba(61, 60, 61, 1)
 }
 
 .home-background {
-    background-color: #1e2631;
+	background-color: #1e2631;
 }
 
 .mobil-game-wrapper {
-    display: block;
+	display: block;
 
-    @media (min-width: 768px) {
-        /* High-end resolutions */
-        display: none;
-    }
+	@media (min-width: 768px) {
+		display: none;
+	}
 }

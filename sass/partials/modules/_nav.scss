@@ -1,280 +1,334 @@
 .logo-nav {
-  display: none;
-  @media (min-width: 768px) {
-    float: left;
-    display: inline-block;
-  }
+	display: none;
+
+	@media (min-width: 768px) {
+		display: inline-block;
+		float: left;
+		margin-top: -2%;
+	}
 }
 
 .logo img {
-    width: 100%;
-  max-width: 664px;
-  max-height: 157px;
-  display: block;
-  margin: 4% auto;
-  @media (min-width: 1024px) {
-    margin: 2% auto;
-  }
+	width: 100%;
+	max-width: 664px;
+	max-height: 157px;
+	display: block;
+	margin: 4% auto;
+
+	@media (min-width: 1024px) {
+		margin: 4% auto;
+	}
 }
 
 .main-nav ul {
-    @media (min-width: 768px) {
-        height: 178px;
-    }
+	@media (min-width: 768px) {
+		height: 178px;
+	}
 }
 
 .main-nav {
-    display: block;
-    margin: 6% 5%;
-    @media (min-width: 768px) {
-        margin: 2% 4%;
-    }
+	display: block;
+	margin: 4% 0;
+
+	@media (min-width: 768px) {
+		margin: 4% 4%;
+	}
 }
 
 .main-nav li {
-    @include font-size(18);
-  border: 3px solid $light-green;
-    display: inline-block;
-  margin-left: 15px;
-  padding: 3px;
-    a {
-        color: #FFF;
-        display: inline-block;
-        font-family: $text-serif;
-        &:hover {
-            color: #24C29F;
-        }
-    }
-  @media (min-width: 768px) {
-    @include font-size(20);
-    padding: 10px;
-  }
+	@include font-size(18);
+	border: 3px solid $light-green;
+	display: inline-block;
+	margin-left: 10px;
+	padding: 5px;
+
+	@media (min-width: 768px) {
+		@include font-size(20);
+		margin-left: 20px;
+		padding: 10px;
+	}
+
+	a {
+		color: #FFF;
+		display: inline-block;
+		font-family: $text-serif;
+		text-shadow: 0 0 10px #FFF;
+		text-transform: uppercase;
+
+		&:hover {
+			color: #24C29F;
+			text-shadow: 0 0 10px #24C29F;
+		}
+	}
 }
 
 // Game menu styles
 
 .game-nav {
-    display: none;
-    & a {
-        @include font-size(30);
-        font-family: $text-serif;
-    }
-    @media only screen and (min-width: 768px) and (max-width: 1280px) {
-        background-color: #FFF;
-        display: block;
-        width: 100%;
-    }
-    @media only screen and (min-width: 1280px) {
-        display: block;
-        position: fixed;
-    }
+	display: none;
+
+	& a {
+		@include font-size(30);
+		font-family: $text-serif;
+		text-transform: uppercase;
+	}
+
+	@media only screen and (min-width: 768px) and (max-width: 1280px) {
+		background-color: #FFF;
+		display: block;
+		width: 100%;
+	}
+
+	@media only screen and (min-width: 1280px) {
+		display: block;
+		position: fixed;
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
-    .stuck {
-      position:fixed;
-      top:0;
-      z-index:2;
-    }
+	.sticky {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 2;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+	}
 }
 
 .list-game {
-    text-align: center;
+	text-align: center;
 }
 
 .list-game-item {
-    margin: 20px 40px;
-    @media (min-width: 768px) {
-        display: inline-block;
-    }
-    @media (min-width: 1280px) {
-        display: block;
-    }
+	margin: 20px 40px;
+
+	@media (min-width: 768px) {
+		display: inline-block;
+	}
+
+	@media (min-width: 1280px) {
+		display: block;
+	}
 }
 
 // Languages menu styles
 
 .content-lang {
-    float: right;
-    margin: 20px 100px;
-    @media(min-width: 768px){
-        margin: 2% 4%;
-    }
+	@media only screen and (max-width: 768px){
+		margin-top: 4%;
+		position: absolute;
+		right: 18%;
+		top: 0;
+	}
+
+	@media(min-width: 768px){
+		float: right;
+		margin: 4%;
+	}
 }
 
 .list-lang {
-    list-style: none;
-    position: absolute;
-    z-index: 1;
-    @media(min-width: 768px){
-        position: inherit;
-    }
+	list-style: none;
+	position: absolute;
+	z-index: 1;
+
+	@media(min-width: 768px){
+		position: inherit;
+	}
 }
 
 .list-lang-item a {
-    @include font-size(14);
-    color: #24C29F;
-    font-family: $text-serif;
-    text-decoration: none;
+	@include font-size(14);
+	color: #24C29F;
+	font-family: $text-serif;
+	text-decoration: none;
+	text-shadow: 0 0 10px #24C29F;
+	text-transform: uppercase;
 }
 
 .list-lang-item {
-    border: 3px solid $light-green;
-    cursor: pointer;
-    left: 0;
-    padding: 10px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-    @media(min-width: 768px){
-        display:inline-block;
-        position: inherit;
-    }
+	border: 3px solid $light-green;
+	cursor: pointer;
+	left: 0;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+
+	@media(min-width: 768px){
+		display:inline-block;
+		position: inherit;
+	}
 }
 
 .list-lang li:first-child + li {
-  @include image-transform(10deg);
-    @media(min-width: 768px){
-    @include image-transform(0deg);
-    }
+	@include image-transform(10deg);
+
+	@media(min-width: 768px) {
+		@include image-transform(0deg);
+	}
 }
 
 .list-lang li:last-child {
-  @include image-transform(10deg);
-    @media(min-width: 768px){
-    @include image-transform(0deg);
-    }
+	@include image-transform(10deg);
+
+	@media(min-width: 768px) {
+		@include image-transform(0deg);
+	}
 }
 
 .close-lang {
-    background: rgba(0, 0, 0, .4);
-    border: 3px solid $light-green;
-    cursor: pointer;
-    position: absolute;
-    padding: 2px 5px;
-    stroke: $light-green;
-    @media(min-width: 768px) {
-        display: none;
-    }
+	background: rgba(0, 0, 0, .4);
+	border: 3px solid $light-green;
+	cursor: pointer;
+	position: absolute;
+	padding: 2px 5px;
+	stroke: $light-green;
+
+	@media(min-width: 768px) {
+		display: none;
+	}
 }
 
 .position0 {
-    top: 55px;
+	top: 55px;
 }
 
 .position1 {
-    top: 110px;
+	top: 110px;
 }
 
 .position2 {
-    top: 165px;
+	top: 165px;
 }
 
 .position3 {
-    top: 220px;
-  @include image-transform(-10deg);
-    @media(min-width:768px){
-    @include image-transform(0deg);
-    }
+	top: 220px;
+	@include image-transform(-10deg);
+
+	@media(min-width:768px){
+		@include image-transform(0deg);
+	}
 }
 
 .position4 {
-    top: 220px;
+	top: 220px;
 }
 
 .selected a {
-    color: #fff;
+	color: #fff;
+	text-shadow: 0 0 10px #FFF;
 }
 
 .selected {
-    background: #24C29F;
-    z-index: 3000;
+	background: #24C29F;
+	z-index: 3000;
 }
 
 /* Credits navigation */
 
 .show-menu {
-    @include font-size(14);
-    background: none;
-    border: 1px solid $light-color;
-    color: $light-color;
-    font-family: $text-serif;
-    margin: 20px 0;
-    padding: 10px 20px;
-    &:after {
-        content: url(../img/arrow-down.png);
-        float: right;
-        margin-left: 10px;
-    }
-    @media screen and (min-width: 1000px) {
-        display: none;
-    }
+	@include font-size(14);
+	background: none;
+	border: 1px solid $text-color;
+	color: $text-color;
+	font-family: $text-serif;
+	margin: 20px 0;
+	padding: 10px 20px;
+
+	&:after {
+		content: url(../img/arrow-down.png);
+		float: right;
+		margin-left: 10px;
+	}
+
+	@media screen and (min-width: 1000px) {
+		display: none;
+	}
 }
 
 .header-nav {
-    background-color: $nav-back-color;
-    left: 0;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 3;
+	background-color: $nav-back-color;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 3;
 }
 
 .header-nav-content {
-    background-color: $nav-back-color;
-    background-size: cover;
-    height: 0;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    transition: height .5s linear;
-    -webkit-transition: height .5s linear;
-    -moz-transition: height .5s linear;
-    -ms-transition: height .5s linear;
-    -o-transition: height .5s linear;
-    width: 100%;
-    @media screen and (min-width: 1000px){
-        float: left;
-        height: 75px;
-    }
+	background-color: $nav-back-color;
+	background-size: cover;
+	height: 0;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	transition: height .5s linear;
+	-webkit-transition: height .5s linear;
+	-moz-transition: height .5s linear;
+	-ms-transition: height .5s linear;
+	-o-transition: height .5s linear;
+	width: 100%;
+
+	@media screen and (min-width: 1000px){
+		float: left;
+		height: 75px;
+	}
 }
 
 .expanded {
-    height: 270px
+	height: 270px
 }
 
 .header-nav-item {
-    border-bottom: 1px solid #f2f2f2;
-    padding: 10px 0;
-    width: 100%;
-    a {
-        @include font-size(18);
-        font-family: $text-serif;
-        &:hover {
-            color: #f2f2f2;
-        }
-        @media screen and (min-width: 1000px) {
-            @include font-size(14);
-            display: block;
-            padding: 24px 0 52px;
-            height: 50%;
-            width: 100%;
-        }
-    }
-    @media screen and (min-width: 1000px) {
-        border: none;
-        float: left;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        width: 16.666%;
-    }
+	border-bottom: 1px solid #f2f2f2;
+	padding: 10px 0;
+	width: 100%;
+
+	a {
+		@include font-size(18);
+		font-family: $text-serif;
+
+		&:hover {
+			color: #f2f2f2;
+		}
+
+		@media screen and (min-width: 1000px) {
+			@include font-size(14);
+			display: block;
+			padding: 24px 0 52px;
+			height: 50%;
+			width: 100%;
+		}
+	}
+
+	@media screen and (min-width: 1000px) {
+		border: none;
+		float: left;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		width: 33.333%;
+	}
+}
+
+// Navigation items colors
+.cetav-item {
+	@include nav-items-colors ($cetav-color);
+}
+
+.fair-item {
+	@include nav-items-colors ($fair-color);
+}
+
+.advisors-item {
+	@include nav-items-colors ($advisors-color);
 }

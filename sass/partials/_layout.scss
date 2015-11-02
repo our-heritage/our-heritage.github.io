@@ -1,14 +1,12 @@
 // Layout styles
 
 .game-wrapper {
-    @media (min-width: 768px) {
-        /* High-end resolutions */
-        margin: 0 auto;
-        width: 85%;
-    }
-    @media (min-width: 1280px) {
-        /* High-end resolutions */
-        margin-left: 200px;
-        width: 85%;
-    }
+	@media (min-width: 768px) {
+		margin: 0 auto;
+		width: 85%;
+	}
+	@media (min-width: 1280px) {
+		margin-left: 200px;
+		width: 85%;
+	}
 }

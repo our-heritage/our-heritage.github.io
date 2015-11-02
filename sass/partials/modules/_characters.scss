@@ -1,171 +1,174 @@
 // Characters Mobile
 .taps-character {
-    margin: 0 auto;
-    max-width: 100%;
-    
-    @media (min-width: 768px) {
-        display: none;
-    }
-    
-    & li { // revisen que esten usando el parent de manera correcta
-        background-color: $unactive-color;
-        border-bottom: 1px solid #ccc;
-    }
-    h3 {
-        cursor: pointer;
-        font-family: $text-serif;
-        margin-right: 4%;
-        padding-bottom: 100px;
-        text-align: right;
-    }
+	margin: 0 auto;
+	max-width: 100%;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+
+	& li {
+		background-color: #8E8A8A;
+		border-bottom: 1px solid #ccc;
+	}
+
+	h3 {
+		cursor: pointer;
+		font-family: $text-serif;
+		margin-right: 4%;
+		padding-bottom: 100px;
+		text-align: right;
+	}
 }
 
 .close-tap {
-    float: right;
-    margin: 5% 0;
-    stroke: #000;
+	float: right;
+	margin: 5% 0;
+	stroke: #000;
 }
 
 .tap-info {
-    background: $light-color;
-    color: $background-color;
-    display: block;
-    height: auto;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    transition: max-height .9s ease-in-out;
-    width: 100%;
-    
-    & p {
-        margin: 16px 0;
-        width: 90%;
-    }
+	background: #fff;
+	color: #222;
+	display: block;
+	height: auto;
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 15px;
+	transition: max-height .9s ease-in-out;
+	width: 100%;
+
+	& p {
+		margin: 16px 0;
+		width: 90%;
+	}
 }
 
 .expand-tap-info {
-    height: 100%;
-    max-height: 480px;
+	height: 100%;
+	max-height: 480px;
 }
 
 // Characters Desktop
 .characters-wrapper {
-    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-    height: 540px;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 900px;
+	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+	height: 540px;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 900px;
 }
 
 .hidden {
-    display: none;
+	display: none;
 }
 
 .details .close-tap {
-    display: none;
+	display: none;
 }
 
 .main-char-selection {
-    background-image: url("../img/characters/family-photo.png");
-    height: 540px;
-    width: 900px;
-    z-index: 1;
+	background-image: url("../img/characters/family-photo.png");
+	height: 540px;
+	width: 900px;
+	z-index: 1;
 }
 
 .char-details {
-    background-color: $wooden-color;
-    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-    margin-top: -540px;
-    overflow: hidden;
-    position: absolute;
-    width: 900px;
-    z-index: 2;
+	background-color: #D7AE83;
+	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+	margin-top: -540px;
+	overflow: hidden;
+	position: absolute;
+	width: 900px;
+	z-index: 2;
 }
 
 .char-selection {
-    margin: 0 auto;
-    padding: 2% 0;
+	margin: 0 auto;
+	padding: 2% 0;
 }
 
 .char-details .char-selection {
-    margin-top: 365px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: 60%;
+	margin-top: 365px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 60%;
 }
 
 .details {
-    height: 540px;
-    overflow: hidden;
-    padding: 6% 6% 0;
-    width: 100%;
-    
-    img {
-        float: left;
-        margin: 0 4%;
-    }
-    h3 {
-        margin-bottom: 15px;
-        text-transform: uppercase;
-    }
-    h3, p {
-        float: right;
-        width: 60%;
-    }
+	height: 540px;
+	overflow: hidden;
+	padding: 6% 6% 0;
+	width: 100%;
+
+	img {
+		float: left;
+		margin: 0 4%;
+	}
+
+	h3 {
+		margin-bottom: 15px;
+		text-transform: uppercase;
+	}
+
+	h3, p {
+		float: right;
+		width: 60%;
+	}
 }
 
 .preview-char {
-    margin-right: 8%;
+	margin-right: 8%;
 }
 
 .main-char-selection .char_btn {
-    background-color: inherit;
-    border: none;
-    height: 450px;
-    margin-left: 20px;
-    padding: 0 2%;
-    width: 19%;
+	background-color: inherit;
+	border: none;
+	height: 450px;
+	margin-left: 20px;
+	padding: 0 2%;
+	width: 19%;
 }
 
 .controls img {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
 }
 
 .controls {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
 }
 
 .back {
-    left: 0;
-    position: absolute;
-    top: 200px;
+	left: 0;
+	position: absolute;
+	top: 200px;
 }
 
 .close-details {
-    cursor: pointer;
-    position: absolute;
-    right: 2%;
-    top: 2%;
-    stroke: #fff;
-    width: 40px;
+	cursor: pointer;
+	position: absolute;
+	right: 2%;
+	top: 2%;
+	stroke: #fff;
+	width: 40px;
 }
 
 .foward {
-    position: absolute;
-    right: 0;
-    top: 200px;
+	position: absolute;
+	right: 0;
+	top: 200px;
 }
 
 .section-character {
-    display: none;
-    
-    @media (min-width: 768px) {
-        display: inherit;
-    }
+	display: none;
+
+	@media (min-width: 768px) {
+		display: inherit;
+	}
 }
