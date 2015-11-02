@@ -358,11 +358,8 @@ th {
   padding: 0; }
 
 /*
-#2DCDE5; //celeste
-#24C29F; //turquesa
 #F37C50; //naranja
-#D7AE83; //beige
-#363434; //negro
+#2DCDE5; //celeste
 */
 html {
   box-sizing: border-box;
@@ -468,9 +465,8 @@ section {
   display: none; }
   @media (min-width: 768px) {
     .logo-nav {
-      display: inline-block;
       float: left;
-      margin-top: -2%; } }
+      display: inline-block; } }
 
 .logo img {
   width: 100%;
@@ -480,7 +476,7 @@ section {
   margin: 4% auto; }
   @media (min-width: 1024px) {
     .logo img {
-      margin: 4% auto; } }
+      margin: 2% auto; } }
 
 @media (min-width: 768px) {
   .main-nav ul {
@@ -488,41 +484,36 @@ section {
 
 .main-nav {
   display: block;
-  margin: 4% 0; }
+  margin: 6% 5%; }
   @media (min-width: 768px) {
     .main-nav {
-      margin: 4% 4%; } }
+      margin: 2% 4%; } }
 
 .main-nav li {
   font-size: 18px;
   font-size: 1.8rem;
   border: 3px solid #24C29F;
   display: inline-block;
-  margin-left: 10px;
-  padding: 5px; }
+  margin-left: 15px;
+  padding: 3px; }
+  .main-nav li a {
+    color: #FFF;
+    display: inline-block;
+    font-family: "Share Tech", serif; }
+    .main-nav li a:hover {
+      color: #24C29F; }
   @media (min-width: 768px) {
     .main-nav li {
       font-size: 20px;
       font-size: 2rem;
-      margin-left: 20px;
       padding: 10px; } }
-  .main-nav li a {
-    color: #FFF;
-    display: inline-block;
-    font-family: "Share Tech", serif;
-    text-shadow: 0 0 10px #FFF;
-    text-transform: uppercase; }
-    .main-nav li a:hover {
-      color: #24C29F;
-      text-shadow: 0 0 10px #24C29F; }
 
 .game-nav {
   display: none; }
   .game-nav a {
     font-size: 30px;
     font-size: 3rem;
-    font-family: "Share Tech", serif;
-    text-transform: uppercase; }
+    font-family: "Share Tech", serif; }
   @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .game-nav {
       background-color: #FFF;
@@ -534,12 +525,10 @@ section {
       position: fixed; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
-  .sticky {
+  .stuck {
     position: fixed;
-    left: 0;
     top: 0;
-    z-index: 2;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
+    z-index: 2; } }
 .list-game {
   text-align: center; }
 
@@ -552,16 +541,12 @@ section {
     .list-game-item {
       display: block; } }
 
-@media only screen and (max-width: 768px) {
-  .content-lang {
-    margin-top: 4%;
-    position: absolute;
-    right: 18%;
-    top: 0; } }
-@media (min-width: 768px) {
-  .content-lang {
-    float: right;
-    margin: 4%; } }
+.content-lang {
+  float: right;
+  margin: 20px 100px; }
+  @media (min-width: 768px) {
+    .content-lang {
+      margin: 2% 4%; } }
 
 .list-lang {
   list-style: none;
@@ -576,9 +561,7 @@ section {
   font-size: 1.4rem;
   color: #24C29F;
   font-family: "Share Tech", serif;
-  text-decoration: none;
-  text-shadow: 0 0 10px #24C29F;
-  text-transform: uppercase; }
+  text-decoration: none; }
 
 .list-lang-item {
   border: 3px solid #24C29F;
@@ -670,8 +653,7 @@ section {
   top: 220px; }
 
 .selected a {
-  color: #fff;
-  text-shadow: 0 0 10px #FFF; }
+  color: #fff; }
 
 .selected {
   background: #24C29F;
@@ -684,7 +666,7 @@ section {
   background: none;
   border: 1px solid #f2f2f2;
   color: #f2f2f2;
-  font-family: "Muli";
+  font-family: "Share Tech", serif;
   margin: 20px 0;
   padding: 10px 20px; }
   .show-menu:after {
@@ -734,7 +716,7 @@ section {
   .header-nav-item a {
     font-size: 18px;
     font-size: 1.8rem;
-    font-family: "Muli"; }
+    font-family: "Share Tech", serif; }
     .header-nav-item a:hover {
       color: #f2f2f2; }
     @media screen and (min-width: 1000px) {
@@ -753,25 +735,7 @@ section {
       margin: 0;
       padding: 0;
       text-align: center;
-      width: 33.333%; } }
-
-.cetav-item {
-  color: #ED912E; }
-  @media screen and (min-width: 1000px) {
-    .cetav-item:hover {
-      background-color: #ED912E; } }
-
-.fair-item {
-  color: #50A03B; }
-  @media screen and (min-width: 1000px) {
-    .fair-item:hover {
-      background-color: #50A03B; } }
-
-.advisors-item {
-  color: #D7AE83; }
-  @media screen and (min-width: 1000px) {
-    .advisors-item:hover {
-      background-color: #D7AE83; } }
+      width: 16.666%; } }
 
 header {
   height: auto;
@@ -834,7 +798,7 @@ header p {
     border-top: 5px solid #c4c4c4;
     border-bottom: 5px solid #c4c4c4;
     color: #f2f2f2;
-    font-family: "Finger Paint";
+    font-family: "Share Tech", serif;
     margin: 20px auto;
     padding: 20px 0;
     width: 85%; }
@@ -850,7 +814,7 @@ header p {
   background-color: rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
   color: #f2f2f2;
-  font-family: "Muli";
+  font-family: "Share Tech", serif;
   margin: 50px auto;
   padding: 20px;
   width: 85%; }
@@ -1036,7 +1000,7 @@ header p {
   stroke: #000; }
 
 .tap-info {
-  background: #fff;
+  background: #f2f2f2;
   color: #222;
   display: block;
   height: auto;
@@ -1450,7 +1414,7 @@ header p {
     font-size: 24px;
     font-size: 2.4rem;
     color: #fff;
-    font-family: "Finger Paint";
+    font-family: "Share Tech", serif;
     margin: auto 5%;
     text-align: left; }
   .team-details p {
@@ -1534,7 +1498,7 @@ header p {
       font-size: 14px;
       font-size: 1.4rem;
       display: block;
-      font-family: "Finger Paint";
+      font-family: "Share Tech", serif;
       padding: 0 2% 10%;
       width: 100%; }
     .team-member .team-member-information p {

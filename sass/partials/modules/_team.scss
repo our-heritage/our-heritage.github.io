@@ -24,7 +24,7 @@
     h2 {
         @include font-size($title-mob-size);
         color: $text-color-light;
-        font-family: $title-font;
+        font-family: $text-serif;
         margin: auto 5%;
         text-align: left;
     }
@@ -121,7 +121,7 @@
         h3 {
             @include font-size(14);
             display: block;
-            font-family: $title-font;
+            font-family: $text-serif;
             padding: 0 2% 10%;
             width: 100%;
         }

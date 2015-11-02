@@ -68,7 +68,7 @@ header p {
         border-top: 5px solid $header-title-border;
         border-bottom: 5px solid $header-title-border;
         color: $title-color;
-        font-family: $title-font;
+        font-family: $text-serif;
         margin: 20px auto;
         padding: 20px 0;
         width: 85%;
@@ -85,7 +85,7 @@ header p {
     background-color: rgba(255, 255, 255, .1);
     box-sizing: border-box;
     color: $text-color;
-    font-family: $text-font;
+    font-family: $text-serif;
     margin: 50px auto;
     padding: 20px;
     width: 85%;

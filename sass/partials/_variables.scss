@@ -7,6 +7,20 @@
 $text-sans: 'Muli', sans-serif;
 $text-serif: 'Share Tech', serif;
 
+//Text sizes//
+$title-mob-size: 24;
+$title-desk-size: 60;
+
+// Color Set
+$main-color:#24C29F;     //turquesa
+$wooden-color: #D7AE83; //beige
+$background-color : #222;
+$dark-color: #363434;  //negro
+$light-color: #f2f2f2;//white
+$unactive-color: #8E8A8A; //gris
+
+
+
 // Colors
 $light-green: #24C29F; //turquesa
 $background-nav: #EA8676; // rosa
@@ -16,16 +30,14 @@ $text-title: #493831; // cafe
 $text: #f2f2f2; // gris claro
 
 /*
-#2DCDE5; //celeste
-#24C29F; //turquesa
 #F37C50; //naranja
-#D7AE83; //beige
-#363434; //negro
+#2DCDE5; //celeste
 */
 
 //font types//
-$title-font: "Finger Paint"; // De donde sale esto?
-$text-font: "Muli";
+// $title-font: "Finger Paint"; // De donde sale esto?
+// $text-font: "Muli";
+
 
 //colors//
 $title-color: #f2f2f2;
