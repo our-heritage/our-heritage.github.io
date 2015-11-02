@@ -5,6 +5,7 @@
 
 @mixin nav-items-colors($color) {
 	color: $color;
+
 	@media screen and (min-width: 1000px) {
 		&:hover {
 			background-color: $color;
@@ -12,6 +13,7 @@
 	}
 }
 
+// old school shiz
 @mixin image-transform($rotate-deg) {
   -ms-transform: rotate($rotate-deg); /* IE 9 */
   -webkit-transform: rotate($rotate-deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
@@ -19,7 +21,6 @@
 }
 
 // mixin to color all team member sections.
-
 @mixin team-color-scheme($color) {
 	background-color: $color;
     .team-member {
