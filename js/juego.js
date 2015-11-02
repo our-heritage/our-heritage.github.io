@@ -226,6 +226,6 @@ function navgameScroll(){
             $(".game-nav").removeClass("stuck");
        }
     }, {
-        offset: 0
+        offset:5
     })
 }
