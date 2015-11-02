@@ -25,43 +25,21 @@
   var charContainers = $('.tap-info');
 
 
-//Nav Game Scroll ***********************************************************************
-enquire.register('(min-width: 768px) and (max-width: 1280px)', {
-   match: function() {
-    console.log('scroll');
-    init();
+//Enquirel.js ******************************************************************
+
+enquire
+.register("screen and (min-width: 768px) and (max-width: 1280px)", function() {
+    console.log("scroll");
     navgameScroll();
-   },
-
-   unmatch: function() {
-    console.log('unmatch scroll');
-    $('.game-nav').removeClass('stuck');
-   }
-});
-
-//smaller viewports ///////////////////////////////////////////////////////////////////////////////////
-enquire.register('(max-width: 766px)', {
-  match: function() {
+})
+.register("screen and (max-width: 766px)", function() {
     smallerViewports();
-  },
-  unmatch: function() {
-    closeTap.off('click');
-    closeNavLang.off('click');
-    listLang.off('click');
-  }
-});
-
-//larger viewports ///////////////////////////////////////////////////////////////////////////////////
-enquire.register('(min-width: 768px)', {
-  match: function() {
+})
+.register("screen and (min-width: 768px)", function() {
     init();
     largerViewports();
-  },
-  unmatch: function() {
-    galleryBtn.off('click');
-    charBtn.off('click');
-  }
 });
+
 
 //Json data ///////////////////////////////////////////////////////////////////////////////////
 function init() {
@@ -81,7 +59,7 @@ function init() {
 // larger viewports ///////////////////////////////////////////////////////////////////////////////////
 function largerViewports() {
 // nav-scroll ///////////////////////////////////////////////////////////////////////////////////
-  $('.game-nav a').click(function(){  
+  $('.game-nav a').click(function(){
     $('html, body').stop().animate({
       scrollTop: $( $(this).attr('href') ).offset().top - -10
     }, 800);
@@ -219,7 +197,7 @@ title = '1/'+item.length;
       num=num-1;
       cont=cont-1;
     }
-    $('.title').text(title); 
+    $('.title').text(title);
   });
   contentSwipe.on('swipeleft',function(){
     if(cont==sizeItem){
@@ -234,14 +212,20 @@ title = '1/'+item.length;
       num=num+1;
       cont=cont+1;
     }
-    $('.title').text(title); 
+    $('.title').text(title);
   });
   counter.append('<p class="title">'+title+'</p>');
 }
 
+//Nav Game  ////////////////////////////////////////////////////////////////////////
 function navgameScroll(){
-  //Nav Game  //////////////////////////////////////////////////////////////////////// 
-  var sticky = new Waypoint.Sticky({
-    element: $('#game-nav')
-  });
+    var waypoints = $('#game-nav').waypoint(function(direction) {
+       if(direction === "down"){
+            $(".game-nav").addClass("stuck");
+       }else{
+            $(".game-nav").removeClass("stuck");
+       }
+    }, {
+        offset: 0
+    })
 }

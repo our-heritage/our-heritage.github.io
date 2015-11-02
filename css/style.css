@@ -354,7 +354,8 @@ table {
   border-spacing: 0; }
 
 td,
-th {
+th,
+ul {
   padding: 0; }
 
 /*
@@ -525,13 +526,12 @@ section {
       display: block;
       position: fixed; } }
 
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
-  .sticky {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
+.stuck {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
+
 .list-game {
   text-align: center; }
 
@@ -1027,6 +1027,7 @@ header p {
   width: 100%; }
   .tap-info p {
     margin: 16px 0;
+    padding: 0;
     width: 90%; }
 
 .expand-tap-info {
