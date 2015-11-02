@@ -1178,6 +1178,9 @@ header p {
   text-align: center;
   width: 100%; }
 
+.ui-loader {
+  display: none !important; }
+
 @media (min-width: 768px) {
   .gallery-container {
     font-size: 0;
