@@ -18,16 +18,19 @@
     }
 
     function domReady() {
+
+      // Counter variable ///////////////////////////////////////////////////////
+      var count = 0;
       //Enquirel.js ************************************************************
       enquire
       .register('screen and (min-width: 768px) and (max-width: 1280px)', function() {
           navgameScroll();
       })
       .register('screen and (max-width: 766px)', function() {
-          smallerViewports();
+          smallerViewports(count);
       })
       .register('screen and (min-width: 768px)', function() {
-          largerViewports();
+          largerViewports(count);
       });
 
     }
@@ -35,9 +38,8 @@
 
 // larger viewports ////////////////////////////////////////////////////////////
 
-function largerViewports() {
+function largerViewports(count) {
 
-  var index = 0;
   var currentChar;
   var target = $('.gallery-imgs');
   var galleryBtn = target.children('li');
@@ -46,7 +48,7 @@ function largerViewports() {
   var details = $('#details');
   var charContainers = $('.tap-info');
 
-// nav-scroll //////////////////////////////////////////////////////////////////
+// Nav-scroll //////////////////////////////////////////////////////////////////
 
   $('.game-nav a').click(function(){
     $('html, body').stop().animate({
@@ -55,42 +57,42 @@ function largerViewports() {
     return false;
   });
 
-//CHARACTERS ///////////////////////////////////////////////////////////////////
+//Characters ///////////////////////////////////////////////////////////////////
 
     charBtn.on('click', function() {
       chosen = $(this).attr('value');
       for(var i = 0; i < charContainers.length; i++){
         currentChar = charContainers[i].id;
         if (chosen == currentChar) {
-          index = i;
+          count = i;
           detailsGenerator(i);
         }
       }
     });
 
     $('.left').on('click', function() {
-      index --;
-      if(index <= 0){
-        index = 3 ;
+      count --;
+      if(count < 0){
+        count = 3 ;
       }
-      detailsGenerator(index);
+      detailsGenerator(count);
     });
 
     $('.right').on('click', function() {
-      index++;
-      if (index == 4) {
-        index = 0;
+      count++;
+      if (count == 4) {
+        count = 0;
       }
-      detailsGenerator(index);
+      detailsGenerator(count);
     });
 
     $('#hide').on('click',function(){
       displayer('hide');
     });
 
-    function detailsGenerator(index) {
+    function detailsGenerator(count) {
 
-      var currId = charContainers[index].id;
+      var currId = charContainers[count].id;
       var charIntro = $('.tap-banner-'+currId).html();
       var charBrief = $('#'+currId).html();
       details.html(charIntro + charBrief );
@@ -105,7 +107,7 @@ function largerViewports() {
       }
     }
 
-//GALLERY //////////////////////////////////////////////////////////////////////
+//Gallery //////////////////////////////////////////////////////////////////////
 
     galleryBtn.on('click', function() {
 
@@ -119,19 +121,19 @@ function largerViewports() {
       $('#show-fullimage').removeClass('hidden').addClass('modal');
 
       $('#previous').on('click', function() {
-        index--;
-        if (index <= 0) {
-          index = 9 - 1;
+        count--;
+        if (count <= 0) {
+          count = 9 - 1;
         }
-        showFullPicture('pic-'+index);
+        showFullPicture('pic-'+count);
       });
 
       $('#next').on('click', function() {
-        index++;
-        if (index >= 9) {
-          index = 1;
+        count++;
+        if (count >= 9) {
+          count = 1;
         }
-        showFullPicture('pic-'+index);
+        showFullPicture('pic-'+count);
       });
 
       $('#closePopUp').on('click', function() {
@@ -140,17 +142,18 @@ function largerViewports() {
     });
 }
 
-// smaller Viewports ///////////////////////////////////////////////////////////
+// Smaller Viewports ///////////////////////////////////////////////////////////
 
-function smallerViewports() {
+function smallerViewports(count) {
 
-  var tapCharacter = $('.taps-character .tap-banner h3');
   var closeTap = $('.close-tap');
   var closeNavLang = $('.close-lang');
-  var listLangItem = $('.list-lang-item');
   var listLang = $('#list-lang');
+  var listLangItem = $('.list-lang-item');
+  var tapCharacter = $('.taps-character .tap-banner h3');
 
-// Close Tag ///////////////////////////////////////////////////////////////////
+
+// Close Tap Character /////////////////////////////////////////////////////////
 
   tapCharacter.on('click', function() {
     if ($(this).parent('.tap-banner').next().hasClass( 'expand-tap-info' )) {
@@ -165,7 +168,7 @@ function smallerViewports() {
     $('.tap-info').removeClass('expand-tap-info');
   });
 
-// Lang ////////////////////////////////////////////////////////////////////////
+// Menu Lang ////////////////////////////////////////////////////////////////////
 
   listLang.on('click', function() {
     for (var i = 0; i < listLangItem.length; i++) {
@@ -184,61 +187,56 @@ function smallerViewports() {
     };
   });
 
-// Gallery /////////////////////////////////////////////////////////////////////
+// Gallery Swipe ////////////////////////////////////////////////////////////////
 
   (function gallerySwipe() {
 
-    var num = 1;
-    var cont = 0;
-    var title;
-    var sizeItem;
-    var item = $('.slider-content');
-    var counter =  $('#counter');
+    var initNumber = 1;
+    var counterNumber;
+    var itemSwipe = $('.slider-content');
+    var counterSwipe =  $('#counter-slider');
     var contentSwipe = $('#gallery-container');
 
-    sizeIteam=item.length-1;
-    title = '1/'+item.length;
+    var countIteam = itemSwipe.length-1;
 
     contentSwipe.on('swiperight',function() {
 
-      if(cont == 0){
+      if(count == 0){
           $('.first-pic').removeClass('first-pic');
           $('.slider-content:last').addClass('first-pic');
-          title = (item.length)+'/'+item.length;
-          num = item.length;
-          cont = sizeIteam;
+          counterNumber = itemSwipe.length;
+          initNumber = itemSwipe.length;
+          count = countIteam;
       }else{
           $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
-          title=(num-1)+'/'+item.length;
-          num = num-1;
-          cont = cont-1;
+          counterNumber = initNumber-1;
+          initNumber = initNumber-1;
+          count = count-1;
       }
-      $('.title').text(title);
+      $('.counterNumber').text(counterNumber);
     });
 
     contentSwipe.on('swipeleft',function() {
 
-      if(cont == sizeIteam){
+      if(count == countIteam){
           $('.first-pic').removeClass('first-pic');
           $('.slider-content:first').addClass('first-pic');
-          title ='1/'+item.length;
-          num = 1;
-          cont = 0;
+          counterNumber ='1';
+          initNumber = 1;
+          count = 0;
       } else {
           $('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
-          title = (num+1)+'/'+item.length;
-          num = num+1;
-          cont = cont+1;
+          counterNumber = initNumber+1;
+          initNumber = initNumber+1;
+          count = count+1;
       }
-      $('.title').text(title);
+      $('.counterNumber').text(counterNumber);
     });
-
-    counter.append('<p class="title">'+title+'</p>');
 
   })();
 }
 
-//Nav Game  ////////////////////////////////////////////////////////////////////
+//Nav Game Tablet /////////////////////////////////////////////////////////////
 
 function navgameScroll(){
     var waypoints = $('#game-nav').waypoint(function(direction) {
