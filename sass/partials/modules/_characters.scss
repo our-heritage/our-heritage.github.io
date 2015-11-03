@@ -101,8 +101,8 @@
 .char-details .char-selection {
 	position: absolute;
 	right: 0;
-	bottom: 0;
 	text-align: center;
+	top: 440px;
 	width: 65%;
 }
 
@@ -119,7 +119,7 @@
 	cursor: pointer;
 	left: 2%;
 	position: absolute;
-	top: 50%;
+	top: 40%;
 }
 
 .details {
@@ -128,6 +128,9 @@
 	overflow: hidden;
 	padding: 5% 0 0 0;
 	width: 80%;
+	@media (min-width: 1280px) {
+		width: 60%;
+	}
 
 	h3 {
 		margin-bottom: 15px;
@@ -138,6 +141,9 @@
 	p {
 		float: right;
 		width: 60%;
+		@media (min-width: 1280px) {
+			width: 50%;
+		}
 	}
 
 	img {
@@ -149,7 +155,7 @@
 	cursor: pointer;
 	position: absolute;
 	right: 2%;
-	top: 50%;
+	top: 40%;
 }
 
 .hidden {
@@ -162,7 +168,7 @@
 }
 
 .preview-char {
-	margin-right: 5%;
+	margin-right: 4%;
 	& h4 {
 		color: #FFF;
 	}
