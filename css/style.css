@@ -448,6 +448,9 @@ section {
     .mobil-game-wrapper {
       display: none; } }
 
+.ui-loading .ui-loader, .ui-loader {
+  display: none; }
+
 @media (min-width: 768px) {
   .game-wrapper {
     margin: 0 auto;
@@ -1162,7 +1165,7 @@ header p {
     width: 100%; } }
 
 @media only screen and (max-width: 768px) {
-  .first {
+  .first-pic {
     display: block; } }
 
 @media only screen and (max-width: 768px) {
