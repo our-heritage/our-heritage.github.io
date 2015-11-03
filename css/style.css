@@ -1408,27 +1408,29 @@ header p {
     width: 100%; }
 
 .team-content {
+  box-sizing: border-box;
+  color: #f2f2f2;
   display: none;
-  overflow: hidden;
-  padding: 5% auto;
+  height: 100%;
   width: 100%; }
 
 .team-details {
   box-shadow: 3px 0 3px 2px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  float: left;
+  height: 100%;
   width: 50%; }
   .team-details h2 {
     font-size: 24px;
     font-size: 2.4rem;
-    color: #f2f2f2;
     font-family: "Share Tech", serif;
     font-size: 8em;
-    margin: auto;
+    margin: 12.5% auto;
     text-align: center; }
 
 .team-credits {
-  display: block;
   float: left;
+  overflow: auto;
+  padding: 1% 2%;
   width: 50%; }
 
 .team-cetav {
@@ -1447,6 +1449,7 @@ header p {
     background: #e3c7aa; }
 
 .visible {
-  display: block; }
+  position: fixed;
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */
