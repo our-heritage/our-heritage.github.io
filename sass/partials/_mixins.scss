@@ -23,15 +23,8 @@
 // mixin to color all team member sections.
 @mixin team-color-scheme($color) {
 	background-color: $color;
-	.team-member {
-		background-color: darken($color, 10%);
-	}
 
-	.team-member-information {
-		background: rgba($color, .7);
-	}
-
-	.team-member-information a {
-		color: lighten($color, 20%);
+	.team-details {
+		background: lighten($color, 10);
 	}
 }

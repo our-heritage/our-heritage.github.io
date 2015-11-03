@@ -451,6 +451,7 @@ section {
   .game-wrapper {
     margin: 0 auto;
     width: 85%; } }
+
 @media (min-width: 1280px) {
   .game-wrapper {
     margin-left: 200px;
@@ -531,6 +532,7 @@ section {
     top: 0;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
+
 .list-game {
   text-align: center; }
 
@@ -549,6 +551,7 @@ section {
     position: absolute;
     right: 18%;
     top: 0; } }
+
 @media (min-width: 768px) {
   .content-lang {
     float: right;
@@ -1195,7 +1198,6 @@ header p {
     list-style: none;
     margin: 0 auto;
     width: 80%; }
-
   .gallery-imgs li {
     background: url(../img/polaroid.jpg);
     box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
@@ -1211,7 +1213,6 @@ header p {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
-
   .gallery-imgs .pic-1 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1219,7 +1220,6 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
-
   .gallery-imgs .pic-2 {
     -ms-transform: rotate(10deg);
     /* IE 9 */
@@ -1228,7 +1228,6 @@ header p {
     transform: rotate(10deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: 20px; }
-
   .gallery-imgs .pic-3 {
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -1239,7 +1238,6 @@ header p {
     left: 5px;
     margin-top: -25px;
     position: relative; }
-
   .gallery-imgs .pic-4 {
     -ms-transform: rotate(-15deg);
     /* IE 9 */
@@ -1248,7 +1246,6 @@ header p {
     transform: rotate(-15deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -10px; }
-
   .gallery-imgs .pic-5 {
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -1258,7 +1255,6 @@ header p {
     /* IE 10, Fx 16+, Op 12.1+ */
     position: relative;
     right: 15px; }
-
   .gallery-imgs .pic-6 {
     -ms-transform: rotate(10deg);
     /* IE 9 */
@@ -1269,7 +1265,6 @@ header p {
     left: 5px;
     position: relative;
     margin-top: -22px; }
-
   .gallery-imgs .pic-7 {
     -ms-transform: rotate(5deg);
     /* IE 9 */
@@ -1278,7 +1273,6 @@ header p {
     transform: rotate(5deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -40px; }
-
   .gallery-imgs .pic-8 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1287,7 +1281,6 @@ header p {
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: 25px; }
-
   .gallery-imgs .pic-9 {
     -ms-transform: rotate(15deg);
     /* IE 9 */
@@ -1296,7 +1289,6 @@ header p {
     transform: rotate(15deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -60px; }
-
   .modal {
     background-color: rgba(0, 0, 0, 0.9);
     display: block;
@@ -1329,6 +1321,7 @@ header p {
       left: 2%;
       position: absolute;
       top: 50%; } }
+
 .cetav {
   float: right; }
   @media (min-width: 1024px) {
@@ -1421,171 +1414,37 @@ header p {
   width: 100%; }
 
 .team-details {
+  box-shadow: 3px 0 3px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 100%; }
+  width: 50%; }
   .team-details h2 {
     font-size: 24px;
     font-size: 2.4rem;
     color: #f2f2f2;
     font-family: "Share Tech", serif;
-    margin: auto 5%;
-    text-align: left; }
-  .team-details p {
-    font-size: 18px;
-    font-size: 1.8rem;
-    color: #f2f2f2;
-    line-height: 1.6em;
-    margin: 5%;
-    padding-bottom: 5%;
-    width: 90%; }
-  @media (min-width: 480px) {
-    .team-details {
-      float: left;
-      display: inline-block;
-      padding: 0;
-      width: 50%;
-      z-index: 1; }
-      .team-details h2 {
-        font-size: 22px;
-        font-size: 2.2rem;
-        margin: 4% 5% 0;
-        padding: 0;
-        width: 90%; }
-      .team-details p {
-        font-size: 14px;
-        font-size: 1.4rem;
-        margin: 8% 5% 0;
-        padding: 0; } }
-  @media (min-width: 640px) {
-    .team-details h2 {
-      font-size: 28px;
-      font-size: 2.8rem; }
-    .team-details p {
-      font-size: 18px;
-      font-size: 1.8rem;
-      padding: 4% 0 0; } }
-  @media (min-width: 1024px) {
-    .team-details {
-      width: 25%; }
-      .team-details h2 {
-        font-size: 26px;
-        font-size: 2.6rem;
-        padding: 0 2%; }
-      .team-details p {
-        font-size: 15px;
-        font-size: 1.5rem;
-        margin: 0 5%;
-        padding: 4% 2%; } }
+    font-size: 8em;
+    margin: auto;
+    text-align: center; }
 
-.team-member {
-  font-size: 15px;
-  font-size: 1.5rem;
-  box-sizing: border-box;
-  color: #f2f2f2;
-  display: inline-block;
+.team-credits {
+  display: block;
   float: left;
-  overflow: hidden;
-  position: relative;
-  width: 50%;
-  z-index: 1; }
-  .team-member img {
-    display: block;
-    height: auto;
-    width: 100%; }
-  .team-member:hover .team-member-information {
-    transform: translateY(0); }
-  .team-member .team-member-information {
-    bottom: 0%;
-    color: #fff;
-    height: 100%;
-    left: 0;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translateY(78%);
-    transition: transform .35s ease-out;
-    z-index: 2; }
-    .team-member .team-member-information h3 {
-      font-size: 14px;
-      font-size: 1.4rem;
-      display: block;
-      font-family: "Share Tech", serif;
-      padding: 0 2% 10%;
-      width: 100%; }
-    .team-member .team-member-information p {
-      padding: 0 2% 8%;
-      width: 90%; }
-    .team-member .team-member-information a {
-      font-size: 14px;
-      font-size: 1.4rem;
-      display: block;
-      padding: 0 2% 10%;
-      text-decoration: underline;
-      width: 100%; }
-    @media (min-width: 480px) {
-      .team-member .team-member-information h3 {
-        font-size: 20px;
-        font-size: 2rem;
-        padding: 1% 4% 10%; }
-      .team-member .team-member-information p,
-      .team-member .team-member-information a {
-        font-size: 18px;
-        font-size: 1.8rem;
-        padding: 0 2% 2%; } }
-    @media (min-width: 640px) {
-      .team-member .team-member-information h3 {
-        font-size: 26px;
-        font-size: 2.6rem;
-        padding: 2% 2% 8%; }
-      .team-member .team-member-information p,
-      .team-member .team-member-information a {
-        font-size: 22px;
-        font-size: 2.2rem;
-        padding: 4% 2%; } }
-    @media (min-width: 768px) {
-      .team-member .team-member-information h3 {
-        font-size: 32px;
-        font-size: 3.2rem;
-        padding: 2% 2% 8%; } }
-    @media (min-width: 1024px) {
-      .team-member .team-member-information h3 {
-        font-size: 22px;
-        font-size: 2.2rem; } }
-    @media (min-width: 1366px) {
-      .team-member .team-member-information h3 {
-        font-size: 30px;
-        font-size: 3rem; } }
-  @media (min-width: 1024px) {
-    .team-member {
-      width: 25%; } }
+  width: 50%; }
 
 .team-cetav {
-  background-color: #ED912E; }
-  .team-cetav .team-member {
-    background-color: #d67812; }
-  .team-cetav .team-member-information {
-    background: rgba(237, 145, 46, 0.7); }
-  .team-cetav .team-member-information a {
-    color: #f5c28c; }
+  background-color: #d67812; }
+  .team-cetav .team-details {
+    background: #ed912e; }
 
 .team-fair {
   background-color: #50A03B; }
-  .team-fair .team-member {
-    background-color: #3d7b2d; }
-  .team-fair .team-member-information {
-    background: rgba(80, 160, 59, 0.7); }
-  .team-fair .team-member-information a {
-    color: #87cc75; }
+  .team-fair .team-details {
+    background: #67be50; }
 
 .team-advisors {
   background-color: #D7AE83; }
-  .team-advisors .team-member {
-    background-color: #cb955c; }
-  .team-advisors .team-member-information {
-    background: rgba(215, 174, 131, 0.7); }
-  .team-advisors .team-member-information a {
-    color: #f0e0d0; }
+  .team-advisors .team-details {
+    background: #e3c7aa; }
 
 .visible {
   display: block; }
