@@ -23,7 +23,7 @@
 
 	h2 {
 		@include font-size($title-mob-size);
-		color: $text-color-light;
+		color: $light-color;
 		font-family: $text-serif;
 		margin: auto 5%;
 		text-align: left;
@@ -31,7 +31,7 @@
 
 	p {
 		@include font-size(18);
-		color: $text-color-light;
+		color: $light-color;
 		line-height: 1.6em;
 		margin: 5%;
 		padding-bottom: 5%;
@@ -88,7 +88,7 @@
 .team-member {
 	@include font-size(15);
 	box-sizing: border-box;
-	color: $text-color-light;
+	color: $light-color;
 	display: inline-block;
 	float: left;
 	overflow: hidden;

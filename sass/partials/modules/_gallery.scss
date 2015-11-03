@@ -49,15 +49,12 @@
 	}
 }
 
-.content-counter {
+.counter-slider {
+  text-align: center;
+  width: 100%;
 	@media (min-width: 768px) {
 		display: none;
 	}
-}
-
-.title {
-	text-align: center;
-	width: 100%;
 }
 
 .ui-loader {

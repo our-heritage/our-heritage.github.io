@@ -358,10 +358,6 @@ th,
 ul {
   padding: 0; }
 
-/*
-#F37C50; //naranja
-#2DCDE5; //celeste
-*/
 html {
   box-sizing: border-box;
   font-size: 10px; }
@@ -1174,13 +1170,12 @@ header p {
     height: 610px;
     width: 100%; } }
 
-@media (min-width: 768px) {
-  .content-counter {
-    display: none; } }
-
-.title {
+.counter-slider {
   text-align: center;
   width: 100%; }
+  @media (min-width: 768px) {
+    .counter-slider {
+      display: none; } }
 
 .ui-loader {
   display: none !important; }
@@ -1424,14 +1419,14 @@ header p {
   .team-details h2 {
     font-size: 24px;
     font-size: 2.4rem;
-    color: #fff;
+    color: #f2f2f2;
     font-family: "Share Tech", serif;
     margin: auto 5%;
     text-align: left; }
   .team-details p {
     font-size: 18px;
     font-size: 1.8rem;
-    color: #fff;
+    color: #f2f2f2;
     line-height: 1.6em;
     margin: 5%;
     padding-bottom: 5%;
@@ -1479,7 +1474,7 @@ header p {
   font-size: 15px;
   font-size: 1.5rem;
   box-sizing: border-box;
-  color: #fff;
+  color: #f2f2f2;
   display: inline-block;
   float: left;
   overflow: hidden;
