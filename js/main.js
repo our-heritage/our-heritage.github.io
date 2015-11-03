@@ -199,39 +199,39 @@ function smallerViewports(count) {
 
     var countIteam = itemSwipe.length-1;
 
-    contentSwipe.on('swiperight',function() {
-
-      if(count == 0){
-          $('.first-pic').removeClass('first-pic');
-          $('.slider-content:last').addClass('first-pic');
-          counterNumber = itemSwipe.length;
-          initNumber = itemSwipe.length;
-          count = countIteam;
-      }else{
-          $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
-          counterNumber = initNumber-1;
-          initNumber = initNumber-1;
-          count = count-1;
-      }
-      $('.counterNumber').text(counterNumber);
-    });
-
-    contentSwipe.on('swipeleft',function() {
-
-      if(count == countIteam){
-          $('.first-pic').removeClass('first-pic');
-          $('.slider-content:first').addClass('first-pic');
-          counterNumber ='1';
-          initNumber = 1;
-          count = 0;
-      } else {
-          $('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
-          counterNumber = initNumber+1;
-          initNumber = initNumber+1;
-          count = count+1;
-      }
-      $('.counterNumber').text(counterNumber);
-    });
+    contentSwipe.swipe( {
+        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+          if(count == countIteam){
+            $('.first-pic').removeClass('first-pic');
+            $('.slider-content:first').addClass('first-pic');
+            counterNumber ='1';
+            initNumber = 1;
+            count = 0;
+          } else {
+            $('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
+            counterNumber = initNumber+1;
+            initNumber = initNumber+1;
+            count = count+1;
+          }
+          $('.counterNumber').text(counterNumber);
+        },
+        swipeRight:function(event, direction, distance, duration, fingerCount) {
+         if(count == 0){
+            $('.first-pic').removeClass('first-pic');
+            $('.slider-content:last').addClass('first-pic');
+            counterNumber = itemSwipe.length;
+            initNumber = itemSwipe.length;
+            count = countIteam;
+          }else{
+            $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
+            counterNumber = initNumber-1;
+            initNumber = initNumber-1;
+            count = count-1;
+          }
+          $('.counterNumber').text(counterNumber);
+        },
+        threshold:0
+      });
 
   })();
 }
