@@ -70,16 +70,15 @@
 		width: 80%;
 	}
 	.gallery-imgs li {
-		background-color: #fff;
-		border: 1px solid #fff;
+		background: url(../img/polaroid.jpg);
 		box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
 		display: inline-block;
-		padding: 10px 10px 30px;
+		padding: 10px 10px 40px;
 		vertical-align: top;
 		width: 33%;
 
 		@media (max-width: 1024px) {
-			padding: 5px 5px 15px;
+			padding: 5px 5px 25px;
 		}
 	}
 
@@ -140,10 +139,11 @@
 
 	// Gallery-Modal Desktop
 	.modal {
-		background-color: rgba(0, 0, 0, .8);
+		background-color: rgba(0, 0, 0, .9);
 		display: block;
 		height: 100%;
 		left: 0;
+		padding: 5% 0;
 		position: fixed;
 		text-align: center;
 		top: 0;
@@ -155,13 +155,12 @@
 			position: absolute;
 			right: 2%;
 			top: 5%;
-			stroke: #fff;
+			stroke: $main-color;
 			width: 40px;
 		}
 
 		.full-picture {
-			height: 80%;
-			margin: 5% auto;
+			height: 100%;
 			max-width: 80%;
 			text-align: center;
 		}

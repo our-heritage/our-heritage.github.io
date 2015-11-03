@@ -8,31 +8,35 @@
 	}
 
 	& li {
-		background-color: #8E8A8A;
-		border-bottom: 1px solid #ccc;
+		background-color: $unactive-color;
+		border-bottom: 1px solid $light-color;
 	}
 
 	h3 {
 		cursor: pointer;
 		font-family: $text-serif;
-		margin-right: 4%;
-		padding-bottom: 100px;
+		float: right;
+		margin: 10% 4% 0 0;
 		text-align: right;
+	}
+
+	img {
+		margin: 10% 0 0 4%;
 	}
 }
 
 .close-tap {
 	float: right;
 	margin: 5% 0;
-	stroke: #000;
+	stroke: $dark-color;
 	@media (min-width: 768px) {
 		display: none;
 	}
 }
 
 .tap-info {
-	background: #fff;
-	color: #222;
+	background: $light-color;
+	color: $dark-color;
 	display: block;
 	height: auto;
 	max-height: 0;
@@ -88,10 +92,11 @@
 
 //Character Selected
 .char-details {
-	background-color: rgba(0, 0, 0, .8);
+	background-color: rgba(0, 0, 0, .9);
 	display: block;
 	height: 100%;
 	left: 0;
+	padding: 5% 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -111,7 +116,7 @@
 	position: absolute;
 	right: 2%;
 	top: 5%;
-	stroke: #fff;
+	stroke: $main-color;
 	width: 40px;
 }
 
@@ -123,18 +128,19 @@
 }
 
 .details {
-	color: #FFF;
+	color: $light-color;
 	margin: 0 auto;
-	overflow: hidden;
-	padding: 5% 0 0 0;
+	text-shadow: 0 0 10px $light-color;
 	width: 80%;
 	@media (min-width: 1280px) {
 		width: 60%;
 	}
 
 	h3 {
+		color: $main-color;
 		margin-bottom: 15px;
 		text-transform: uppercase;
+		text-shadow: 0 0 10px $main-color;
 	}
 
 	h3,
@@ -170,6 +176,8 @@
 .preview-char {
 	margin-right: 4%;
 	& h4 {
-		color: #FFF;
+		color: $light-color;
+		margin-top: 2%;
+		text-shadow: 0 0 10px $light-color;
 	}
 }

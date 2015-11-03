@@ -1,4 +1,3 @@
-// Header
 header {
 	height: auto;
 	overflow: hidden;
@@ -6,10 +5,11 @@ header {
 }
 
 header p {
-	color: #FFF;
+	@include font-size(18);
+	color: $light-color;
 	font-family: $text-serif;
 	text-align: center;
-	text-shadow: 0 0 10px #FFF;
+	text-shadow: 0 0 10px $dark-color;
 	text-transform: uppercase;
 }
 
@@ -37,7 +37,7 @@ header p {
 }
 
 .play {
-	background: url("../img/play.png") no-repeat;
+	background: url("../img/icons/play.png") no-repeat;
 	background-size: cover;
 	display: block;
 	height: 85px;
@@ -45,7 +45,7 @@ header p {
 	width: 85px;
 }
 
-// Header Creditos
+// Credits Header
 .main-header {
 	background: url("../img/header-banner.jpg") no-repeat;
 	background-size: cover;
