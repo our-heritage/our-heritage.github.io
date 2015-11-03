@@ -529,12 +529,12 @@ section {
       display: block;
       position: fixed; } }
 
-.stuck {
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
-
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .stuck {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
 .list-game {
   text-align: center; }
 
@@ -905,7 +905,7 @@ header p {
 
 .about-content {
   color: #fff;
-  height: 270px;
+  height: 300px;
   max-width: 480px;
   position: absolute;
   top: 0; }
@@ -918,7 +918,7 @@ header p {
       .about-content.left:before, .about-content.right:before {
         border: 8px solid rgba(36, 194, 159, 0.3);
         content: "";
-        height: 261px;
+        height: 290px;
         margin-top: 35px;
         position: absolute;
         width: 480px; }
@@ -1017,6 +1017,9 @@ header p {
   float: right;
   margin: 5% 0;
   stroke: #000; }
+  @media (min-width: 768px) {
+    .close-tap {
+      display: none; } }
 
 .tap-info {
   background: #fff;
@@ -1044,56 +1047,11 @@ header p {
   overflow: hidden;
   width: 900px; }
 
-.hidden {
-  display: none; }
-
-.details .close-tap {
-  display: none; }
-
 .main-char-selection {
   background-image: url("../img/characters/family-photo.png");
   height: 540px;
   width: 900px;
   z-index: 1; }
-
-.char-details {
-  background-color: #D7AE83;
-  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
-  margin-top: -540px;
-  overflow: hidden;
-  position: absolute;
-  width: 900px;
-  z-index: 2; }
-
-.char-selection {
-  margin: 0 auto;
-  padding: 2% 0; }
-
-.char-details .char-selection {
-  margin-top: 365px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 60%; }
-
-.details {
-  height: 540px;
-  overflow: hidden;
-  padding: 6% 6% 0;
-  width: 100%; }
-  .details img {
-    float: left;
-    margin: 0 4%; }
-  .details h3 {
-    margin-bottom: 15px;
-    text-transform: uppercase; }
-  .details h3, .details p {
-    float: right;
-    width: 60%; }
-
-.preview-char {
-  margin-right: 8%; }
 
 .main-char-selection .char_btn {
   background-color: inherit;
@@ -1103,39 +1061,82 @@ header p {
   padding: 0 2%;
   width: 19%; }
 
-.controls img {
-  border-radius: 50%;
-  height: 40px;
-  width: 40px; }
-
-.controls {
-  overflow: hidden;
-  position: absolute;
-  width: 100%; }
-
-.back {
-  left: 0;
-  position: absolute;
-  top: 200px; }
-
-.close-details {
-  cursor: pointer;
-  position: absolute;
-  right: 2%;
-  top: 2%;
-  stroke: #fff;
-  width: 40px; }
-
-.foward {
-  position: absolute;
-  right: 0;
-  top: 200px; }
-
 .section-character {
   display: none; }
   @media (min-width: 768px) {
     .section-character {
       display: inherit; } }
+
+.char-details {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; }
+
+.char-details .char-selection {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 440px;
+  width: 65%; }
+
+.close-details {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  stroke: #fff;
+  width: 40px; }
+
+.back {
+  cursor: pointer;
+  left: 2%;
+  position: absolute;
+  top: 40%; }
+
+.details {
+  color: #FFF;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 5% 0 0 0;
+  width: 80%; }
+  @media (min-width: 1280px) {
+    .details {
+      width: 60%; } }
+  .details h3 {
+    margin-bottom: 15px;
+    text-transform: uppercase; }
+  .details h3,
+  .details p {
+    float: right;
+    width: 60%; }
+    @media (min-width: 1280px) {
+      .details h3,
+      .details p {
+        width: 50%; } }
+  .details img {
+    float: left; }
+
+.foward {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 40%; }
+
+.hidden {
+  display: none; }
+
+.char-selection {
+  margin: 0 auto; }
+
+.preview-char {
+  margin-right: 4%; }
+  .preview-char h4 {
+    color: #FFF; }
 
 @media (min-width: 768px) {
   .section-gallery h2 {
@@ -1180,6 +1181,9 @@ header p {
 .title {
   text-align: center;
   width: 100%; }
+
+.ui-loader {
+  display: none !important; }
 
 @media (min-width: 768px) {
   .gallery-container {

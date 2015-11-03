@@ -44,7 +44,7 @@
     <section class="section-history" id="history">
       <h2 class="title-history">Una búsqueda entre recuerdos</h2>
       <p>Amy es una niña que vive con sus padres y abuelo en un edificio de apartamentos en el año 2050. A ella le gusta mucho explorar y conocer nuevos lugares, le interesa saber más sobre el pasado y los lugares que su familia visitó.</p>
-      <p>Para completar su "misión" de hacer un collage para su clase de arte, deberá recolectar fotografías sobre diferentes sitios.</p>
+      <p>En su escuela le han pedido a Amy hacer un collage para su clase de arte, en donde deberá recolectar fotografías antiguas sobre su familia y lugares fascinantes.</p>
       <p>Sin embargo, el cambio climático ha afectado drásticamente, tanto al mundo natural como a los seres humanos, por lo que las restricciones para salir al exterior y los toques de queda la frustran mucho.</p>
       <p>Descubre los diferentes eventos que involucran la familia de Amy y como cada uno representa una manera distinta de pensar sobre el cambio climático.</p>
       <p>¿Qué planeta le estamos heredando a nuestras futuras generaciones?</p>
@@ -89,6 +89,25 @@
         </div>
       </li>
       <li>
+        <div class="tap-banner tap-banner-grandps">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/characters/body-grandps.png">
+            <source media="(max-width: 768px)" srcset="img/characters/head-grandps.png">
+            <img srcset="img/characters/body-grandps" alt="This picture is currently having some problems.">
+          </picture>
+          <h3>Gramps</h3>
+        </div>
+        <div class="tap-info" id="grandps">
+          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+            <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
+            <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
+          </svg>
+          <p>Un hombre de 70 años que pasó casi toda su vida negando el cambio climático, quién
+          después de ver y experimentar las consecuencias desastrosas entró en razón. Su lenguaje corporal refleja su frustración y arrepentimiento sobre el estado actual del mundo.</p>
+          <p>Cuando habla con Amy intenta ser jovial y optimista, pero a veces su vergüenza sale a la luz. Con el resto de la familia se porta distante y amargado. Aun así, ama y cuida mucho a su familia. No es realmente conservador, pero le cuesta salirse de su zona de confort.</p>
+        </div>
+      </li>
+      <li>
         <div class="tap-banner tap-banner-dad">
           <picture>
             <source media="(min-width: 768px)" srcset="img/characters/body-dad.png">
@@ -106,26 +125,6 @@
             <p>Aunque renunció a su trabajo, continúa diseñando conceptos y productos para el movimiento ambientalista de su esposa. Como esposo comprensivo, apoya a su esposa en sus esfuerzos políticos y sociales, aunque lo hace más para mejorar el mundo para su hija que por ser un apasionado ecologista. Es simpático y compasivo, aunque le gusta más ahondar en su trabajo que en cualquier otra cosa.</p>
         </div>
       </li>
-      <li>
-        <div class="tap-banner tap-banner-grandps">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/characters/body-grandps.png">
-            <source media="(max-width: 768px)" srcset="img/characters/head-grandps.png">
-            <img srcset="img/characters/body-grandps" alt="This picture is currently having some problems.">
-          </picture>
-          <h3>Grandps</h3>
-        </div>
-        <div class="tap-info" id="grandps">
-          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-            <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-            <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-          </svg>
-          <p>Un hombre de 70 años que pasó casi toda su vida negando el cambio climático, quién
-          después de ver y experimentar las consecuencias desastrosas entró en razón. Su lenguaje corporal refleja su frustración y arrepentimiento sobre el estado actual del mundo.</p>
-          <p>Cuando habla con Amy intenta ser jovial y optimista, pero a veces su vergüenza sale a la luz. Con el resto de la familia se porta distante y amargado. Aun así, ama y cuida mucho a su familia. No es realmente conservador, pero le cuesta salirse de su zona de confort.</p>
-        </div>
-      </li>
-
     </ul>
 
     <section class="section-character" id="section-character">
@@ -133,8 +132,8 @@
         <div class="main-char-selection char-selection">
           <button class="char_btn" value="amy"></button>
           <button class="char_btn" value="mom"></button>
-          <button class="char_btn" value="dad"></button>
           <button class="char_btn" value="grandps"></button>
+          <button class="char_btn" value="dad"></button>
         </div>
       <div class="char-details hidden" id="char_details">
           <svg id="hide" class="close-details" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
@@ -219,7 +218,6 @@
   </footer>
   <script type="text/javascript" src="js/enquire.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
   <script type="text/javascript" src="js/juego.js"></script>
 </body>

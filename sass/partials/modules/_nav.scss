@@ -85,12 +85,13 @@
 	}
 }
 
-
-.stuck {
-	position: fixed;
-	top: 0;
-	z-index: 2;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+	.stuck {
+		position: fixed;
+		top: 0;
+		z-index: 2;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+	}
 }
 
 .list-game {
