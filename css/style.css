@@ -1415,14 +1415,15 @@ header p {
 .team-details {
   box-shadow: 3px 0 3px 2px rgba(0, 0, 0, 0.2);
   float: left;
-  height: 100%;
+  height: 640px;
   width: 50%; }
   .team-details h2 {
     font-size: 24px;
     font-size: 2.4rem;
     font-family: "Share Tech", serif;
     font-size: 8em;
-    margin: auto; }
+    margin: auto;
+    text-align: center; }
 
 .team-credits {
   float: left;
