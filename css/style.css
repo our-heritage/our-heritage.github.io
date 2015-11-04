@@ -451,6 +451,7 @@ section {
   .game-wrapper {
     margin: 0 auto;
     width: 85%; } }
+
 @media (min-width: 1280px) {
   .game-wrapper {
     margin-left: 200px;
@@ -527,6 +528,7 @@ section {
     top: 0;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
+
 .list-game {
   text-align: center; }
 
@@ -545,6 +547,7 @@ section {
     position: absolute;
     right: 18%;
     top: 0; } }
+
 @media (min-width: 768px) {
   .content-lang {
     float: right;
@@ -1207,7 +1210,6 @@ header p {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
-
   .gallery-imgs .pic-1 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1215,7 +1217,6 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
-
   .gallery-imgs .pic-2 {
     -ms-transform: rotate(10deg);
     /* IE 9 */
@@ -1224,7 +1225,6 @@ header p {
     transform: rotate(10deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: 20px; }
-
   .gallery-imgs .pic-3 {
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -1235,7 +1235,6 @@ header p {
     left: 5px;
     margin-top: -25px;
     position: relative; }
-
   .gallery-imgs .pic-4 {
     -ms-transform: rotate(-15deg);
     /* IE 9 */
@@ -1244,7 +1243,6 @@ header p {
     transform: rotate(-15deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -10px; }
-
   .gallery-imgs .pic-5 {
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -1254,7 +1252,6 @@ header p {
     /* IE 10, Fx 16+, Op 12.1+ */
     position: relative;
     right: 15px; }
-
   .gallery-imgs .pic-6 {
     -ms-transform: rotate(10deg);
     /* IE 9 */
@@ -1265,7 +1262,6 @@ header p {
     left: 5px;
     position: relative;
     margin-top: -22px; }
-
   .gallery-imgs .pic-7 {
     -ms-transform: rotate(5deg);
     /* IE 9 */
@@ -1274,7 +1270,6 @@ header p {
     transform: rotate(5deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -40px; }
-
   .gallery-imgs .pic-8 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1283,7 +1278,6 @@ header p {
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: 25px; }
-
   .gallery-imgs .pic-9 {
     -ms-transform: rotate(15deg);
     /* IE 9 */
@@ -1292,7 +1286,6 @@ header p {
     transform: rotate(15deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -60px; }
-
   .modal {
     background-color: rgba(0, 0, 0, 0.9);
     display: block;
@@ -1325,6 +1318,7 @@ header p {
       left: 2%;
       position: absolute;
       top: 50%; } }
+
 .cetav {
   float: right; }
   @media (min-width: 1024px) {
@@ -1415,6 +1409,7 @@ header p {
   color: #f2f2f2;
   display: none;
   height: 640px;
+  text-shadow: 2px 2px 22px #000;
   width: 100%; }
 
 .team-details {
