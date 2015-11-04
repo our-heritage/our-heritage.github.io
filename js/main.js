@@ -150,17 +150,17 @@ function smallerViewports(count) {
   var closeNavLang = $('.close-lang');
   var listLang = $('#list-lang');
   var listLangItem = $('.list-lang-item');
-  var tapCharacter = $('.taps-character .tap-banner h3');
+  var tapCharacter = $('.taps-character .tap-banner');
 
 
 // Close Tap Character /////////////////////////////////////////////////////////
 
   tapCharacter.on('click', function() {
-    if ($(this).parent('.tap-banner').next().hasClass( 'expand-tap-info' )) {
-      $(this).parent('.tap-banner').next().removeClass('expand-tap-info');
+    if ($(this).next().hasClass( 'expand-tap-info' )) {
+      $(this).next().removeClass('expand-tap-info');
     }else {
       $('.tap-info').removeClass('expand-tap-info');
-      $(this).parent('.tap-banner').next().addClass('expand-tap-info');
+      $(this).next().addClass('expand-tap-info');
     }
   });
 

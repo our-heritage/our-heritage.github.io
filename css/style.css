@@ -408,12 +408,12 @@ h2 {
   text-align: center; }
 
 h3 {
-  font-size: 26px;
-  font-size: 2.6rem; }
+  font-size: 36px;
+  font-size: 3.6rem; }
 
 h4 {
-  font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 18px;
+  font-size: 1.8rem; }
 
 li {
   display: block;
@@ -451,7 +451,6 @@ section {
   .game-wrapper {
     margin: 0 auto;
     width: 85%; } }
-
 @media (min-width: 1280px) {
   .game-wrapper {
     margin-left: 200px;
@@ -474,10 +473,6 @@ section {
   @media (min-width: 1024px) {
     .logo img {
       margin: 4% auto; } }
-
-@media (min-width: 768px) {
-  .main-nav ul {
-    height: 178px; } }
 
 .main-nav {
   display: block;
@@ -532,7 +527,6 @@ section {
     top: 0;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
-
 .list-game {
   text-align: center; }
 
@@ -551,11 +545,10 @@ section {
     position: absolute;
     right: 18%;
     top: 0; } }
-
 @media (min-width: 768px) {
   .content-lang {
     float: right;
-    margin: 4%; } }
+    margin: 3% 4% 0 0; } }
 
 .list-lang {
   list-style: none;
@@ -1008,7 +1001,6 @@ header p {
     background-color: #8E8A8A;
     border-bottom: 1px solid #f2f2f2; }
   .taps-character h3 {
-    cursor: pointer;
     font-family: "Share Tech", serif;
     float: right;
     margin: 10% 4% 0 0;
@@ -1045,15 +1037,14 @@ header p {
 
 .characters-wrapper {
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
-  height: 540px;
-  margin: 0 auto;
+  max-height: 550px;
+  margin: 5% auto;
   overflow: hidden;
-  width: 900px; }
+  max-width: 900px; }
 
 .main-char-selection {
-  background-image: url("../img/characters/family-photo.png");
-  height: 540px;
-  width: 900px;
+  background: url("../img/characters/family-photo.png") no-repeat center center;
+  background-size: 100% 100%;
   z-index: 1; }
 
 .main-char-selection .char_btn {
@@ -1086,7 +1077,7 @@ header p {
   right: 0;
   text-align: center;
   top: 440px;
-  width: 65%; }
+  width: 74%; }
 
 .close-details {
   cursor: pointer;
@@ -1112,7 +1103,7 @@ header p {
       width: 60%; } }
   .details h3 {
     color: #24C29F;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     text-transform: uppercase;
     text-shadow: 0 0 10px #24C29F; }
   .details h3,
@@ -1122,7 +1113,8 @@ header p {
     @media (min-width: 1280px) {
       .details h3,
       .details p {
-        width: 50%; } }
+        width: 50%;
+        margin-right: 5%; } }
   .details img {
     float: left; }
 
@@ -1142,7 +1134,7 @@ header p {
   margin-right: 4%; }
   .preview-char h4 {
     color: #f2f2f2;
-    margin-top: 2%;
+    margin-top: 10px;
     text-shadow: 0 0 10px #f2f2f2; }
 
 @media (min-width: 768px) {
@@ -1155,8 +1147,9 @@ header p {
     max-width: 100%; } }
 
 .section-gallery {
-  width: 100%; }
-  @media (min-width: 768px) {
+  width: 100%;
+  padding: 60px 30px; }
+  @media (min-width: 1280px) {
     .section-gallery {
       padding: 60px; } }
 
@@ -1188,13 +1181,17 @@ header p {
     .counter-slider {
       display: none; } }
 
+.gallery-container {
+  width: 100%; }
+  @media (min-width: 1280px) {
+    .gallery-container {
+      font-size: 0;
+      /* Hack that removes white space */
+      list-style: none;
+      margin: 0 auto;
+      width: 80%; } }
+
 @media (min-width: 768px) {
-  .gallery-container {
-    font-size: 0;
-    /* Hack that removes white space */
-    list-style: none;
-    margin: 0 auto;
-    width: 80%; }
   .gallery-imgs li {
     background: url(../img/polaroid.jpg);
     box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
@@ -1210,6 +1207,7 @@ header p {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
+
   .gallery-imgs .pic-1 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1217,6 +1215,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-2 {
     -ms-transform: rotate(10deg);
     /* IE 9 */
@@ -1225,6 +1224,7 @@ header p {
     transform: rotate(10deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: 20px; }
+
   .gallery-imgs .pic-3 {
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -1235,6 +1235,7 @@ header p {
     left: 5px;
     margin-top: -25px;
     position: relative; }
+
   .gallery-imgs .pic-4 {
     -ms-transform: rotate(-15deg);
     /* IE 9 */
@@ -1243,6 +1244,7 @@ header p {
     transform: rotate(-15deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -10px; }
+
   .gallery-imgs .pic-5 {
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -1252,6 +1254,7 @@ header p {
     /* IE 10, Fx 16+, Op 12.1+ */
     position: relative;
     right: 15px; }
+
   .gallery-imgs .pic-6 {
     -ms-transform: rotate(10deg);
     /* IE 9 */
@@ -1262,6 +1265,7 @@ header p {
     left: 5px;
     position: relative;
     margin-top: -22px; }
+
   .gallery-imgs .pic-7 {
     -ms-transform: rotate(5deg);
     /* IE 9 */
@@ -1270,6 +1274,7 @@ header p {
     transform: rotate(5deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -40px; }
+
   .gallery-imgs .pic-8 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1278,6 +1283,7 @@ header p {
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: 25px; }
+
   .gallery-imgs .pic-9 {
     -ms-transform: rotate(15deg);
     /* IE 9 */
@@ -1286,6 +1292,7 @@ header p {
     transform: rotate(15deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -60px; }
+
   .modal {
     background-color: rgba(0, 0, 0, 0.9);
     display: block;
@@ -1318,7 +1325,6 @@ header p {
       left: 2%;
       position: absolute;
       top: 50%; } }
-
 .cetav {
   float: right; }
   @media (min-width: 1024px) {

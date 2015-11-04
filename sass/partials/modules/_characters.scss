@@ -1,4 +1,5 @@
-// Characters Mobile
+// Smaller Viewports
+
 .taps-character {
 	margin: 0 auto;
 	max-width: 100%;
@@ -13,7 +14,6 @@
 	}
 
 	h3 {
-		cursor: pointer;
 		font-family: $text-serif;
 		float: right;
 		margin: 10% 4% 0 0;
@@ -57,20 +57,20 @@
 	max-height: 480px;
 }
 
-// Characters Desktop
+// larger viewports
+
 .characters-wrapper {
-	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-	height: 540px;
-	margin: 0 auto;
-	overflow: hidden;
-	width: 900px;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
+  max-height: 550px;
+  margin: 5% auto;
+  overflow: hidden;
+  max-width: 900px;
 }
 
 .main-char-selection {
-	background-image: url("../img/characters/family-photo.png");
-	height: 540px;
-	width: 900px;
-	z-index: 1;
+  background: url("../img/characters/family-photo.png") no-repeat center center;
+  background-size: 100% 100%;
+  z-index: 1;
 }
 
 .main-char-selection .char_btn {
@@ -91,6 +91,7 @@
 }
 
 //Character Selected
+
 .char-details {
 	background-color: rgba(0, 0, 0, .9);
 	display: block;
@@ -108,7 +109,7 @@
 	right: 0;
 	text-align: center;
 	top: 440px;
-	width: 65%;
+	width: 74%;
 }
 
 .close-details {
@@ -138,7 +139,7 @@
 
 	h3 {
 		color: $main-color;
-		margin-bottom: 15px;
+		margin-bottom: 35px;
 		text-transform: uppercase;
 		text-shadow: 0 0 10px $main-color;
 	}
@@ -149,6 +150,7 @@
 		width: 60%;
 		@media (min-width: 1280px) {
 			width: 50%;
+      margin-right: 5%;
 		}
 	}
 
@@ -175,9 +177,9 @@
 
 .preview-char {
 	margin-right: 4%;
-	& h4 {
+	h4 {
 		color: $light-color;
-		margin-top: 2%;
+		margin-top: 10px;
 		text-shadow: 0 0 10px $light-color;
 	}
 }

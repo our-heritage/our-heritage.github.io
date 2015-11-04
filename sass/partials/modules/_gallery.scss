@@ -14,8 +14,8 @@
 
 .section-gallery {
 	width: 100%;
-
-	@media (min-width: 768px) {
+  padding: 60px 30px;
+	@media (min-width: 1280px) {
 		padding: 60px;
 	}
 }
@@ -57,14 +57,18 @@
 	}
 }
 
+.gallery-container {
+  width: 100%;
+  @media (min-width: 1280px) {
+    font-size: 0; /* Hack that removes white space */
+    list-style: none;
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
 // Gallery Desktop
 @media (min-width: 768px) {
-	.gallery-container {
-		font-size: 0; /* Hack that removes white space */
-		list-style: none;
-		margin: 0 auto;
-		width: 80%;
-	}
 	.gallery-imgs li {
 		background: url(../img/polaroid.jpg);
 		box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
