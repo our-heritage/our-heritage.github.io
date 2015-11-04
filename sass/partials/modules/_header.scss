@@ -50,22 +50,16 @@ header p {
 	background: url("../img/header-banner.jpg") no-repeat;
 	background-size: cover;
 	overflow: hidden;
-	padding: 150px 0 100px;
+	padding: 150px 0 0;
 	text-align: center;
 
-	h2 {
-		@include font-size($title-mob-size);
-		border-top: 5px solid $header-title-border;
-		border-bottom: 5px solid $header-title-border;
-		color: $light-color;
-		font-family: $text-serif;
-		margin: 20px auto;
-		padding: 20px 0;
+	h1{
+		border-bottom: 3px solid $light-color;
+		margin: 0 auto;
 		width: 85%;
 
 		@media screen and (min-width: 1000px) {
-			@include font-size(60);
-			width: 75%;
+			width: 50%;
 		}
 	}
 }
@@ -76,9 +70,9 @@ header p {
 	box-sizing: border-box;
 	color: $light-color;
 	font-family: $text-serif;
-	margin: 50px auto;
+	margin: 100px auto;
 	padding: 20px;
-	width: 85%;
+	width: 60%;
 
 	@media screen and (min-width: 1000px) {
 		@include font-size(24);

@@ -681,16 +681,13 @@ section {
     .show-menu {
       display: none; } }
 
-.header-nav {
+.team-nav {
   background-color: #171926;
-  left: 0;
   overflow: hidden;
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 3; }
 
-.header-nav-content {
+.team-nav-content {
   background-color: #171926;
   background-size: cover;
   height: 0;
@@ -706,25 +703,25 @@ section {
   -o-transition: height .5s linear;
   width: 100%; }
   @media screen and (min-width: 1000px) {
-    .header-nav-content {
+    .team-nav-content {
       float: left;
       height: 75px; } }
 
 .expanded {
-  height: 270px; }
+  height: 123px; }
 
-.header-nav-item {
+.team-nav-item {
   border-bottom: 1px solid #f2f2f2;
   padding: 10px 0;
   width: 100%; }
-  .header-nav-item a {
+  .team-nav-item a {
     font-size: 18px;
     font-size: 1.8rem;
     font-family: "Share Tech", serif; }
-    .header-nav-item a:hover {
+    .team-nav-item a:hover {
       color: #f2f2f2; }
     @media screen and (min-width: 1000px) {
-      .header-nav-item a {
+      .team-nav-item a {
         font-size: 14px;
         font-size: 1.4rem;
         display: block;
@@ -732,7 +729,7 @@ section {
         height: 50%;
         width: 100%; } }
   @media screen and (min-width: 1000px) {
-    .header-nav-item {
+    .team-nav-item {
       border: none;
       float: left;
       height: 100%;
@@ -803,23 +800,15 @@ header p {
   background: url("../img/header-banner.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
-  padding: 150px 0 100px;
+  padding: 150px 0 0;
   text-align: center; }
-  .main-header h2 {
-    font-size: 24px;
-    font-size: 2.4rem;
-    border-top: 5px solid #c4c4c4;
-    border-bottom: 5px solid #c4c4c4;
-    color: #f2f2f2;
-    font-family: "Share Tech", serif;
-    margin: 20px auto;
-    padding: 20px 0;
+  .main-header h1 {
+    border-bottom: 3px solid #f2f2f2;
+    margin: 0 auto;
     width: 85%; }
     @media screen and (min-width: 1000px) {
-      .main-header h2 {
-        font-size: 60px;
-        font-size: 6rem;
-        width: 75%; } }
+      .main-header h1 {
+        width: 50%; } }
 
 .brief {
   font-size: 18px;
@@ -828,9 +817,9 @@ header p {
   box-sizing: border-box;
   color: #f2f2f2;
   font-family: "Share Tech", serif;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 20px;
-  width: 85%; }
+  width: 60%; }
   @media screen and (min-width: 1000px) {
     .brief {
       font-size: 24px;

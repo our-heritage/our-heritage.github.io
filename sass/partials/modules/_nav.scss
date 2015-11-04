@@ -250,17 +250,14 @@
 	}
 }
 
-.header-nav {
+.team-nav {
 	background-color: $nav-back-color;
-	left: 0;
 	overflow: hidden;
-	position: fixed;
-	top: 0;
 	width: 100%;
 	z-index: 3;
 }
 
-.header-nav-content {
+.team-nav-content {
 	background-color: $nav-back-color;
 	background-size: cover;
 	height: 0;
@@ -283,10 +280,10 @@
 }
 
 .expanded {
-	height: 270px
+	height: 123px
 }
 
-.header-nav-item {
+.team-nav-item {
 	border-bottom: 1px solid #f2f2f2;
 	padding: 10px 0;
 	width: 100%;

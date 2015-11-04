@@ -33,6 +33,8 @@
           largerViewports(count);
       });
 
+      navTeamScroll();
+
     }
 })(window, document);
 
@@ -244,6 +246,18 @@ function navgameScroll(){
             $('.game-nav').addClass('stuck');
        }else{
             $('.game-nav').removeClass('stuck');
+       }
+    }, {
+        offset:5
+    })
+}
+
+function navTeamScroll(){
+    var waypoints = $('#team-nav').waypoint(function(direction) {
+       if(direction === 'down'){
+            $('.team-nav').addClass('stuck');
+       }else{
+            $('.team-nav').removeClass('stuck');
        }
     }, {
         offset:5
