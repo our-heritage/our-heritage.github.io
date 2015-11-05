@@ -1451,6 +1451,11 @@ button:focus:active {
   max-height: 100%;
   padding: 4%;
   width: 50%; }
+  .team-credits h3 {
+    padding: 1em 0 0.5em; }
+  .team-credits li {
+    font-size: 1.5em;
+    font-family: "Muli", sans-serif; }
 
 .team-cetav {
   background-color: #d67812; }
