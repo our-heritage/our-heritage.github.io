@@ -1,18 +1,3 @@
-header {
-	height: auto;
-	overflow: hidden;
-	padding-bottom: 40px;
-}
-
-header p {
-	@include font-size(18);
-	color: $light-color;
-	font-family: $text-serif;
-	text-align: center;
-	text-shadow: 0 0 10px $dark-color;
-	text-transform: uppercase;
-}
-
 .header-background {
 	background: url(../img/header.png) no-repeat center bottom;
 	background-size: cover;

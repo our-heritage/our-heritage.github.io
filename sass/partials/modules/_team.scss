@@ -1,65 +1,64 @@
 .team-section-wrapper {
-	width: 100%;
+    width: 100%;
 
-	h2 {
-		@include font-size(24);
-		margin: 0;
-		padding: 20px 0;
-		text-align: center;
-		width: 100%;
-	}
+    h2 {
+        @include font-size(24);
+        margin: 0;
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .team-content {
-	box-sizing: border-box;
-	color: $light-color;
-	display: none;
-	height: 640px;
-	text-shadow: 2px 2px 22px #000;
-	width: 100%;
-
+    box-sizing: border-box;
+    color: $light-color;
+    display: none;
+    height: 640px;
+    text-shadow: 2px 2px 22px #000;
+    width: 100%;
 }
 
 .team-details {
-	box-shadow: 3px 0 3px 2px rgba(0, 0, 0, 0.2);
-	float: left;
-	height: 640px;
-	width: 50%;
+    box-shadow: 3px 0 3px 2px rgba(0, 0, 0, .2);
+    float: left;
+    height: 640px;
+    width: 50%;
 
-	h2 {
-		@include font-size($title-mob-size);
-		font-family: $text-serif;
-		font-size: 8em;
-		margin: auto;
-		text-align: center;
-	}
+    h2 {
+        @include font-size($title-mob-size);
+        font-family: $text-serif;
+        font-size: 8em;
+        margin: auto;
+        text-align: center;
+    }
 }
 
 .team-credits{
-	float: left;
-	height: 100%;
-	overflow-y: scroll;
-	max-height: 100%;
-	padding: 4%;
-	width: 50%;
+    float: left;
+    height: 100%;
+    overflow-y: scroll;
+    max-height: 100%;
+    padding: 4%;
+    width: 50%;
 }
 
 .team-cetav {
-	@include team-color-scheme(darken($cetav-color, 10));
+    @include team-color-scheme(darken($cetav-color, 10));
 }
 
 .team-fair {
-	 @include team-color-scheme($fair-color);
+     @include team-color-scheme($fair-color);
 }
 
 .team-advisors {
-	@include team-color-scheme($advisors-color);
+    @include team-color-scheme($advisors-color);
 }
 
 .visible{
-	display: inline-block;
+    display: inline-block;
 }
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar { // esto para que?
     display: none; 
 }

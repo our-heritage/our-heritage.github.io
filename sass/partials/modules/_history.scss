@@ -1,28 +1,28 @@
 .content-history {
-		margin: 20px auto;
-		max-width: 600px;
+    margin: 20px auto;
+    max-width: 600px;
 }
 
 .section-history h2 {
-		margin: 0;
-		text-transform: uppercase;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 .section-history p {
-		line-height: 22px;
-		padding: 18px 0 0;
+    line-height: 22px;
+    padding: 18px 0 0;
 }
 
 .section-history {
-		background: #F7EEE6;
-		box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-		margin: 50px auto;
-		padding: 3%;
-		width: 85%;
+    background: #F7EEE6;
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+    margin: 50px auto;
+    padding: 3%;
+    width: 85%;
 
-		@media (min-width: 768px) {
-				min-width: 590px;
-				padding: 4%;
-				width: 46%;
-		}
+    @media (min-width: 768px) {
+        min-width: 590px;
+        padding: 4%;
+        width: 46%;
+    }
 }

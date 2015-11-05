@@ -1,25 +1,25 @@
 var creditsModule = (function(window,undefined) {
 
-  dropdown = function(){
+  dropdown = function() {
     $(".show-menu , .header-nav-content").click(function() {
       $(".header-nav-content").toggleClass("expanded");
 
     });
   }
 
-  toggleDisplay = function(id){
+  toggleDisplay = function(id) {
     $(".team-content").removeClass("visible");
     $("#team"+id+"").addClass("visible");
   }
 
-  scrollEfect = function(attr){
+  scrollEfect = function(attr) {
     $('html, body').stop().animate({
           scrollTop: $(attr).offset().top - 100
       }, 800);
       return false;
   }
 
-return{
+return {
   dropdown : dropdown,
   toggle : toggleDisplay,
   scrollEfect : scrollEfect
@@ -29,16 +29,16 @@ return{
 })( window, undefined );
 
 
-if ($(window).width() < 1000) {
+if ($(window).width() < 1000) { // para que esto si estamos usando enquire?
   creditsModule.dropdown();
 }
 
-$(".display").click(function(){
+$(".display").click(function() {
     var id = $(this).attr("id");
     creditsModule.toggle(id);
 });
 
-$('.header-nav-item a').click(function(){
+$('.header-nav-item a').click(function() {
   var attr = $(this).attr('href');
   creditsModule.scrollEfect(attr);
 });

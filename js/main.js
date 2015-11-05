@@ -1,6 +1,6 @@
 (function(w, d, u) {
     // Mozilla, Opera, Webkit
-    if(document.addEventListener) {
+    if(document.addEventListener) { // esto es innecesario, estan cargando jQuery usen el metodo que ya les da
       document.addEventListener('DOMContentLoaded', function() {
         document.removeEventListener('DOMContentLoaded', arguments.callee, false);
         domReady();
@@ -17,7 +17,7 @@
       });
     }
 
-    function domReady() {
+    function domReady() { // usen jQuery, para eso ya lo cargaron
 
       // Counter variable ///////////////////////////////////////////////////////
       var count = 0;
@@ -40,6 +40,9 @@
 
 // larger viewports ////////////////////////////////////////////////////////////
 
+
+// Todo lo que esta aca afuera ensucion el global
+
 function largerViewports(count) {
 
   var currentChar;
@@ -52,7 +55,7 @@ function largerViewports(count) {
 
 // Nav-scroll //////////////////////////////////////////////////////////////////
 
-  $('.game-nav a').click(function(){
+  $('.game-nav a').click(function() {
     $('html, body').stop().animate({
       scrollTop: $( $(this).attr('href') ).offset().top - -10
     }, 800);
@@ -190,7 +193,8 @@ function smallerViewports(count) {
   });
 
 // Gallery Swipe ////////////////////////////////////////////////////////////////
-
+  
+  // IIFE dentro de otra funcion?
   (function gallerySwipe() {
 
     var initNumber = 1;
@@ -239,7 +243,6 @@ function smallerViewports(count) {
 }
 
 //Nav Game Tablet /////////////////////////////////////////////////////////////
-
 function navgameScroll(){
     var waypoints = $('#game-nav').waypoint(function(direction) {
        if(direction === 'down'){

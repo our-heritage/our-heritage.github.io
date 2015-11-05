@@ -1,94 +1,94 @@
-.cetav {
-	float: right;
+.cetav { // estas clases donde se usan? 
+    float: right;
 
-	@media (min-width: 1024px) {
-		float: inherit;
-	}
+    @media (min-width: 1024px) {
+        float: inherit; // revisen que hace inherit
+    }
 }
 
 .fairplay {
-	float: left;
+    float: left;
 
-	@media (min-width: 1024px) {
-		float: inherit;
-	}
+    @media (min-width: 1024px) {
+        float: inherit; // revisen que hace inherit
+    }
 }
 
 .spon-list li {
-	display: inline-block;
-	margin-right: 25px;
+    display: inline-block;
+    margin-right: 25px;
 }
 
 .spon-list {
-	margin: 0 auto;
-	margin-top: 20px;
-	max-width: 90%;
-	overflow: hidden;
-	text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 90%;
+    overflow: hidden;
+    text-align: center;
 
-	@media (min-width: 1024px) {
-		margin: 35px auto;
-		max-width: 1100px;
-	}
+    @media (min-width: 1024px) {
+        margin: 35px auto;
+        max-width: 1100px;
+    }
 
-	.hidden {
-		display: none;
+    .hidden {
+        display: none;
 
-		@media (min-width: 1024px) {
-			display: inline-block;
-		}
-	}
+        @media (min-width: 1024px) {
+            display: inline-block;
+        }
+    }
 }
 
 .team-logo img,
 .spon-list img {
-	width: 60%;
+    width: 60%;
 }
 
 .team {
-	overflow: hidden;
-	margin: 0 auto;
-	max-width: 780px;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 780px;
 
-	@media (min-width: 1024px) {
-		max-width: 1100px;
-	}
+    @media (min-width: 1024px) {
+        max-width: 1100px;
+    }
 
-	.hidden {
-		display: none;
+    .hidden {
+        display: none;
 
-		@media (min-width: 1024px) {
-			display: inline-block;
-		}
-	}
+        @media (min-width: 1024px) {
+            display: inline-block;
+        }
+    }
 }
 
 .team-and {
-	@include font-size(20);
-	display: inline-block;
-	padding-top: 28px;
-	text-align: center;
-	width: 64px;
+    @include font-size(20);
+    display: inline-block;
+    padding-top: 28px;
+    text-align: center;
+    width: 64px;
 
-	@media (min-width: 1024px) {
-		height: 95px;
-		padding-top: 0;
-		vertical-align: bottom;
-	}
+    @media (min-width: 1024px) {
+        height: 95px;
+        padding-top: 0;
+        vertical-align: bottom;
+    }
 }
 
 .team-copy {
-	margin: 0 auto;
-	max-width: 700px;
-	width: 80%;
+    margin: 0 auto;
+    max-width: 700px;
+    width: 80%;
 }
 
 .team-logo {
-	display: inline-block;
-	max-width: 288px;
-	width: 40%;
+    display: inline-block;
+    max-width: 288px;
+    width: 40%;
 
-	@media (min-width: 1024px) {
-		width: inherit;
-	}
+    @media (min-width: 1024px) {
+        width: inherit;
+    }
 }
