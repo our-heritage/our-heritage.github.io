@@ -21,26 +21,38 @@
 
 .team-details {
     box-shadow: 3px 0 3px 2px rgba(0, 0, 0, .2);
+    display: table;
     float: left;
     height: 640px;
     width: 50%;
 
     h2 {
         @include font-size($title-mob-size);
+        display: table-cell;
         font-family: $text-serif;
         font-size: 8em;
         margin: auto;
         text-align: center;
+        vertical-align: middle;
     }
 }
 
-.team-credits{
+.team-credits {
     float: left;
     height: 100%;
     overflow-y: scroll;
     max-height: 100%;
     padding: 4%;
     width: 50%;
+
+    h3 {
+        padding: 1em 0 0.5em;
+    }
+
+    li {
+        font-size: 1.5em;
+        font-family: $text-sans;
+    }
 }
 
 .team-cetav {
@@ -55,10 +67,11 @@
     @include team-color-scheme($advisors-color);
 }
 
-.visible{
+.visible {
     display: inline-block;
 }
 
-::-webkit-scrollbar { // esto para que?
+//Es para quitar el scrollbar en chrome, falta para IE y firefox.
+::-webkit-scrollbar { // esto para que? 
     display: none; 
 }

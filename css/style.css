@@ -367,26 +367,30 @@ html {
 *:after {
   box-sizing: inherit; }
 
-a {
-  color: #000;
-  font-family: "Muli", sans-serif;
-  text-decoration: none; }
+.background-juego {
+  background-image: url(../img/desktop-background.png);
+  -webkit-box-shadow: inset 0px 140px 211px -23px #3d3c3d;
+  -moz-box-shadow: inset 0px 140px 211px -23px #3d3c3d;
+  box-shadow: inset 0px 140px 211px -23px #3d3c3d; }
 
-button {
-  background: none;
-  border: none; }
+.home-background {
+  background-color: #1e2631; }
 
-button:active,
-button:focus,
-button:focus:active {
-  box-shadow: none;
-  outline: 0; }
+.mobil-game-wrapper {
+  display: block; }
+  @media (min-width: 768px) {
+    .mobil-game-wrapper {
+      display: none; } }
+
+.ui-loading .ui-loader,
+.ui-loader {
+  display: none; }
 
 footer {
   background-color: #d2d2d2;
   margin-top: 50px;
   overflow: hidden;
-  padding: 3% 0 2% 0;
+  padding: 3% 0 2%;
   text-align: center; }
 
 footer a {
@@ -394,10 +398,53 @@ footer a {
   display: inline-block;
   padding: 2px 5px; }
 
+header {
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 40px; }
+  header p {
+    font-size: 18px;
+    font-size: 1.8rem;
+    color: #f2f2f2;
+    font-family: "Share Tech", serif;
+    padding-bottom: 0;
+    text-shadow: 0 0 10px #363434;
+    text-transform: uppercase; }
+  header h1 {
+    background: url(../img/logo.png) no-repeat center center;
+    background-size: contain;
+    height: 180px;
+    margin: 30px auto 140px;
+    max-width: 600px;
+    text-indent: -9999px;
+    width: 90%; }
+
+section {
+  overflow: hidden; }
+
+@media (min-width: 768px) {
+  .game-wrapper {
+    margin: 0 auto;
+    width: 85%; } }
+@media (min-width: 1280px) {
+  .game-wrapper {
+    margin-left: 200px;
+    width: 85%; } }
+
+a {
+  color: #000;
+  font-family: "Muli", sans-serif;
+  text-decoration: none; }
+
 h1 {
   margin: 0; }
 
-h2, h3, h4 {
+h1 a {
+  color: transparent; }
+
+h2,
+h3,
+h4 {
   font-family: "Share Tech", serif;
   margin: 0; }
 
@@ -408,8 +455,8 @@ h2 {
   text-align: center; }
 
 h3 {
-  font-size: 26px;
-  font-size: 2.6rem; }
+  font-size: 36px;
+  font-size: 3.6rem; }
 
 h4 {
   font-size: 18px;
@@ -426,49 +473,30 @@ p {
   padding-bottom: 16px;
   margin: 0; }
 
-section {
-  overflow: hidden; }
+button {
+  background: none;
+  border: 0; }
 
-.background-juego {
-  background-image: url(../img/desktop-background.png);
-  -webkit-box-shadow: inset 0px 140px 211px -23px #3d3c3d;
-  -moz-box-shadow: inset 0px 140px 211px -23px #3d3c3d;
-  box-shadow: inset 0px 140px 211px -23px #3d3c3d; }
-
-.home-background {
-  background-color: #1e2631; }
-
-.mobil-game-wrapper {
-  display: block; }
-  @media (min-width: 768px) {
-    .mobil-game-wrapper {
-      display: none; } }
-
-.ui-loading .ui-loader, .ui-loader {
-  display: none; }
-
-@media (min-width: 768px) {
-  .game-wrapper {
-    margin: 0 auto;
-    width: 85%; } }
-@media (min-width: 1280px) {
-  .game-wrapper {
-    margin-left: 200px;
-    width: 85%; } }
+button:active,
+button:focus,
+button:focus:active {
+  box-shadow: none;
+  outline: 0; }
 
 .logo-nav {
   display: none; }
   @media (min-width: 768px) {
     .logo-nav {
       display: inline-block;
-      float: left; } }
+      float: left;
+      margin-top: -2%; } }
 
 .logo img {
-  width: 100%;
+  display: block;
+  margin: 4% auto;
   max-width: 664px;
   max-height: 157px;
-  display: block;
-  margin: 4% auto; }
+  width: 100%; }
   @media (min-width: 1024px) {
     .logo img {
       margin: 4% auto; } }
@@ -478,7 +506,7 @@ section {
   margin: 4% 0; }
   @media (min-width: 768px) {
     .main-nav {
-      margin: 2% 4% 0; } }
+      margin: 4%; } }
 
 .main-nav li {
   font-size: 18px;
@@ -497,28 +525,12 @@ section {
     color: #FFF;
     display: inline-block;
     font-family: "Share Tech", serif;
+    text-decoration: none;
     text-shadow: 0 0 10px #FFF;
     text-transform: uppercase; }
     .main-nav li a:hover {
       color: #24C29F;
       text-shadow: 0 0 10px #24C29F; }
-
-.game-nav {
-  display: none; }
-  .game-nav a {
-    font-size: 30px;
-    font-size: 3rem;
-    font-family: "Share Tech", serif;
-    text-transform: uppercase; }
-  @media only screen and (min-width: 768px) and (max-width: 1280px) {
-    .game-nav {
-      background-color: #FFF;
-      display: block;
-      width: 100%; } }
-  @media only screen and (min-width: 1280px) {
-    .game-nav {
-      display: block;
-      position: fixed; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   .stuck {
@@ -526,107 +538,6 @@ section {
     top: 0;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
-.list-game {
-  text-align: center; }
-
-.list-game-item {
-  margin: 20px 40px; }
-  @media (min-width: 768px) {
-    .list-game-item {
-      display: inline-block; } }
-  @media (min-width: 1280px) {
-    .list-game-item {
-      display: block; } }
-
-@media only screen and (max-width: 768px) {
-  .content-lang {
-    margin-top: 4%;
-    position: absolute;
-    right: 18%;
-    top: 0; } }
-@media (min-width: 768px) {
-  .content-lang {
-    float: right;
-    margin: 2% 4% 0 0; } }
-
-.list-lang {
-  list-style: none;
-  margin: 0;
-  position: absolute;
-  z-index: 1; }
-  @media (min-width: 768px) {
-    .list-lang {
-      position: inherit; } }
-
-.list-lang-item a {
-  font-size: 14px;
-  font-size: 1.4rem;
-  color: #24C29F;
-  font-family: "Share Tech", serif;
-  text-decoration: none;
-  text-shadow: 0 0 10px #24C29F;
-  text-transform: uppercase; }
-
-.list-lang-item {
-  border: 3px solid #24C29F;
-  cursor: pointer;
-  left: 0;
-  padding: 10px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
-  transition: all 1s; }
-  @media (min-width: 768px) {
-    .list-lang-item {
-      display: inline-block;
-      position: inherit; } }
-
-.list-lang li:first-child + li {
-  -ms-transform: rotate(10deg);
-  /* IE 9 */
-  -webkit-transform: rotate(10deg);
-  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-  transform: rotate(10deg);
-  /* IE 10, Fx 16+, Op 12.1+ */ }
-  @media (min-width: 768px) {
-    .list-lang li:first-child + li {
-      -ms-transform: rotate(0deg);
-      /* IE 9 */
-      -webkit-transform: rotate(0deg);
-      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: rotate(0deg);
-      /* IE 10, Fx 16+, Op 12.1+ */ } }
-
-.list-lang li:last-child {
-  -ms-transform: rotate(10deg);
-  /* IE 9 */
-  -webkit-transform: rotate(10deg);
-  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-  transform: rotate(10deg);
-  /* IE 10, Fx 16+, Op 12.1+ */ }
-  @media (min-width: 768px) {
-    .list-lang li:last-child {
-      -ms-transform: rotate(0deg);
-      /* IE 9 */
-      -webkit-transform: rotate(0deg);
-      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: rotate(0deg);
-      /* IE 10, Fx 16+, Op 12.1+ */ } }
-
-.close-lang {
-  background: rgba(0, 0, 0, 0.4);
-  border: 3px solid #24C29F;
-  cursor: pointer;
-  position: absolute;
-  padding: 2px 5px;
-  stroke: #24C29F; }
-  @media (min-width: 768px) {
-    .close-lang {
-      display: none; } }
-
 .position0 {
   top: 55px; }
 
@@ -637,13 +548,13 @@ section {
   top: 165px; }
 
 .position3 {
-  top: 220px;
   -ms-transform: rotate(-10deg);
   /* IE 9 */
   -webkit-transform: rotate(-10deg);
   /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
   transform: rotate(-10deg);
-  /* IE 10, Fx 16+, Op 12.1+ */ }
+  /* IE 10, Fx 16+, Op 12.1+ */
+  top: 220px; }
   @media (min-width: 768px) {
     .position3 {
       -ms-transform: rotate(0deg);
@@ -655,14 +566,6 @@ section {
 
 .position4 {
   top: 220px; }
-
-.selected a {
-  color: #fff;
-  text-shadow: 0 0 10px #FFF; }
-
-.selected {
-  background: #24C29F;
-  z-index: 3000; }
 
 .show-menu {
   font-size: 14px;
@@ -722,8 +625,8 @@ section {
       color: #f2f2f2; }
     @media screen and (min-width: 1000px) {
       .team-nav-item a {
-        font-size: 14px;
-        font-size: 1.4rem;
+        font-size: 24px;
+        font-size: 2.4rem;
         display: block;
         padding: 24px 0 52px;
         height: 50%;
@@ -756,26 +659,128 @@ section {
     .advisors-item:hover {
       background-color: #D7AE83; } }
 
-header {
-  height: auto;
-  overflow: hidden;
-  padding-bottom: 40px; }
-  header p {
-    font-size: 18px;
-    font-size: 1.8rem;
-    color: #f2f2f2;
+@media only screen and (max-width: 768px) {
+  .content-lang {
+    margin-top: 4%;
+    position: absolute;
+    right: 18%;
+    top: 0; } }
+@media (min-width: 768px) {
+  .content-lang {
+    float: right;
+    margin: 3% 4% 0 0; } }
+
+.close-lang {
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px solid #24C29F;
+  cursor: pointer;
+  position: absolute;
+  padding: 2px 5px;
+  stroke: #24C29F; }
+  @media (min-width: 768px) {
+    .close-lang {
+      display: none; } }
+
+.list-lang {
+  list-style: none;
+  position: absolute;
+  z-index: 1; }
+  @media (min-width: 768px) {
+    .list-lang {
+      position: inherit; } }
+
+.list-lang-item {
+  border: 3px solid #24C29F;
+  cursor: pointer;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s; }
+  @media (min-width: 768px) {
+    .list-lang-item {
+      display: inline-block;
+      position: inherit; } }
+  .list-lang-item.selected {
+    background: #24C29F;
+    z-index: 3000; }
+    .list-lang-item.selected a {
+      color: #fff;
+      text-shadow: 0 0 10px #FFF; }
+
+.list-lang-item a {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #24C29F;
+  font-family: "Share Tech", serif;
+  text-decoration: none;
+  text-shadow: 0 0 10px #24C29F;
+  text-transform: uppercase; }
+
+.list-lang li:first-child + li {
+  -ms-transform: rotate(10deg);
+  /* IE 9 */
+  -webkit-transform: rotate(10deg);
+  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  transform: rotate(10deg);
+  /* IE 10, Fx 16+, Op 12.1+ */ }
+  @media (min-width: 768px) {
+    .list-lang li:first-child + li {
+      -ms-transform: rotate(0deg);
+      /* IE 9 */
+      -webkit-transform: rotate(0deg);
+      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      transform: rotate(0deg);
+      /* IE 10, Fx 16+, Op 12.1+ */ } }
+
+.list-lang li:last-child {
+  -ms-transform: rotate(10deg);
+  /* IE 9 */
+  -webkit-transform: rotate(10deg);
+  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  transform: rotate(10deg);
+  /* IE 10, Fx 16+, Op 12.1+ */ }
+  @media (min-width: 768px) {
+    .list-lang li:last-child {
+      -ms-transform: rotate(0deg);
+      /* IE 9 */
+      -webkit-transform: rotate(0deg);
+      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      transform: rotate(0deg);
+      /* IE 10, Fx 16+, Op 12.1+ */ } }
+
+.game-nav {
+  display: none; }
+  .game-nav a {
+    font-size: 30px;
+    font-size: 3rem;
     font-family: "Share Tech", serif;
-    padding-bottom: 0;
-    text-shadow: 0 0 10px #363434;
     text-transform: uppercase; }
-  header h1 {
-    background: url(../img/logo.png) no-repeat center center;
-    background-size: contain;
-    height: 180px;
-    margin: 30px auto 140px;
-    max-width: 600px;
-    text-indent: -9999px;
-    width: 90%; }
+  @media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .game-nav {
+      background-color: #FFF;
+      display: block;
+      width: 100%; } }
+  @media only screen and (min-width: 1280px) {
+    .game-nav {
+      display: block;
+      position: fixed; } }
+
+.list-game {
+  text-align: center; }
+
+.list-game-item {
+  margin: 20px 40px; }
+  @media (min-width: 768px) {
+    .list-game-item {
+      display: inline-block; } }
+  @media (min-width: 1280px) {
+    .list-game-item {
+      display: block; } }
 
 .header-background {
   background: url(../img/header.png) no-repeat center bottom;
@@ -972,18 +977,6 @@ header {
       .about-image > :first-child:hover {
         opacity: 1; } }
 
-.section-history h2 {
-  margin: 0 auto;
-  padding-bottom: 16px;
-  text-transform: uppercase;
-  width: 75%; }
-
-.section-history p {
-  line-height: 22px;
-  margin: 0 auto;
-  padding-bottom: 16px;
-  width: 75%; }
-
 .section-history {
   background: url("../img/notebook.png") no-repeat center center;
   background-size: 100% 100%;
@@ -997,6 +990,18 @@ header {
     .section-history {
       min-width: 590px;
       width: 55%; } }
+
+.section-history h2 {
+  margin: 0 auto;
+  padding-bottom: 16px;
+  text-transform: uppercase;
+  width: 75%; }
+
+.section-history p {
+  line-height: 22px;
+  margin: 0 auto;
+  padding-bottom: 16px;
+  width: 75%; }
 
 .taps-character {
   margin: 0 auto;
@@ -1431,16 +1436,19 @@ header {
 
 .team-details {
   box-shadow: 3px 0 3px 2px rgba(0, 0, 0, 0.2);
+  display: table;
   float: left;
   height: 640px;
   width: 50%; }
   .team-details h2 {
     font-size: 24px;
     font-size: 2.4rem;
+    display: table-cell;
     font-family: "Share Tech", serif;
     font-size: 8em;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    vertical-align: middle; }
 
 .team-credits {
   float: left;
@@ -1449,6 +1457,11 @@ header {
   max-height: 100%;
   padding: 4%;
   width: 50%; }
+  .team-credits h3 {
+    padding: 1em 0 0.5em; }
+  .team-credits li {
+    font-size: 1.5em;
+    font-family: "Muli", sans-serif; }
 
 .team-cetav {
   background-color: #d67812; }
