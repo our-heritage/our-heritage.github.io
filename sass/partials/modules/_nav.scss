@@ -4,7 +4,6 @@
 	@media (min-width: 768px) {
 		display: inline-block;
 		float: left;
-		margin-top: -2%;
 	}
 }
 
@@ -31,7 +30,7 @@
 	margin: 4% 0;
 
 	@media (min-width: 768px) {
-		margin: 4% 4%;
+		margin: 2% 4% 0;
 	}
 }
 
@@ -122,12 +121,13 @@
 
 	@media(min-width: 768px){
 		float: right;
-		margin: 3% 4% 0 0;
+		margin: 2% 4% 0 0;
 	}
 }
 
 .list-lang {
 	list-style: none;
+	margin: 0;
 	position: absolute;
 	z-index: 1;
 
@@ -250,17 +250,14 @@
 	}
 }
 
-.header-nav {
+.team-nav {
 	background-color: $nav-back-color;
-	left: 0;
 	overflow: hidden;
-	position: fixed;
-	top: 0;
 	width: 100%;
 	z-index: 3;
 }
 
-.header-nav-content {
+.team-nav-content {
 	background-color: $nav-back-color;
 	background-size: cover;
 	height: 0;
@@ -283,10 +280,10 @@
 }
 
 .expanded {
-	height: 270px
+	height: 123px
 }
 
-.header-nav-item {
+.team-nav-item {
 	border-bottom: 1px solid #f2f2f2;
 	padding: 10px 0;
 	width: 100%;

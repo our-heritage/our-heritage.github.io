@@ -2,23 +2,36 @@ header {
 	height: auto;
 	overflow: hidden;
 	padding-bottom: 40px;
-}
 
-header p {
-	@include font-size(18);
-	color: $light-color;
-	font-family: $text-serif;
-	text-align: center;
-	text-shadow: 0 0 10px $dark-color;
-	text-transform: uppercase;
+	p {
+		@include font-size(18);
+		color: $light-color;
+		font-family: $text-serif;
+		padding-bottom: 0;
+		text-shadow: 0 0 10px $dark-color;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		background: url(../img/logo.png) no-repeat center center;
+		background-size: contain;
+		height: 180px;
+		margin: 30px auto 140px;
+		max-width: 600px;
+		text-indent: -9999px;
+		width: 90%;
+	}
 }
 
 .header-background {
 	background: url(../img/header.png) no-repeat center bottom;
 	background-size: cover;
+	/* -webkit-box-shadow: inset 0px 140px 211px -23px #000; */
+    -moz-box-shadow: inset 0px 140px 211px -40px #000;
+    box-shadow: inset 0px 140px 211px -40px #000;
 
 	@media (min-width: 1024px) {
-		height: 770px;
+		height: 850px;
 		padding-bottom: 80px;
 	}
 }
@@ -37,12 +50,11 @@ header p {
 }
 
 .play {
-	background: url("../img/icons/play.png") no-repeat;
-	background-size: cover;
-	display: block;
+	background: url("../img/icons/play.png") no-repeat center left;
 	height: 85px;
-	margin: 15px auto;
-	width: 85px;
+	display: block;
+	margin: 10% auto;
+	width: 280px;
 }
 
 // Credits Header
@@ -50,22 +62,16 @@ header p {
 	background: url("../img/header-banner.jpg") no-repeat;
 	background-size: cover;
 	overflow: hidden;
-	padding: 150px 0 100px;
+	padding: 150px 0 0;
 	text-align: center;
 
-	h2 {
-		@include font-size($title-mob-size);
-		border-top: 5px solid $header-title-border;
-		border-bottom: 5px solid $header-title-border;
-		color: $light-color;
-		font-family: $text-serif;
-		margin: 20px auto;
-		padding: 20px 0;
+	h1{
+		border-bottom: 3px solid $light-color;
+		margin: 0 auto;
 		width: 85%;
 
 		@media screen and (min-width: 1000px) {
-			@include font-size(60);
-			width: 75%;
+			width: 50%;
 		}
 	}
 }
@@ -76,9 +82,9 @@ header p {
 	box-sizing: border-box;
 	color: $light-color;
 	font-family: $text-serif;
-	margin: 50px auto;
+	margin: 100px auto;
 	padding: 20px;
-	width: 85%;
+	width: 60%;
 
 	@media screen and (min-width: 1000px) {
 		@include font-size(24);
