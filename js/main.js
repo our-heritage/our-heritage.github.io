@@ -33,6 +33,8 @@
           largerViewports(count);
       });
 
+      navTeamScroll();
+
     }
 })(window, document);
 
@@ -146,11 +148,12 @@ function largerViewports(count) {
 
 function smallerViewports(count) {
 
-  var closeTap = $('.close-tap');
-  var closeNavLang = $('.close-lang');
-  var listLang = $('#list-lang');
-  var listLangItem = $('.list-lang-item');
-  var tapCharacter = $('.taps-character .tap-banner');
+  var closeTap = $('.close-tap'),
+      closeNavLang = $('.close-lang'),
+      listLang = $('#list-lang'),
+      listLangItem = $('.list-lang-item'),
+      tapCharacter = $('.taps-character .tap-banner'),
+      openCreditsMenu  = $(".show-menu , .header-nav-content");
 
 
 // Close Tap Character /////////////////////////////////////////////////////////
@@ -185,6 +188,12 @@ function smallerViewports(count) {
       });
       listLangItem.addClass('list-lang-item')
     };
+  });
+
+// Dropdown Menu Credits Page////////////////////////////////////////////////////
+
+  openCreditsMenu.on('click', function() {
+    $(".team-nav-content").toggleClass("expanded");
   });
 
 // Gallery Swipe ////////////////////////////////////////////////////////////////
@@ -249,3 +258,49 @@ function navgameScroll(){
         offset:5
     })
 }
+
+var creditsModule = (function(window,undefined) {
+
+  toggleDisplay = function(id){
+    $(".team-content").removeClass("visible");
+    $("#team"+id+"").addClass("visible");
+  }
+
+  scrollEfect = function(attr){
+    $('html, body').stop().animate({
+          scrollTop: $(attr).offset().top - 100
+      }, 800);
+      return false;
+  }
+
+  navTeamScroll = function(){
+    var waypoints = $('#team-nav').waypoint(function(direction) {
+       if(direction === 'down'){
+            $('.team-nav').addClass('stuck');
+       }else{
+            $('.team-nav').removeClass('stuck');
+       }
+    }, {
+        offset:5
+    })
+}
+
+  return{
+    toggle : toggleDisplay,
+    scrollEfect : scrollEfect,
+    navTeamScroll : navTeamScroll
+  }
+
+})( window, undefined );
+
+$(".display").click(function(){
+    var id = $(this).attr("id");
+    creditsModule.toggle(id);
+});
+
+$('.header-nav-item a').click(function(){
+  var attr = $(this).attr('href');
+  creditsModule.scrollEfect(attr);
+});
+
+creditsModule.navTeamScroll()
