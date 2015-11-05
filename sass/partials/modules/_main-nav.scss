@@ -1,0 +1,64 @@
+.logo-nav {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: inline-block;
+        float: left;
+        margin-top: -2%;
+    }
+}
+
+.logo img {
+    display: block;
+    margin: 4% auto;
+    max-width: 664px;
+    max-height: 157px;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        margin: 4% auto;
+    }
+}
+
+.main-nav {
+    display: block;
+    margin: 4% 0;
+
+    @media (min-width: 768px) {
+        margin: 4%;
+    }
+}
+
+.main-nav li {
+    @include font-size(18);
+    border: 3px solid $main-color;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px;
+
+    @media (min-width: 768px) {
+        @include font-size(20);
+        margin-left: 20px;
+        padding: 10px;
+    }
+
+    a {
+        color: #FFF;
+        display: inline-block;
+        font-family: $text-serif;
+        text-decoration: none;
+        text-shadow: 0 0 10px #FFF;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #24C29F;
+            text-shadow: 0 0 10px #24C29F;
+        }
+    }
+}
+
+.main-nav ul {
+    @media (min-width: 768px) { // que ondas aqui?
+        //height: 178px;
+    }
+}

@@ -6,18 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script>
-    // Picture element HTML5 shiv
-    document.createElement( "picture" );
+    document.createElement("picture");
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js" async></script>
 </head>
+
 <body class="background-juego" data-role="none">
   <header class="header-juego">
     <div class="content-lang">
       <svg class="close-lang" height="45px" width="45px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
         <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
         <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-      </svg>
+      </svg><!-- cual es el fallback de estos svg? -->
+
       <ul class="list-lang" id="list-lang">
             <li class="list-lang-item selected"><a href="#">en</a></li>
             <li class="list-lang-item"><a href="es.html">es</a></li>
@@ -33,6 +34,7 @@
       </ul>
     </nav>
   </header>
+  
   <nav class="game-nav" id="game-nav">
     <ul class="list-game">
       <li class="list-game-item"><a href="#history">Historia</a></li>
@@ -40,6 +42,7 @@
       <li class="list-game-item"><a href="#gallery">Galería</a></li>
     </ul>
   </nav>
+  
   <div class="game-wrapper">
     <section class="section-history" id="history">
       <h2 class="title-history">Una búsqueda entre recuerdos</h2>
@@ -50,7 +53,7 @@
       <p>¿Qué planeta le estamos heredando a nuestras futuras generaciones?</p>
     </section>
 
-<ul class="taps-character">
+<ul class="taps-character"> <!-- Habiamos quedado en usar el mismo markup porque oculta esto en desktop? -->
       <h2>Personajes</h2>
       <li>
         <div class="tap-banner tap-banner-amy">
@@ -65,7 +68,8 @@
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
             <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-          </svg>
+          </svg> <!-- cual es el fallback de estos svg? -->
+
           <p>Una niña de 8 años, linda, dulce y optimista. Amy es muy inteligente, y debido a su desconocimiento de cómo fue el mundo en el pasado, es más bien ingenua en comprender lo mal que está en la actualidad.</p>
           <p>Aunque Amy está llena de energía y ambiciones, el espacio y libertad restringidos, han desarrollado su gusto por la literatura y otras aficiones, como programas de televisión. Tiene un carácter dulce con su familia y amigos, pero se vuelve apasionada y seria cuando está en “modo aventura”.</p>
         </div>
@@ -112,7 +116,7 @@
           <picture>
             <source media="(min-width: 768px)" srcset="img/characters/body-dad.png">
             <source media="(max-width: 768px)" srcset="img/characters/head-dad.png">
-            <img srcset="img/characters/body-dad.png" alt="This picture is currently having some problems.">
+            <img srcset="img/characters/body-dad.png" alt="This picture is currently having some problems."> <!-- que es este alt? -->
           </picture>
           <h3>Papá</h3>
         </div>
@@ -130,7 +134,7 @@
     <section class="section-character" id="section-character">
     <div class="characters-wrapper">
         <div class="main-char-selection char-selection">
-          <button class="char_btn" value="amy"></button>
+          <button class="char_btn" value="amy"></button> <!-- Porque buttons? nada de esto tiene relacion con botones -->
           <button class="char_btn" value="mom"></button>
           <button class="char_btn" value="grandps"></button>
           <button class="char_btn" value="dad"></button>
@@ -199,9 +203,11 @@
           </li>
         </ul>
       </div>
+      
       <div id="counter-slider" class="counter-slider">
         <p><span class="counterNumber">1</span>/9</p>
       </div>
+      
       <div id="show-fullimage" class="hidden">
         <img src="img/icons/previous.png" class="previous" id="previous">
         <img id="full-picture" class="full-picture" src="">
@@ -213,11 +219,13 @@
       </div>
     </section>
   </div>
+  
   <footer>
     <p>Jugá y descubrí la experiencia climática del 2050.</p>
     <p>Este proyecto fue desarrollado por <a href="creditos.html">Créditos</a></p>
     <p>© 2015 Our Heritage</p>
   </footer>
+  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.12/jquery.touchSwipe.min.js"></script>

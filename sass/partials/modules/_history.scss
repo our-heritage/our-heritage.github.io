@@ -1,29 +1,30 @@
+.section-history {
+    background: url("../img/notebook.png") no-repeat center center;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 95%;
+    
+    @media only screen and (max-width: 480px) {
+        padding-top: 150px;
+    }
+
+    @media (min-width: 768px) {
+        min-width: 590px;
+        width: 55%;
+    }
+}
+
 .section-history h2 {
-	margin: 0 auto;
-	padding-bottom: 16px;
-	text-transform: uppercase;
-	width: 75%;
+    margin: 0 auto;
+    padding-bottom: 16px;
+    text-transform: uppercase;
+    width: 75%;
 }
 
 .section-history p {
-	line-height: 22px;
-	margin: 0 auto;
-	padding-bottom: 16px;
-	width: 75%;
-}
-
-.section-history {
-	background: url("../img/notebook.png") no-repeat center center;
-	background-size: 100% 100%;
-	margin: 0 auto;
-	padding-top: 100px;
-	width: 95%;
-	@media only screen and (max-width: 480px) {
-		padding-top: 150px;
-	}
-
-	@media (min-width: 768px) {
-		min-width: 590px;
-		width: 55%;
-	}
+    line-height: 22px;
+    margin: 0 auto;
+    padding-bottom: 16px;
+    width: 75%;
 }

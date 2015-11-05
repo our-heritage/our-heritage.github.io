@@ -1,6 +1,6 @@
 (function(w, d, u) {
     // Mozilla, Opera, Webkit
-    if(document.addEventListener) {
+    if(document.addEventListener) { // esto es innecesario, estan cargando jQuery usen el metodo que ya les da
       document.addEventListener('DOMContentLoaded', function() {
         document.removeEventListener('DOMContentLoaded', arguments.callee, false);
         domReady();
@@ -17,7 +17,7 @@
       });
     }
 
-    function domReady() {
+    function domReady() { // usen jQuery, para eso ya lo cargaron
 
       // Counter variable ///////////////////////////////////////////////////////
       var count = 0;
@@ -40,8 +40,11 @@
 
 // larger viewports ////////////////////////////////////////////////////////////
 
-function largerViewports(count) {
 
+// Todo lo que esta aca afuera ensucion el global
+
+function largerViewports(count) {
+  //  esta funcion largerViewports hace mucho y nada relacionado, mejor separar las cosas especificas en funciones, y las llaman cuando las necesitan
   var currentChar;
   var target = $('.gallery-imgs');
   var galleryBtn = target.children('li');
@@ -52,7 +55,7 @@ function largerViewports(count) {
 
 // Nav-scroll //////////////////////////////////////////////////////////////////
 
-  $('.game-nav a').click(function(){
+  $('.game-nav a').click(function() {
     $('html, body').stop().animate({
       scrollTop: $( $(this).attr('href') ).offset().top - -10
     }, 800);
@@ -61,93 +64,98 @@ function largerViewports(count) {
 
 //Characters ///////////////////////////////////////////////////////////////////
 
-    charBtn.on('click', function() {
-      chosen = $(this).attr('value');
-      for(var i = 0; i < charContainers.length; i++){
-        currentChar = charContainers[i].id;
-        if (chosen == currentChar) {
-          count = i;
-          detailsGenerator(i);
-        }
-      }
-    });
-
-    $('.left').on('click', function() {
-      count --;
-      if(count < 0){
-        count = 3 ;
-      }
-      detailsGenerator(count);
-    });
-
-    $('.right').on('click', function() {
-      count++;
-      if (count == 4) {
-        count = 0;
-      }
-      detailsGenerator(count);
-    });
-
-    $('#hide').on('click',function(){
-      displayer('hide');
-    });
-
-    function detailsGenerator(count) {
-
-      var currId = charContainers[count].id;
-      var charIntro = $('.tap-banner-'+currId).html();
-      var charBrief = $('#'+currId).html();
-      details.html(charIntro + charBrief );
-      displayer('show');
-    }
-
-    function displayer(option) {
-      if (option == 'show') {
-        overallCharContainer.removeClass('hidden');
-      } else {
-        overallCharContainer.addClass('hidden');
+  charBtn.on('click', function() {
+    chosen = $(this).attr('value');
+    
+    for(var i = 0; i < charContainers.length; i++) {
+      currentChar = charContainers[i].id;
+      
+      if (chosen == currentChar) {
+        count = i;
+        detailsGenerator(i);
       }
     }
+  });
+
+  $('.left').on('click', function() {
+    count --;
+    
+    if(count < 0){
+      count = 3 ;
+    }
+    
+    detailsGenerator(count);
+  });
+
+  $('.right').on('click', function() {
+    count++;
+    
+    if(count == 4) {
+      count = 0;
+    }
+    
+    detailsGenerator(count);
+  });
+
+  $('#hide').on('click',function() {
+    displayer('hide');
+  });
+
+  function detailsGenerator(count) {
+    var currId = charContainers[count].id,
+        charIntro = $('.tap-banner-' + currId).html(),
+        charBrief = $('#' + currId).html();
+    
+    details.html(charIntro + charBrief );
+    displayer('show');
+  }
+
+  function displayer(option) {
+    if (option == 'show') {
+      overallCharContainer.removeClass('hidden');
+    } else {
+      overallCharContainer.addClass('hidden');
+    }
+  }
 
 //Gallery //////////////////////////////////////////////////////////////////////
+  galleryBtn.on('click', function() {
+    function showFullPicture(id) {
+      $('#full-picture').attr('src', 'img/gallery/' + id + '.jpg');
+    }
 
-    galleryBtn.on('click', function() {
-
-      function showFullPicture(id) {
-        $('#full-picture').attr('src', 'img/gallery/'+id+'.jpg');
+    var pictureId = this.id;
+    
+    showFullPicture(pictureId);
+    $('#show-fullimage').removeClass('hidden').addClass('modal');
+    
+    $('#previous').on('click', function() {
+      count--;
+      if (count <= 0) {
+        count = 9 - 1;
       }
-
-      var pictureId = this.id;
-      showFullPicture(pictureId);
-
-      $('#show-fullimage').removeClass('hidden').addClass('modal');
-
-      $('#previous').on('click', function() {
-        count--;
-        if (count <= 0) {
-          count = 9 - 1;
-        }
-        showFullPicture('pic-'+count);
-      });
-
-      $('#next').on('click', function() {
-        count++;
-        if (count >= 9) {
-          count = 1;
-        }
-        showFullPicture('pic-'+count);
-      });
-
-      $('#closePopUp').on('click', function() {
-        $('#show-fullimage').removeClass('modal').addClass('hidden');
-      });
+      
+      showFullPicture('pic-' + count);
     });
+
+    $('#next').on('click', function() {
+      count++;
+      
+      if (count >= 9) {
+        count = 1;
+      }
+      
+      showFullPicture('pic-' + count);
+    });
+
+    $('#closePopUp').on('click', function() {
+      $('#show-fullimage').removeClass('modal').addClass('hidden');
+    });
+  });
 }
 
 // Smaller Viewports ///////////////////////////////////////////////////////////
-
 function smallerViewports(count) {
-
   var closeTap = $('.close-tap'),
       closeNavLang = $('.close-lang'),
       listLang = $('#list-lang'),
@@ -157,11 +165,10 @@ function smallerViewports(count) {
 
 
 // Close Tap Character /////////////////////////////////////////////////////////
-
   tapCharacter.on('click', function() {
     if ($(this).next().hasClass( 'expand-tap-info' )) {
       $(this).next().removeClass('expand-tap-info');
-    }else {
+    } else {
       $('.tap-info').removeClass('expand-tap-info');
       $(this).next().addClass('expand-tap-info');
     }
@@ -172,7 +179,6 @@ function smallerViewports(count) {
   });
 
 // Menu Lang ////////////////////////////////////////////////////////////////////
-
   listLang.on('click', function() {
     for (var i = 0; i < listLangItem.length; i++) {
       listLangItem.addClass(function( i ) {
@@ -183,30 +189,29 @@ function smallerViewports(count) {
 
   closeNavLang.on('click', function() {
     for (var m = 0; m < listLangItem.length; m++) {
-      listLangItem.removeClass(function( m ) {
-        return 'list-lang-item position'+m;
+      listLangItem.removeClass(function(m) {
+        return 'list-lang-item position' + m;
       });
-      listLangItem.addClass('list-lang-item')
+
+      listLangItem.addClass('list-lang-item');
     };
   });
 
 // Dropdown Menu Credits Page////////////////////////////////////////////////////
-
   openCreditsMenu.on('click', function() {
     $(".team-nav-content").toggleClass("expanded");
   });
 
 // Gallery Swipe ////////////////////////////////////////////////////////////////
-
+  
+  // IIFE dentro de otra funcion?
   (function gallerySwipe() {
-
-    var initNumber = 1;
-    var counterNumber;
-    var itemSwipe = $('.slider-content');
-    var counterSwipe =  $('#counter-slider');
-    var contentSwipe = $('#gallery-container');
-
-    var countIteam = itemSwipe.length-1;
+    var initNumber = 1,
+        counterNumber,
+        itemSwipe = $('.slider-content'),
+        counterSwipe =  $('#counter-slider'),
+        contentSwipe = $('#gallery-container'),
+        countIteam = itemSwipe.length - 1;
 
     contentSwipe.swipe( {
         swipeLeft:function(event, direction, distance, duration, fingerCount) {
@@ -231,7 +236,7 @@ function smallerViewports(count) {
             counterNumber = itemSwipe.length;
             initNumber = itemSwipe.length;
             count = countIteam;
-          }else{
+          } else {
             $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
             counterNumber = initNumber-1;
             initNumber = initNumber-1;
@@ -239,24 +244,23 @@ function smallerViewports(count) {
           }
           $('.counterNumber').text(counterNumber);
         },
-        threshold:0
+        threshold: 0
       });
 
   })();
 }
 
 //Nav Game Tablet /////////////////////////////////////////////////////////////
-
-function navgameScroll(){
-    var waypoints = $('#game-nav').waypoint(function(direction) {
-       if(direction === 'down'){
-            $('.game-nav').addClass('stuck');
-       }else{
-            $('.game-nav').removeClass('stuck');
-       }
-    }, {
-        offset:5
-    })
+function navgameScroll() {
+  var waypoints = $('#game-nav').waypoint(function(direction) {
+    if(direction === 'down'){
+      $('.game-nav').addClass('stuck');
+    } else {
+      $('.game-nav').removeClass('stuck');
+    }
+  }, {
+    offset: 5
+  })
 }
 
 var creditsModule = (function(window,undefined) {
@@ -277,21 +281,21 @@ var creditsModule = (function(window,undefined) {
     var waypoints = $('#team-nav').waypoint(function(direction) {
        if(direction === 'down'){
             $('.team-nav').addClass('stuck');
-       }else{
+       } else {
             $('.team-nav').removeClass('stuck');
        }
     }, {
-        offset:5
+        offset: 5
     })
 }
 
-  return{
+  return {
     toggle : toggleDisplay,
     scrollEfect : scrollEfect,
     navTeamScroll : navTeamScroll
   }
 
-})( window, undefined );
+})( window, undefined ); // quien recibe esto? y donde lo usan?
 
 $(".display").click(function(){
     var id = $(this).attr("id");
@@ -303,4 +307,4 @@ $('.header-nav-item a').click(function(){
   creditsModule.scrollEfect(attr);
 });
 
-creditsModule.navTeamScroll()
+creditsModule.navTeamScroll();

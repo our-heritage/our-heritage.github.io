@@ -6,13 +6,15 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Our Heritage</title>
 </head>
+
 <body class="home-background">
   <header class="header-background">
     <div class="content-lang">
       <svg class="close-lang" height="45px" width="45px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
         <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
         <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-      </svg>
+      </svg><!-- cual es el fallback de estos svg? -->
+      
       <ul class="list-lang" id="list-lang">
             <li class="list-lang-item selected"><a href="#">en</a></li>
             <li class="list-lang-item"><a href="es.html">es</a></li>
@@ -20,6 +22,7 @@
             <li class="list-lang-item"><a href="de.html">de</a></li>
         </ul>
     </div>
+    
     <nav class="main-nav">
       <a class="logo-nav" href="#"><img src="img/logo-nav.png"></a>
       <ul>
@@ -27,10 +30,11 @@
         <li><a href="juego.html">Juego</a></li>
       </ul>
     </nav>
+    
     <h1>Our Heritage</h1>
     <button class="btn play"><p>Mirá el Teaser</p></button>
-    
   </header>
+
   <section>
     <ul class="about">
       <li>
@@ -67,6 +71,7 @@
       </li>
     </ul>
   </section>
+  
   <footer>
     <h2>Agradecimientos</h2>
     <p class="team-copy">Este proyecto es financiado por el Fondo Cultural Franco Alemán y es ejecutado gracias a la unión entre el equipo de Fair Play Labs y el Centro de Tecnología y Artes Visuales (CETAV) del Parque La Libertad, con el objetivo de desarrollar un videojuego para crear conciencia sobre el cambio climático y sus severas consecuencias.</p>
@@ -95,8 +100,10 @@
     <p>Este proyecto fue desarrollado por <a href="creditos.html">Créditos</a></p>
     <p>© 2015 Our Heritage</p>
   </footer>
+  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Aqui no estan cargando jquery.waypoints.min.js entonces tira un error en consola ojo: https://cloudup.com/cHk3ZTl1RO5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.12/jquery.touchSwipe.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>

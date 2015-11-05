@@ -1,0 +1,11 @@
+button {
+    background: none;
+    border: 0;
+}
+
+button:active,
+button:focus,
+button:focus:active {
+    box-shadow: none;
+    outline: 0;
+}

@@ -1,28 +1,3 @@
-header {
-	height: auto;
-	overflow: hidden;
-	padding-bottom: 40px;
-
-	p {
-		@include font-size(18);
-		color: $light-color;
-		font-family: $text-serif;
-		padding-bottom: 0;
-		text-shadow: 0 0 10px $dark-color;
-		text-transform: uppercase;
-	}
-
-	h1 {
-		background: url(../img/logo.png) no-repeat center center;
-		background-size: contain;
-		height: 180px;
-		margin: 30px auto 140px;
-		max-width: 600px;
-		text-indent: -9999px;
-		width: 90%;
-	}
-}
-
 .header-background {
 	background: url(../img/header.png) no-repeat center bottom;
 	background-size: cover;

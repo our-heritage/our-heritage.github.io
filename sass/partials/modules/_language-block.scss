@@ -1,0 +1,90 @@
+.content-lang {
+    @media only screen and (max-width: 768px){
+        margin-top: 4%;
+        position: absolute;
+        right: 18%;
+        top: 0;
+    }
+
+    @media(min-width: 768px){
+        float: right;
+        margin: 3% 4% 0 0;
+    }
+}
+
+.close-lang {
+    background: rgba(0, 0, 0, .4);
+    border: 3px solid $main-color;
+    cursor: pointer;
+    position: absolute;
+    padding: 2px 5px;
+    stroke: $main-color;
+
+    @media(min-width: 768px) {
+        display: none;
+    }
+}
+
+.list-lang {
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+
+    @media(min-width: 768px){
+        position: inherit;
+    }
+}
+
+.list-lang-item {
+    border: 3px solid $main-color;
+    cursor: pointer;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+
+    @media(min-width: 768px){
+        display:inline-block;
+        position: inherit;
+    }
+    
+    &.selected {
+        background: #24C29F;
+        z-index: 3000; // quien hizo esto?
+        
+        a {
+            color: #fff;
+            text-shadow: 0 0 10px #FFF;
+        }
+    }
+}
+
+.list-lang-item a {
+    @include font-size(14);
+    color: #24C29F;
+    font-family: $text-serif;
+    text-decoration: none;
+    text-shadow: 0 0 10px #24C29F;
+    text-transform: uppercase;
+}
+
+.list-lang li:first-child + li {
+    @include image-transform(10deg);
+
+    @media(min-width: 768px) {
+        @include image-transform(0deg);
+    }
+}
+
+.list-lang li:last-child {
+    @include image-transform(10deg);
+
+    @media(min-width: 768px) {
+        @include image-transform(0deg);
+    }
+}
