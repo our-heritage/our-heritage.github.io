@@ -21,16 +21,19 @@
 
 .team-details {
     box-shadow: 3px 0 3px 2px rgba(0, 0, 0, .2);
+    display: table;
     float: left;
     height: 640px;
     width: 50%;
 
     h2 {
         @include font-size($title-mob-size);
+        display: table-cell;
         font-family: $text-serif;
         font-size: 8em;
         margin: auto;
         text-align: center;
+        vertical-align: middle;
     }
 }
 
@@ -59,6 +62,7 @@
     display: inline-block;
 }
 
-::-webkit-scrollbar { // esto para que?
+//Es para quitar el scrollbar en chrome, falta para IE y firefox.
+::-webkit-scrollbar { // esto para que? 
     display: none; 
 }
