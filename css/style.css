@@ -394,8 +394,8 @@ footer a {
   display: inline-block;
   padding: 2px 5px; }
 
-h1 a {
-  color: transparent; }
+h1 {
+  margin: 0; }
 
 h2, h3, h4 {
   font-family: "Share Tech", serif;
@@ -408,8 +408,8 @@ h2 {
   text-align: center; }
 
 h3 {
-  font-size: 36px;
-  font-size: 3.6rem; }
+  font-size: 26px;
+  font-size: 2.6rem; }
 
 h4 {
   font-size: 18px;
@@ -451,7 +451,6 @@ section {
   .game-wrapper {
     margin: 0 auto;
     width: 85%; } }
-
 @media (min-width: 1280px) {
   .game-wrapper {
     margin-left: 200px;
@@ -462,8 +461,7 @@ section {
   @media (min-width: 768px) {
     .logo-nav {
       display: inline-block;
-      float: left;
-      margin-top: -2%; } }
+      float: left; } }
 
 .logo img {
   width: 100%;
@@ -480,7 +478,7 @@ section {
   margin: 4% 0; }
   @media (min-width: 768px) {
     .main-nav {
-      margin: 4% 4%; } }
+      margin: 2% 4% 0; } }
 
 .main-nav li {
   font-size: 18px;
@@ -528,7 +526,6 @@ section {
     top: 0;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
-
 .list-game {
   text-align: center; }
 
@@ -547,14 +544,14 @@ section {
     position: absolute;
     right: 18%;
     top: 0; } }
-
 @media (min-width: 768px) {
   .content-lang {
     float: right;
-    margin: 3% 4% 0 0; } }
+    margin: 2% 4% 0 0; } }
 
 .list-lang {
   list-style: none;
+  margin: 0;
   position: absolute;
   z-index: 1; }
   @media (min-width: 768px) {
@@ -763,22 +760,32 @@ header {
   height: auto;
   overflow: hidden;
   padding-bottom: 40px; }
-
-header p {
-  font-size: 18px;
-  font-size: 1.8rem;
-  color: #f2f2f2;
-  font-family: "Share Tech", serif;
-  text-align: center;
-  text-shadow: 0 0 10px #363434;
-  text-transform: uppercase; }
+  header p {
+    font-size: 18px;
+    font-size: 1.8rem;
+    color: #f2f2f2;
+    font-family: "Share Tech", serif;
+    padding-bottom: 0;
+    text-shadow: 0 0 10px #363434;
+    text-transform: uppercase; }
+  header h1 {
+    background: url(../img/logo.png) no-repeat center center;
+    background-size: contain;
+    height: 180px;
+    margin: 30px auto 140px;
+    max-width: 600px;
+    text-indent: -9999px;
+    width: 90%; }
 
 .header-background {
   background: url(../img/header.png) no-repeat center bottom;
-  background-size: cover; }
+  background-size: cover;
+  /* -webkit-box-shadow: inset 0px 140px 211px -23px #000; */
+  -moz-box-shadow: inset 0px 140px 211px -40px #000;
+  box-shadow: inset 0px 140px 211px -40px #000; }
   @media (min-width: 1024px) {
     .header-background {
-      height: 770px;
+      height: 850px;
       padding-bottom: 80px; } }
 
 .header-juego {
@@ -792,12 +799,11 @@ header p {
   margin: 2% 3%; }
 
 .play {
-  background: url("../img/icons/play.png") no-repeat;
-  background-size: cover;
-  display: block;
+  background: url("../img/icons/play.png") no-repeat center left;
   height: 85px;
-  margin: 15px auto;
-  width: 85px; }
+  display: block;
+  margin: 10% auto;
+  width: 280px; }
 
 .main-header {
   background: url("../img/header-banner.jpg") no-repeat;
@@ -836,7 +842,7 @@ header p {
   width: 100%; }
   @media (min-width: 768px) {
     .about li {
-      height: 290px;
+      height: 320px;
       margin: 150px 0;
       max-width: 1100px; } }
 
@@ -846,7 +852,7 @@ header p {
   @media (min-width: 768px) {
     .about {
       padding: 0;
-      width: 498px; }
+      width: 556px; }
       .about .right {
         float: right; }
       .about .left {
@@ -890,21 +896,23 @@ header p {
 
 .about-content {
   color: #fff;
-  height: 300px;
-  max-width: 480px;
+  height: auto;
   position: absolute;
   top: 0; }
   @media (min-width: 768px) {
     .about-content {
+      width: 556px;
+      padding: 15px 0 20px 0;
       position: inherit; } }
   @media (min-width: 1100px) {
     .about-content {
-      background-color: #24C29F; }
+      background-color: #24C29F;
+      max-width: 480px; }
       .about-content.left:before, .about-content.right:before {
         border: 8px solid rgba(36, 194, 159, 0.3);
         content: "";
-        height: 290px;
-        margin-top: 35px;
+        height: 100%;
+        margin-top: 15px;
         position: absolute;
         width: 480px; }
       .about-content.right:before {
@@ -915,6 +923,9 @@ header p {
 .about-image img {
   position: absolute;
   right: 0; }
+  @media (min-width: 1100px) {
+    .about-image img {
+      width: 100%; } }
 
 .about-image {
   margin: 20px auto;
@@ -926,28 +937,30 @@ header p {
     .about-image {
       margin: 0; } }
   @media (min-width: 1100px) {
-    .about-image.right, .about-image.left {
-      background: url(../img/polaroid.jpg);
-      outline: 1px solid transparent;
-      padding: 10px 10px 40px; }
-    .about-image.right {
-      -ms-transform: rotate(5deg);
-      /* IE 9 */
-      -webkit-transform: rotate(5deg);
-      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: rotate(5deg);
-      /* IE 10, Fx 16+, Op 12.1+ */
-      left: -60px;
-      z-index: 0; }
-    .about-image.left {
-      -ms-transform: rotate(-5deg);
-      /* IE 9 */
-      -webkit-transform: rotate(-5deg);
-      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: rotate(-5deg);
-      /* IE 10, Fx 16+, Op 12.1+ */
-      left: 60px;
-      z-index: 0; } }
+    .about-image {
+      width: 52%; }
+      .about-image.right, .about-image.left {
+        background: url(../img/polaroid.jpg);
+        outline: 1px solid transparent;
+        padding: 10px 10px 40px; }
+      .about-image.right {
+        -ms-transform: rotate(5deg);
+        /* IE 9 */
+        -webkit-transform: rotate(5deg);
+        /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+        transform: rotate(5deg);
+        /* IE 10, Fx 16+, Op 12.1+ */
+        left: -60px;
+        z-index: 0; }
+      .about-image.left {
+        -ms-transform: rotate(-5deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-5deg);
+        /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+        transform: rotate(-5deg);
+        /* IE 10, Fx 16+, Op 12.1+ */
+        left: 60px;
+        z-index: 0; } }
 
 .about-image > :first-child {
   position: relative;
@@ -1094,6 +1107,8 @@ header p {
     .details {
       width: 60%; } }
   .details h3 {
+    font-size: 36px;
+    font-size: 3.6rem;
     color: #24C29F;
     margin-bottom: 35px;
     text-transform: uppercase;
@@ -1139,8 +1154,10 @@ header p {
     max-width: 100%; } }
 
 .section-gallery {
-  width: 100%;
-  padding: 60px 30px; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .section-gallery {
+      padding: 60px 30px; } }
   @media (min-width: 1280px) {
     .section-gallery {
       padding: 60px; } }
@@ -1199,6 +1216,7 @@ header p {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
+
   .gallery-imgs .pic-1 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1206,6 +1224,7 @@ header p {
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */ }
+
   .gallery-imgs .pic-2 {
     -ms-transform: rotate(10deg);
     /* IE 9 */
@@ -1214,6 +1233,7 @@ header p {
     transform: rotate(10deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: 20px; }
+
   .gallery-imgs .pic-3 {
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -1224,6 +1244,7 @@ header p {
     left: 5px;
     margin-top: -25px;
     position: relative; }
+
   .gallery-imgs .pic-4 {
     -ms-transform: rotate(-15deg);
     /* IE 9 */
@@ -1232,6 +1253,7 @@ header p {
     transform: rotate(-15deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -10px; }
+
   .gallery-imgs .pic-5 {
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -1241,6 +1263,7 @@ header p {
     /* IE 10, Fx 16+, Op 12.1+ */
     position: relative;
     right: 15px; }
+
   .gallery-imgs .pic-6 {
     -ms-transform: rotate(10deg);
     /* IE 9 */
@@ -1251,6 +1274,7 @@ header p {
     left: 5px;
     position: relative;
     margin-top: -22px; }
+
   .gallery-imgs .pic-7 {
     -ms-transform: rotate(5deg);
     /* IE 9 */
@@ -1259,6 +1283,7 @@ header p {
     transform: rotate(5deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -40px; }
+
   .gallery-imgs .pic-8 {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
@@ -1267,6 +1292,7 @@ header p {
     transform: rotate(-10deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: 25px; }
+
   .gallery-imgs .pic-9 {
     -ms-transform: rotate(15deg);
     /* IE 9 */
@@ -1275,6 +1301,7 @@ header p {
     transform: rotate(15deg);
     /* IE 10, Fx 16+, Op 12.1+ */
     margin-top: -60px; }
+
   .modal {
     background-color: rgba(0, 0, 0, 0.9);
     display: block;
@@ -1307,7 +1334,6 @@ header p {
       left: 2%;
       position: absolute;
       top: 50%; } }
-
 .cetav {
   float: right; }
   @media (min-width: 1024px) {

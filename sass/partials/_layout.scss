@@ -16,15 +16,25 @@ header {
     height: auto;
     overflow: hidden;
     padding-bottom: 40px;
-}
 
-header p {
-    @include font-size(18);
-    color: $light-color;
-    font-family: $text-serif;
-    text-align: center;
-    text-shadow: 0 0 10px $dark-color;
-    text-transform: uppercase;
+    p {
+        @include font-size(18);
+        color: $light-color;
+        font-family: $text-serif;
+        padding-bottom: 0;
+        text-shadow: 0 0 10px $dark-color;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        background: url(../img/logo.png) no-repeat center center;
+        background-size: contain;
+        height: 180px;
+        margin: 30px auto 140px;
+        max-width: 600px;
+        text-indent: -9999px;
+        width: 90%;
+    }
 }
 
 section {

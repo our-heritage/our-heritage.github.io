@@ -1,9 +1,12 @@
 .header-background {
 	background: url(../img/header.png) no-repeat center bottom;
 	background-size: cover;
+	/* -webkit-box-shadow: inset 0px 140px 211px -23px #000; */
+    -moz-box-shadow: inset 0px 140px 211px -40px #000;
+    box-shadow: inset 0px 140px 211px -40px #000;
 
 	@media (min-width: 1024px) {
-		height: 770px;
+		height: 850px;
 		padding-bottom: 80px;
 	}
 }
@@ -22,12 +25,11 @@
 }
 
 .play {
-	background: url("../img/icons/play.png") no-repeat;
-	background-size: cover;
-	display: block;
+	background: url("../img/icons/play.png") no-repeat center left;
 	height: 85px;
-	margin: 15px auto;
-	width: 85px;
+	display: block;
+	margin: 10% auto;
+	width: 280px;
 }
 
 // Credits Header

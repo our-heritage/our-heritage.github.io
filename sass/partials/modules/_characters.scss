@@ -1,5 +1,4 @@
 // Smaller Viewports
-
 .taps-character {
 	margin: 0 auto;
 	max-width: 100%;
@@ -138,6 +137,7 @@
 	}
 
 	h3 {
+		@include font-size(36);
 		color: $main-color;
 		margin-bottom: 35px;
 		text-transform: uppercase;
