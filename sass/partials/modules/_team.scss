@@ -37,13 +37,22 @@
     }
 }
 
-.team-credits{
+.team-credits {
     float: left;
     height: 100%;
     overflow-y: scroll;
     max-height: 100%;
     padding: 4%;
     width: 50%;
+
+    h3 {
+        padding: 1em 0 0.5em;
+    }
+
+    li {
+        font-size: 1.5em;
+        font-family: $text-sans;
+    }
 }
 
 .team-cetav {
@@ -58,7 +67,7 @@
     @include team-color-scheme($advisors-color);
 }
 
-.visible{
+.visible {
     display: inline-block;
 }
 
