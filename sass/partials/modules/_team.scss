@@ -4,10 +4,11 @@
 
 .team-content {
     box-sizing: border-box;
-    color: $light-color;
+    color: $dark-color;
     display: none;
-    height: 640px;
-    text-shadow: 2px 2px 22px #000;
+    height: auto;
+    position: relative;
+    top: 10;
     width: 100%;
 }
 
@@ -29,16 +30,17 @@
     }
     
     @media(min-width: 1024px){
-        height: 640px;
+        height: 1024px;    
+        left: 0;
+        position: absolute;
+        top: 0;
         width: 50%;
     }
-
 }
 
 .team-credits {
     float: left;
-    height: 430px;
-    overflow-y: scroll;
+    height: auto;
     max-height: 100%;
     padding: 4%;
     width: 100%;
@@ -61,10 +63,16 @@
     }
 
     @media(min-width: 1024px){
-        height: 640px;
+        // padding: 3% 5% 3% 55%;
+        float: right;
+        height: 1024px;
+        overflow: auto;
+        position: relative;
         width: 50%;
     }
 }
+
+
 
 .team-cetav {
     @include team-color-scheme(darken($cetav-color, 10));
@@ -80,9 +88,4 @@
 
 .visible {
     display: inline-block;
-}
-
-//Es para quitar el scrollbar en chrome, falta para IE y firefox.
-::-webkit-scrollbar { // esto para que? 
-    display: none; 
 }
