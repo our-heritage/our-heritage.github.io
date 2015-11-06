@@ -402,7 +402,7 @@ header {
     color: #f2f2f2;
     font-family: "Share Tech", serif;
     padding-bottom: 0;
-    text-shadow: 0 0 10px #363434;
+    text-shadow: 1px 1px 4px #363434;
     text-transform: uppercase; }
   header h1 {
     background: url(../img/logo.png) no-repeat center center;
@@ -515,15 +515,15 @@ button:focus:active {
       margin-left: 20px;
       padding: 10px; } }
   .main-nav li a {
-    color: #FFF;
+    color: #f2f2f2;
     display: inline-block;
     font-family: "Share Tech", serif;
     text-decoration: none;
-    text-shadow: 0 0 10px #FFF;
+    text-shadow: 1px 1px 4px #f2f2f2;
     text-transform: uppercase; }
     .main-nav li a:hover {
       color: #24C29F;
-      text-shadow: 0 0 10px #24C29F; }
+      text-shadow: 1px 1px 4px #24C29F; }
 
 .content-lang {
   margin-top: 4%;
@@ -539,9 +539,10 @@ button:focus:active {
   background: rgba(0, 0, 0, 0.4);
   border: 3px solid #24C29F;
   cursor: pointer;
+  height: 41px;
   position: absolute;
   padding: 2px 5px;
-  stroke: #24C29F; }
+  width: 41px; }
   @media (min-width: 768px) {
     .close-lang {
       display: none; } }
@@ -575,7 +576,7 @@ button:focus:active {
     z-index: 3; }
     .list-lang-item.selected a {
       color: #fff;
-      text-shadow: 0 0 10px #FFF; }
+      text-shadow: 1px 1px 4px #f2f2f2; }
 
 .list-lang-item a {
   font-size: 18px;
@@ -583,7 +584,7 @@ button:focus:active {
   color: #24C29F;
   font-family: "Share Tech", serif;
   text-decoration: none;
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 1px 1px 4px #24C29F;
   text-transform: uppercase; }
 
 .list-lang li:first-child + li {
@@ -638,8 +639,10 @@ button:focus:active {
   .game-nav a {
     font-size: 30px;
     font-size: 3rem;
+    color: #f2f2f2;
     font-family: "Share Tech", serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px #f2f2f2; }
   @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .game-nav {
       background-color: #FFF;
@@ -772,7 +775,7 @@ button:focus:active {
       padding-bottom: 80px; } }
 
 .game-background {
-  background-image: url(../img/desktop-background.png);
+  background-image: url(../img/desktop-background.jpg);
   -webkit-box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, 0.7);
   -moz-box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, 0.7);
   box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, 0.7); }
@@ -855,7 +858,7 @@ button:focus:active {
   margin-bottom: 10px;
   padding: 3%;
   position: relative;
-  text-shadow: 0 0 10px #FFF;
+  text-shadow: 1px 1px 4px #f2f2f2;
   text-transform: uppercase;
   z-index: 3; }
   .about-content h3:after {
@@ -880,7 +883,7 @@ button:focus:active {
       font-size: 1.6rem;
       padding: 2% 4%;
       position: relative;
-      text-shadow: 0 0 10px #FFF;
+      text-shadow: 1px 1px 4px #f2f2f2;
       z-index: 3; } }
 
 .about-content {
@@ -962,29 +965,33 @@ button:focus:active {
         opacity: 1; } }
 
 .section-history {
-  background: url("../img/notebook.png") no-repeat center center;
-  background-size: 100% 100%;
-  margin: 0 auto;
-  padding-top: 100px;
-  width: 95%; }
-  @media only screen and (max-width: 480px) {
-    .section-history {
-      padding-top: 150px; } }
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px 15px rgba(36, 194, 159, 0.5);
+  margin: 50px auto;
+  padding: 15px 0;
+  width: 90%; }
   @media (min-width: 768px) {
     .section-history {
+      box-shadow: 0 0 10px 30px rgba(36, 194, 159, 0.5);
+      margin: 100px auto;
       min-width: 590px;
-      width: 55%; } }
+      padding: 65px 0;
+      width: 65%; } }
 
 .section-history h2 {
+  color: #24C29F;
   margin: 0 auto;
-  padding-bottom: 16px;
+  padding: 16px 0;
   text-transform: uppercase;
+  text-shadow: 1px 1px 4px #24C29F;
   width: 75%; }
 
 .section-history p {
+  color: #f2f2f2;
   line-height: 22px;
   margin: 0 auto;
   padding-bottom: 16px;
+  text-shadow: 1px 1px 4px #f2f2f2;
   width: 75%; }
 
 .taps-character {
@@ -1006,8 +1013,7 @@ button:focus:active {
 
 .close-tap {
   float: right;
-  margin: 5% 0;
-  stroke: #363434; }
+  margin: 5% 0; }
   @media (min-width: 768px) {
     .close-tap {
       display: none; } }
@@ -1081,7 +1087,6 @@ button:focus:active {
   position: absolute;
   right: 2%;
   top: 5%;
-  stroke: #24C29F;
   width: 40px; }
 
 .back {
@@ -1093,7 +1098,7 @@ button:focus:active {
 .details {
   color: #f2f2f2;
   margin: 0 auto;
-  text-shadow: 0 0 10px #f2f2f2;
+  text-shadow: 1px 1px 4px #f2f2f2;
   width: 80%; }
   @media (min-width: 1280px) {
     .details {
@@ -1104,7 +1109,7 @@ button:focus:active {
     color: #24C29F;
     margin-bottom: 35px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px #24C29F; }
+    text-shadow: 1px 1px 4px #24C29F; }
   .details h3,
   .details p {
     float: right;
@@ -1135,10 +1140,10 @@ button:focus:active {
   .preview-char h4 {
     color: #f2f2f2;
     margin-top: 10px;
-    text-shadow: 0 0 10px #f2f2f2; }
+    text-shadow: 1px 1px 4px #f2f2f2; }
   .preview-char:hover > h4 {
     color: #24C29F;
-    text-shadow: 0 0 10px #24C29F; }
+    text-shadow: 1px 1px 4px #24C29F; }
 
 @media (min-width: 768px) {
   .section-gallery h2 {
@@ -1314,7 +1319,6 @@ button:focus:active {
       position: absolute;
       right: 2%;
       top: 5%;
-      stroke: #24C29F;
       width: 40px; }
     .modal .full-picture {
       height: 100%;
