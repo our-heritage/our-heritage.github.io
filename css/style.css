@@ -1450,7 +1450,7 @@ button:focus:active {
 
 .team-credits {
   float: left;
-  height: 500px;
+  height: 430px;
   overflow-y: scroll;
   max-height: 100%;
   padding: 4%;
@@ -1469,6 +1469,7 @@ button:focus:active {
       color: #f2f2f2; }
   @media (min-width: 1024px) {
     .team-credits {
+      height: 640px;
       width: 50%; } }
 
 .team-cetav {

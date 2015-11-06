@@ -45,7 +45,7 @@
 
 .team-credits {
     float: left;
-    height: 500px;
+    height: 430px;
     overflow-y: scroll;
     max-height: 100%;
     padding: 4%;
@@ -69,6 +69,7 @@
     }
 
     @media(min-width: 1024px){
+        height: 640px;
         width: 50%;
     }
 }
