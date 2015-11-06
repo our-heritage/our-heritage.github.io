@@ -21,6 +21,9 @@ $(document).ready(function() {
     // Change Color Taps Creditos ///////////////////////////////////////////////
 
     changeColorCreditos();
+
+    // Video Teaser Modal //////////////////////////////////////////////////////
+    videoTeaserModal();
 })
 
 // Nav-scroll //////////////////////////////////////////////////////////////////
@@ -269,4 +272,28 @@ function changeColorCreditos() {
 
 }
 
+// Video //////////////////////////////////////////////////////////////////////////
+function videoTeaserModal() {
 
+  var video = $('#main-video'),
+    btn = $('#btn-play-js'),
+    close = $('#close'),
+    player = $('#ytplayer'),
+    content = '<iframe class="main-video-player" width="640" height="480" src="https://www.youtube.com/embed/E7CaTJ2SvG8'+
+    '?autoplay=1&amp;rel=0&amp;'+
+    'controls=1&amp;showinfo=1"  frameborder="0"/>';
+
+//expected display block
+  btn.click(function(){
+    video.addClass('header-lightbox-video');
+    btn.addClass('non-visible');
+    player.html(content);
+  });
+
+ //expected display none
+  close.click(function(){
+    video.removeClass('header-lightbox-video');
+    btn.removeClass('non-visible');
+    player.html('');
+  });
+}
