@@ -9,17 +9,22 @@
 }
 
 .header-lightbox-video{
-  -webkit-transition: .6s;
-  -o-transition: .6s;
-  transition: .6s;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, .9);
-  position:absolute;
-  margin: 0 auto;
-  top: 0;
-  opacity: 1;
-  height: auto;
-  //padding-bottom:100px;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s;
+    margin: 0 auto;
+    top: 0;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .9);
+    display: block;
+    height: 100%;
+    left: 0;
+    padding: 5% 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 
   @media(min-width: 768px){
     //padding-bottom: 70px;
@@ -60,10 +65,11 @@
 }
 
 .close-video-modal {
-  float: right;
-  margin: 2%;
-  position: relative;
-  z-index: 3;
+    right: 0;
+    margin: 2%;
+    top: 0;
+    position: absolute;
+    z-index: 3;
 }
 
 ::selection{
