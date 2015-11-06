@@ -1,108 +1,108 @@
 .content-lang {
-
-    margin-top: 4%;
-    position: absolute;
-    right: 18%;
-    @media(min-width: 768px){
-        float: right;
-        margin: 3% 4% 0 0;
-        position: inherit;
-    }
+	margin-top: 4%;
+	position: absolute;
+	right: 18%;
+	@media(min-width: 768px){
+		float: right;
+		margin: 3% 4% 0 0;
+		position: inherit;
+	}
 }
 
 .close-lang {
-    background: rgba(0, 0, 0, .4);
-    border: 3px solid $main-color;
-    cursor: pointer;
-    position: absolute;
-    padding: 2px 5px;
-    stroke: $main-color;
+	background: rgba(0, 0, 0, .4);
+	border: 3px solid $main-color;
+	cursor: pointer;
+	height: 41px;
+	position: absolute;
+	padding: 2px 5px;
+	width: 41px;
 
-    @media(min-width: 768px) {
-        display: none;
-    }
+	@media(min-width: 768px) {
+		display: none;
+	}
 }
 
 .list-lang {
-    list-style: none;
-    position: absolute;
-    z-index: 1;
+	list-style: none;
+	position: absolute;
+	z-index: 1;
 
-    @media(min-width: 768px){
-        position: inherit;
-    }
+	@media(min-width: 768px){
+		position: inherit;
+	}
 }
 
 .list-lang-item {
-    border: 3px solid $main-color;
-    cursor: pointer;
-    left: 0;
-    padding: 8px;
-    position: absolute;
-    text-align: center;
-    top: -11px;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -webkit-transition: all 1s;
-    transition: all 1s;
+	border: 3px solid $main-color;
+	cursor: pointer;
+	left: 0;
+	padding: 8px;
+	position: absolute;
+	text-align: center;
+	top: -11px;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-webkit-transition: all 1s;
+	transition: all 1s;
 
-    @media(min-width: 768px){
-        display:inline-block;
-        position: inherit;
-    }
-    
-    &.selected {
-        background: #24C29F;
-        z-index: 3;
-        
-        a {
-            color: #fff;
-            text-shadow: 0 0 10px #FFF;
-        }
-    }
+	@media(min-width: 768px){
+		display:inline-block;
+		position: inherit;
+	}
+	
+	&.selected {
+		background: #24C29F;
+		z-index: 3;
+		
+		a {
+			color: #fff;
+			text-shadow: 1px 1px 4px $light-color;
+		}
+	}
 }
 
 .list-lang-item a {
-    @include font-size(18);
-    color: #24C29F;
-    font-family: $text-serif;
-    text-decoration: none;
-    text-shadow: 0 0 10px #fff;
-    text-transform: uppercase;
+	@include font-size(18);
+	color: #24C29F;
+	font-family: $text-serif;
+	text-decoration: none;
+	text-shadow: 1px 1px 4px $main-color;
+	text-transform: uppercase;
 }
 
 .list-lang li:first-child + li {
-    @include image-transform(10deg);
+	@include image-transform(10deg);
 
-    @media(min-width: 768px) {
-        @include image-transform(0deg);
-    }
+	@media(min-width: 768px) {
+		@include image-transform(0deg);
+	}
 }
 
 .list-lang li:last-child {
-    @include image-transform(10deg);
+	@include image-transform(10deg);
 
-    @media(min-width: 768px) {
-        @include image-transform(0deg);
-    }
+	@media(min-width: 768px) {
+		@include image-transform(0deg);
+	}
 }
 
 .lang-item-position-0 { // estas clases donde se usan?
-    top: 55px;
+	top: 55px;
 }
 
 .lang-item-position-1 {
-    top: 110px;
+	top: 110px;
 }
 
 .lang-item-position-2 {
-    top: 165px;
+	top: 165px;
 }
 
 .lang-item-position-3 {
-    top: 220px;
+	top: 220px;
 }
 
 .lang-item-position-4 {
-    top: 220px;
+	top: 220px;
 }

@@ -37,7 +37,7 @@
 	margin-bottom: 10px;
 	padding: 3%;
 	position: relative;
-	text-shadow: 0 0 10px #FFF;
+	text-shadow: 1px 1px 4px $light-color;
 	text-transform: uppercase;
 	z-index: 3;
 
@@ -66,7 +66,7 @@
 		@include font-size(16);
 		padding: 2% 4%;
 		position: relative;
-		text-shadow: 0 0 10px #FFF;
+		text-shadow: 1px 1px 4px $light-color;
 		z-index: 3;
 	}
 }
@@ -132,11 +132,13 @@
 			outline: 1px solid transparent;
 			padding: 10px 10px 40px;
 		}
+
 		&.right {
 			@include image-transform(5deg);
 			left: -60px;
 			z-index: 0;
 		}
+		
 		&.left {
 			@include image-transform(-5deg);
 			left: 60px;
