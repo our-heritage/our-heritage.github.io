@@ -11,20 +11,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js" async></script>
 </head>
 
-<body class="background-juego" data-role="none">
+<body class="game-background" data-role="none">
   <header class="header-juego">
     <div class="content-lang">
-      <svg class="close-lang" height="45px" width="45px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-        <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-      </svg><!-- cual es el fallback de estos svg? -->
-
+      <img src="img/icons/close.png" class="close-lang">
       <ul class="list-lang" id="list-lang">
-            <li class="list-lang-item selected"><a href="#">en</a></li>
-            <li class="list-lang-item"><a href="es.html">es</a></li>
-            <li class="list-lang-item"><a href="fr.html">fr</a></li>
-            <li class="list-lang-item"><a href="de.html">de</a></li>
-        </ul>
+        <li class="list-lang-item selected"><a href="#">en</a></li>
+        <li class="list-lang-item"><a href="es.html">es</a></li>
+        <li class="list-lang-item"><a href="fr.html">fr</a></li>
+        <li class="list-lang-item"><a href="de.html">de</a></li>
+      </ul>
     </div>
       <nav class="main-nav">
       <a class="logo-nav" href="#"><img src="img/logo-nav.png"></a>
@@ -59,35 +55,28 @@
         <div class="tap-banner tap-banner-amy">
           <picture>
             <source media="(min-width: 768px)" srcset="img/characters/body-amy.png">
-            <source media="(max-width: 768px)" srcset="img/characters/head-amy.png">
-            <img srcset="img/characters/body-amy.png" alt="This picture is currently having some problems.">
+            <source media="(max-width: 768px)" srcset="img/characters/tap-amy.png">
+            <img srcset="img/characters/body-amy.png" alt="Imagen de Amy">
           </picture>
           <h3>Amy</h3>
         </div>
         <div class="tap-info" id="amy">
-          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-            <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-            <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-          </svg> <!-- cual es el fallback de estos svg? -->
-
+          <img src="img/icons/close.png" class="close-tap">
           <p>Una niña de 8 años, linda, dulce y optimista. Amy es muy inteligente, y debido a su desconocimiento de cómo fue el mundo en el pasado, es más bien ingenua en comprender lo mal que está en la actualidad.</p>
           <p>Aunque Amy está llena de energía y ambiciones, el espacio y libertad restringidos, han desarrollado su gusto por la literatura y otras aficiones, como programas de televisión. Tiene un carácter dulce con su familia y amigos, pero se vuelve apasionada y seria cuando está en “modo aventura”.</p>
         </div>
       </li>
-	  <li>
+    <li>
         <div class="tap-banner tap-banner-mom">
           <picture>
             <source media="(min-width: 768px)" srcset="img/characters/body-mom.png">
-            <source media="(max-width: 768px)" srcset="img/characters/head-mom.png">
-            <img srcset="img/characters/body-mom.png" alt="This picture is currently having some problems.">
+            <source media="(max-width: 768px)" srcset="img/characters/tap-mom.png">
+            <img srcset="img/characters/body-mom.png" alt="Imagen de la Mamá">
           </picture>
           <h3>Mamá</h3>
         </div>
         <div class="tap-info" id="mom">
-          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-            <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-            <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-          </svg>
+          <img src="img/icons/close.png" class="close-tap">
           <p>Activista ambiental de 35 años. Siempre tuvo claro que los malos hábitos de la humanidad, ocasionarían daños al medio ambiente. Considera que el cambio climático es un tema de negligencia, no de destino.</p>
           <p>Es segura de sí misma y tiene una actitud optimista hacia la posibilidad de cambio y de progreso. Es mucho más seria que su esposo, pero a menudo se ríen y juegan juntos.</p>
           <p>Le apasionan los libros, es realista y una líder natural. Es miembro activo de grupos conservacionistas y dirige varios de ellos. Aunque el mundo no es lo que era, no se ha dado por vencida, intenta proteger el planeta dentro de sus posibilidades.</p>
@@ -97,16 +86,13 @@
         <div class="tap-banner tap-banner-grandps">
           <picture>
             <source media="(min-width: 768px)" srcset="img/characters/body-grandps.png">
-            <source media="(max-width: 768px)" srcset="img/characters/head-grandps.png">
-            <img srcset="img/characters/body-grandps" alt="This picture is currently having some problems.">
+            <source media="(max-width: 768px)" srcset="img/characters/tap-grandps.png">
+            <img srcset="img/characters/body-grandps" alt="Imagen del Abuelo">
           </picture>
           <h3>Abuelo</h3>
         </div>
         <div class="tap-info" id="grandps">
-          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-            <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-            <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-          </svg>
+          <img src="img/icons/close.png" class="close-tap">
           <p>Un hombre de 70 años que pasó casi toda su vida negando el cambio climático. Después de ver y experimentar las consecuencias desastrosas, entró en razón. Su lenguaje corporal refleja su frustración y arrepentimiento sobre el estado actual del mundo.</p>
           <p>Cuando habla con Amy intenta ser jovial y optimista, pero a veces su vergüenza sale a la luz. Con el resto de la familia se porta distante y amargado; aun así, les ama y cuida mucho. No es realmente conservador, pero le cuesta salirse de su zona de confort.</p>
         </div>
@@ -115,16 +101,13 @@
         <div class="tap-banner tap-banner-dad">
           <picture>
             <source media="(min-width: 768px)" srcset="img/characters/body-dad.png">
-            <source media="(max-width: 768px)" srcset="img/characters/head-dad.png">
-            <img srcset="img/characters/body-dad.png" alt="This picture is currently having some problems."> <!-- que es este alt? -->
+            <source media="(max-width: 768px)" srcset="img/characters/tap-dad.png">
+            <img srcset="img/characters/body-dad.png" alt="Imagen del Papá">
           </picture>
           <h3>Papá</h3>
         </div>
         <div class="tap-info" id="dad">
-          <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-            <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-            <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-          </svg>
+          <img src="img/icons/close.png" class="close-tap">
             <p>Ingeniero retirado de 40 años. Dedicó su carrera profesional a la ingeniería estructural. Al contrario de su padre, sí creyó en el cambio climático desde joven, pero para él, el mundo estaba demasiado dañado y lo único que se podía hacer era prepararse para el futuro.</p>
             <p>Aunque renunció a su trabajo, continúa diseñando conceptos y productos para el movimiento ambientalista de su esposa, a la que apoya en sus esfuerzos políticos y sociales. Su motivación principal es mejorar el mundo para su hija. Es simpático y compasivo, aunque le gusta más ahondar en su trabajo que en cualquier otra cosa.</p>
         </div>
@@ -134,35 +117,33 @@
     <section class="section-character" id="section-character">
     <div class="characters-wrapper">
         <div class="main-char-selection char-selection">
-          <button class="char_btn" value="amy"></button> <!-- Porque buttons? nada de esto tiene relacion con botones -->
-          <button class="char_btn" value="mom"></button>
-          <button class="char_btn" value="grandps"></button>
-          <button class="char_btn" value="dad"></button>
+          <img src="img/characters/family-photo.png" alt="" usemap="#Map" />
+          <map name="Map" id="Map">
+              <area class="char_btn" alt="Amy" title="Amy" name="amy" shape="poly" coords="493,372,505,365,517,360,516,342,506,318,496,298,482,283,445,278,433,281,421,299,418,329,416,358,416,379,434,391,425,416,420,433,422,453,418,471,403,489,383,498,389,522,395,542,416,554,432,563,451,568,473,562,495,560,504,545,508,514,499,490,503,474,506,452,511,435,509,405,495,375,491,373,489,374,487,374" />
+              <area class="char_btn" alt="Abuelo" title="Abuelo" name="grandps" shape="poly" coords="584,532,577,559,615,563,621,545,625,512,630,496,643,493,651,519,656,555,680,566,697,548,688,532,688,510,698,488,707,460,708,430,701,409,727,401,749,384,745,342,722,314,706,302,683,284,689,263,695,244,686,230,682,192,661,155,625,146,599,158,584,168,565,197,568,225,568,234,557,244,552,268,545,286,535,304,530,315,530,380,557,401,557,420,562,464,574,503" />
+              <area class="char_btn" alt="Papa" title="Papa" name="dad" shape="poly" coords="364,198,387,184,401,164,413,142,417,120,409,104,401,82,437,19,471,14,500,29,508,57,506,87,498,111,504,133,515,146,535,157,562,172,573,193,573,221,563,242,548,266,547,275,530,284,513,302,485,283,462,273,445,275,409,287,397,241" />
+              <area class="char_btn" alt="Mama" title="Mama" name="mom" shape="poly" coords="274,196,255,191,242,173,247,147,255,129,259,122,262,100,313,69,363,87,373,117,383,159,387,188,365,198,388,236,404,257,412,275,394,317,385,348,389,369,403,414,400,453,385,472,372,478,377,509,384,530,394,544,400,559,389,566,373,562,360,555,350,503,350,489,343,477,343,486,324,487,314,487,320,518,324,550,315,564,294,557,288,548,298,533,292,510,280,479,260,459,251,429,251,399,255,374,258,355,260,349,257,330,246,302,236,281,239,252,245,231,272,197" />
+          </map>
         </div>
       <div class="char-details hidden" id="char_details">
-          <svg id="hide" class="close-details" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-            <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-            <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-          </svg>
-          <img class="back left" src="img/icons/previous.png"></a>
-          <img class="foward right" src="img/icons/next.png"></a>
-
+        <img src="img/icons/close.png" id="hide" class="close-details">
+        <img class="back left" src="img/icons/previous.png"></a>
+        <img class="foward right" src="img/icons/next.png"></a>
         <div class="details" id="details">
         </div>
-
         <div class="char-selection">
-          <button class="char_btn preview-char" value="amy">
+          <button class="char_btn preview-char" name="amy">
             <img src="img/characters/head-amy.png" >
             <h4>Amy</h4>
-          <button class="char_btn preview-char" value="mom">
+          <button class="char_btn preview-char" name="mom">
             <img src="img/characters/head-mom.png" >
             <h4>Mamá</h4>
           </button>
-          <button class="char_btn preview-char" value="dad">
+          <button class="char_btn preview-char" name="dad">
             <img src="img/characters/head-dad.png" >
             <h4>Papá</h4>
           </button>
-          <button class="char_btn preview-char" value="grandps">
+          <button class="char_btn preview-char" name="grandps">
             <img src="img/characters/head-grandps.png" >
             <h4>Abuelo</h4>
           </button>
@@ -211,19 +192,18 @@
       <div id="show-fullimage" class="hidden">
         <img src="img/icons/previous.png" class="previous" id="previous">
         <img id="full-picture" class="full-picture" src="">
-        <svg class="close-details" id="closePopUp" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-          <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-          <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-        </svg>
+        <img src="img/icons/close.png" class="close-details" id="closePopUp">
         <img class="next" src="img/icons/next.png" id="next">
       </div>
     </section>
   </div>
   
-  <footer>
-    <p>Jugá y descubrí la experiencia climática del 2050.</p>
-    <p>Este proyecto fue desarrollado por <a href="creditos.html">Créditos</a></p>
-    <p>© 2015 Our Heritage</p>
+  <footer class="footer-game">
+      <section class="footer-content">
+        <p>Jugá y descubrí la experiencia climática del 2050.</p>
+        <p>Este proyecto fue desarrollado por <a href="creditos.html">Créditos</a></p>
+        <p>© 2015 Our Heritage</p>
+      </section>
   </footer>
   
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>

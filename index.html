@@ -10,11 +10,8 @@
 <body class="home-background">
   <header class="header-background">
     <div class="content-lang">
-      <svg class="close-lang" height="45px" width="45px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
-        <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
-      </svg><!-- cual es el fallback de estos svg? -->
-      
+      <img src="img/icons/close.png" class="close-lang">
+
       <ul class="list-lang" id="list-lang">
             <li class="list-lang-item selected"><a href="#">en</a></li>
             <li class="list-lang-item"><a href="es.html">es</a></li>
@@ -22,7 +19,7 @@
             <li class="list-lang-item"><a href="de.html">de</a></li>
         </ul>
     </div>
-    
+
     <nav class="main-nav">
       <a class="logo-nav" href="#"><img src="img/logo-nav.png"></a>
       <ul>
@@ -30,12 +27,19 @@
         <li><a href="juego.html">Juego</a></li>
       </ul>
     </nav>
-    
+    <!-- video teaser section -->
+    <section class="main-video" id="main-video">
+        <div id="close">
+          <img src="img/icons/close.png" class="close-video-modal">
+        </div>
+        <div id="ytplayer" class="ytplayer"></div>
+    </section>
+    <!-- video teaser section end-->
     <h1>Our Heritage</h1>
-    <button class="btn play"><p>Mirá el Teaser</p></button>
+    <button id="btn-play-js" class="btn play"><p>Mirá el Teaser</p></button>
   </header>
 
-  <section>
+  <section class="about-top">
     <ul class="about">
       <li>
         <div class="about-image left"><img src="img/about/enviroment.png"></div>
@@ -71,36 +75,39 @@
       </li>
     </ul>
   </section>
-  
-  <footer>
+  <section class="thanks">
     <h2>Agradecimientos</h2>
-    <p class="team-copy">Este proyecto es financiado por el Fondo Cultural Franco Alemán y es ejecutado gracias a la unión entre el equipo de Fair Play Labs y el Centro de Tecnología y Artes Visuales (CETAV) del Parque La Libertad, con el objetivo de desarrollar un videojuego para crear conciencia sobre el cambio climático y sus severas consecuencias.</p>
-    <p class="team-copy">Agradecemos especialmente el apoyo de las Embajadas de Francia y de la República Federal Alemana en Costa Rica, a Damiano Borgogno y Pascal Girot de la oficina de cambio climático del Programa de Naciones Unidas para el Desarrollo (PNUD) en Costa Rica y a todas las personas involucradas en esta iniciativa.</p>
-    <ul class="spon-list">
-      <li>
-        <img src="img/logos/fr-de.png" alt=""/>
-      </li>
-      <li>
-        <img src="img/logos/mcj-pll-logo.png" alt=""/>
-      </li>
-      <li>
-        <img src="img/logos/fpl-logo.png" alt=""/>
-      </li>
-      <li>
-        <img src="img/logos/cetav-logo.png" alt=""/>
-      </li>
-      <li>
-        <img src="img/logos/undp-logo.png" alt=""/>
-      </li>
-      <li>
-        <img src="img/logos/cop-cmp-logo.png" alt=""/>
-      </li>
-    </ul>
-    <p>Jugá y descubrí la experiencia climática del 2050.</p>
-    <p>Este proyecto fue desarrollado por <a href="creditos.html">Créditos</a></p>
-    <p>© 2015 Our Heritage</p>
+      <p class="team-copy">Este proyecto es financiado por el Fondo Cultural Franco Alemán y es ejecutado gracias a la unión entre el equipo de Fair Play Labs y el Centro de Tecnología y Artes Visuales (CETAV) del Parque La Libertad, con el objetivo de desarrollar un videojuego para crear conciencia sobre el cambio climático y sus severas consecuencias.</p>
+      <p class="team-copy">Agradecemos especialmente el apoyo de las Embajadas de Francia y de la República Federal Alemana en Costa Rica, a Damiano Borgogno y Pascal Girot de la oficina de cambio climático del Programa de Naciones Unidas para el Desarrollo (PNUD) en Costa Rica y a todas las personas involucradas en esta iniciativa.</p>
+      <ul class="spon-list">
+        <li>
+          <img src="img/logos/fr-de.png" alt=""/>
+        </li>
+        <li>
+          <img src="img/logos/mcj-pll-logo.png" alt=""/>
+        </li>
+        <li>
+          <img src="img/logos/fpl-logo.png" alt=""/>
+        </li>
+        <li>
+          <img src="img/logos/cetav-logo.png" alt=""/>
+        </li>
+        <li>
+          <img src="img/logos/undp-logo.png" alt=""/>
+        </li>
+        <li>
+          <img src="img/logos/cop-cmp-logo.png" alt=""/>
+        </li>
+      </ul>
+    </section>
+  <footer class="footer">
+      <section class="footer-content">
+        <p>Jugá y descubrí la experiencia climática del 2050.</p>
+        <p>Este proyecto fue desarrollado por <a href="creditos.html">Créditos</a></p>
+        <p>© 2015 Our Heritage</p>
+      </section>
   </footer>
-  
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>

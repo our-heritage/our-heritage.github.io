@@ -1,10 +1,8 @@
 .logo-nav {
     display: none;
-
     @media (min-width: 768px) {
         display: inline-block;
         float: left;
-        margin-top: -2%;
     }
 }
 
@@ -43,22 +41,16 @@
     }
 
     a {
-        color: #FFF;
+        color: $light-color;
         display: inline-block;
         font-family: $text-serif;
         text-decoration: none;
-        text-shadow: 0 0 10px #FFF;
+        text-shadow: 1px 1px 4px $light-color;
         text-transform: uppercase;
 
         &:hover {
-            color: #24C29F;
-            text-shadow: 0 0 10px #24C29F;
+            color: $main-color;
+            text-shadow: 1px 1px 4px $main-color;
         }
-    }
-}
-
-.main-nav ul {
-    @media (min-width: 768px) { // que ondas aqui?
-        //height: 178px;
     }
 }

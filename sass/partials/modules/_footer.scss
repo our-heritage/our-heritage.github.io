@@ -1,0 +1,39 @@
+.footer {
+    background: url(../img/footer.png);
+    background-color: #d2d2d2;
+    color: #fff;
+
+    &-game {
+    background: url(../img/footer.png);
+    color: #fff;
+    }
+}
+
+.footer-content {
+	margin-top: 200px;
+}
+
+footer a {
+
+	background-color: $light-color;
+    border: 1px solid $main-color;
+    color: $main-color;
+    display: inline-block;
+    font-family: $text-serif;
+    padding: 5px 10px;
+
+    &:hover {
+    background-color: $main-color;
+    border: 1px solid $light-color;
+    color: $light-color;
+    }
+}
+
+footer p  {
+	@include font-size(16);
+    font-family: $text-sans;
+    margin: 0;
+    @media (min-width: 768px){
+    	@include font-size(20);
+    }
+}
