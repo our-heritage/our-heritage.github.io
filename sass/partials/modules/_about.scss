@@ -134,13 +134,13 @@
         }
 
         &.right {
-            @include image-transform(5deg);
+            transform: rotate(5deg);
             left: -60px;
             z-index: 0;
         }
         
         &.left {
-            @include image-transform(-5deg);
+            transform: rotate(-5deg);
             left: 60px;
             z-index: 0;
         }

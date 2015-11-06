@@ -52,7 +52,7 @@
         font-family: $text-sans;
     }
 
-    a{
+    a {
         @include font-size ($links-size);
         text-decoration: underline;
         &:hover{
@@ -60,7 +60,7 @@
         }
     }
 
-    @media(min-width: 1024px){
+    @media(min-width: 1024px) {
         height: 640px;
         width: 50%;
     }
