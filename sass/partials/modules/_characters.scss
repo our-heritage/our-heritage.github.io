@@ -60,16 +60,19 @@
 
 .characters-wrapper {
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
-  max-height: 550px;
   margin: 5% auto;
   overflow: hidden;
   max-width: 900px;
 }
 
+.main-char-selection img{
+  width: 100%;
+}
+
+
 .main-char-selection {
-  background: url("../img/characters/family-photo.png") no-repeat center center;
-  background-size: 100% 100%;
-  z-index: 1;
+  height: 583px;
+  max-width: 900px;
 }
 
 .main-char-selection .char_btn {
@@ -176,10 +179,18 @@
 }
 
 .preview-char {
-	margin-right: 4%;
+	margin-right: 2%;
+  margin-top: 3%;
+
 	h4 {
 		color: $light-color;
 		margin-top: 10px;
 		text-shadow: 0 0 10px $light-color;
 	}
+  &:hover > h4 {
+    color: $main-color;
+    text-shadow: 0 0 10px $main-color;
+  }
 }
+
+    

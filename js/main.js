@@ -45,7 +45,7 @@ function charactersModal(count) {
     charContainers = $('.tap-info');
 
   charBtn.on('click', function() {
-    chosen = $(this).attr('value');
+    chosen = $(this).attr('name');
 
     for (var i = 0; i < charContainers.length; i++) {
       currentChar = charContainers[i].id;
@@ -171,7 +171,7 @@ function menuLang() {
     listLang.on('click', function() {
       for (var i = 0; i < listLangItem.length; i++) {
         listLangItem.addClass(function(i) {
-          return 'list-lang-item position' + i;
+          return 'list-lang-item lang-item-position-' + i;
         });
       };
     });
@@ -179,7 +179,7 @@ function menuLang() {
   closeNavLang.on('click', function() {
     for (var m = 0; m < listLangItem.length; m++) {
       listLangItem.removeClass(function(m) {
-        return 'list-lang-item position' + m;
+        return 'list-lang-item lang-item-position-' + m;
       });
 
       listLangItem.addClass('list-lang-item');
@@ -238,9 +238,9 @@ function gallerySwipe(count) {
 function navGameScroll() {
   var waypoints = $('#game-nav').waypoint(function(direction) {
     if (direction === 'down') {
-      $('.game-nav').addClass('stuck');
+      $('.game-nav').addClass('nav-sticky');
     } else {
-      $('.game-nav').removeClass('stuck');
+      $('.game-nav').removeClass('nav-sticky');
     }
   }, {
     offset: 5

@@ -11,6 +11,13 @@
 	}
 }
 
+.game-background {
+    background-image: url(../img/desktop-background.png);
+    -webkit-box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
+    -moz-box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
+    box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
+}
+
 .header-juego {
 	background: transparent;
 }

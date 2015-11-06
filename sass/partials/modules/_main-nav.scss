@@ -4,7 +4,6 @@
     @media (min-width: 768px) {
         display: inline-block;
         float: left;
-        margin-top: -2%;
     }
 }
 
@@ -54,11 +53,5 @@
             color: #24C29F;
             text-shadow: 0 0 10px #24C29F;
         }
-    }
-}
-
-.main-nav ul {
-    @media (min-width: 768px) { // que ondas aqui?
-        //height: 178px;
     }
 }

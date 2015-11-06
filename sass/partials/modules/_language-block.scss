@@ -1,14 +1,12 @@
 .content-lang {
-    @media only screen and (max-width: 768px){
-        margin-top: 4%;
-        position: absolute;
-        right: 18%;
-        top: 0;
-    }
 
+    margin-top: 4%;
+    position: absolute;
+    right: 18%;
     @media(min-width: 768px){
         float: right;
         margin: 3% 4% 0 0;
+        position: inherit;
     }
 }
 
@@ -39,10 +37,10 @@
     border: 3px solid $main-color;
     cursor: pointer;
     left: 0;
-    padding: 10px;
+    padding: 8px;
     position: absolute;
     text-align: center;
-    top: 0;
+    top: -11px;
     -moz-transition: all 1s;
     -o-transition: all 1s;
     -webkit-transition: all 1s;
@@ -55,7 +53,7 @@
     
     &.selected {
         background: #24C29F;
-        z-index: 3000; // quien hizo esto?
+        z-index: 3;
         
         a {
             color: #fff;
@@ -65,11 +63,11 @@
 }
 
 .list-lang-item a {
-    @include font-size(14);
+    @include font-size(18);
     color: #24C29F;
     font-family: $text-serif;
     text-decoration: none;
-    text-shadow: 0 0 10px #24C29F;
+    text-shadow: 0 0 10px #fff;
     text-transform: uppercase;
 }
 
@@ -87,4 +85,24 @@
     @media(min-width: 768px) {
         @include image-transform(0deg);
     }
+}
+
+.lang-item-position-0 { // estas clases donde se usan?
+    top: 55px;
+}
+
+.lang-item-position-1 {
+    top: 110px;
+}
+
+.lang-item-position-2 {
+    top: 165px;
+}
+
+.lang-item-position-3 {
+    top: 220px;
+}
+
+.lang-item-position-4 {
+    top: 220px;
 }
