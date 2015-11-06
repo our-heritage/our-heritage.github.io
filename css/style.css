@@ -875,7 +875,6 @@ button:focus:active {
 
 .close-video-modal {
   float: right;
-  stroke: #24C29F;
   margin: 2%;
   position: relative;
   z-index: 3; }
