@@ -15,12 +15,14 @@
 	h3 {
 		font-family: $text-serif;
 		float: right;
-		margin: 10% 4% 0 0;
 		text-align: right;
+    margin-top: -65px;
+    margin-right: 53px;
+    position: relative;
 	}
 
 	img {
-		margin: 10% 0 0 4%;
+		width: 100%;
 	}
 }
 
