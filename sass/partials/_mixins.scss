@@ -15,7 +15,7 @@
 
 // mixin to color all team member sections.
 @mixin team-color-scheme($color) {
-    background-color: $color;
+    background-color: #fff;
 
     .team-details {
         background: lighten($color, 10);
