@@ -33,12 +33,11 @@
 }
 
 .about-content h3 {
-<<<<<<< HEAD
     background-color: rgba(243, 124, 80, .4);
     margin-bottom: 10px;
     padding: 3%;
     position: relative;
-    text-shadow: 0 0 10px #FFF;
+    text-shadow: 1px 1px 4px $light-color;
     text-transform: uppercase;
     z-index: 3;
 
@@ -67,47 +66,9 @@
         @include font-size(16);
         padding: 2% 4%;
         position: relative;
-        text-shadow: 0 0 10px #FFF;
+        text-shadow: 1px 1px 4px $light-color;
         z-index: 3;
     }
-=======
-	background-color: rgba(243, 124, 80, .4);
-	margin-bottom: 10px;
-	padding: 3%;
-	position: relative;
-	text-shadow: 1px 1px 4px $light-color;
-	text-transform: uppercase;
-	z-index: 3;
-
-	&:after {
-		content: url(../img/more.png);
-		padding-right: 3%;
-		position: absolute;
-		right: 0;
-	}
-
-	@media (min-width: 768px) {
-		background-color: transparent;
-		margin-bottom: 0;
-		padding: 2% 4%;
-
-		&:after {
-			content: "";
-		}
-	}
-}
-
-.about-content p {
-	@include font-size(14);
-
-	@media (min-width: 768px) {
-		@include font-size(16);
-		padding: 2% 4%;
-		position: relative;
-		text-shadow: 1px 1px 4px $light-color;
-		z-index: 3;
-	}
->>>>>>> upstream/master
 }
 
 .about-content {
@@ -153,7 +114,6 @@
 }
 
 .about-image {
-<<<<<<< HEAD
     margin: 20px auto;
     position: relative;
     transition: opacity 1s ease-in-out;
@@ -172,50 +132,19 @@
             outline: 1px solid transparent;
             padding: 10px 10px 40px;
         }
+
         &.right {
             @include image-transform(5deg);
             left: -60px;
             z-index: 0;
         }
+        
         &.left {
             @include image-transform(-5deg);
             left: 60px;
             z-index: 0;
         }
     }
-=======
-	margin: 20px auto;
-	position: relative;
-	transition: opacity 1s ease-in-out;
-	overflow: hidden;
-	z-index: 1;
-
-	@media (min-width: 768px) {
-		margin: 0;
-	}
-
-	@media (min-width: 1100px) {
-		width: 52%;
-		&.right,
-		&.left {
-			background: url(../img/polaroid.jpg);
-			outline: 1px solid transparent;
-			padding: 10px 10px 40px;
-		}
-
-		&.right {
-			@include image-transform(5deg);
-			left: -60px;
-			z-index: 0;
-		}
-		
-		&.left {
-			@include image-transform(-5deg);
-			left: 60px;
-			z-index: 0;
-		}
-	}
->>>>>>> upstream/master
 }
 
 .about-image > :first-child {
