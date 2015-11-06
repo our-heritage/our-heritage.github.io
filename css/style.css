@@ -999,10 +999,12 @@ button:focus:active {
   .taps-character h3 {
     font-family: "Share Tech", serif;
     float: right;
-    margin: 10% 4% 0 0;
-    text-align: right; }
+    text-align: right;
+    margin-top: -65px;
+    margin-right: 53px;
+    position: relative; }
   .taps-character img {
-    margin: 10% 0 0 4%; }
+    width: 100%; }
 
 .close-tap {
   float: right;
