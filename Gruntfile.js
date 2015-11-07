@@ -5,19 +5,18 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // Watch for changes and trigger compass
+
         watch: {
             sass: {
                 files: ['sass/**/*.{scss,sass}','sass/partials/**/*.{scss,sass}'],
                 tasks: ['sass:dist', 'postcss']
             },
             js: {
-                files: ['js/**/*.js'],
-                tasks: ['uglify:dev']
+                files: ['js/src/**/*.js'],
+                tasks: ['concat', 'uglify:dev']
             }
         },
 
-        // Compass and scss
         sass: {
             options: {
                 sourceMap: true,
@@ -50,6 +49,17 @@ module.exports = function (grunt) {
             }
         },
 
+        concat: {
+          options: {
+            stripBanners: true,
+            separator: ';\n',
+          },
+          dist: {
+            src: ['js/src/jquery-2.1.4.js','js/src/enquire.js', 'js/src/jquery.waypoints.js', 'js/src/jquery.touchSwipe.js'],
+            dest: 'js/build/vendors.js',
+          },
+        },
+
         uglify: {
           dev: {
             options: {
@@ -59,8 +69,8 @@ module.exports = function (grunt) {
               beautify: true
             },
             files: {
-              'js/main.min.js': ['js/main.js']
-              // Output: input
+              'js/main.min.js': ['js/src/main.js'],
+              'js/vendors.min.js': ['js/build/vendors.js']
             }
           },
           prod: {
@@ -70,12 +80,13 @@ module.exports = function (grunt) {
               compress: true
             },
             files: {
-              'js/main.min.js': ['js/main.js']
+              'js/main.min.js': ['js/src/main.js'],
+              'js/vendors.min.js': ['js/build/vendors.js']
             }
           }
         }
     });
 
-    grunt.registerTask('default', ['sass:dist', 'watch', 'uglify:dev']);
-    grunt.registerTask('prod', ['sass:prod', 'uglify:prod', 'postcss']);
+    grunt.registerTask('default', ['sass:dist', 'watch', 'concat', 'uglify:dev']);
+    grunt.registerTask('prod', ['sass:prod', 'concat', 'uglify:prod', 'postcss']);
 };
