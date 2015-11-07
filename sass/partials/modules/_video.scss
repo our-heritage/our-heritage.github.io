@@ -26,7 +26,15 @@
   }
 }
 
-.header-lightbox-video{
+.teaser {
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.teaser-modal{
     -webkit-transition: .6s;
     -o-transition: .6s;
     transition: .6s;
@@ -43,27 +51,13 @@
     top: 0;
     width: 100%;
     z-index: 999;
-
-  @media(min-width: 768px){
-    //padding-bottom: 70px;
-  }
-
-  @media(min-width: 1024px){
-    height: 850px;
-  }
 }
 
 .non-visible{
   display: none;
 }
 
-.main-video {
-  width: 100%;
-  color: #FFF;
-  text-align: center;
-  margin: 0 auto;
-  opacity: 0;
-}
+
 
 .ytplayer {
   margin: 0 auto;

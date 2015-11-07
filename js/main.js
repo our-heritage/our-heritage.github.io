@@ -245,22 +245,22 @@
   }
 
   function videoTeaserModal() {
-    var video = $('#main-video'),
+    var video = $('.teaser'),
         btn = $('#btn-play-js'),
         close = $('#close'),
         player = $('#ytplayer'),
-        content = '<iframe class="main-video-player" width="640" height="480" src="https://www.youtube.com/embed/E7CaTJ2SvG8'+
+        content = '<iframe class="main-video-player" width="640" height="480" src="https://www.youtube.com/embed/DLzxrzFCyOs'+
       '?autoplay=1&amp;rel=0&amp;'+
       'controls=1&amp;showinfo=1"  frameborder="0"/>';
 
     btn.click(function(){
-      video.addClass('header-lightbox-video');
+      video.addClass('teaser-modal');
       btn.addClass('non-visible');
       player.html(content);
     });
 
     close.click(function(){
-      video.removeClass('header-lightbox-video');
+      video.removeClass('teaser-modal');
       btn.removeClass('non-visible');
       player.html('');
     });
