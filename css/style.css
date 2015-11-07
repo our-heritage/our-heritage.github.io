@@ -971,16 +971,17 @@ button:focus:active {
     .about-content {
       background-color: #24C29F;
       max-width: 480px; }
-      .about-content .left:before,
-      .about-content .right:before {
+      .about-content.left:before, .about-content.right:before {
         border: 8px solid rgba(36, 194, 159, 0.3);
         content: "";
         height: 100%;
         margin-top: 15px;
         position: absolute;
-        width: 480px; } }
-  .about-content .left:before {
-    margin-left: 24px; }
+        width: 480px; }
+      .about-content.right:before {
+        margin-left: -20px; }
+      .about-content.left:before {
+        margin-left: 24px; } }
 
 .history-section {
   background-color: rgba(0, 0, 0, 0.6);
