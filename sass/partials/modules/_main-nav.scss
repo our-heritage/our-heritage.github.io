@@ -1,11 +1,3 @@
-.logo-nav {
-    display: none;
-    @media (min-width: 768px) {
-        display: inline-block;
-        float: left;
-    }
-}
-
 .logo img {
     display: block;
     margin: 4% auto;
@@ -18,12 +10,11 @@
     }
 }
 
-.main-nav {
-    display: block;
-    margin: 4% 0;
-
+.logo-nav {
+    display: none;
     @media (min-width: 768px) {
-        margin: 4%;
+        display: inline-block;
+        float: left;
     }
 }
 
@@ -52,5 +43,14 @@
             color: $main-color;
             text-shadow: 1px 1px 4px $main-color;
         }
+    }
+}
+
+.main-nav {
+    display: block;
+    margin: 4% 0;
+
+    @media (min-width: 768px) {
+        margin: 4%;
     }
 }

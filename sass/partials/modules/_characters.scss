@@ -1,68 +1,111 @@
-// Smaller Viewports
-.taps-character {
-	margin: 0 auto;
-	max-width: 100%;
-
-	@media (min-width: 768px) {
-		display: none;
-	}
-
-	& li {
-		background-color: $unactive-color;
-		border-bottom: 1px solid $light-color;
-	}
-
-	h3 {
-		font-family: $text-serif;
-		float: right;
-		text-align: right;
-    margin-top: -65px;
-    margin-right: 53px;
-    position: relative;
-	}
-
-	img {
-		width: 100%;
-	}
+.back {
+  cursor: pointer;
+  left: 2%;
+  position: absolute;
+  top: 40%;
 }
 
-.close-tap {
-	float: right;
-	margin: 5% 0;
-	@media (min-width: 768px) {
-		display: none;
-	}
+.char-details .char-selection {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 440px;
+  width: 74%;
 }
 
-.tap-info {
-	background: $light-color;
-	color: $dark-color;
-	display: block;
-	height: auto;
-	max-height: 0;
-	overflow: hidden;
-	padding: 0 15px;
-	transition: max-height .9s ease-in-out;
-	width: 100%;
-
-	& p {
-		margin: 16px 0;
-		padding: 0;
-		width: 90%;
-	}
+.char-details {
+  background-color: rgba(0, 0, 0, .9);
+  display: block;
+  height: 100%;
+  left: 0;
+  padding: 5% 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-.expand-tap-info {
-	height: 100%;
-	max-height: 480px;
+.character-section {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inherit;
+  }
 }
 
-// larger viewports
+.char-selection {
+  margin: 0 auto;
+}
+
 .characters-wrapper {
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
   margin: 5% auto;
   overflow: hidden;
   max-width: 900px;
+}
+
+.close-details {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  width: 40px;
+}
+
+.close-tap {
+  float: right;
+  margin: 5% 0;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.details {
+  color: $light-color;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px $light-color;
+  width: 80%;
+  @media (min-width: 1280px) {
+    width: 60%;
+  }
+
+  h3 {
+    @include font-size(36);
+    color: $main-color;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px $main-color;
+  }
+
+  h3,
+  p {
+    float: right;
+    width: 60%;
+    @media (min-width: 1280px) {
+      width: 50%;
+      margin-right: 5%;
+    }
+  }
+
+  img {
+    float: left;
+  }
+}
+
+.expand-tap-info {
+  height: 100%;
+  max-height: 480px;
+}
+
+.foward {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 40%;
+}
+
+.hidden {
+  display: none;
 }
 
 .main-char-selection img {
@@ -75,118 +118,70 @@
 }
 
 .main-char-selection .char_btn {
-	background-color: inherit;
-	border: none;
-	height: 450px;
-	margin-left: 20px;
-	padding: 0 2%;
-	width: 19%;
-}
-
-.section-character {
-	display: none;
-
-	@media (min-width: 768px) {
-		display: inherit;
-	}
-}
-
-//Character Selected
-.char-details {
-	background-color: rgba(0, 0, 0, .9);
-	display: block;
-	height: 100%;
-	left: 0;
-	padding: 5% 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 999;
-}
-
-.char-details .char-selection {
-	position: absolute;
-	right: 0;
-	text-align: center;
-	top: 440px;
-	width: 74%;
-}
-
-.close-details {
-	cursor: pointer;
-	position: absolute;
-	right: 2%;
-	top: 5%;
-	width: 40px;
-}
-
-.back {
-	cursor: pointer;
-	left: 2%;
-	position: absolute;
-	top: 40%;
-}
-
-.details {
-	color: $light-color;
-	margin: 0 auto;
-	text-shadow: 1px 1px 4px $light-color;
-	width: 80%;
-	@media (min-width: 1280px) {
-		width: 60%;
-	}
-
-	h3 {
-		@include font-size(36);
-		color: $main-color;
-		margin-bottom: 35px;
-		text-transform: uppercase;
-		text-shadow: 1px 1px 4px $main-color;
-	}
-
-	h3,
-	p {
-		float: right;
-		width: 60%;
-		@media (min-width: 1280px) {
-			width: 50%;
-	  	margin-right: 5%;
-		}
-	}
-
-	img {
-		float: left;
-	}
-}
-
-.foward {
-	cursor: pointer;
-	position: absolute;
-	right: 2%;
-	top: 40%;
-}
-
-.hidden {
-	display: none;
-}
-
-// Characters bottom controls
-.char-selection {
-	margin: 0 auto;
+  background-color: inherit;
+  border: none;
+  height: 450px;
+  margin-left: 20px;
+  padding: 0 2%;
+  width: 19%;
 }
 
 .preview-char {
-	margin-right: 2%;
-  margin-top: 3%;
+  margin-right: 2%;
+    margin-top: 3%;
 
-	h4 {
-		color: $light-color;
-		margin-top: 10px;
-		text-shadow: 1px 1px 4px $light-color;
-	}
+  h4 {
+    color: $light-color;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px $light-color;
+  }
 
   &:hover > h4 {
-	color: $main-color;
-	text-shadow: 1px 1px 4px $main-color;
+  color: $main-color;
+  text-shadow: 1px 1px 4px $main-color;
+  }
+}
+
+.taps-character {
+  margin: 0 auto;
+  max-width: 100%;
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  li {
+    background-color: $unactive-color;
+    border-bottom: 1px solid $light-color;
+  }
+
+  h3 {
+    font-family: $text-serif;
+    float: right;
+    text-align: right;
+      margin-top: -65px;
+      margin-right: 53px;
+      position: relative;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.tap-info {
+  background: $light-color;
+  color: $dark-color;
+  display: block;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height .9s ease-in-out;
+  width: 100%;
+
+  p {
+    margin: 16px 0;
+    padding: 0;
+    width: 90%;
   }
 }

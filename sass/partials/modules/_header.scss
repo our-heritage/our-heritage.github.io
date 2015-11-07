@@ -1,75 +1,73 @@
-.header-background {
-	background: url(../img/header.png) no-repeat center bottom;
-	background-size: cover;
-	/* -webkit-box-shadow: inset 0px 140px 211px -23px #000; */
-	-moz-box-shadow: inset 0px 140px 211px -40px #000;
-	box-shadow: inset 0px 140px 211px -40px #000;
+.brief {
+  @include font-size(18);
+  background-color: rgba(255, 255, 255, .1);
+  box-sizing: border-box;
+  color: $light-color;
+  font-family: $text-serif;
+  margin: 100px auto;
+  padding: 20px;
+  width: 60%;
 
-	@media (min-width: 1024px) {
-		height: 850px;
-		padding-bottom: 80px;
-	}
+  @media screen and (min-width: 1000px) {
+    @include font-size(24);
+    width: 40%;
+  }
 }
 
-.game-background {
-	background-image: url(../img/desktop-background.jpg);
-	-webkit-box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
-	-moz-box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
-	box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
+.game-container {
+  background-image: url(../img/desktop-background.jpg);
+  -webkit-box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
+  -moz-box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
+  box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
 }
 
-.header-juego {
-	background: transparent;
+.header-index {
+  background: url(../img/header.png) no-repeat center bottom;
+  background-size: cover;
+  -moz-box-shadow: inset 0px 140px 211px -40px #000;
+  box-shadow: inset 0px 140px 211px -40px #000;
+
+  @media (min-width: 1024px) {
+    height: 850px;
+    padding-bottom: 80px;
+  }
+}
+
+.header-game {
+  background: transparent;
 }
 
 .lang-select li {
-	display: inline-block;
+  display: inline-block;
 }
 
 .lang-select {
-	float: right;
-	margin: 2% 3%;
+  float: right;
+  margin: 2% 3%;
+}
+// Credits Header
+.main-header {
+  background: url("../img/header-banner.jpg") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding: 150px 0 0;
+  text-align: center;
+
+  h1 {
+    border-bottom: 3px solid $light-color;
+    margin: 0 auto;
+    width: 85%;
+
+    @media screen and (min-width: 1000px) {
+      width: 50%;
+    }
+  }
 }
 
 .play {
-	background: url("../img/icons/play.png") no-repeat center left;
-	height: 85px;
-	display: block;
-	margin: 10% auto;
-	width: 280px;
-}
-
-// Credits Header
-.main-header {
-	background: url("../img/header-banner.jpg") no-repeat;
-	background-size: cover;
-	overflow: hidden;
-	padding: 150px 0 0;
-	text-align: center;
-
-	h1 {
-		border-bottom: 3px solid $light-color;
-		margin: 0 auto;
-		width: 85%;
-
-		@media screen and (min-width: 1000px) {
-			width: 50%;
-		}
-	}
-}
-
-.brief {
-	@include font-size(18);
-	background-color: rgba(255, 255, 255, .1);
-	box-sizing: border-box;
-	color: $light-color;
-	font-family: $text-serif;
-	margin: 100px auto;
-	padding: 20px;
-	width: 60%;
-
-	@media screen and (min-width: 1000px) {
-		@include font-size(24);
-		width: 40%;
-	}
+  background: url("../img/icons/play.png") no-repeat center left;
+  height: 85px;
+  display: block;
+  margin: 10% auto;
+  width: 280px;
 }
