@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['sass/**/*.{scss,sass}','sass/partials/**/*.{scss,sass}'],
-                tasks: ['sass:dist']
+                tasks: ['sass:dist', 'postcss']
             },
             js: {
                 files: ['js/**/*.js'],
@@ -35,6 +35,18 @@ module.exports = function (grunt) {
                 files: {
                     'css/styles.css': 'sass/styles.scss'
                 }
+            }
+        },
+
+        postcss: {
+            options: {
+              map: true,
+              processors: [
+                require('autoprefixer')({browsers: 'last 3 versions'})
+              ]
+            },
+            dist: {
+              src: 'css/*.css'
             }
         },
 
@@ -65,5 +77,5 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', ['sass:dist', 'watch', 'uglify:dev']);
-    grunt.registerTask('prod', ['sass:prod', 'uglify:prod']);
+    grunt.registerTask('prod', ['sass:prod', 'uglify:prod', 'postcss']);
 };

@@ -54,7 +54,7 @@
         font-family: $text-sans;
     }
 
-    a{
+    a {
         @include font-size ($links-size);
         text-decoration: underline;
         &:hover{
