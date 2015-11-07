@@ -15,10 +15,10 @@
 .gallery-container {
   width: 100%;
   @media (min-width: 1280px) {
-  font-size: 0; /* Hack that removes white space */
-  list-style: none;
-  margin: 0 auto;
-  width: 80%;
+    font-size: 0; /* Hack that removes white space */
+    list-style: none;
+    margin: 0 auto;
+    width: 80%;
   }
 }
 
@@ -67,7 +67,7 @@
     width: 100%;
   }
 }
-// Gallery Desktop
+
 @media (min-width: 768px) {
   .gallery-imgs li {
     background: url(../img/polaroid.jpg);
@@ -89,51 +89,51 @@
 
   // Scattered Pictures Style
   .gallery-imgs .pic-1 {
-    @include image-transform(-10deg);
+    transform: rotate(-10deg);
   }
 
   .gallery-imgs .pic-2 {
-    @include image-transform(10deg);
+    transform: rotate(10deg);
     margin-top: 20px;
   }
 
   .gallery-imgs .pic-3 {
-    @include image-transform(-5deg);
+    transform: rotate(-5deg);
     left: 5px;
     margin-top: -25px;
     position: relative;
   }
 
   .gallery-imgs .pic-4 {
-    @include image-transform(-15deg);
+    transform: rotate(-15deg);
     margin-top: -10px;
   }
 
   .gallery-imgs .pic-5 {
-    @include image-transform(-5deg);
+    transform: rotate(-5deg);
     position: relative;
     right: 15px;
   }
 
   .gallery-imgs .pic-6 {
-    @include image-transform(10deg);
+    transform: rotate(10deg);
     left: 5px;
     position: relative;
     margin-top: -22px;
   }
 
   .gallery-imgs .pic-7 {
-    @include image-transform(5deg);
+    transform: rotate(5deg);
     margin-top: -40px;
   }
 
   .gallery-imgs .pic-8 {
-    @include image-transform(-10deg);
+    transform: rotate(-10deg);
     margin-top: 25px;
   }
 
   .gallery-imgs .pic-9 {
-    @include image-transform(15deg);
+    transform: rotate(15deg);
     margin-top: -60px;
   }
 

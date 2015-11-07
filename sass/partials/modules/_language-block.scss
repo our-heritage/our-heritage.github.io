@@ -33,18 +33,18 @@
 }
 
 .list-lang li:first-child + li {
-  @include image-transform(10deg);
+  transform: rotate(10deg);
 
   @media(min-width: 768px) {
-    @include image-transform(0deg);
+    transform: rotate(0deg);
   }
 }
 
 .list-lang li:last-child {
-  @include image-transform(10deg);
+  transform: rotate(10deg);
 
   @media(min-width: 768px) {
-    @include image-transform(0deg);
+    transform: rotate(0deg);
   }
 }
 
