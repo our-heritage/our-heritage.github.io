@@ -14,9 +14,10 @@
 
 .section-gallery {
     width: 100%;
-  @media (min-width: 768px) {
+    
+    @media (min-width: 768px) {
         padding: 60px 30px;
-  }
+    }
     @media (min-width: 1280px) {
         padding: 60px;
     }
@@ -52,21 +53,23 @@
 }
 
 .counter-slider {
-  text-align: center;
-  width: 100%;
+    text-align: center;
+    width: 100%;
+    
     @media (min-width: 768px) {
         display: none;
     }
 }
 
 .gallery-container {
-  width: 100%;
-  @media (min-width: 1280px) {
-    font-size: 0; /* Hack that removes white space */
-    list-style: none;
-    margin: 0 auto;
-    width: 80%;
-  }
+    width: 100%;
+    
+    @media (min-width: 1280px) {
+        font-size: 0; /* Hack that removes white space */
+        list-style: none;
+        margin: 0 auto;
+        width: 80%;
+    }
 }
 
 // Gallery Desktop

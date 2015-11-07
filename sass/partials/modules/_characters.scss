@@ -1,192 +1,194 @@
 // Smaller Viewports
 .taps-character {
-	margin: 0 auto;
-	max-width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
 
-	@media (min-width: 768px) {
-		display: none;
-	}
+    @media (min-width: 768px) {
+        display: none;
+    }
 
-	& li {
-		background-color: $unactive-color;
-		border-bottom: 1px solid $light-color;
-	}
+    & li {
+        background-color: $unactive-color;
+        border-bottom: 1px solid $light-color;
+    }
 
-	h3 {
-		font-family: $text-serif;
-		float: right;
-		text-align: right;
-    margin-top: -65px;
-    margin-right: 53px;
-    position: relative;
-	}
+    h3 {
+        font-family: $text-serif;
+        float: right;
+        text-align: right;
+        margin-top: -65px;
+        margin-right: 53px;
+        position: relative;
+    }
 
-	img {
-		width: 100%;
-	}
+    img {
+        width: 100%;
+    }
 }
 
 .close-tap {
-	float: right;
-	margin: 5% 0;
-	@media (min-width: 768px) {
-		display: none;
-	}
+    float: right;
+    margin: 5% 0;
+    
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
 .tap-info {
-	background: $light-color;
-	color: $dark-color;
-	display: block;
-	height: auto;
-	max-height: 0;
-	overflow: hidden;
-	padding: 0 15px;
-	transition: max-height .9s ease-in-out;
-	width: 100%;
+    background: $light-color;
+    color: $dark-color;
+    display: block;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height .9s ease-in-out;
+    width: 100%;
 
-	& p {
-		margin: 16px 0;
-		padding: 0;
-		width: 90%;
-	}
+    p {
+        margin: 16px 0;
+        padding: 0;
+        width: 90%;
+    }
 }
 
 .expand-tap-info {
-	height: 100%;
-	max-height: 480px;
+    height: 100%;
+    max-height: 480px;
 }
 
 // larger viewports
 .characters-wrapper {
-  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-  margin: 5% auto;
-  overflow: hidden;
-  max-width: 900px;
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+    margin: 5% auto;
+    overflow: hidden;
+    max-width: 900px;
 }
 
 .main-char-selection img {
-  width: 100%;
+    width: 100%;
 }
 
 .main-char-selection {
-  height: 583px;
-  max-width: 900px;
+    height: 583px;
+    max-width: 900px;
 }
 
 .main-char-selection .char_btn {
-	background-color: inherit;
-	border: none;
-	height: 450px;
-	margin-left: 20px;
-	padding: 0 2%;
-	width: 19%;
+    background-color: inherit;
+    border: 0;
+    height: 450px;
+    margin-left: 20px;
+    padding: 0 2%;
+    width: 19%;
 }
 
 .section-character {
-	display: none;
+    display: none;
 
-	@media (min-width: 768px) {
-		display: inherit;
-	}
+    @media (min-width: 768px) {
+        display: inherit;
+    }
 }
 
 //Character Selected
 .char-details {
-	background-color: rgba(0, 0, 0, .9);
-	display: block;
-	height: 100%;
-	left: 0;
-	padding: 5% 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 999;
+    background-color: rgba(0, 0, 0, .9);
+    display: block;
+    height: 100%;
+    left: 0;
+    padding: 5% 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999; // este valor no deberia ser mayor a 10
 }
 
 .char-details .char-selection {
-	position: absolute;
-	right: 0;
-	text-align: center;
-	top: 440px;
-	width: 74%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 440px;
+    width: 74%;
 }
 
 .close-details {
-	cursor: pointer;
-	position: absolute;
-	right: 2%;
-	top: 5%;
-	width: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    width: 40px;
 }
 
 .back {
-	cursor: pointer;
-	left: 2%;
-	position: absolute;
-	top: 40%;
+    cursor: pointer;
+    left: 2%;
+    position: absolute;
+    top: 40%;
 }
 
 .details {
-	color: $light-color;
-	margin: 0 auto;
-	text-shadow: 1px 1px 4px $light-color;
-	width: 80%;
-	@media (min-width: 1280px) {
-		width: 60%;
-	}
+    color: $light-color;
+    margin: 0 auto;
+    text-shadow: 1px 1px 4px $light-color;
+    width: 80%;
 
-	h3 {
-		@include font-size(36);
-		color: $main-color;
-		margin-bottom: 35px;
-		text-transform: uppercase;
-		text-shadow: 1px 1px 4px $main-color;
-	}
+    @media (min-width: 1280px) {
+        width: 60%;
+    }
 
-	h3,
-	p {
-		float: right;
-		width: 60%;
-		@media (min-width: 1280px) {
-			width: 50%;
-	  	margin-right: 5%;
-		}
-	}
+    h3 {
+        @include font-size(36);
+        color: $main-color;
+        margin-bottom: 35px;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 4px $main-color;
+    }
+    h3,
+    p {
+        float: right;
+        width: 60%;
 
-	img {
-		float: left;
-	}
+        @media (min-width: 1280px) {
+            width: 50%;
+            margin-right: 5%;
+        }
+    }
+
+    img {
+        float: left;
+    }
 }
 
 .foward {
-	cursor: pointer;
-	position: absolute;
-	right: 2%;
-	top: 40%;
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 40%;
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
 // Characters bottom controls
 .char-selection {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 .preview-char {
-	margin-right: 2%;
-  margin-top: 3%;
+    margin-right: 2%;
+    margin-top: 3%;
 
-	h4 {
-		color: $light-color;
-		margin-top: 10px;
-		text-shadow: 1px 1px 4px $light-color;
-	}
+    h4 {
+        color: $light-color;
+        margin-top: 10px;
+        text-shadow: 1px 1px 4px $light-color;
+    }
 
-  &:hover > h4 {
-	color: $main-color;
-	text-shadow: 1px 1px 4px $main-color;
-  }
+    &:hover > h4 {
+        color: $main-color;
+        text-shadow: 1px 1px 4px $main-color;
+    }
 }

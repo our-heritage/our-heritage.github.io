@@ -24,6 +24,15 @@
     }
 }
 
+.lang-select {
+    float: right;
+    margin: 2% 3%;
+}
+
+.lang-select li {
+    display: inline-block;
+}
+
 .list-lang {
     list-style: none;
     position: absolute;
