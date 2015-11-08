@@ -19,15 +19,6 @@
     }
 }
 
-.main-nav {
-    display: block;
-    margin: 4% 0;
-
-    @media (min-width: 768px) {
-        margin: 4%;
-    }
-}
-
 .main-nav li {
     @include font-size(18);
     border: 3px solid $main-color;
@@ -53,5 +44,14 @@
             color: $main-color;
             text-shadow: 1px 1px 4px $main-color;
         }
+    }
+}
+
+.main-nav {
+    display: block;
+    margin: 4% 0;
+
+    @media (min-width: 768px) {
+        margin: 4%;
     }
 }

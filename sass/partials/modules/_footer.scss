@@ -1,18 +1,9 @@
-.footer {
-    background: url(../img/footer.png);
-    background-color: #d2d2d2;
+footer {
+    background: #A5BBD1 url(../img/footer.png) center bottom repeat-x;
+    clear: both;
     color: #fff;
-
-    &-game {
-    background: url(../img/footer.png);
-    color: #fff;
-    }
-}
-
-.footer-content {
-    margin: 200px auto 0;
-    max-width: 650px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+    overflow: hidden;
+    padding: 200px 0 300px;
 }
 
 footer a {
@@ -32,4 +23,16 @@ footer p  {
     @media (min-width: 768px){
         @include font-size(20);
     }
+}
+
+.footer-content {
+    margin: 0 auto;
+    max-width: 650px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+    text-align: center;
+}
+
+.footer-game {
+    background-color: transparent;
+    color: #fff;
 }

@@ -2,7 +2,7 @@
     margin-top: 4%;
     position: absolute;
     right: 18%;
-    
+
     @media(min-width: 768px){
         float: right;
         margin: 3% 4% 0 0;
@@ -38,8 +38,8 @@
     position: absolute;
     z-index: 1;
 
-    @media(min-width: 768px){
-        position: inherit;
+    @media(min-width: 768px) {
+        position: inherit; // mejor cambiarlo a static, si es lo que necesitan, el padre tambien hereda
     }
 }
 
@@ -94,7 +94,8 @@
     }
 }
 
-.lang-item-position-0 { // estas clases donde se usan?
+
+.lang-item-position-0 {
     top: 55px;
 }
 
@@ -113,3 +114,4 @@
 .lang-item-position-4 {
     top: 220px;
 }
+

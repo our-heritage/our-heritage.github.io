@@ -1,4 +1,25 @@
-.header-background {
+.brief {
+    @include font-size(18);
+    background-color: rgba(255, 255, 255, .1);
+    box-sizing: border-box;
+    color: $light-color;
+    font-family: $text-serif;
+    margin: 100px auto;
+    padding: 20px;
+    width: 60%;
+
+    @media screen and (min-width: 1000px) {
+        @include font-size(24);
+        width: 40%;
+    }
+}
+
+.game-container {
+    background-image: url(../img/desktop-background.jpg);
+    box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
+}
+
+.header-index {
     background: url(../img/header.png) no-repeat center bottom;
     background-size: cover;
     box-shadow: inset 0px 140px 211px -40px #000;
@@ -9,21 +30,8 @@
     }
 }
 
-.game-background {
-    background-image: url(../img/desktop-background.jpg);
-    box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
-}
-
-.header-juego {
+.header-game {
     background: transparent;
-}
-
-.play {
-    background: url("../img/icons/play.png") no-repeat center left;
-    height: 85px;
-    display: block;
-    margin: 10% auto;
-    width: 280px;
 }
 
 // Credits Header
@@ -45,18 +53,10 @@
     }
 }
 
-.brief {
-    @include font-size(18);
-    background-color: rgba(255, 255, 255, .1);
-    box-sizing: border-box;
-    color: $light-color;
-    font-family: $text-serif;
-    margin: 100px auto;
-    padding: 20px;
-    width: 60%;
-
-    @media screen and (min-width: 1000px) {
-        @include font-size(24);
-        width: 40%;
-    }
+.play {
+    background: url("../img/icons/play.png") no-repeat center left;
+    height: 85px;
+    display: block;
+    margin: 10% auto;
+    width: 280px;
 }

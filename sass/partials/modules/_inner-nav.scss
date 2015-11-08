@@ -23,6 +23,21 @@
     }
 }
 
+.game-nav ul {
+    text-align: center;
+    
+    li {
+        margin: 20px 40px;
+       
+        @media (min-width: 768px) {
+          display: inline-block;
+        }
+        @media (min-width: 1280px) {
+          display: block;
+        }
+    }
+}
+
 .list-game {
     text-align: center;
 }
