@@ -17,6 +17,7 @@
           <li class="list-lang-item"><a href="es.html">es</a></li>
           <li class="list-lang-item"><a href="fr.html">fr</a></li>
           <li class="list-lang-item"><a href="de.html">de</a></li>
+          <!-- Agregar comportamiento hover a los items -->
           </ul>
       </div>
 
@@ -25,7 +26,9 @@
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="juego.html">Juego</a></li>
+          <!-- En este momento el area cliqueable es solo el texto, todo el "boton" deberia de serlo -->
         </ul>
+        <!-- Agregar comportamiento hover a los items -->
       </nav>
 
       <h1>Our Heritage</h1>
@@ -37,6 +40,7 @@
         <img src="img/icons/close.png" class="close-video-modal">
       </div>
       <div id="ytplayer" class="ytplayer"></div>
+      <!-- Agregar comportamiento hover al boton -->
     </section>
     <!-- video teaser section end-->
     <section>
@@ -51,6 +55,7 @@
         </li>
         <li>
           <div class="about-image right"><img src="img/about/amy.png"></div>
+          <!-- Imagenes que son parte del contenido deben tener alt -->
           <div class="about-content left">
             <h3>Amy</h3>
             <p>Amy es inocente, curiosa y aventurera. Desde su punto de vista, el planeta no está mejor ni peor que en el pasado, ya que es en el que le ha tocado vivir y no tiene otra referencia.</p>
@@ -86,6 +91,7 @@
         </li>
         <li>
           <img src="img/logos/mcj-pll-logo.png" alt=""/>
+          <!-- tienen un logo que no tenga fondo? creo que los del equipo de CETAV lo tienen, sino pidanlo -->
         </li>
         <li>
           <img src="img/logos/fpl-logo.png" alt=""/>
@@ -98,13 +104,16 @@
         </li>
         <li>
           <img src="img/logos/cop-cmp-logo.png" alt=""/>
+          <!-- este logo se ve super pequeño -->
         </li>
       </ul>
     </section>
     <footer>
-      <p>Jugá y descubrí la experiencia climática del 2050.</p>
-      <p>Este proyecto fue desarrollado por <a href="creditos.html">Créditos</a></p>
-      <p>© 2015 Our Heritage</p>
+      <section class="footer-content">
+        <p>Jugá y descubrí la experiencia climática del 2050.</p>
+        <p>Este proyecto fue desarrollado por un <a href="creditos.html" title="Creditos">equipo interdisciplinario</a>, gracias a todos por aportar su tiempo, recursos y conocimiento.</p>
+        <p>&copy; 2015 Our Heritage</p>
+      </section>
     </footer>
     <script type="text/javascript" src="js/vendors.min.js"></script>
     <script type="text/javascript" src="js/main.min.js"></script>

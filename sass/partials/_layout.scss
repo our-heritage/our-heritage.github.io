@@ -3,15 +3,6 @@ header {
     overflow: hidden;
     padding-bottom: 40px;
 
-    p {
-        @include font-size(18);
-        color: $light-color;
-        font-family: $text-serif;
-        padding-bottom: 0;
-        text-shadow: 1px 1px 4px $dark-color;
-        text-transform: uppercase;
-    }
-
     h1 {
         background: url(../img/logo.png) no-repeat center center;
         background-size: contain;
@@ -20,6 +11,14 @@ header {
         max-width: 600px;
         text-indent: -9999px;
         width: 90%;
+    }
+    p {
+        @include font-size(18);
+        color: $light-color;
+        font-family: $text-serif;
+        padding-bottom: 0;
+        text-shadow: 1px 1px 4px $dark-color;
+        text-transform: uppercase;
     }
 }
 
@@ -34,6 +33,5 @@ section {
     }
     @media (min-width: 1280px) {
         margin-left: 200px;
-        width: 85%;
     }
 }

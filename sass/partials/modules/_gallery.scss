@@ -1,71 +1,74 @@
 .first-pic {
-  @media only screen and (max-width: 768px) {
-    display: block;
-  }
+    @media only screen and (max-width: 768px) {
+        display: block;
+    }
 }
 
 .counter-slider {
-  text-align: center;
-  width: 100%;
-  @media (min-width: 768px) {
-    display: none;
-  }
+    text-align: center;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
 .gallery-container {
-  width: 100%;
-  @media (min-width: 1280px) {
-    font-size: 0; /* Hack that removes white space */
-    list-style: none;
-    margin: 0 auto;
-    width: 80%;
-  }
+    width: 100%;
+
+    @media (min-width: 1280px) {
+        font-size: 0; /* Hack that removes white space */
+        list-style: none;
+        margin: 0 auto;
+        width: 80%;
+    }
 }
 
 .gallery-imgs {
-  width: 100%;
+    width: 100%;
 
-  @media (min-width: 768px) {
-    list-style: none;
-    text-align: center;
-  }
+    @media (min-width: 768px) {
+        list-style: none;
+        text-align: center;
+    }
 }
 
 .section-gallery h2 {
-  @media (min-width: 768px) {
-    display: none;
-  }
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
 .section-gallery img {
-  @media only screen and (max-width: 768px) {
-    height: auto;
-    max-width: 100%;
-  }
+    @media only screen and (max-width: 768px) {
+        height: auto;
+        max-width: 100%;
+    }
 }
 
 .section-gallery {
-  width: 100%;
-  @media (min-width: 768px) {
-    padding: 60px 30px;
-  }
-  @media (min-width: 1280px) {
-    padding: 60px;
-  }
+    width: 100%;
+
+    @media (min-width: 768px) {
+        padding: 60px 30px;
+    }
+    @media (min-width: 1280px) {
+        padding: 60px;
+    }
 }
 
 .slider-content {
-  @media only screen and (max-width: 768px) {
-    display: none;
-    width: 100%;
-  }
+    @media only screen and (max-width: 768px) {
+        display: none;
+        width: 100%;
+    }
 }
 
 .slider-image {
-  @media only screen and (max-width: 768px) {
-    height: 610px;
-    width: 100%;
-  }
+    @media only screen and (max-width: 768px) {
+        height: 610px;
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) {

@@ -1,140 +1,64 @@
-.advisors-item {
-  @include nav-items-colors ($advisors-color);
-}
+// Game Page navigation
+.game-nav {
+    display: none;
 
-.cetav-item {
-  @include nav-items-colors ($cetav-color);
-}
+    a {
+        @include font-size(30);
+        color: $light-color;
+        font-family: $text-serif;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 4px $main-color;
+    }
 
-.expanded {
-  height: 123px
-}
+    @media only screen and (min-width: 768px) and (max-width: 1280px) {
+        background-color: rgba(0, 0, 0, .6);
+        box-shadow: 0px 0px 15px 10px rgba(36, 194, 159, .5);
+        display: block;
+        width: 100%;
+    }
 
-.fair-item {
-  @include nav-items-colors ($fair-color);
+    @media only screen and (min-width: 1280px) {
+        display: block;
+        position: fixed;
+    }
 }
 
 .game-nav ul {
-  text-align: center;
-  li {
-    margin: 20px 40px;
-    @media (min-width: 768px) {
-      display: inline-block;
-    }
-    @media (min-width: 1280px) {
-      display: block;
-    }
-  }
-}
-
-.game-nav {
-  display: none;
-  a {
-    @include font-size(30);
-    color: $light-color;
-    font-family: $text-serif;
-    text-shadow: 1px 2px 8px $light-color;
-    text-transform: uppercase;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 1280px) {
-    background-color: rgba(0,0,0,.6);
-    box-shadow: 0 10px 15px 5px rgba(0, 0, 0, .5);
-    display: block;
-    width: 100%;
-  }
-  @media only screen and (min-width: 1280px) {
-    display: block;
-    position: fixed;
-  }
-}
-
-.show-menu {
-  @include font-size(14);
-  background: none;
-  border: 1px solid $light-color;
-  color: $light-color;
-  font-family: $text-serif;
-  margin: 20px 0;
-  padding: 10px 20px;
-
-  &:after {
-    content: url(../img/arrow-down.png);
-    float: right;
-    margin-left: 10px;
-  }
-
-  @media screen and (min-width: 1000px) {
-    display: none;
-  }
-}
-
-.team-nav-content {
-  background-color: $nav-back-color;
-  background-size: cover;
-  height: 0;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  transition: height .5s linear;
-  -webkit-transition: height .5s linear;
-  -moz-transition: height .5s linear;
-  -ms-transition: height .5s linear;
-  -o-transition: height .5s linear;
-  width: 100%;
-
-  @media screen and (min-width: 1000px){
-    float: left;
-    height: 75px;
-  }
-}
-
-.team-nav-item {
-  border-bottom: 1px solid #f2f2f2;
-  padding: 10px 0;
-  width: 100%;
-
-  a {
-    @include font-size(18);
-    font-family: $text-serif;
-
-    &:hover {
-      color: #f2f2f2;
-    }
-
-    @media screen and (min-width: 1000px) {
-      @include font-size(24);
-      display: block;
-      padding: 24px 0 52px;
-      height: 50%;
-      width: 100%;
-    }
-  }
-
-  @media screen and (min-width: 1000px) {
-    border: none;
-    float: left;
-    height: 100%;
-    margin: 0;
-    padding: 0;
     text-align: center;
-    width: 33.333%;
-  }
+    
+    li {
+        margin: 20px 40px;
+       
+        @media (min-width: 768px) {
+          display: inline-block;
+        }
+        @media (min-width: 1280px) {
+          display: block;
+        }
+    }
 }
 
-.team-nav {
-  background-color: $nav-back-color;
-  overflow: hidden;
-  width: 100%;
-  z-index: 3;
+.list-game {
+    text-align: center;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
-  .nav-sticky {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
-    position: fixed;
-    top: 0;
-  }
+.list-game-item {
+    margin: 20px 40px;
+
+    @media (min-width: 768px) {
+        display: inline-block;
+    }
+
+    @media (min-width: 1280px) {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) { //esto donde se usa?
+    .nav-sticky {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+    }
 }

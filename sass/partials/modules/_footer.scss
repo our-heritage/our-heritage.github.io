@@ -1,38 +1,38 @@
 footer {
-    background: url(../img/footer.png);
-    background-color: #A5BBD1; 
+    background: #A5BBD1 url(../img/footer.png) center bottom repeat-x;
     clear: both;
     color: #fff;
     overflow: hidden;
-    padding: 200px 0 5px;
-    text-align: center;
+    padding: 200px 0 300px;
 }
 
 footer a {
-    background-color: $light-color;
-    border: 1px solid $main-color;
-    color: $main-color;
-    display: inline-block;
-    font-family: $text-serif;
-    padding: 5px 10px;
+    color: #fff;
+    border-bottom: 2px solid #F2CD77;
 
     &:hover {
-    background-color: $main-color;
-    border: 1px solid $light-color;
-    color: $light-color;
+        border-color: #fff;
     }
 }
 
-footer p {
+footer p  {
     @include font-size(16);
     font-family: $text-sans;
     margin: 0;
+
     @media (min-width: 768px){
         @include font-size(20);
     }
 }
 
+.footer-content {
+    margin: 0 auto;
+    max-width: 650px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+    text-align: center;
+}
+
 .footer-game {
-    background: url(../img/footer.png);
+    background-color: transparent;
     color: #fff;
 }

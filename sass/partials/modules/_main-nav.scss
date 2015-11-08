@@ -1,3 +1,12 @@
+.logo-nav {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: inline-block;
+        float: left;
+    }
+}
+
 .logo img {
     display: block;
     margin: 4% auto;
@@ -7,14 +16,6 @@
 
     @media (min-width: 1024px) {
         margin: 4% auto;
-    }
-}
-
-.logo-nav {
-    display: none;
-    @media (min-width: 768px) {
-        display: inline-block;
-        float: left;
     }
 }
 

@@ -7,36 +7,36 @@
     z-index: 3;
 }
 
-.header-lightbox-video iframe, .header-lightbox-video object, .header-lightbox-video embed {
-  position: relative;
-  top: 20px;
-  width: 100%;
-  height: 240px;
-
-  @media(min-width: 768px){
-    top: 70px;
+.header-lightbox-video iframe, 
+.header-lightbox-video object, 
+.header-lightbox-video embed {
+    position: relative;
+    top: 20px;
     width: 100%;
-    height: 400px;
-  }
+    height: 240px;
 
-  @media(min-width: 768px){
-    top: 70px;
-    width: 640px;
-    height: 420px;
-  }
+    @media(min-width: 768px) {
+        top: 70px;
+        width: 100%;
+        height: 400px;
+    }
+
+    @media(min-width: 768px) { // este bloque sobreescribe el anterior, cual queda?
+        top: 70px;
+        width: 640px;
+        height: 420px;
+    }
 }
 
 .teaser {
-  width: 100%;
-  color: #FFF;
-  text-align: center;
-  margin: 0 auto;
-  opacity: 0;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    margin: 0 auto;
+    opacity: 0;
 }
 
 .teaser-modal{
-    -webkit-transition: .6s;
-    -o-transition: .6s;
     transition: .6s;
     margin: 0 auto;
     top: 0;
@@ -54,22 +54,21 @@
 }
 
 .non-visible{
-  display: none;
+    display: none;
 }
 
-
-
 .ytplayer {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
 
-  @media(min-width: 768px){
-    padding-bottom: 70px;
-  }
+    @media(min-width: 768px){
+        padding-bottom: 70px;
+    }
 }
 
 ::selection{
-  background: #222;
-  color: #fff;
+    background: #222;
+    color: #fff;
 }
+
