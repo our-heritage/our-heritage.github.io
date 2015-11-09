@@ -15,7 +15,7 @@
   <body class="game-container" data-role="none">
     <header class="header-game">
       <div class="content-lang">
-        <img src="img/icons/close.png" class="close-lang">
+        <span class="close-lang"></span>
         <ul class="list-lang" id="list-lang">
           <li class="list-lang-item selected"><a href="#">en</a></li>
           <li class="list-lang-item"><a href="es.html">es</a></li>
@@ -50,10 +50,10 @@
         <p>¿Qué planeta le estamos heredando a nuestras futuras generaciones?</p>
       </section>
       <!-- history-section´s end -->
-      <ul class="taps-character">
+      <ul class="taps-character" data-role="collapsible-set">
         <h2>Personajes</h2>
-        <li>
-          <div class="tap-banner tap-banner-amy">
+        <li data-role="collapsible">
+          <div class="tap-banner-amy">
             <picture>
               <source media="(min-width: 768px)" srcset="img/characters/body-amy.png">
               <source media="(max-width: 768px)" srcset="img/characters/tap-amy.png">
@@ -62,14 +62,12 @@
             <h3>Amy</h3>
           </div>
           <div class="tap-info" id="amy">
-            <img src="img/icons/close.png" class="close-tap">
-            <!-- el icono de cerrar no se incluye como img, no es parte del contenido, usen un span y ponen el icono como background -->
             <p>Una niña de 8 años, linda, dulce y optimista. Amy es muy inteligente, y debido a su desconocimiento de cómo fue el mundo en el pasado, es más bien ingenua en comprender lo mal que está en la actualidad.</p>
             <p>Aunque Amy está llena de energía y ambiciones, el espacio y libertad restringidos, han desarrollado su gusto por la literatura y otras aficiones, como programas de televisión. Tiene un carácter dulce con su familia y amigos, pero se vuelve apasionada y seria cuando está en “modo aventura”.</p>
           </div>
         </li>
         <li>
-          <div class="tap-banner tap-banner-mom">
+          <div class="tap-banner-mom">
             <picture>
               <source media="(min-width: 768px)" srcset="img/characters/body-mom.png">
               <source media="(max-width: 768px)" srcset="img/characters/tap-mom.png">
@@ -78,15 +76,13 @@
             <h3>Mamá</h3>
           </div>
           <div class="tap-info" id="mom">
-            <img src="img/icons/close.png" class="close-tap">
-            <!-- el icono de cerrar no se incluye como img, no es parte del contenido, usen un span y ponen el icono como background -->
             <p>Activista ambiental de 35 años. Siempre tuvo claro que los malos hábitos de la humanidad, ocasionarían daños al medio ambiente. Considera que el cambio climático es un tema de negligencia, no de destino.</p>
             <p>Es segura de sí misma y tiene una actitud optimista hacia la posibilidad de cambio y de progreso. Es mucho más seria que su esposo, pero a menudo se ríen y juegan juntos.</p>
             <p>Le apasionan los libros, es realista y una líder natural. Es miembro activo de grupos conservacionistas y dirige varios de ellos. Aunque el mundo no es lo que era, no se ha dado por vencida, intenta proteger el planeta dentro de sus posibilidades.</p>
           </div>
         </li>
         <li>
-          <div class="tap-banner tap-banner-dad">
+          <div class="tap-banner-dad">
             <picture>
               <source media="(min-width: 768px)" srcset="img/characters/body-dad.png">
               <source media="(max-width: 768px)" srcset="img/characters/tap-dad.png">
@@ -95,14 +91,12 @@
             <h3>Papá</h3>
           </div>
           <div class="tap-info" id="dad">
-            <img src="img/icons/close.png" class="close-tap">
-            <!-- el icono de cerrar no se incluye como img, no es parte del contenido, usen un span y ponen el icono como background -->
             <p>Ingeniero retirado de 40 años. Dedicó su carrera profesional a la ingeniería estructural. Al contrario de su padre, sí creyó en el cambio climático desde joven, pero para él, el mundo estaba demasiado dañado y lo único que se podía hacer era prepararse para el futuro.</p>
             <p>Aunque renunció a su trabajo, continúa diseñando conceptos y productos para el movimiento ambientalista de su esposa, a la que apoya en sus esfuerzos políticos y sociales. Su motivación principal es mejorar el mundo para su hija. Es simpático y compasivo, aunque le gusta más ahondar en su trabajo que en cualquier otra cosa.</p>
           </div>
         </li>
         <li>
-          <div class="tap-banner tap-banner-gramps">
+          <div class="tap-banner-gramps">
             <picture>
               <source media="(min-width: 768px)" srcset="img/characters/body-gramps.png">
               <source media="(max-width: 768px)" srcset="img/characters/tap-gramps.png">
@@ -111,8 +105,6 @@
             <h3>Abuelo</h3>
           </div>
           <div class="tap-info" id="gramps">
-            <img src="img/icons/close.png" class="close-tap">
-            <!-- el icono de cerrar no se incluye como img, no es parte del contenido, usen un span y ponen el icono como background -->
             <p>Un hombre de 70 años que pasó casi toda su vida negando el cambio climático. Después de ver y experimentar las consecuencias desastrosas, entró en razón. Su lenguaje corporal refleja su frustración y arrepentimiento sobre el estado actual del mundo.</p>
             <p>Cuando habla con Amy intenta ser jovial y optimista, pero a veces su vergüenza sale a la luz. Con el resto de la familia se porta distante y amargado; aun así, les ama y cuida mucho. No es realmente conservador, pero le cuesta salirse de su zona de confort.</p>
           </div>
@@ -122,7 +114,7 @@
       <section class="character-section" id="section-character">
        <!-- hover sobre personajes -->
         <div class="characters-wrapper">
-          <div class="main-char-selection char-selection">
+          <div class="main-char-selection">
             <img src="img/characters/family-photo.png" alt="" usemap="#Map" />
             <map name="Map" id="Map">
               <area class="char_btn" alt="Amy" title="Amy" name="amy" shape="poly" coords="493,372,505,365,517,360,516,342,506,318,496,298,482,283,445,278,433,281,421,299,418,329,416,358,416,379,434,391,425,416,420,433,422,453,418,471,403,489,383,498,389,522,395,542,416,554,432,563,451,568,473,562,495,560,504,545,508,514,499,490,503,474,506,452,511,435,509,405,495,375,491,373,489,374,487,374" />
@@ -131,35 +123,36 @@
               <area class="char_btn" alt="Mama" title="Mama" name="mom" shape="poly" coords="274,196,255,191,242,173,247,147,255,129,259,122,262,100,313,69,363,87,373,117,383,159,387,188,365,198,388,236,404,257,412,275,394,317,385,348,389,369,403,414,400,453,385,472,372,478,377,509,384,530,394,544,400,559,389,566,373,562,360,555,350,503,350,489,343,477,343,486,324,487,314,487,320,518,324,550,315,564,294,557,288,548,298,533,292,510,280,479,260,459,251,429,251,399,255,374,258,355,260,349,257,330,246,302,236,281,239,252,245,231,272,197" />
             </map>
           </div>
-          <div class="char-details hidden" id="char_details">
-
-          <!-- el icono de cerrar y los arrows no se incluyen como img, no con parte del contenido, usen un span y ponen el icono como background, usen un sprite -->
-            <img src="img/icons/close.png" id="hide" class="close-details">
-            <img class="back left" src="img/icons/previous.png"></a>
-            <img class="foward right" src="img/icons/next.png"></a>
-            <div class="details" id="details">
-            </div>
-            <div class="char-selection">
-            <!-- Ricardo quedo en cambiar el markup de esto, no deben ser buttons -->
-              <button class="char_btn preview-char" name="amy">
-                <img src="img/characters/head-amy.png"> <!-- ojo este button no tiene etiqueta de cierre -->
-                <h4>Amy</h4>
-              <button class="char_btn preview-char" name="mom">
-                <img src="img/characters/head-mom.png">
-                <h4>Mamá</h4>
-              </button>
-              <button class="char_btn preview-char" name="dad">
-                <img src="img/characters/head-dad.png">
-                <h4>Papá</h4>
-              </button>
-              <button class="char_btn preview-char" name="gramps">
-                <img src="img/characters/head-gramps.png">
-                <h4>Abuelo</h4>
-              </button>
-          </div>
         </div>
       </section>
       <!-- section-characterds´s end -->
+            <!-- Modal -->
+      <div class="modal hidden" id="modal-char">
+        <span class="close"></span>
+        <span class="previous-arrow"></span>
+        <span class="next-arrow"></span>
+        <div class="char-details" id="char-details"></div>
+        <div class="char-selection"><!-- ojo no tiene etiqueta de cierre -->
+          <!-- Ricardo quedo en cambiar el markup de esto, no deben ser buttons -->
+          <button class="char_btn preview-char" name="amy">
+            <img src="img/characters/head-amy.png"> <!-- ojo este button no tiene etiqueta de cierre -->
+            <h4>Amy</h4>
+          </button>
+          <button class="char_btn preview-char" name="mom">
+            <img src="img/characters/head-mom.png">
+            <h4>Mamá</h4>
+          </button>
+          <button class="char_btn preview-char" name="dad">
+            <img src="img/characters/head-dad.png">
+            <h4>Papá</h4>
+          </button>
+          <button class="char_btn preview-char" name="gramps">
+            <img src="img/characters/head-gramps.png">
+            <h4>Abuelo</h4>
+          </button>
+        </div>
+      </div>
+      <!-- Modal -->
       <section class="section-gallery" id="gallery">
         <h2>Galería</h2>
         <div id="gallery-container" class="gallery-container">
@@ -198,15 +191,15 @@
         <div id="counter-slider" class="counter-slider">
           <p><span class="counterNumber">1</span>/9</p>
         </div>
-        <div id="show-fullimage" class="hidden">
-        <!-- icono de close y arrows, mismo comentario anterior -->
-          <img src="img/icons/previous.png" class="previous" id="previous">
-          <img id="full-picture" class="full-picture" src="">
-          <img src="img/icons/close.png" class="close-details" id="closePopUp">
-          <img class="next" src="img/icons/next.png" id="next">
-        </div>
       </section>
-      <!-- section-gallery´s end -->
+      <!-- Modal -->
+      <div class="modal hidden" id="modal-gallery">
+        <span class="close"></span>
+        <span class="previous-arrow"></span>
+        <span class="next-arrow"></span>
+        <img id="gallery-picture" class="full-picture" src="">
+      </div>
+      <!-- Modal -->
     </div>
     <!-- game-wrapper´s end -->
     <footer class="footer-game">
