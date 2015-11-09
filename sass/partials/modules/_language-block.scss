@@ -10,20 +10,6 @@
     }
 }
 
-.close-lang {
-    background: rgba(0, 0, 0, .4);
-    border: 3px solid $main-color;
-    cursor: pointer;
-    height: 41px;
-    position: absolute;
-    padding: 2px 5px;
-    width: 41px;
-
-    @media(min-width: 768px) {
-        display: none;
-    }
-}
-
 .lang-select {
     float: right;
     margin: 2% 3%;
@@ -39,7 +25,7 @@
     z-index: 1;
 
     @media(min-width: 768px) {
-        position: inherit; // mejor cambiarlo a static, si es lo que necesitan, el padre tambien hereda
+        position: static;
     }
 }
 
@@ -55,7 +41,7 @@
 
     @media(min-width: 768px){
         display:inline-block;
-        position: inherit;
+        position: static;
     }
     
     &.selected {
@@ -96,22 +82,17 @@
 
 
 .lang-item-position-0 {
-    top: 55px;
+    top: 42px;
 }
 
 .lang-item-position-1 {
-    top: 110px;
+    top: 96px;
 }
 
 .lang-item-position-2 {
-    top: 165px;
+    top: 150px;
 }
 
 .lang-item-position-3 {
-    top: 220px;
+    top: 205px;
 }
-
-.lang-item-position-4 {
-    top: 220px;
-}
-

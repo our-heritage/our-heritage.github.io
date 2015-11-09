@@ -25,3 +25,27 @@ body {
 .ui-loader {
     display: none;
 }
+
+// Modal Desktop
+.modal {
+    transition: .10s;
+    background-color: rgba(0, 0, 0, .9);
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    padding: 5% 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden-image {
+    opacity: 0;
+}

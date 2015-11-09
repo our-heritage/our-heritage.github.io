@@ -1,0 +1,73 @@
+.close-lang,
+.close,
+.down-arrow,
+.next-arrow,
+.play-arrow,
+.previous-arrow, 
+.up-arrow {
+	background: url('../img/sprite.png') no-repeat;
+	cursor: pointer;
+}
+
+.close-lang {
+	background-position: -48px -187px;
+	border: 3px solid #24C29F;
+	display: block;
+	height: 40px;
+    padding: 2px 5px;
+    position: absolute;
+    width: 39px;
+    @media(min-width: 768px) {
+        display: none;
+    }
+}
+
+.close {
+	background-position: -0px -177px;
+	height: 40px;
+	margin: 30px 40px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 39px;
+}
+
+.down-arrow {
+	background-position: -50px -77px;
+	height: 9px;
+	width: 9px;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.next-arrow { 
+	background-position: -0px -77px;
+	height: 50px;
+	width: 50px;
+	right: 2%;
+	position: absolute;
+	top: 40%;
+}
+
+.play-arrow { 
+	background-position: -0px -0px;
+    display: block;
+	height: 77px;
+	margin: 10% auto;
+	width: 285px;
+}
+
+.previous-arrow { 
+	background-position: -0px -127px;
+	height: 50px;
+	left: 2%;
+	position: absolute;
+	top: 40%;
+	width: 50px;
+}
+
+.up-arrow { 
+	background-position: -59px -77px;
+	height: 9px;
+    width: 9px; 
+}
