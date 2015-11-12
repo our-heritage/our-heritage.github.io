@@ -7,7 +7,7 @@
     margin: 20px 0;
     padding: 10px 20px;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 766px) {
         display: none;
     }
 }
@@ -15,6 +15,7 @@
 .team-nav {
     background-color: $nav-back-color;
     overflow: hidden;
+    text-align: center;
     width: 100%;
     z-index: 3;
 }
@@ -31,7 +32,7 @@
     transition: height .5s linear;
     width: 100%;
 
-    @media screen and (min-width: 1000px){
+    @media screen and (min-width: 766px){
         float: left;
         height: 75px;
     }
@@ -54,7 +55,7 @@
             color: #f2f2f2;
         }
 
-        @media screen and (min-width: 1000px) {
+        @media screen and (min-width: 766px) {
             @include font-size(24);
             display: block;
             padding: 24px 0 52px;
@@ -63,7 +64,7 @@
         }
     }
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 766px) {
         border: none;
         float: left;
         height: 100%;

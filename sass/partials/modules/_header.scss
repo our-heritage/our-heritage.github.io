@@ -8,7 +8,7 @@
     padding: 20px;
     width: 60%;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 766px) {
         @include font-size(24);
         width: 40%;
     }
@@ -39,15 +39,14 @@
     background: url("../img/header-banner.jpg") no-repeat;
     background-size: cover;
     overflow: hidden;
-    padding: 150px 0 0;
-    text-align: center;
+    padding: 0;
 
     h1 {
         border-bottom: 3px solid $light-color;
         margin: 0 auto;
         width: 85%;
 
-        @media screen and (min-width: 1000px) {
+        @media screen and (min-width: 766px) {
             width: 50%;
         }
     }

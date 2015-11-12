@@ -170,6 +170,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -298,6 +299,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -651,24 +654,16 @@ button:focus:active {
   text-transform: uppercase; }
 
 .list-lang li:first-child + li {
-  -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:first-child + li {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
 
 .list-lang li:last-child {
-  -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:last-child {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
 
 .lang-item-position-0 {
   top: 42px; }
@@ -741,13 +736,14 @@ button:focus:active {
   font-family: "Share Tech", serif;
   margin: 20px 0;
   padding: 10px 20px; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .show-menu {
       display: none; } }
 
 .team-nav {
   background-color: #171926;
   overflow: hidden;
+  text-align: center;
   width: 100%;
   z-index: 3; }
 
@@ -762,7 +758,7 @@ button:focus:active {
   text-align: center;
   transition: height .5s linear;
   width: 100%; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .team-nav-content {
       float: left;
       height: 75px; } }
@@ -780,7 +776,7 @@ button:focus:active {
     font-family: "Share Tech", serif; }
     .team-nav-item a:hover {
       color: #f2f2f2; }
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 766px) {
       .team-nav-item a {
         font-size: 24px;
         font-size: 2.4rem;
@@ -788,7 +784,7 @@ button:focus:active {
         padding: 24px 0 52px;
         height: 50%;
         width: 100%; } }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .team-nav-item {
       border: none;
       float: left;
@@ -800,19 +796,19 @@ button:focus:active {
 
 .cetav-item {
   color: #ED912E; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .cetav-item:hover {
       background-color: #ED912E; } }
 
 .fair-item {
   color: #50A03B; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .fair-item:hover {
       background-color: #50A03B; } }
 
 .advisors-item {
   color: #2C78A9; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .advisors-item:hover {
       background-color: #2C78A9; } }
 
@@ -826,7 +822,7 @@ button:focus:active {
   margin: 100px auto;
   padding: 20px;
   width: 60%; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .brief {
       font-size: 24px;
       font-size: 2.4rem;
@@ -852,13 +848,12 @@ button:focus:active {
   background: url("../img/header-banner.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
-  padding: 150px 0 0;
-  text-align: center; }
+  padding: 0; }
   .main-header h1 {
     border-bottom: 3px solid #f2f2f2;
     margin: 0 auto;
     width: 85%; }
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 766px) {
       .main-header h1 {
         width: 50%; } }
 
@@ -895,10 +890,6 @@ button:focus:active {
   width: 100%;
   height: 100%; }
 
-::-moz-selection {
-  background: #222;
-  color: #fff; }
-
 ::selection {
   background: #222;
   color: #fff; }
@@ -929,14 +920,10 @@ button:focus:active {
         padding: 10px 10px 40px;
         z-index: 0; }
       .about-image.right {
-        -webkit-transform: rotate(5deg);
-            -ms-transform: rotate(5deg);
-                transform: rotate(5deg);
+        transform: rotate(5deg);
         left: -60px; }
       .about-image.left {
-        -webkit-transform: rotate(-5deg);
-            -ms-transform: rotate(-5deg);
-                transform: rotate(-5deg);
+        transform: rotate(-5deg);
         left: 60px; } }
 
 .about-image > :first-child {
@@ -1250,53 +1237,35 @@ button:focus:active {
     height: auto;
     max-width: 100%; }
   .gallery-imgs .pic-1 {
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
+    transform: rotate(-10deg); }
   .gallery-imgs .pic-2 {
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg);
+    transform: rotate(10deg);
     margin-top: 20px; }
   .gallery-imgs .pic-3 {
-    -webkit-transform: rotate(-5deg);
-        -ms-transform: rotate(-5deg);
-            transform: rotate(-5deg);
+    transform: rotate(-5deg);
     left: 5px;
     margin-top: -25px;
     position: relative; }
   .gallery-imgs .pic-4 {
-    -webkit-transform: rotate(-15deg);
-        -ms-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
     margin-top: -10px; }
   .gallery-imgs .pic-5 {
-    -webkit-transform: rotate(-5deg);
-        -ms-transform: rotate(-5deg);
-            transform: rotate(-5deg);
+    transform: rotate(-5deg);
     position: relative;
     right: 15px; }
   .gallery-imgs .pic-6 {
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg);
+    transform: rotate(10deg);
     left: 5px;
     position: relative;
     margin-top: -22px; }
   .gallery-imgs .pic-7 {
-    -webkit-transform: rotate(5deg);
-        -ms-transform: rotate(5deg);
-            transform: rotate(5deg);
+    transform: rotate(5deg);
     margin-top: -40px; }
   .gallery-imgs .pic-8 {
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    transform: rotate(-10deg);
     margin-top: 25px; }
   .gallery-imgs .pic-9 {
-    -webkit-transform: rotate(15deg);
-        -ms-transform: rotate(15deg);
-            transform: rotate(15deg);
+    transform: rotate(15deg);
     margin-top: -60px; }
   .full-picture {
     height: 100%;
@@ -1494,4 +1463,5 @@ footer p {
 .footer-game {
   background-color: transparent;
   color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
