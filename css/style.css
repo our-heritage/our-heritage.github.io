@@ -406,16 +406,17 @@ header {
   padding-bottom: 40px; }
   header h1 {
     background: url(../img/logo.png) no-repeat center center;
+    display: none;
     height: 180px;
-    left: 35%;
-    max-width: 544px;
+    left: 36%;
     position: absolute;
     text-indent: -9999px;
     top: 25px;
     width: 90%; }
-    @media (max-width: 1366px) {
+    @media (min-width: 1366px) {
       header h1 {
-        display: none; } }
+        display: block;
+        max-width: 544px; } }
 
 section {
   overflow: hidden; }
@@ -602,7 +603,7 @@ button:focus:active {
 .content-lang {
   margin-top: 4%;
   position: absolute;
-  right: 18%; }
+  right: 50px; }
   @media (min-width: 768px) {
     .content-lang {
       float: right;
@@ -862,7 +863,7 @@ button:focus:active {
   margin: 0 auto;
   padding: 95px 0;
   text-align: center;
-  width: 400px; }
+  width: 315px; }
   .play-btn-wrapper span {
     font-size: 40px;
     font-size: 4rem;
