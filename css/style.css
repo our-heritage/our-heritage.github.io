@@ -170,6 +170,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -298,6 +299,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -403,20 +406,16 @@ header {
   padding-bottom: 40px; }
   header h1 {
     background: url(../img/logo.png) no-repeat center center;
-    background-size: contain;
     height: 180px;
-    margin: 30px auto 140px;
-    max-width: 600px;
+    left: 35%;
+    max-width: 544px;
+    position: absolute;
     text-indent: -9999px;
+    top: 25px;
     width: 90%; }
-  header p {
-    font-size: 18px;
-    font-size: 1.8rem;
-    color: #f2f2f2;
-    font-family: "Share Tech", serif;
-    padding-bottom: 0;
-    text-shadow: 1px 1px 4px #363434;
-    text-transform: uppercase; }
+    @media (max-width: 1366px) {
+      header h1 {
+        display: none; } }
 
 section {
   overflow: hidden; }
@@ -425,7 +424,6 @@ section {
   .game-wrapper {
     margin: 0 auto;
     width: 85%; } }
-
 @media (min-width: 1280px) {
   .game-wrapper {
     margin-left: 200px; } }
@@ -529,11 +527,13 @@ button:focus:active {
   top: 40%; }
 
 .play-arrow {
+  background-color: none;
   background-position: -0px -0px;
-  display: block;
+  border-radius: 100%;
   height: 77px;
-  margin: 10% auto;
-  width: 285px; }
+  width: 77px; }
+  .play-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.4); }
 
 .previous-arrow {
   background-position: -0px -127px;
@@ -549,11 +549,14 @@ button:focus:active {
   width: 9px; }
 
 .logo-nav {
-  display: none; }
+  display: none;
+  width: 200px; }
   @media (min-width: 768px) {
     .logo-nav {
       display: inline-block;
       float: left; } }
+  .logo-nav img {
+    width: 100%; }
 
 .logo img {
   display: block;
@@ -651,24 +654,16 @@ button:focus:active {
   text-transform: uppercase; }
 
 .list-lang li:first-child + li {
-  -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:first-child + li {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
 
 .list-lang li:last-child {
-  -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:last-child {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
 
 .lang-item-position-0 {
   top: 42px; }
@@ -731,7 +726,6 @@ button:focus:active {
     top: 0;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
-
 .show-menu {
   font-size: 14px;
   font-size: 1.4rem;
@@ -842,7 +836,7 @@ button:focus:active {
   box-shadow: inset 0px 140px 211px -40px #000; }
   @media (min-width: 1024px) {
     .header-index {
-      height: 850px;
+      height: 810px;
       padding-bottom: 80px; } }
 
 .header-game {
@@ -861,6 +855,21 @@ button:focus:active {
     @media screen and (min-width: 1000px) {
       .main-header h1 {
         width: 50%; } }
+
+.play-btn-wrapper {
+  background: url("../img/video-sprite.png") no-repeat top center;
+  display: block;
+  margin: 0 auto;
+  padding: 95px 0;
+  text-align: center;
+  width: 400px; }
+  .play-btn-wrapper span {
+    font-size: 40px;
+    font-size: 4rem;
+    color: #f2f2f2;
+    font-family: "Share Tech", serif;
+    display: block;
+    margin-top: 70px; }
 
 .header-lightbox-video iframe,
 .header-lightbox-video object,
@@ -892,12 +901,8 @@ button:focus:active {
 
 .ytplayer {
   margin: 0 auto;
-  width: 100%;
-  height: 100%; }
-
-::-moz-selection {
-  background: #222;
-  color: #fff; }
+  width: 60px;
+  height: 72px; }
 
 ::selection {
   background: #222;
@@ -929,14 +934,10 @@ button:focus:active {
         padding: 10px 10px 40px;
         z-index: 0; }
       .about-image.right {
-        -webkit-transform: rotate(5deg);
-            -ms-transform: rotate(5deg);
-                transform: rotate(5deg);
+        transform: rotate(5deg);
         left: -60px; }
       .about-image.left {
-        -webkit-transform: rotate(-5deg);
-            -ms-transform: rotate(-5deg);
-                transform: rotate(-5deg);
+        transform: rotate(-5deg);
         left: 60px; } }
 
 .about-image > :first-child {
@@ -1249,60 +1250,51 @@ button:focus:active {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
+
   .gallery-imgs .pic-1 {
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
+    transform: rotate(-10deg); }
+
   .gallery-imgs .pic-2 {
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg);
+    transform: rotate(10deg);
     margin-top: 20px; }
+
   .gallery-imgs .pic-3 {
-    -webkit-transform: rotate(-5deg);
-        -ms-transform: rotate(-5deg);
-            transform: rotate(-5deg);
+    transform: rotate(-5deg);
     left: 5px;
     margin-top: -25px;
     position: relative; }
+
   .gallery-imgs .pic-4 {
-    -webkit-transform: rotate(-15deg);
-        -ms-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
     margin-top: -10px; }
+
   .gallery-imgs .pic-5 {
-    -webkit-transform: rotate(-5deg);
-        -ms-transform: rotate(-5deg);
-            transform: rotate(-5deg);
+    transform: rotate(-5deg);
     position: relative;
     right: 15px; }
+
   .gallery-imgs .pic-6 {
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg);
+    transform: rotate(10deg);
     left: 5px;
     position: relative;
     margin-top: -22px; }
+
   .gallery-imgs .pic-7 {
-    -webkit-transform: rotate(5deg);
-        -ms-transform: rotate(5deg);
-            transform: rotate(5deg);
+    transform: rotate(5deg);
     margin-top: -40px; }
+
   .gallery-imgs .pic-8 {
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    transform: rotate(-10deg);
     margin-top: 25px; }
+
   .gallery-imgs .pic-9 {
-    -webkit-transform: rotate(15deg);
-        -ms-transform: rotate(15deg);
-            transform: rotate(15deg);
+    transform: rotate(15deg);
     margin-top: -60px; }
+
   .full-picture {
     height: 100%;
     max-width: 80%;
     text-align: center; } }
-
 .cetav {
   float: right; }
   @media (min-width: 1024px) {
@@ -1494,4 +1486,5 @@ footer p {
 .footer-game {
   background-color: transparent;
   color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
