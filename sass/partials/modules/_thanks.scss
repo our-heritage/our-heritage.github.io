@@ -1,22 +1,12 @@
-.cetav { // estas clases donde se usan? 
-    float: right;
-
-    @media (min-width: 1024px) {
-        float: inherit; // revisen que hace inherit
-    }
-}
-
-.fairplay {
-    float: left;
-
-    @media (min-width: 1024px) {
-        float: inherit; // revisen que hace inherit
-    }
-}
 
 .spon-list li {
-    display: inline-block;
-    margin-right: 25px;
+    margin-top: 55px;
+    margin-right: 55px;
+    width: 100%;
+    @media (min-width: 1100px) {
+        display: inline-block;
+        width: auto;
+    }
 }
 
 .spon-list {
@@ -27,7 +17,6 @@
     text-align: center;
     @media (min-width: 1024px) {
         margin: 35px auto;
-        max-width: 1100px;
     }
 
     .hidden {
@@ -35,6 +24,12 @@
         @media (min-width: 1024px) {
             display: inline-block;
         }
+    }
+}
+
+.spon-list-logoparque{
+    @media (max-width: 500px) {
+        width: 100%;
     }
 }
 
@@ -68,21 +63,18 @@
     }
 }
 
-.thanks-section p {
+.thanks-section {
+    background-color: #A5BBD1;
+    border-top: 20px solid #374A54;
+    h2{
+        font-size: 4rem;
+    }
+    p {
     color: $light-color;
     margin: 0 auto;
     max-width: 700px;
     width: 80%;
 }
-
-.thanks-section {
-    background-color: #A5BBD1;
-    border-top: 20px solid #374A54;
-}
-
-.team-logo img,
-.spon-list img {
-    width: 60%;
 }
 
 .team-logo {
