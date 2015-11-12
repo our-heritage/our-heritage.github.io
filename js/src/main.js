@@ -216,10 +216,11 @@
   }
 
   function navCreditos() {
-    var openCreditsMenu = $('.show-menu, .header-nav-content');
+    var openCreditsMenu = $('.show-menu, .header-nav-item');
 
     openCreditsMenu.on('click', function() {
       $('.team-nav-content').toggleClass('expanded');
+      
     });
   }
 

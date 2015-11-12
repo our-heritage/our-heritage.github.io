@@ -735,13 +735,14 @@ button:focus:active {
   font-family: "Share Tech", serif;
   margin: 20px 0;
   padding: 10px 20px; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .show-menu {
       display: none; } }
 
 .team-nav {
   background-color: #171926;
   overflow: hidden;
+  text-align: center;
   width: 100%;
   z-index: 3; }
 
@@ -756,7 +757,7 @@ button:focus:active {
   text-align: center;
   transition: height .5s linear;
   width: 100%; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .team-nav-content {
       float: left;
       height: 75px; } }
@@ -774,7 +775,7 @@ button:focus:active {
     font-family: "Share Tech", serif; }
     .team-nav-item a:hover {
       color: #f2f2f2; }
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 766px) {
       .team-nav-item a {
         font-size: 24px;
         font-size: 2.4rem;
@@ -782,7 +783,7 @@ button:focus:active {
         padding: 24px 0 52px;
         height: 50%;
         width: 100%; } }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .team-nav-item {
       border: none;
       float: left;
@@ -794,19 +795,19 @@ button:focus:active {
 
 .cetav-item {
   color: #ED912E; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .cetav-item:hover {
       background-color: #ED912E; } }
 
 .fair-item {
   color: #50A03B; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .fair-item:hover {
       background-color: #50A03B; } }
 
 .advisors-item {
   color: #2C78A9; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .advisors-item:hover {
       background-color: #2C78A9; } }
 
@@ -817,10 +818,10 @@ button:focus:active {
   box-sizing: border-box;
   color: #f2f2f2;
   font-family: "Share Tech", serif;
-  margin: 100px auto;
-  padding: 20px;
+  margin: 200px auto 130px auto;
+  padding: 40px;
   width: 60%; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 766px) {
     .brief {
       font-size: 24px;
       font-size: 2.4rem;
@@ -846,13 +847,12 @@ button:focus:active {
   background: url("../img/header-banner.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
-  padding: 150px 0 0;
-  text-align: center; }
+  padding: 0; }
   .main-header h1 {
     border-bottom: 3px solid #f2f2f2;
     margin: 0 auto;
     width: 85%; }
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 766px) {
       .main-header h1 {
         width: 50%; } }
 
