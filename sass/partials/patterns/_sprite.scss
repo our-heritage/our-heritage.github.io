@@ -10,13 +10,15 @@
 }
 
 .close-lang {
-	background-position: -48px -187px;
-	border: 3px solid #24C29F;
+	background-color: rgba(0, 0, 0, .5);
+	background-position: -48px -186px;
+	border: 1px solid $main-color;
+	box-shadow: 1px 1px 10px $main-color;
 	display: block;
-	height: 40px;
+	height: 38px;
     padding: 2px 5px;
     position: absolute;
-    width: 39px;
+    width: 36px;
     @media(min-width: 768px) {
         display: none;
     }
@@ -47,6 +49,9 @@
 	right: 2%;
 	position: absolute;
 	top: 40%;
+	@media (min-width: 1280px) {
+		right: 5%;
+	}
 }
 
 .play-arrow { 
@@ -68,6 +73,9 @@
 	position: absolute;
 	top: 40%;
 	width: 50px;
+	@media (min-width: 1280px) {
+		left: 5%;
+	}
 }
 
 .up-arrow { 

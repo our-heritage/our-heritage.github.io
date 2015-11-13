@@ -30,14 +30,18 @@
 }
 
 .list-lang-item {
-    border: 3px solid $main-color;
+    -webkit-backface-visibility: hidden;
+    background: rgba(0, 0, 0, .5);
+    border: 1px solid $main-color;
+    box-shadow: 1px 1px 10px $main-color;
     cursor: pointer;
     left: 0;
+    margin-right: 4px; 
     padding: 8px;
     position: absolute;
     text-align: center;
     top: -11px;
-    transition: all 1s;
+    transition: all 1s ease;
 
     @media(min-width: 768px){
         display:inline-block;
@@ -45,23 +49,22 @@
     }
     
     &.selected {
-        background: #24C29F;
+        background: $main-color;
         z-index: 3;
-        
-        a {
-            color: #fff;
-            text-shadow: 1px 1px 4px $light-color;
-        }
+    }
+
+    &:hover {
+        background: $main-color;
     }
 }
 
 .list-lang-item a {
     @include font-size(18);
-    color: #24C29F;
+    color: $light-color;
     font-family: $text-serif;
     text-decoration: none;
-    text-shadow: 1px 1px 4px $main-color;
     text-transform: uppercase;
+    text-shadow: 1px 1px 4px $light-color;
 }
 
 .list-lang li:first-child + li {
