@@ -3,14 +3,16 @@
 .down-arrow,
 .next-arrow,
 .play-arrow,
-.previous-arrow, 
+.previous-arrow,
+.download-mac,
+.download-win, 
 .up-arrow {
 	background: url('../img/sprite.png') no-repeat;
 	cursor: pointer;
 }
 
 .close-lang {
-	background-position: -48px -187px;
+	background-position: -144px -142px;
 	border: 3px solid #24C29F;
 	display: block;
 	height: 40px;
@@ -23,13 +25,18 @@
 }
 
 .close {
-	background-position: -0px -177px;
-	height: 40px;
-	margin: 30px 40px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 39px;
+    background-position: -45px 4px;
+    height: 51px;
+    margin: 30px 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    z-index: 1;
+
+	&:hover {
+		background-position: -201px -4px;
+	}
 }
 
 .down-arrow {
@@ -41,17 +48,20 @@
 }
 
 .next-arrow { 
-	background-position: -0px -77px;
-	height: 50px;
-	width: 50px;
-	right: 2%;
-	position: absolute;
-	top: 40%;
+    background-position: 0px -21px;
+    height: 66px;
+    width: 50px;
+    right: 2%;
+    position: absolute;
+    top: 40%;
+
+	&:hover {
+		background-position: -135px -6px;
+	}
 }
 
-.play-arrow { 
-	background-color: none; 
-	background-position: -0px -0px;
+.play-arrow {
+	background-position: -50px -47px;
 	border-radius: 100%; 
 	height: 77px;
 	width: 77px;
@@ -62,16 +72,38 @@
 }
 
 .previous-arrow { 
-	background-position: -0px -127px;
-	height: 50px;
-	left: 2%;
-	position: absolute;
-	top: 40%;
-	width: 50px;
+    background-position: -225px -69px;
+    height: 66px;
+    left: 2%;
+    position: absolute;
+    top: 40%;
+    width: 50px;
+
+	&:hover {
+		background-position: -165px -70px;
+	}
 }
 
 .up-arrow { 
 	background-position: -59px -77px;
 	height: 9px;
     width: 9px; 
+}
+
+.download-mac, .download-win { 
+    text-indent: -9999px;
+    height: 54px;
+    width: 68px;
+    border-radius: 12px;
+    &:hover {
+      background-color: $main-color;
+    }
+}
+
+.download-mac { 
+	background-position: 0px -123px;
+}
+
+.download-win { 
+    background-position: -68px -123px;
 }

@@ -2,29 +2,45 @@
   $(document).ready(function() {
     var count = 0;
 
-    enquire
-    .register('screen and (min-width: 768px) and (max-width: 1280px)', {
+    enquire.register('screen and (min-width: 768px) and (max-width: 1280px)', {
+
       match : function() {
         navGameScroll(); 
       },  
       unmatch : function() {
         $('.game-nav').removeClass('nav-sticky');
       }
-    })
-    .register('screen and (max-width: 766px)', function() {
-      gallerySwipe(count);
-      menuLang();
-      tapCharacter();
-      navCreditos();
-    })
-    .register('screen and (min-width: 768px)', function() {
-      gameScroll();
-      controlsModal();
-      charactersModal(count);
-      galleryModal(count);
+    });
+
+    enquire.register('(max-width: 766px)', {
+
+      match: function() {
+        showAboutInfo();
+        gallerySwipe(count);
+        menuLang();
+        tapCharacter();
+        navCreditos();
+      },
+      unmatch: function() {
+        $('.about-image').off('click');
+      }
+    });
+
+    enquire.register('screen and (min-width: 768px)', {
+
+      match : function() {
+        gameScroll();
+        charactersModal(count);
+        galleryModal(count);
+        $('map').imageMapResize();
+      },  
+      unmatch : function() {
+        //code
+      }
     });
 
     changeColorCreditos();
+    controlsModal();
     videoTeaserModal();
   });
 
@@ -53,10 +69,13 @@
     });
   }
 
-  $('.about-image').on('click', function() {
-    $('.about-image').removeClass('hidden-image');
-    $(this).toggleClass('hidden-image');
-  });
+  function showAboutInfo() {
+
+    $('.about-image').on('click', function() {
+      $('.about-image').removeClass('hidden-image');
+      $(this).toggleClass('hidden-image');
+    });
+  }
 
   function charactersModal(count) {
     var currentChar,
@@ -256,9 +275,7 @@
         close = $('.teaser .close'),
         btn = $('#btn-play-js'),
         player = $('#ytplayer'),
-        content = '<iframe class="main-video-player" width="640" height="480" src="https://www.youtube.com/embed/DLzxrzFCyOs'+
-      '?autoplay=1&amp;rel=0&amp;'+
-      'controls=1&amp;showinfo=1"  frameborder="0"/>';
+        content = '<iframe src="https://www.youtube.com/embed/DLzxrzFCyOs" frameborder="0" allowfullscreen></iframe>';
 
     btn.click(function(){
       displayModal('show', video);

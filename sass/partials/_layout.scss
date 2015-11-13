@@ -1,25 +1,3 @@
-header {
-    height: auto;
-    overflow: hidden;
-    padding-bottom: 40px;
-
-    h1 {
-        background: url(../img/logo.png) no-repeat center center;
-        display: none;
-        height: 180px;
-        left: 36%; 
-        position: absolute;
-        text-indent: -9999px;
-        top: 25px; 
-        width: 90%;
-
-        @media (min-width: 1366px) {
-            display: block;
-            max-width: 544px;
-        }
-    }
-}
-
 section {
     overflow: hidden;
 }

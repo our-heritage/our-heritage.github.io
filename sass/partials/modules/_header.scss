@@ -1,3 +1,30 @@
+header {
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+
+    h1 {
+        background: url(../img/logo.png) no-repeat center center;
+        background-size: contain;
+        height: 180px;
+        margin: 0 auto;
+        text-indent: -9999px;
+        width: 80%;
+
+        @media screen and (min-width: 766px) {
+            display: none;
+        }
+
+        @media (min-width: 1366px) {
+        	top: 25px;
+        	position: absolute;
+        	left: 36%;
+            display: block;
+            max-width: 544px;
+        }
+    }
+}
+
 .brief {
     @include font-size(18);
     background-color: rgba(255, 255, 255, .1);
@@ -15,14 +42,19 @@
 }
 
 .game-container {
-    background-image: url(../img/desktop-background.jpg);
-    box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, .7);
+    background-image: url(../img/bg/desktop-background.png);
+    box-shadow: inset 0px 178px 234px 51px rgba(49, 26, 4, .8);
 }
 
 .header-index {
-    background: url(../img/header.png) no-repeat center bottom;
+    background: url(../img/bg/main-header-small.png) no-repeat center bottom;
     background-size: cover;
     box-shadow: inset 0px 140px 211px -40px #000;
+
+    @media (min-width: 766px) {
+    	background: url(../img/bg/main-header.png) no-repeat center bottom;
+    	height: 640px;
+    }
 
     @media (min-width: 1024px) {
         height: 810px;
@@ -36,7 +68,7 @@
 
 // Credits Header
 .main-header {
-    background: url("../img/header-banner.jpg") no-repeat;
+    background: url(../img/bg/header-banner.jpg) no-repeat;
     background-size: cover;
     overflow: hidden;
     padding: 0;
@@ -53,18 +85,19 @@
 }
 
 .play-btn-wrapper {
-    background: url("../img/video-sprite.png") no-repeat top center;
+    background: url(../img/bg/video-wrapper.png) no-repeat;
+    background-size: cover;
     display: block;
     margin: 0 auto;
-    padding: 95px 0; 
+    padding-top: 80px;
     text-align: center;
-    width: 315px;
+    max-width: 337px;
 
     span {
         @include font-size(40);
         color: $light-color;
         font-family: $text-serif;
         display: block;
-        margin-top: 70px;
+        margin-top: 66px;
     }
 }
