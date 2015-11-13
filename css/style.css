@@ -170,7 +170,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -299,8 +298,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -425,6 +422,7 @@ section {
   .game-wrapper {
     margin: 0 auto;
     width: 85%; } }
+
 @media (min-width: 1280px) {
   .game-wrapper {
     margin-left: 200px; } }
@@ -655,16 +653,24 @@ button:focus:active {
   text-transform: uppercase; }
 
 .list-lang li:first-child + li {
-  transform: rotate(10deg); }
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:first-child + li {
-      transform: rotate(0deg); } }
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); } }
 
 .list-lang li:last-child {
-  transform: rotate(10deg); }
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:last-child {
-      transform: rotate(0deg); } }
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); } }
 
 .lang-item-position-0 {
   top: 42px; }
@@ -727,6 +733,7 @@ button:focus:active {
     top: 0;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); } }
+
 .show-menu {
   font-size: 14px;
   font-size: 1.4rem;
@@ -821,12 +828,12 @@ button:focus:active {
   font-family: "Share Tech", serif;
   margin: 200px auto 130px auto;
   padding: 40px;
-  width: 60%; }
+  width: 85%; }
   @media screen and (min-width: 766px) {
     .brief {
       font-size: 24px;
       font-size: 2.4rem;
-      width: 40%; } }
+      width: 60%; } }
 
 .game-container {
   background-image: url(../img/desktop-background.jpg);
@@ -905,6 +912,10 @@ button:focus:active {
   width: 60px;
   height: 72px; }
 
+::-moz-selection {
+  background: #222;
+  color: #fff; }
+
 ::selection {
   background: #222;
   color: #fff; }
@@ -935,10 +946,14 @@ button:focus:active {
         padding: 10px 10px 40px;
         z-index: 0; }
       .about-image.right {
-        transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+            -ms-transform: rotate(5deg);
+                transform: rotate(5deg);
         left: -60px; }
       .about-image.left {
-        transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+            -ms-transform: rotate(-5deg);
+                transform: rotate(-5deg);
         left: 60px; } }
 
 .about-image > :first-child {
@@ -1251,51 +1266,60 @@ button:focus:active {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
-
   .gallery-imgs .pic-1 {
-    transform: rotate(-10deg); }
-
+    -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg); }
   .gallery-imgs .pic-2 {
-    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg);
     margin-top: 20px; }
-
   .gallery-imgs .pic-3 {
-    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+            transform: rotate(-5deg);
     left: 5px;
     margin-top: -25px;
     position: relative; }
-
   .gallery-imgs .pic-4 {
-    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+            transform: rotate(-15deg);
     margin-top: -10px; }
-
   .gallery-imgs .pic-5 {
-    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+            transform: rotate(-5deg);
     position: relative;
     right: 15px; }
-
   .gallery-imgs .pic-6 {
-    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg);
     left: 5px;
     position: relative;
     margin-top: -22px; }
-
   .gallery-imgs .pic-7 {
-    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+            transform: rotate(5deg);
     margin-top: -40px; }
-
   .gallery-imgs .pic-8 {
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg);
     margin-top: 25px; }
-
   .gallery-imgs .pic-9 {
-    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+            transform: rotate(15deg);
     margin-top: -60px; }
-
   .full-picture {
     height: 100%;
     max-width: 80%;
     text-align: center; } }
+
 .spon-list li {
   margin-top: 55px;
   margin-right: 55px;
@@ -1480,5 +1504,4 @@ footer p {
 .footer-game {
   background-color: transparent;
   color: #fff; }
-
 /*# sourceMappingURL=style.css.map */

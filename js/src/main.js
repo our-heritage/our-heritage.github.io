@@ -216,11 +216,15 @@
   }
 
   function navCreditos() {
-    var openCreditsMenu = $('.show-menu, .header-nav-item');
+    var openCreditsMenu = $('.show-menu, .display');
 
     openCreditsMenu.on('click', function() {
       $('.team-nav-content').toggleClass('expanded');
-      
+      $('#show-menu-arrow').removeClass('up-arrow');
+
+      if ($('.team-nav-content').hasClass('expanded')) {
+        $('#show-menu-arrow').addClass('up-arrow');
+      };
     });
   }
 
@@ -232,7 +236,7 @@
         $('.game-nav').removeClass('nav-sticky');
       }
     }, {
-      offset: 5
+      offset: 0
     })
   }
 
