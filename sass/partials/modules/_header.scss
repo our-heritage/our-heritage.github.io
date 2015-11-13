@@ -6,11 +6,11 @@
     font-family: $text-serif;
     margin: 200px auto 130px auto;
     padding: 40px;
-    width: 60%;
+    width: 85%;
 
     @media screen and (min-width: 766px) {
         @include font-size(24);
-        width: 40%;
+        width: 60%;
     }
 }
 
