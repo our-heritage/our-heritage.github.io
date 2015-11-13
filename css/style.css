@@ -848,7 +848,8 @@ button:focus:active {
   .team-nav-item a {
     font-size: 18px;
     font-size: 1.8rem;
-    font-family: "Share Tech", serif; }
+    font-family: "Share Tech", serif;
+    transition: all .5s linear; }
     .team-nav-item a:hover {
       color: #f2f2f2; }
     @media screen and (min-width: 766px) {
