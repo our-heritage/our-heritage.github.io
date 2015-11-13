@@ -397,23 +397,32 @@ body {
 .hidden-image {
   opacity: 0; }
 
-header {
-  height: auto;
-  overflow: hidden;
-  padding-bottom: 40px; }
-  header h1 {
-    background: url(../img/logo.png) no-repeat center center;
-    display: none;
-    height: 180px;
-    left: 36%;
-    position: absolute;
-    text-indent: -9999px;
-    top: 25px;
-    width: 90%; }
-    @media (min-width: 1366px) {
-      header h1 {
-        display: block;
-        max-width: 544px; } }
+.download-section {
+  display: none; }
+  @media (min-width: 768px) {
+    .download-section {
+      right: 0;
+      margin-right: 6%;
+      margin-top: -80px;
+      position: absolute;
+      display: inline-block;
+      max-width: 465px; }
+      .download-section span {
+        text-transform: uppercase;
+        font-family: "Share Tech", serif;
+        color: #f2f2f2;
+        font-size: 30px;
+        font-size: 3rem;
+        vertical-align: middle;
+        margin-right: 4%; } }
+
+.about-frame:before {
+  content: "";
+  height: 23px;
+  width: 100%;
+  position: absolute;
+  background: url(../img/bg/about-frame.png) center bottom;
+  margin-top: -22px; }
 
 section {
   overflow: hidden; }
@@ -485,13 +494,15 @@ button:focus:active {
 .next-arrow,
 .play-arrow,
 .previous-arrow,
+.download-mac,
+.download-win,
 .up-arrow {
   background: url("../img/sprite.png") no-repeat;
   cursor: pointer; }
 
 .close-lang {
   background-color: rgba(0, 0, 0, 0.5);
-  background-position: -48px -186px;
+  background-position: -144px -142px;
   border: 1px solid #24C29F;
   box-shadow: 1px 1px 10px #24C29F;
   display: block;
@@ -504,35 +515,39 @@ button:focus:active {
       display: none; } }
 
 .close {
-  background-position: -0px -177px;
-  height: 40px;
+  background-position: -45px 4px;
+  height: 51px;
   margin: 30px 40px;
   position: absolute;
   right: 0;
   top: 0;
-  width: 39px; }
+  width: 50px;
+  z-index: 1; }
+  .close:hover {
+    background-position: -201px -4px; }
 
 .down-arrow {
-  background-position: -50px -77px;
+  background-position: 1px -1px;
   height: 9px;
-  width: 9px;
+  width: 10px;
   margin-left: 10px;
   display: inline-block; }
 
 .next-arrow {
-  background-position: -0px -77px;
-  height: 50px;
+  background-position: 0px -21px;
+  height: 66px;
   width: 50px;
   right: 2%;
   position: absolute;
   top: 40%; }
+  .next-arrow:hover {
+    background-position: -135px -6px; }
   @media (min-width: 1280px) {
     .next-arrow {
       right: 5%; } }
 
 .play-arrow {
-  background-color: none;
-  background-position: -0px -0px;
+  background-position: -50px -47px;
   border-radius: 100%;
   height: 77px;
   width: 77px; }
@@ -540,24 +555,39 @@ button:focus:active {
     background-color: rgba(0, 0, 0, 0.4); }
 
 .previous-arrow {
-  background-position: -0px -127px;
-  height: 50px;
+  background-position: -225px -69px;
+  height: 66px;
   left: 2%;
   position: absolute;
   top: 40%;
   width: 50px; }
+  .previous-arrow:hover {
+    background-position: -165px -70px; }
   @media (min-width: 1280px) {
     .previous-arrow {
       left: 5%; } }
 
 .up-arrow {
-  background-position: -59px -77px;
+  background-position: -14px -1px;
   height: 9px;
   width: 9px; }
 
+.download-mac, .download-win {
+  text-indent: -9999px;
+  height: 54px;
+  width: 68px;
+  border-radius: 12px; }
+  .download-mac:hover, .download-win:hover {
+    background-color: #24C29F; }
+
+.download-mac {
+  background-position: 0px -123px; }
+
+.download-win {
+  background-position: -68px -123px; }
+
 .logo-nav {
-  display: none;
-  width: 200px; }
+  display: none; }
   @media (min-width: 768px) {
     .logo-nav {
       display: inline-block;
@@ -712,7 +742,9 @@ button:focus:active {
     .game-nav a:before, .game-nav a:after {
       content: '';
       position: absolute;
-      transition: transform .5s ease; }
+      transition: -webkit-transform .5s ease;
+      transition: transform .5s ease;
+      transition: transform .5s ease, -webkit-transform .5s ease; }
     .game-nav a:before {
       left: 0;
       bottom: 0;
@@ -720,9 +752,13 @@ button:focus:active {
       height: 2px;
       background: #24C29F;
       box-shadow: 10px 10px 10px #24C29F;
-      transform: scaleX(0); }
+      -webkit-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+              transform: scaleX(0); }
     .game-nav a:hover:before {
-      transform: scaleX(1); }
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1); }
   @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .game-nav {
       background-color: rgba(0, 0, 0, 0.6);
@@ -851,6 +887,28 @@ button:focus:active {
     .advisors-item:hover {
       background-color: #2C78A9; } }
 
+header {
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 40px; }
+  header h1 {
+    background: url(../img/logo.png) no-repeat center center;
+    background-size: contain;
+    height: 180px;
+    margin: 0 auto;
+    text-indent: -9999px;
+    width: 80%; }
+    @media screen and (min-width: 766px) {
+      header h1 {
+        display: none; } }
+    @media (min-width: 1366px) {
+      header h1 {
+        top: 25px;
+        position: absolute;
+        left: 36%;
+        display: block;
+        max-width: 544px; } }
+
 .brief {
   font-size: 18px;
   font-size: 1.8rem;
@@ -868,13 +926,17 @@ button:focus:active {
       width: 60%; } }
 
 .game-container {
-  background-image: url(../img/desktop-background.jpg);
-  box-shadow: inset 0px 140px 211px -23px rgba(78, 42, 7, 0.7); }
+  background-image: url(../img/bg/desktop-background.png);
+  box-shadow: inset 0px 85px 235px 102px rgba(49, 26, 4, 0.8); }
 
 .header-index {
-  background: url(../img/header.png) no-repeat center bottom;
+  background: url(../img/bg/main-header-small.png) no-repeat center bottom;
   background-size: cover;
   box-shadow: inset 0px 140px 211px -40px #000; }
+  @media (min-width: 766px) {
+    .header-index {
+      background: url(../img/bg/main-header.png) no-repeat center bottom;
+      height: 640px; } }
   @media (min-width: 1024px) {
     .header-index {
       height: 810px;
@@ -884,7 +946,7 @@ button:focus:active {
   background: transparent; }
 
 .main-header {
-  background: url("../img/header-banner.jpg") no-repeat;
+  background: url(../img/bg/header-banner.jpg) no-repeat;
   background-size: cover;
   overflow: hidden;
   padding: 0; }
@@ -897,60 +959,40 @@ button:focus:active {
         width: 50%; } }
 
 .play-btn-wrapper {
-  background: url("../img/video-sprite.png") no-repeat top center;
+  background: url(../img/bg/video-wrapper.png) no-repeat;
+  background-size: cover;
   display: block;
   margin: 0 auto;
-  padding: 95px 0;
+  padding-top: 80px;
   text-align: center;
-  width: 315px; }
+  max-width: 337px; }
   .play-btn-wrapper span {
     font-size: 40px;
     font-size: 4rem;
     color: #f2f2f2;
     font-family: "Share Tech", serif;
     display: block;
-    margin-top: 70px; }
+    margin-top: 66px; }
 
-.header-lightbox-video iframe,
-.header-lightbox-video object,
-.header-lightbox-video embed {
+@media (min-width: 1280px) {
+  .teaser.modal {
+    padding: 5% 15%; } }
+
+.embed-container {
   position: relative;
-  top: 20px;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 50px;
+  left: 0;
   width: 100%;
-  height: 240px; }
-  @media (min-width: 768px) {
-    .header-lightbox-video iframe,
-    .header-lightbox-video object,
-    .header-lightbox-video embed {
-      top: 70px;
-      width: 100%;
-      height: 400px; } }
-  @media (min-width: 768px) {
-    .header-lightbox-video iframe,
-    .header-lightbox-video object,
-    .header-lightbox-video embed {
-      top: 70px;
-      width: 640px;
-      height: 420px; } }
-
-.teaser {
-  width: 100%;
-  color: #FFF;
-  text-align: center;
-  margin: 0 auto; }
-
-.ytplayer {
-  margin: 0 auto;
-  width: 60px;
-  height: 72px; }
-
-::-moz-selection {
-  background: #222;
-  color: #fff; }
-
-::selection {
-  background: #222;
-  color: #fff; }
+  height: 100%; }
 
 .about-image img {
   position: absolute;
@@ -974,7 +1016,8 @@ button:focus:active {
     .about-image {
       width: 52%; }
       .about-image.right, .about-image.left {
-        background: url(../img/polaroid.jpg);
+        -webkit-backface-visibility: hidden;
+        background: url(../img/bg/polaroid.jpg);
         padding: 10px 10px 40px;
         z-index: 0; }
       .about-image.right {
@@ -991,13 +1034,7 @@ button:focus:active {
 .about-image > :first-child {
   position: relative;
   transition: opacity 1s ease-in-out;
-  z-index: 1;
-  /* &:hover {
-    opacity: 0;
-    @media (min-width: 768px) {
-      opacity: 1;
-    }
-  } */ }
+  z-index: 1; }
 
 .about-section li {
   margin: 0 auto;
@@ -1078,29 +1115,27 @@ button:focus:active {
         margin-left: 24px; } }
 
 .history-section {
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 10px 15px rgba(36, 194, 159, 0.5);
+  background: url("../img/bg/history-wrapper.png") no-repeat;
+  background-position-x: -32px;
+  background-size: 100% 100%;
   margin: 50px auto;
   padding: 15px 0;
   width: 90%; }
   .history-section h2 {
     color: #24C29F;
     margin: 0 auto;
-    padding: 16px 0;
-    text-shadow: 1px 1px 4px #24C29F;
+    padding-bottom: 30px;
     text-transform: uppercase;
     width: 75%; }
   .history-section p {
-    color: #f2f2f2;
+    color: #363434;
     line-height: 22px;
     margin: 0 auto;
     padding-bottom: 16px;
-    text-shadow: 1px 1px 4px #f2f2f2;
     width: 75%; }
   @media (min-width: 768px) {
     .history-section {
-      box-shadow: 0 0 10px 30px rgba(36, 194, 159, 0.5);
-      margin: 100px auto;
+      margin: 0 auto 100px auto;
       min-width: 590px;
       padding: 65px 0;
       width: 65%; } }
@@ -1124,10 +1159,9 @@ button:focus:active {
   margin: 0 auto; }
 
 .characters-wrapper {
-  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
   margin: 5% auto;
   overflow: hidden;
-  max-width: 900px; }
+  max-width: 993px; }
 
 .close-tap {
   float: right;
@@ -1169,8 +1203,8 @@ button:focus:active {
   width: 100%; }
 
 .main-char-selection {
-  height: 583px;
-  max-width: 900px; }
+  height: 668px;
+  max-width: 993px; }
 
 .main-char-selection .char_btn {
   background-color: inherit;
@@ -1288,15 +1322,18 @@ button:focus:active {
 @media (min-width: 768px) {
   .gallery-imgs li {
     -webkit-backface-visibility: hidden;
-    background: url(../img/polaroid.jpg);
+    background: url(../img/bg/polaroid.jpg);
     box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
     display: inline-block;
     padding: 10px 10px 40px;
     transition: all 1s ease;
     vertical-align: top;
     width: 33%; }
     .gallery-imgs li:hover {
-      transform: rotate(0deg); } }
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); } }
   @media (min-width: 768px) and (max-width: 1024px) {
     .gallery-imgs li {
       padding: 5px 5px 25px; } }
@@ -1520,7 +1557,7 @@ button:focus:active {
   display: inline-block; }
 
 footer {
-  background: #A5BBD1 url(../img/footer.png) center bottom repeat-x;
+  background: #A5BBD1 url(../img/bg/footer.png) center bottom repeat-x;
   clear: both;
   color: #fff;
   overflow: hidden;

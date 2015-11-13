@@ -1,39 +1,23 @@
-.header-lightbox-video iframe, 
-.header-lightbox-video object, 
-.header-lightbox-video embed {
-    position: relative;
-    top: 20px;
-    width: 100%;
-    height: 240px;
-
-    @media(min-width: 768px) {
-        top: 70px;
-        width: 100%;
-        height: 400px;
-    }
-
-    @media(min-width: 768px) { // este bloque sobreescribe el anterior, cual queda?
-        top: 70px;
-        width: 640px;
-        height: 420px;
-    }
+.teaser.modal {
+  @media (min-width: 1280px) {
+    padding: 5% 15%;
+  }
 }
 
-.teaser {
-    width: 100%;
-    color: #FFF;
-    text-align: center;
-    margin: 0 auto;
-}
+.embed-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden;
+  max-width: 100%; 
+} 
 
-.ytplayer {
-    margin: 0 auto;
-    width: 60px;
-    height: 72px;
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { 
+  position: absolute; 
+  top: 50px; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
 }
-
-::selection{
-    background: #222;
-    color: #fff;
-}
-

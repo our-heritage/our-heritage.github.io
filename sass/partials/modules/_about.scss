@@ -24,7 +24,8 @@
     width: 52%;
     &.right,
     &.left {
-      background: url(../img/polaroid.jpg);
+      -webkit-backface-visibility: hidden;
+      background: url(../img/bg/polaroid.jpg);
       padding: 10px 10px 40px;
       z-index: 0;
     }
@@ -32,7 +33,6 @@
     &.right {
       transform: rotate(5deg);
       left: -60px;
-      
     }
     
     &.left {
@@ -46,12 +46,6 @@
   position: relative;
   transition: opacity 1s ease-in-out;
   z-index: 1;
-  /* &:hover {
-    opacity: 0;
-    @media (min-width: 768px) {
-      opacity: 1;
-    }
-  } */
 }
 
 .about-section li {

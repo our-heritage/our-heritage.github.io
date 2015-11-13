@@ -75,8 +75,9 @@
 @media (min-width: 768px) {
 	.gallery-imgs li {
 		-webkit-backface-visibility: hidden;
-		background: url(../img/polaroid.jpg);
+		background: url(../img/bg/polaroid.jpg);
 		box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+    cursor: pointer;
 		display: inline-block;
 		padding: 10px 10px 40px;
 		transition: all 1s ease;

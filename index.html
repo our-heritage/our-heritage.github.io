@@ -22,7 +22,13 @@
       </div>
 
       <nav class="main-nav">
-        <a class="logo-nav" href="#"><img src="img/logo.png"></a>
+        <a class="logo-nav" href="index.html">
+          <picture>
+            <source media="(min-width: 1366px)" srcset="img/logo-nav-small.png">
+            <source media="(max-width: 1366px)" srcset="img/logo-nav.png">
+            <img srcset="img/logo-nav-small.png" alt="Imagen de Amy">
+          </picture>
+        </a>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="juego.html">Juego</a></li>
@@ -40,11 +46,16 @@
     <!-- header´s end-->
     <section class="teaser modal hidden">
       <span class="close"></span>
-      <div id="ytplayer" class="ytplayer"></div>
+      <div id="ytplayer" class="embed-container"></div>
       <!-- Agregar comportamiento hover al boton -->
     </section>
     <!-- video teaser section end-->
-    <section>
+    <div class="download-section">
+      <span>download demo now!</span>
+      <button class="download-win">Download for Win</button>
+      <button class="download-mac">Download for Mac</button>
+    </div>
+    <section class="about-frame">
       <ul class="about-section">
         <li>
           <div class="about-image left"><img src="img/about/enviroment.png"></div>
@@ -92,7 +103,6 @@
         </li>
         <li>
           <img src="img/logos/logo-germany.png" alt=""/>
-          <!-- tienen un logo que no tenga fondo? creo que los del equipo de CETAV lo tienen, sino pidanlo -->
         </li>
         <li>
           <img src="img/logos/logo-francoaleman.png" alt=""/>
