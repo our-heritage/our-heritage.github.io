@@ -491,13 +491,15 @@ button:focus:active {
   cursor: pointer; }
 
 .close-lang {
-  background-position: -48px -187px;
-  border: 3px solid #24C29F;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: -48px -186px;
+  border: 1px solid #24C29F;
+  box-shadow: 1px 1px 10px #24C29F;
   display: block;
-  height: 40px;
+  height: 38px;
   padding: 2px 5px;
   position: absolute;
-  width: 39px; }
+  width: 36px; }
   @media (min-width: 768px) {
     .close-lang {
       display: none; } }
@@ -525,6 +527,9 @@ button:focus:active {
   right: 2%;
   position: absolute;
   top: 40%; }
+  @media (min-width: 1280px) {
+    .next-arrow {
+      right: 5%; } }
 
 .play-arrow {
   background-color: none;
@@ -542,6 +547,9 @@ button:focus:active {
   position: absolute;
   top: 40%;
   width: 50px; }
+  @media (min-width: 1280px) {
+    .previous-arrow {
+      left: 5%; } }
 
 .up-arrow {
   background-position: -59px -77px;
@@ -571,10 +579,13 @@ button:focus:active {
 .main-nav li {
   font-size: 18px;
   font-size: 1.8rem;
-  border: 3px solid #24C29F;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #24C29F;
+  box-shadow: 1px 1px 10px #24C29F;
   display: inline-block;
   margin-left: 10px;
-  padding: 5px; }
+  padding: 5px;
+  transition: all 1s ease; }
   @media (min-width: 768px) {
     .main-nav li {
       font-size: 20px;
@@ -588,9 +599,8 @@ button:focus:active {
     text-decoration: none;
     text-shadow: 1px 1px 4px #f2f2f2;
     text-transform: uppercase; }
-    .main-nav li a:hover {
-      color: #24C29F;
-      text-shadow: 1px 1px 4px #24C29F; }
+  .main-nav li:hover {
+    background: #24C29F; }
 
 .main-nav {
   display: block;
@@ -625,14 +635,18 @@ button:focus:active {
       position: static; } }
 
 .list-lang-item {
-  border: 3px solid #24C29F;
+  -webkit-backface-visibility: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #24C29F;
+  box-shadow: 1px 1px 10px #24C29F;
   cursor: pointer;
   left: 0;
+  margin-right: 4px;
   padding: 8px;
   position: absolute;
   text-align: center;
   top: -11px;
-  transition: all 1s; }
+  transition: all 1s ease; }
   @media (min-width: 768px) {
     .list-lang-item {
       display: inline-block;
@@ -640,18 +654,17 @@ button:focus:active {
   .list-lang-item.selected {
     background: #24C29F;
     z-index: 3; }
-    .list-lang-item.selected a {
-      color: #fff;
-      text-shadow: 1px 1px 4px #f2f2f2; }
+  .list-lang-item:hover {
+    background: #24C29F; }
 
 .list-lang-item a {
   font-size: 18px;
   font-size: 1.8rem;
-  color: #24C29F;
+  color: #f2f2f2;
   font-family: "Share Tech", serif;
   text-decoration: none;
-  text-shadow: 1px 1px 4px #24C29F;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px #f2f2f2; }
 
 .list-lang li:first-child + li {
   transform: rotate(10deg); }
@@ -684,8 +697,25 @@ button:focus:active {
     font-size: 3rem;
     color: #f2f2f2;
     font-family: "Share Tech", serif;
-    text-transform: uppercase;
-    text-shadow: 3px 3px 4px #24C29F; }
+    line-height: 24px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px #f2f2f2;
+    text-transform: uppercase; }
+    .game-nav a:before, .game-nav a:after {
+      content: '';
+      position: absolute;
+      transition: transform .5s ease; }
+    .game-nav a:before {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #24C29F;
+      box-shadow: 10px 10px 10px #24C29F;
+      transform: scaleX(0); }
+    .game-nav a:hover:before {
+      transform: scaleX(1); }
   @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .game-nav {
       background-color: rgba(0, 0, 0, 0.6);
@@ -700,7 +730,9 @@ button:focus:active {
 .game-nav ul {
   text-align: center; }
   .game-nav ul li {
-    margin: 20px 40px; }
+    height: 44px;
+    margin: 30px 40px;
+    line-height: 24px; }
     @media (min-width: 768px) {
       .game-nav ul li {
         display: inline-block; } }
@@ -1060,9 +1092,11 @@ button:focus:active {
 .char-selection {
   position: absolute;
   right: 0;
-  text-align: center;
-  top: 440px;
-  width: 74%; }
+  top: 460px;
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .char-selection {
+      width: 80%; } }
 
 .character-section {
   display: none; }
@@ -1092,9 +1126,11 @@ button:focus:active {
   text-align: left;
   text-shadow: 1px 1px 4px #f2f2f2;
   width: 80%; }
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
     .char-details {
-      width: 60%; } }
+      height: 583px;
+      margin: 5% auto;
+      max-width: 900px; } }
   .char-details h3 {
     font-size: 36px;
     font-size: 3.6rem;
@@ -1106,10 +1142,9 @@ button:focus:active {
   .char-details p {
     float: right;
     width: 60%; }
-    @media (min-width: 1280px) {
+    @media (min-width: 1024px) {
       .char-details h3,
       .char-details p {
-        width: 50%;
         margin-right: 5%; } }
   .char-details img {
     float: left; }
@@ -1186,11 +1221,11 @@ button:focus:active {
       display: none; } }
 
 .gallery-container {
+  font-size: 0;
+  /* Hack that removes white space */
   width: 100%; }
   @media (min-width: 1280px) {
     .gallery-container {
-      font-size: 0;
-      /* Hack that removes white space */
       list-style: none;
       margin: 0 auto;
       width: 80%; } }
@@ -1236,12 +1271,16 @@ button:focus:active {
 
 @media (min-width: 768px) {
   .gallery-imgs li {
+    -webkit-backface-visibility: hidden;
     background: url(../img/polaroid.jpg);
     box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
     display: inline-block;
     padding: 10px 10px 40px;
+    transition: all 1s ease;
     vertical-align: top;
-    width: 33%; } }
+    width: 33%; }
+    .gallery-imgs li:hover {
+      transform: rotate(0deg); } }
   @media (min-width: 768px) and (max-width: 1024px) {
     .gallery-imgs li {
       padding: 5px 5px 25px; } }
@@ -1259,7 +1298,7 @@ button:focus:active {
     margin-top: 20px; }
 
   .gallery-imgs .pic-3 {
-    transform: rotate(-5deg);
+    transform: rotate(-10deg);
     left: 5px;
     margin-top: -25px;
     position: relative; }
@@ -1269,7 +1308,7 @@ button:focus:active {
     margin-top: -10px; }
 
   .gallery-imgs .pic-5 {
-    transform: rotate(-5deg);
+    transform: rotate(-8deg);
     position: relative;
     right: 15px; }
 
@@ -1280,7 +1319,7 @@ button:focus:active {
     margin-top: -22px; }
 
   .gallery-imgs .pic-7 {
-    transform: rotate(5deg);
+    transform: rotate(10deg);
     margin-top: -40px; }
 
   .gallery-imgs .pic-8 {

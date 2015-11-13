@@ -2,9 +2,11 @@
 .char-selection {
   position: absolute;
   right: 0;
-  text-align: center;
-  top: 440px;
-  width: 74%;
+  top: 460px;
+  width: 100%;
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
 }
 
 .character-section {
@@ -40,8 +42,10 @@
   text-align: left;
   text-shadow: 1px 1px 4px $light-color;
   width: 80%;
-  @media (min-width: 1280px) {
-    width: 60%;
+  @media (min-width: 1024px) {
+    height: 583px;
+    margin: 5% auto;
+    max-width: 900px;
   }
 
   h3 {
@@ -56,8 +60,7 @@
   p {
     float: right;
     width: 60%;
-    @media (min-width: 1280px) {
-      width: 50%;
+    @media (min-width: 1024px) {
       margin-right: 5%;
     }
   }
@@ -96,8 +99,8 @@
   }
 
   &:hover > h4 {
-  color: $main-color;
-  text-shadow: 1px 1px 4px $main-color;
+    color: $main-color;
+    text-shadow: 1px 1px 4px $main-color;
   }
 }
 
@@ -117,9 +120,9 @@
     font-family: $text-serif;
     float: right;
     text-align: right;
-      margin-top: -65px;
-      margin-right: 53px;
-      position: relative;
+    margin-top: -65px;
+    margin-right: 53px;
+    position: relative;
   }
 
   img {
