@@ -13,10 +13,6 @@ body {
     box-sizing: inherit;
 }
 
-area:focus {
-    outline: none;
-}
-
 .mobil-game-wrapper {
     display: block;
 
@@ -32,18 +28,21 @@ area:focus {
 
 // Modal Desktop
 .modal {
-    transition: .10s;
-    background-color: rgba(0, 0, 0, .9);
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 1;
-    padding: 5% 0;
-    position: fixed;
-    text-align: center;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+    display: none;
+    @media (min-width: 768px) {
+      transition: .10s;
+      background-color: rgba(0, 0, 0, .9);
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 1;
+      padding: 5% 0;
+      position: fixed;
+      text-align: center;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
 }
 
 .hidden {
@@ -85,5 +84,12 @@ area:focus {
         vertical-align: middle;
         text-align: center;
       }
+  }
+}
+
+.section-title {
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
   }
 }

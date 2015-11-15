@@ -367,9 +367,6 @@ body {
 *:after {
   box-sizing: inherit; }
 
-area:focus {
-  outline: none; }
-
 .mobil-game-wrapper {
   display: block; }
   @media (min-width: 768px) {
@@ -381,18 +378,21 @@ area:focus {
   display: none; }
 
 .modal {
-  transition: .10s;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: block;
-  height: 100%;
-  left: 0;
-  opacity: 1;
-  padding: 5% 0;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  z-index: 999; }
+  display: none; }
+  @media (min-width: 768px) {
+    .modal {
+      transition: .10s;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 1;
+      padding: 5% 0;
+      position: fixed;
+      text-align: center;
+      top: 0;
+      width: 100%;
+      z-index: 999; } }
 
 .hidden {
   display: none; }
@@ -428,6 +428,12 @@ area:focus {
         font-size: 3rem;
         vertical-align: middle;
         text-align: center; } }
+
+.section-title {
+  display: block; }
+  @media (min-width: 768px) {
+    .section-title {
+      display: none; } }
 
 section {
   overflow: hidden; }
@@ -510,10 +516,8 @@ button:focus:active {
   cursor: pointer; }
 
 .close-lang {
-  background-color: rgba(0, 0, 0, 0.5);
   background-position: -144px -142px;
   border: 1px solid #24C29F;
-  box-shadow: 1px 1px 10px #24C29F;
   display: block;
   height: 38px;
   padding: 2px 5px;
@@ -667,9 +671,6 @@ button:focus:active {
 
 .list-lang-item {
   -webkit-backface-visibility: hidden;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid #24C29F;
-  box-shadow: 1px 1px 10px #24C29F;
   cursor: pointer;
   left: 0;
   margin-right: 4px;
@@ -778,7 +779,7 @@ button:focus:active {
       display: block;
       position: fixed;
       margin-top: 13%;
-      margin-left: 10%; } }
+      margin-left: 7%; } }
 
 .game-nav li {
   display: inline-block; }
@@ -1138,7 +1139,7 @@ header {
   display: none; }
   @media (min-width: 768px) {
     .character-section {
-      display: inherit; } }
+      display: block; } }
 
 .characters-wrapper {
   margin: 5% auto;
@@ -1201,19 +1202,21 @@ header {
   @media (min-width: 1280px) {
     .char-selection {
       text-align: right;
+      margin-top: 30px;
       width: 85%; } }
 
 .preview-char {
   display: inline-block;
-  margin-right: 5%; }
+  margin-right: 5%;
+  cursor: pointer; }
   .preview-char h4 {
     color: #f2f2f2;
     margin-top: 10px;
     text-align: center;
     text-shadow: 1px 1px 4px #f2f2f2; }
-    .preview-char h4:hover {
-      color: #24C29F;
-      text-shadow: 1px 1px 4px #24C29F; }
+  .preview-char:hover > h4 {
+    color: #24C29F;
+    text-shadow: 1px 1px 4px #24C29F; }
 
 .taps-character {
   margin: 0 auto;

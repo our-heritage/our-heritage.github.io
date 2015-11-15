@@ -39,6 +39,7 @@
       </ul>
     </nav>
     <div class="game-wrapper">
+      <h2 class="section-title">Historia</h2>
       <section class="history-section" id="history">
         <h2>Una búsqueda entre recuerdos</h2>
         <p>Amy es una niña que vive con sus padres y abuelo en un edificio de apartamentos en el año 2050. A ella le gusta mucho explorar y conocer nuevos lugares, le interesa saber más sobre el pasado y los lugares que su familia visitó.</p>
@@ -49,7 +50,7 @@
       </section>
       <!-- history-section´s end -->
       <ul class="taps-character" data-role="collapsible-set">
-        <h2>Personajes</h2>
+        <h2 class="section-title">Personajes</h2>
         <li data-role="collapsible">
           <div class="tap-banner-amy">
             <picture>
@@ -113,12 +114,12 @@
        <!-- hover sobre personajes -->
         <div class="characters-wrapper">
           <div class="main-char-selection">
-            <img src="img/characters/family-photo.png" alt="" usemap="#Map" />
+            <img src="img/characters/family-photo.png" border="0" usemap="#Map" />
             <map name="Map" id="Map">
-              <area class="char_btn" alt="Amy" title="Amy" href="#" name="amy" shape="poly" coords="461,590,422,548,463,505,480,422,458,405,476,320,535,320,569,393,537,420,553,479,543,604,454,605" />
-              <area class="char_btn" alt="Abuelo" title="Abuelo" href="#" name="gramps" shape="poly" coords="627,601,581,457,577,356,619,248,694,194,742,315,786,380,787,437,745,450,738,598" />
-              <area class="char_btn" alt="Papa" title="Papa" href="#" name="dad" shape="poly" coords="451,318,597,319,599,270,620,265,616,226,539,170,538,146,550,55,446,65,454,169,460,168,409,242" />
-              <area class="char_btn" alt="Mama" title="Mama" href="#" name="mom" shape="poly" coords="339,575,289,481,301,387,271,313,311,234,290,226,332,112,412,116,439,214,416,241,462,310,432,400,452,482,422,526,429,569,448,605,328,604" />
+              <area class="char_btn" alt="Amy" title="Amy" name="amy" shape="poly" coords="461,590,422,548,463,505,480,422,458,405,476,320,535,320,569,393,537,420,553,479,543,604,454,605" />
+              <area class="char_btn" alt="Abuelo" title="Abuelo" name="gramps" shape="poly" coords="627,601,581,457,577,356,619,248,694,194,742,315,786,380,787,437,745,450,738,598" />
+              <area class="char_btn" alt="Papa" title="Papa" name="dad" shape="poly" coords="451,318,597,319,599,270,620,265,616,226,539,170,538,146,550,55,446,65,454,169,460,168,409,242" />
+              <area class="char_btn" alt="Mama" title="Mama" name="mom" shape="poly" coords="339,575,289,481,301,387,271,313,311,234,290,226,332,112,412,116,439,214,416,241,462,310,432,400,452,482,422,526,429,569,448,605,328,604" />
             </map>
           </div>
         </div>
@@ -131,27 +132,27 @@
         <span class="next-arrow"></span>
         <div class="char-details" id="char-details"></div>
         <div class="char-selection">
-          <a class="char_btn preview-char" name="amy">
+          <span class="char_btn preview-char" name="amy">
             <img src="img/characters/head-amy.png">
             <h4>Amy</h4>
-          </a>
-          <a class="char_btn preview-char" name="mom">
+          </span>
+          <span class="char_btn preview-char" name="mom">
             <img src="img/characters/head-mom.png">
             <h4>Mamá</h4>
-          </button>
-          <a class="char_btn preview-char" name="dad">
+          </span>
+          <span class="char_btn preview-char" name="dad">
             <img src="img/characters/head-dad.png">
             <h4>Papá</h4>
-          </a>
-          <a class="char_btn preview-char" name="gramps">
+          </span>
+          <span class="char_btn preview-char" name="gramps">
             <img src="img/characters/head-gramps.png">
             <h4>Abuelo</h4>
-          </a>
+          </span>
         </div>
       </div>
       <!-- Modal -->
       <section class="section-gallery" id="gallery">
-        <h2>Galería</h2>
+        <h2 class="section-title">Galería</h2>
         <div id="gallery-container" class="gallery-container">
           <ul id="slider" class="gallery-imgs">
             <li class="slider-content first-pic pic-1" id="pic-1">
