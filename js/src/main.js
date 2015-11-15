@@ -5,7 +5,10 @@
     enquire.register('screen and (min-width: 768px) and (max-width: 1280px)', {
 
       match : function() {
-        navGameScroll();
+        if ($('#game-nav').length > 0) { 
+          navGameScroll();
+        }
+        
         $('map').imageMapResize();
       },  
       unmatch : function() {
@@ -50,9 +53,9 @@
       element: $('#game-nav'),
       handler: function(direction) {
         if (direction === 'down') {
-          $('.game-nav').addClass('nav-sticky');
+          $('#game-nav').addClass('nav-sticky');
         } else {
-          $('.game-nav').removeClass('nav-sticky');
+          $('#game-nav').removeClass('nav-sticky');
         }
       },
       offset: 0
