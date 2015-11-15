@@ -1,101 +1,56 @@
-.content-lang {
-    margin-top: 4%;
-    position: absolute;
-    right: 50px;
-
-    @media(min-width: 768px){
-        float: right;
-        margin: 3% 4% 0 0;
-        position: inherit;
-    }
-}
-
-.lang-select {
-    float: right;
-    margin: 2% 3%;
-}
-
-.lang-select li {
-    display: inline-block;
-}
-
-.list-lang {
-    list-style: none;
-    position: absolute;
-    z-index: 1;
-
-    @media(min-width: 768px) {
-        position: static;
-    }
-}
-
-.list-lang-item {
-    -webkit-backface-visibility: hidden;
-    background: rgba(0, 0, 0, .5);
-    border: 1px solid $main-color;
-    box-shadow: 1px 1px 10px $main-color;
-    cursor: pointer;
-    left: 0;
-    margin-right: 4px; 
-    padding: 8px;
+.list-lang ul {
     position: absolute;
     text-align: center;
-    top: -11px;
-    transition: all 1s ease;
-
-    @media(min-width: 768px){
-        display:inline-block;
-        position: static;
-    }
-    
-    &.selected {
-        background: $main-color;
-        z-index: 3;
-    }
-
-    &:hover {
-        background: $main-color;
-    }
+    top: 30%;
+    width: 100%;
 }
 
-.list-lang-item a {
-    @include font-size(18);
+.list-lang li {
+    display: inline-block;
+    float: left;
+    line-height: 50px;
+    padding-bottom: 100px;
+    width: 50%
+}
+
+.list-lang-item a, .select-lang {
+    @include font-size(38);
     color: $light-color;
     font-family: $text-serif;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     text-shadow: 1px 1px 4px $light-color;
-}
 
-.list-lang li:first-child + li {
-    transform: rotate(10deg);
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        transition: transform .3s ease;
+    }
 
-    @media(min-width: 768px) {
-        transform: rotate(0deg);
+    &:before {
+        background: $main-color;
+        bottom: 0;
+        box-shadow: 10px 10px 10px $main-color;
+        height: 2px;
+        left: 0;
+        transform:  scaleX(0);
+        width: 100%;
+    }
+
+    &:hover:before {
+        transform:  scaleX(1);
     }
 }
 
-.list-lang li:last-child {
-    transform: rotate(10deg);
-
-    @media(min-width: 768px) {
-        transform: rotate(0deg);
-    }
+.selected > a:before {
+    transform: none;
 }
 
-
-.lang-item-position-0 {
-    top: 42px;
-}
-
-.lang-item-position-1 {
-    top: 96px;
-}
-
-.lang-item-position-2 {
-    top: 150px;
-}
-
-.lang-item-position-3 {
-    top: 205px;
+.select-lang {
+    margin: 2% 4% 0 0;
+    position: absolute;
+    right: 0;
 }
