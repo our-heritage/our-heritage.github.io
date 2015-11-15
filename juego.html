@@ -21,7 +21,6 @@
           <li class="list-lang-item"><a href="es.html">es</a></li>
           <li class="list-lang-item"><a href="fr.html">fr</a></li>
           <li class="list-lang-item"><a href="de.html">de</a></li>
-          <!-- aplican los comentarios que estan en el index.html -->
         </ul>
       </div>
       <nav class="main-nav">
@@ -37,7 +36,6 @@
         <li><a href="#history">Historia</a></li>
         <li><a href="#section-character">Personajes</a></li>
         <li><a href="#gallery">Galería</a></li>
-        <!-- aplicar hover a los items -->
       </ul>
     </nav>
     <div class="game-wrapper">
@@ -100,7 +98,7 @@
             <picture>
               <source media="(min-width: 768px)" srcset="img/characters/body-gramps.png">
               <source media="(max-width: 768px)" srcset="img/characters/tap-gramps.png">
-              <img srcset="img/characters/body-gramps" alt="Imagen del Abuelo">
+              <img srcset="img/characters/body-gramps.png" alt="Imagen del Abuelo">
             </picture>
             <h3>Abuelo</h3>
           </div>
@@ -132,24 +130,23 @@
         <span class="previous-arrow"></span>
         <span class="next-arrow"></span>
         <div class="char-details" id="char-details"></div>
-        <div class="char-selection"><!-- ojo no tiene etiqueta de cierre -->
-          <!-- Ricardo quedo en cambiar el markup de esto, no deben ser buttons -->
-          <button class="char_btn preview-char" name="amy">
-            <img src="img/characters/head-amy.png"> <!-- ojo este button no tiene etiqueta de cierre -->
+        <div class="char-selection">
+          <a class="char_btn preview-char" name="amy">
+            <img src="img/characters/head-amy.png">
             <h4>Amy</h4>
-          </button>
-          <button class="char_btn preview-char" name="mom">
+          </a>
+          <a class="char_btn preview-char" name="mom">
             <img src="img/characters/head-mom.png">
             <h4>Mamá</h4>
           </button>
-          <button class="char_btn preview-char" name="dad">
+          <a class="char_btn preview-char" name="dad">
             <img src="img/characters/head-dad.png">
             <h4>Papá</h4>
-          </button>
-          <button class="char_btn preview-char" name="gramps">
+          </a>
+          <a class="char_btn preview-char" name="gramps">
             <img src="img/characters/head-gramps.png">
             <h4>Abuelo</h4>
-          </button>
+          </a>
         </div>
       </div>
       <!-- Modal -->
@@ -157,8 +154,6 @@
         <h2>Galería</h2>
         <div id="gallery-container" class="gallery-container">
           <ul id="slider" class="gallery-imgs">
-
-          <!-- hover sobre imagenes del slider -->
             <li class="slider-content first-pic pic-1" id="pic-1">
               <img src="img/gallery/pic-1.jpg" class="slider-image">
             </li>

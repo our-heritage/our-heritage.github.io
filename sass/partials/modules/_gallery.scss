@@ -21,10 +21,10 @@
 .gallery-imgs {
 	width: 100%;
 
-		@media (min-width: 768px) {
-			list-style: none;
-			text-align: center;
-		}
+	@media (min-width: 768px) {
+		list-style: none;
+		text-align: center;
+	}
 }
 
 .section-gallery h2 {
@@ -77,10 +77,10 @@
 		-webkit-backface-visibility: hidden;
 		background: url(../img/bg/polaroid.jpg);
 		box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-    cursor: pointer;
+    	cursor: pointer;
 		display: inline-block;
 		padding: 10px 10px 40px;
-		transition: all 1s ease;
+		transition: all .3s ease;
 		vertical-align: top;
 		width: 33%;
 

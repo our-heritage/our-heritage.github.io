@@ -15,8 +15,8 @@
 .logo img {
     display: block;
     margin: 4% auto;
-    max-width: 664px;
     max-height: 157px;
+    max-width: 664px;
     width: 100%;
 
     @media (min-width: 1024px) {
@@ -26,31 +26,32 @@
 
 .main-nav li {
     @include font-size(18);
-    background: rgba(0, 0, 0, .5);
-    border: 1px solid $main-color;
-    box-shadow: 1px 1px 10px $main-color;
     display: inline-block;
     margin-left: 10px;
-    padding: 5px;
-    transition: all 1s ease;
+    transition: all .5s ease;
 
     @media (min-width: 768px) {
         @include font-size(20);
         margin-left: 20px;
-        padding: 10px;
     }
 
     a {
         color: $light-color;
         display: inline-block;
         font-family: $text-serif;
+        padding: 5px;
         text-decoration: none;
         text-shadow: 1px 1px 4px $light-color;
         text-transform: uppercase;
-    }
 
-    &:hover {
-        background: $main-color;
+        @media (min-width: 768px) {
+            padding: 10px;
+        }
+
+        &:hover {
+            color: $main-color;
+            text-shadow: 1px 1px 4px $main-color;
+        }
     }
 }
 

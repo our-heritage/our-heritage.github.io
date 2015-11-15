@@ -7,17 +7,17 @@
 .download-mac,
 .download-win, 
 .up-arrow {
-	background: url('../img/sprite.png') no-repeat;
-	cursor: pointer;
+  background: url('../img/sprite.png') no-repeat;
+  cursor: pointer;
 }
 
 .close-lang {
-	background-color: rgba(0, 0, 0, .5);
-	background-position: -144px -142px;
-	border: 1px solid $main-color;
-	box-shadow: 1px 1px 10px $main-color;
-	display: block;
-	height: 38px;
+  background-color: rgba(0, 0, 0, .5);
+  background-position: -144px -142px;
+  border: 1px solid $main-color;
+  box-shadow: 1px 1px 10px $main-color;
+  display: block;
+  height: 38px;
     padding: 2px 5px;
     position: absolute;
     width: 36px;
@@ -36,17 +36,17 @@
     width: 50px;
     z-index: 1;
 
-	&:hover {
-		background-position: -201px -4px;
-	}
+  &:hover {
+    background-position: -201px -4px;
+  }
 }
 
 .down-arrow {
   background-position: 1px -1px;
   height: 9px;
   width: 10px;
-	margin-left: 10px;
-	display: inline-block;
+  margin-left: 10px;
+  display: inline-block;
 }
 
 .next-arrow { 
@@ -57,9 +57,9 @@
     position: absolute;
     top: 40%;
 
-	&:hover {
-		background-position: -135px -6px;
-	}
+  &:hover {
+    background-position: -135px -6px;
+  }
 
     @media (min-width: 1280px) {
         right: 5%;
@@ -67,14 +67,14 @@
 }
 
 .play-arrow {
-	background-position: -50px -47px;
-	border-radius: 100%; 
-	height: 77px;
-	width: 77px;
+  background-position: -50px -47px;
+  border-radius: 100%; 
+  height: 77px;
+  width: 77px;
 
-	&:hover {
-		background-color: rgba(0, 0, 0, .4); 
-	}
+  &:hover {
+    background-color: rgba(0, 0, 0, .4); 
+  }
 }
 
 .previous-arrow { 
@@ -85,23 +85,23 @@
     top: 40%;
     width: 50px;
 
-	&:hover {
-		background-position: -165px -70px;
-	}
-	
-	@media (min-width: 1280px) {
-		left: 5%;
-	}
+  &:hover {
+    background-position: -165px -70px;
+  }
+  
+  @media (min-width: 1280px) {
+    left: 5%;
+  }
 }
 
 .up-arrow { 
-	background-position: -14px -1px;
-	height: 9px;
+  background-position: -14px -1px;
+  height: 9px;
     width: 9px; 
 }
 
 .download-mac { 
-	background-position: 0px -123px;
+  background-position: 0px -123px;
 }
 
 .download-win { 

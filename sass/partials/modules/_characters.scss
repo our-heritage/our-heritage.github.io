@@ -1,153 +1,148 @@
-// .char-details 
-.char-selection {
-  position: absolute;
-  right: 0;
-  top: 460px;
-  width: 100%;
-  @media (min-width: 1024px) {
-    width: 80%;
-  }
-}
-
 .character-section {
-  display: none;
+	display: none;
 
-  @media (min-width: 768px) {
-    display: inherit;
-  }
-}
-
-.char-selection {
-  margin: 0 auto;
+  	@media (min-width: 768px) {
+		display: inherit;
+  	}
 }
 
 .characters-wrapper {
-  margin: 5% auto;
-  overflow: hidden;
-  max-width: 993px;
+	margin: 5% auto;
+	overflow: hidden;
+	max-width: 993px;
 }
 
 .close-tap {
-  float: right;
-  margin: 5% 0;
-  @media (min-width: 768px) {
-    display: none;
-  }
+  	float: right;
+  	margin: 5% 0;
+  	@media (min-width: 768px) {
+		display: none;
+  	}
 }
 
 .char-details {
-  color: $light-color;
-  margin: 0 auto;
-  text-align: left;
-  text-shadow: 1px 1px 4px $light-color;
-  width: 80%;
-  @media (min-width: 1024px) {
-    height: 583px;
-    margin: 5% auto;
-    max-width: 900px;
-  }
+	color: $light-color;
+	margin: 2% auto;
+	text-align: left;
+  	text-shadow: 1px 1px 4px $light-color;
+  	width: 80%;
+  	@media (min-width: 1024px) {
+		height: 583px;
+		margin: 5% auto;
+		max-width: 900px;
+  	}
 
-  h3 {
-    @include font-size(36);
-    color: $main-color;
-    margin-bottom: 35px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 4px $main-color;
-  }
+	h3 {
+		@include font-size(36);
+		color: $main-color;
+		margin-bottom: 35px;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 4px $main-color;
+	}
 
-  h3,
-  p {
-    float: right;
-    width: 60%;
-    @media (min-width: 1024px) {
-      margin-right: 5%;
-    }
-  }
+	h3,
+	p {
+		float: right;
+		margin-right: 5%;
+		width: 55%;
+	}
 
   img {
-    float: left;
+    position: absolute;
+    right: 64%;
   }
 }
 
 .main-char-selection img {
-  width: 100%;
+	width: 100%;
 }
 
 .main-char-selection {
-  height: 668px;
-  max-width: 993px;
+	height: 668px;
+	max-width: 993px;
 }
 
 .main-char-selection .char_btn {
-  background-color: inherit;
-  border: none;
-  height: 450px;
-  margin-left: 20px;
-  padding: 0 2%;
-  width: 19%;
+	background-color: inherit;
+	border: none;
+	height: 450px;
+	margin-left: 20px;
+	padding: 0 2%;
+	width: 19%;
+}
+
+.char-selection {
+ 	position: absolute;
+ 	top: 500px;
+ 	width: 100%;
+ 	@media (min-width: 1280px) {
+		text-align: right;
+		width: 85%;
+ 	}
 }
 
 .preview-char {
-  margin-right: 2%;
-  margin-top: 3%;
+	display: inline-block;
+	margin-right: 5%;
 
-  h4 {
-    color: $light-color;
-    margin-top: 10px;
-    text-shadow: 1px 1px 4px $light-color;
-  }
+	h4 {
+		color: $light-color;
+		margin-top: 10px;
+		text-align: center;
+		text-shadow: 1px 1px 4px $light-color;
 
-  &:hover > h4 {
-    color: $main-color;
-    text-shadow: 1px 1px 4px $main-color;
-  }
+		&:hover {
+			color: $main-color;
+			text-shadow: 1px 1px 4px $main-color;
+		}
+	}
 }
 
 .taps-character {
-  margin: 0 auto;
-  max-width: 100%;
-  @media (min-width: 768px) {
-    display: none;
-  }
+	margin: 0 auto;
+	max-width: 100%;
+	@media (min-width: 768px) {
+		display: none;
+	}
 
-  li {
-    background-color: $unactive-color;
-    border-bottom: 1px solid $light-color;
-  }
+	li {
+		background-color: $unactive-color;
+		border-bottom: 1px solid $light-color;
+	}
 
-  h3 {
-    font-family: $text-serif;
-    float: right;
-    text-align: right;
-    margin-top: -65px;
-    margin-right: 53px;
-    position: relative;
-  }
+	h3 {
+		font-family: $text-serif;
+		float: right;
+		text-align: right;
+		margin-top: -65px;
+		margin-right: 53px;
+		position: relative;
+	}
 
-  img {
-    width: 100%;
-  }
+  	img {
+		width: 100%;
+  	}
 }
 
 .tap-info {
-  background: $light-color;
-  color: $dark-color;
-  display: block;
-  height: auto;
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 15px;
-  transition: max-height .9s ease-in-out;
-  width: 100%;
+	background: $light-color;
+	color: $dark-color;
+	display: block;
+	height: auto;
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 15px;
+	transition: max-height .9s ease-in-out;
+	width: 100%;
 
-  p {
-    margin: 16px 0;
-    padding: 0;
-    width: 90%;
-  }
+	p {
+		margin: 16px 0;
+		padding: 0;
+		width: 90%;
+	}
 }
 
 .tap-expand-info {
-  height: 100%;
-  max-height: 480px;
+	height: 100%;
+	max-height: 480px;
 }
