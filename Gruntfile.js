@@ -55,7 +55,7 @@ module.exports = function (grunt) {
             separator: ';\n',
           },
           dist: {
-            src: ['js/src/jquery-2.1.4.js','js/src/enquire.js', 'js/src/jquery.waypoints.js', 'js/src/jquery.touchSwipe.js', 'js/src/imageMapResizer.min.js'],
+            src: ['js/src/jquery-2.1.4.js','js/src/enquire.js', 'js/src/imageMapResizer.min.js', 'js/src/jquery.waypoints.js', 'js/src/jquery.touchSwipe.js'],
             dest: 'js/build/vendors.js',
           },
         },

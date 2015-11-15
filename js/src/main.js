@@ -1,14 +1,16 @@
 (function() {
   $(document).ready(function() {
     var count = 0;
-
+    
     enquire.register('screen and (min-width: 768px) and (max-width: 1280px)', {
 
       match : function() {
-        navGameScroll(); 
+        navGameScroll();
+        $('map').imageMapResize();
       },  
       unmatch : function() {
-        $('.game-nav').removeClass('nav-sticky');
+        $('#game-nav').removeClass('nav-sticky');
+        Waypoint.destroyAll();
       }
     });
 
@@ -32,10 +34,9 @@
         gameScroll();
         charactersModal(count);
         galleryModal(count);
-        $('map').imageMapResize();
       },  
       unmatch : function() {
-        //code
+        $('.gallery-imgs li').off('click');
       }
     });
 
@@ -43,6 +44,20 @@
     controlsModal();
     videoTeaserModal();
   });
+
+  function navGameScroll() {
+    var waypoint = new Waypoint({
+      element: $('#game-nav'),
+      handler: function(direction) {
+        if (direction === 'down') {
+          $('.game-nav').addClass('nav-sticky');
+        } else {
+          $('.game-nav').removeClass('nav-sticky');
+        }
+      },
+      offset: 0
+    })
+  }
 
   function changeColorCreditos() {
     $('.display').click(function() {
@@ -245,18 +260,6 @@
         $('#show-menu-arrow').addClass('up-arrow');
       };
     });
-  }
-
-  function navGameScroll() {
-    var waypoints = $('#game-nav').waypoint(function(direction) {
-      if (direction === 'down') {
-        $('.game-nav').addClass('nav-sticky');
-      } else {
-        $('.game-nav').removeClass('nav-sticky');
-      }
-    }, {
-      offset: 0
-    })
   }
 
   function showFullPicture(id) {

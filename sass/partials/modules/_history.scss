@@ -21,8 +21,15 @@
         padding-bottom: 16px;
         width: 75%;
     }
-    
+
     @media (min-width: 768px) {
+      margin: 100px auto;
+      min-width: 590px;
+      padding: 65px 0;
+      width: 75%;
+    }
+
+    @media (min-width: 1280px) {
       margin: 0 auto 100px auto;
       min-width: 590px;
       padding: 65px 0;

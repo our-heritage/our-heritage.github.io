@@ -1,3 +1,12 @@
+.download-section:before{
+  content: "";
+  height: 23px;
+  width: 100%;
+  position: absolute;
+  background: url(../img/bg/about-frame.png) center bottom;
+  margin-top: -72px;
+}
+
 .about-image img {
   position: absolute;
   right: 0;

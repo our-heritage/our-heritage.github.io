@@ -100,16 +100,6 @@
     width: 9px; 
 }
 
-.download-mac, .download-win { 
-    text-indent: -9999px;
-    height: 54px;
-    width: 68px;
-    border-radius: 12px;
-    &:hover {
-      background-color: $main-color;
-    }
-}
-
 .download-mac { 
 	background-position: 0px -123px;
 }

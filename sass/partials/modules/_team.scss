@@ -1,3 +1,28 @@
+.brief {
+  padding: 38% 0 8% 0;
+  //background: url(../img/bg/second-bg-small.png) no-repeat center bottom;
+  p {
+    @include font-size(18);
+    background-color: rgba(255, 255, 255, .1);
+    box-sizing: border-box;
+    color: $light-color;
+    font-family: $text-serif;
+    margin: 0 auto;
+    width: 85%;
+    padding: 26px;
+
+    @media screen and (min-width: 768px) {
+        @include font-size(24);
+        width: 50%;
+        padding: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding: 14% 0 8% 0;
+    //background: url(../img/bg/second-bg.png) no-repeat center bottom;
+  }
+}
+
 .team-section-wrapper {
     width: 100%;
 }

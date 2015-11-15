@@ -3,13 +3,17 @@ section {
 }
 
 .game-wrapper {
-	padding-top: 150px; 
-    @media (min-width: 768px) {
-        padding: 0 auto;
-        padding-top: 0;
-        width: 85%;
-    }
-    @media (min-width: 1280px) {
-    	padding: 200px 0 0 200px;
-    }
+  width: 100%;
+  padding-top: 50px;
+  
+  @media (min-width: 768px) {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 200px;
+  }
+
+  @media (min-width: 1280px) {
+	  padding-top: 200px;
+    float: right;
+  }
 }

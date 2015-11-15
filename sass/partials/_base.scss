@@ -13,6 +13,10 @@ body {
     box-sizing: inherit;
 }
 
+area:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
 .mobil-game-wrapper {
     display: block;
 
@@ -50,33 +54,36 @@ body {
     opacity: 0;
 }
 
-.download-section {
-  display: none;
-  
-  @media (min-width: 768px) {
-    right: 0;
-    margin-right: 6%;
-    margin-top: -80px;
-    position: absolute;
+.download-mac, .download-win { 
+    text-indent: -9999px;
+    height: 54px;
+    width: 68px;
+    border-radius: 12px;
     display: inline-block;
-    max-width: 465px;
-
-    span {
-      text-transform: uppercase;
-      font-family: $text-serif;
-      color: $light-color;
-      @include font-size(30);
-      vertical-align: middle;
-      margin-right: 4%;
+    vertical-align: -webkit-baseline-middle;
+    margin-left: 15px;
+    &:hover {
+      background-color: $main-color;
     }
-  }
 }
 
-.about-frame:before{
-  content: "";
-  height: 23px;
-  width: 100%;
-  position: absolute;
-	background: url(../img/bg/about-frame.png) center bottom;
-  margin-top: -22px;
+.download-section {
+    display: none;
+  
+    @media (min-width: 768px) {
+      display: block;
+      padding-top: 50px;
+      div {
+        width: 438px;
+        margin: 0 auto;
+      }
+      p, span {
+        text-transform: uppercase;
+        font-family: $text-serif;
+        color: $light-color;
+        @include font-size(30);
+        vertical-align: middle;
+        text-align: center;
+      }
+  }
 }
