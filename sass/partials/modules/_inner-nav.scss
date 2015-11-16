@@ -1,28 +1,47 @@
 // Game Page navigation
+.game-nav li {
+    height: 27px;
+    line-height: 27px;
+       
+    @media (min-width: 768px) {
+        display: inline-block;
+    }
+
+    @media (min-width: 1280px) {
+        display: block;
+        margin-bottom: 35%;
+    }
+}
+
 .game-nav {
     display: none;
+    text-align: center;
+
     a {
         @include font-size(24);
-        padding: 0 20px;
         color: $light-color;
         font-family: $text-serif;
+        line-height: 27px;
+        margin: 0 50px;
+        position: relative;
+        text-decoration: none;
         text-shadow: 1px 1px 4px $light-color;
         text-transform: uppercase;
 
         &:before, &:after {
             content: '';
             position: absolute;
-            transition: transform .5s ease;
+            transition: transform .3s ease;
         }
 
         &:before {
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
             background: $main-color;
+            bottom: 0;
             box-shadow: 10px 10px 10px $main-color;
+            height: 2px;
+            left: 0;
             transform:  scaleX(0);
+            width: 100%;
         }
 
         &:hover:before {
@@ -30,61 +49,34 @@
         }
 
         @media (min-width: 1280px) {
-          @include font-size(30);
+            @include font-size(30);
+            margin: 0;
         }
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1280px) {
+        background-color: rgba(0, 0, 0, .6);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
         display: block;
-        background-color: rgba(0, 0, 0, 0.6);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 180px;
         padding: 10px;
-    }
-
-    @media (min-width: 1280px) {
-        display: block;
-        position: fixed;
-        margin-top: 13%;
-        margin-left: 7%;
-    }
-}
-
-.game-nav li {
-        display: inline-block;
-
-    @media (min-width: 1280px) {
+        position: absolute;
         text-align: center;
-        height: 44px;
-        margin: 19% 0;
-        display: block;
-    }
-}
-
-.list-game {
-    text-align: center;
-}
-
-.list-game-item {
-    margin: 20px 40px;
-
-    @media (min-width: 768px) {
-        display: inline-block;
-    }
-
-    @media (min-width: 1280px) {
-        display: block;
-    }
-}
-
-
-    .nav-sticky {
-        margin-top: 0;
-        position: fixed;
-        top: 0;
-        z-index: 2;
+        top: 180px;
         width: 100%;
     }
+
+    @media (min-width: 1280px) {
+        display: block;
+        margin-left: 4%;
+        margin-top: 15%;
+        position: fixed;
+    }
+}
+
+.nav-sticky {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
