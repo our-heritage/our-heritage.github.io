@@ -1,43 +1,44 @@
 .download-mac,
 .download-win {
-    text-indent: -9999px;
-    height: 54px;
-    width: 68px;
-    border-radius: 12px;
-    display: inline-block;
-    vertical-align: -webkit-baseline-middle;
-    margin-left: 15px;
-    &:hover {
-      background-color: $main-color;
-    }
+	border-radius: 12px;
+	display: inline-block;
+	height: 54px;
+	margin-left: 15px;
+	text-indent: -9999px;
+	vertical-align: -webkit-baseline-middle;
+	width: 68px;
+	&:hover {
+		background-color: $main-color;
+	}
 }
 
 .download-section {
-    display: none;
+	display: none;
 
-    @media (min-width: 768px) {
-      display: block;
-      padding-top: 50px;
-      div {
-        width: 438px;
-        margin: 0 auto;
-      }
-      p, span {
-        text-transform: uppercase;
-        font-family: $text-serif;
-        color: $light-color;
-        @include font-size(30);
-        vertical-align: middle;
-        text-align: center;
-      }
-  }
+	@media (min-width: 768px) {
+		display: block;
+		padding-top: 50px;
+		div {
+			margin: 0 auto;
+			width: 438px;
+		}
+		p,
+		span {
+			@include font-size(30);
+			color: $light-color;
+			font-family: $text-serif;
+			text-align: center;
+			text-transform: uppercase;
+			vertical-align: middle;
+		}
+	}
 }
 
 .download-section:before{
-  content: "";
-  height: 23px;
-  width: 100%;
-  position: absolute;
-  background: url(../img/bg/about-frame.png) center bottom;
-  margin-top: -72px;
+	background: url(../img/bg/about-frame.png) center bottom;
+	content: "";
+	height: 23px;
+	margin-top: -72px;
+	position: absolute;
+	width: 100%;
 }

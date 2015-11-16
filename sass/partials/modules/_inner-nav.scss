@@ -1,82 +1,82 @@
 // Game Page navigation
 .game-nav li {
-    height: 27px;
-    line-height: 27px;
-       
-    @media (min-width: 768px) {
-        display: inline-block;
-    }
+	height: 27px;
+	line-height: 27px;
 
-    @media (min-width: 1280px) {
-        display: block;
-        margin-bottom: 35%;
-    }
+	@media (min-width: 768px) {
+		display: inline-block;
+	}
+
+	@media (min-width: 1280px) {
+		display: block;
+		margin-bottom: 35%;
+	}
 }
 
 .game-nav {
-    display: none;
-    text-align: center;
+	display: none;
+	text-align: center;
 
-    a {
-        @include font-size(24);
-        color: $light-color;
-        font-family: $text-serif;
-        line-height: 27px;
-        margin: 0 50px;
-        position: relative;
-        text-decoration: none;
-        text-shadow: 1px 1px 4px $light-color;
-        text-transform: uppercase;
+	a {
+		@include font-size(24);
+		color: $light-color;
+		font-family: $text-serif;
+		line-height: 27px;
+		margin: 0 50px;
+		position: relative;
+		text-decoration: none;
+		text-shadow: 1px 1px 4px $light-color;
+		text-transform: uppercase;
 
-        &:before, &:after {
-            content: '';
-            position: absolute;
-            transition: transform .3s ease;
-        }
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			transition: transform .3s ease;
+		}
 
-        &:before {
-            background: $main-color;
-            bottom: 0;
-            box-shadow: 10px 10px 10px $main-color;
-            height: 2px;
-            left: 0;
-            transform:  scaleX(0);
-            width: 100%;
-        }
+		&:before {
+			background: $main-color;
+			bottom: 0;
+			box-shadow: 10px 10px 10px $main-color;
+			height: 2px;
+			left: 0;
+			transform:  scaleX(0);
+			width: 100%;
+		}
 
-        &:hover:before {
-            transform:  scaleX(1);
-        }
+		&:hover:before {
+			transform:  scaleX(1);
+		}
 
-        @media (min-width: 1280px) {
-            @include font-size(30);
-            margin: 0;
-        }
-    }
+		@media (min-width: 1280px) {
+			@include font-size(30);
+			margin: 0;
+		}
+	}
 
-    @media only screen and (min-width: 768px) and (max-width: 1280px) {
-        background-color: rgba(0, 0, 0, .6);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
-        display: block;
-        padding: 10px;
-        position: absolute;
-        text-align: center;
-        top: 180px;
-        width: 100%;
-    }
+	@media only screen and (min-width: 768px) and (max-width: 1280px) {
+		background-color: rgba(0, 0, 0, .6);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+		display: block;
+		padding: 10px;
+		position: absolute;
+		text-align: center;
+		top: 180px;
+		width: 100%;
+	}
 
-    @media (min-width: 1280px) {
-        display: block;
-        margin-left: 4%;
-        margin-top: 15%;
-        position: fixed;
-    }
+	@media (min-width: 1280px) {
+		display: block;
+		margin-left: 4%;
+		margin-top: 15%;
+		position: fixed;
+	}
 }
 
 .nav-sticky {
-    margin-top: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
+	margin-top: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 }

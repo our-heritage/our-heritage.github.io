@@ -1,13 +1,13 @@
 .counter-slider {
+	color: #fff;
+	background: rgb(36, 194, 159);
+	padding-top: 15px;
 	text-align: center;
 	width: 100%;
-  color: #fff;
-  background: rgb(36, 194, 159);
-  padding-top: 15px;
 
-  p {
-    @include font-size(20);
-  }
+	p {
+		@include font-size(20);
+	}
 
 	@media (min-width: 768px) {
 		display: none;
@@ -84,7 +84,7 @@
 		-webkit-backface-visibility: hidden;
 		background: url(../img/bg/polaroid.jpg);
 		box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-    	cursor: pointer;
+		cursor: pointer;
 		display: inline-block;
 		padding: 10px 10px 40px;
 		transition: all .3s ease;
@@ -116,43 +116,43 @@
 	}
 
 	.gallery-imgs .pic-3 {
-		transform: rotate(-10deg);
 		left: 5px;
 		margin-top: -25px;
 		position: relative;
+		transform: rotate(-10deg);
 	}
 
 	.gallery-imgs .pic-4 {
-		transform: rotate(-15deg);
 		margin-top: -10px;
+		transform: rotate(-15deg);
 	}
 
 	.gallery-imgs .pic-5 {
-		transform: rotate(-8deg);
-		position: relative;
 		right: 15px;
+		position: relative;
+		transform: rotate(-8deg);
 	}
 
 	.gallery-imgs .pic-6 {
-		transform: rotate(10deg);
 		left: 5px;
-		position: relative;
 		margin-top: -22px;
+		position: relative;
+		transform: rotate(10deg);
 	}
 
 	.gallery-imgs .pic-7 {
-		transform: rotate(10deg);
 		margin-top: -40px;
+		transform: rotate(10deg);
 	}
 
 	.gallery-imgs .pic-8 {
-		transform: rotate(-10deg);
 		margin-top: 25px;
+		transform: rotate(-10deg);
 	}
 
 	.gallery-imgs .pic-9 {
-		transform: rotate(15deg);
 		margin-top: -60px;
+		transform: rotate(15deg);
 	}
 
 	.full-picture {

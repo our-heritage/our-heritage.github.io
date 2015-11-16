@@ -1,23 +1,23 @@
 @mixin font-size($size) {
-    font-size: $size + px;
-    font-size: ($size / 10) + rem;
+	font-size: $size + px;
+	font-size: ($size / 10) + rem;
 }
 
 @mixin nav-items-colors($color) {
-    color: $color;
+	color: $color;
 
-    @media screen and (min-width: 766px) {
-        &:hover {
-            background-color: $color;
-        }
-    }
+	@media screen and (min-width: 766px) {
+		&:hover {
+			background-color: $color;
+		}
+	}
 }
 
 // mixin to color all team member sections.
 @mixin team-color-scheme($color) {
-    background-color: #fff;
+	background-color: #fff;
 
-    .team-details {
-        background: lighten($color, 10);
-    }
+	.team-details {
+		background: lighten($color, 10);
+	}
 }

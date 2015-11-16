@@ -1,28 +1,28 @@
 .character-section {
 	display: none;
 
-  	@media (min-width: 768px) {
-		  display: block;
-  	}
+	@media (min-width: 768px) {
+		display: block;
+	}
 }
 
 .characters-wrapper {
 	margin: 5% auto;
-	overflow: hidden;
 	max-width: 993px;
+	overflow: hidden;
 }
 
 .char-details {
 	color: $light-color;
 	margin: 2% auto;
 	text-align: left;
-  	text-shadow: 1px 1px 4px $light-color;
-  	width: 80%;
-  	@media (min-width: 1024px) {
+	text-shadow: 1px 1px 4px $light-color;
+	width: 80%;
+	@media (min-width: 1024px) {
 		height: 583px;
 		margin: 5% auto;
 		max-width: 900px;
-  	}
+	}
 
 	h3 {
 		@include font-size(36);
@@ -39,10 +39,10 @@
 		width: 55%;
 	}
 
-  img {
-    position: absolute;
-    right: 64%;
-  }
+	img {
+		position: absolute;
+		right: 64%;
+	}
 }
 
 .main-char-selection img {
@@ -64,21 +64,21 @@
 }
 
 .char-selection {
- 	position: absolute;
- 	top: 500px;
- 	width: 100%;
- 	@media (min-width: 1280px) {
+	position: absolute;
+	top: 500px;
+	width: 100%;
+	@media (min-width: 1280px) {
 		text-align: right;
-    margin-top: 30px;
+		margin-top: 30px;
 		width: 85%;
- 	}
+	}
 }
 
 .preview-char {
+	cursor: pointer;
 	display: inline-block;
 	margin-right: 5%;
-  cursor: pointer;
-  
+
 	h4 {
 		color: $light-color;
 		margin-top: 10px;
@@ -86,15 +86,16 @@
 		text-shadow: 1px 1px 4px $light-color;
 	}
 
-  &:hover > h4 {
-      color: $main-color;
-      text-shadow: 1px 1px 4px $main-color;
-  }
+	&:hover > h4 {
+		color: $main-color;
+		text-shadow: 1px 1px 4px $main-color;
+	}
 }
 
 .taps-character {
 	margin: 0 auto;
 	max-width: 100%;
+
 	@media (min-width: 768px) {
 		display: none;
 	}
@@ -104,19 +105,19 @@
 	}
 
 	h3 {
-    color: #fff;
-		font-family: $text-serif;
-    @include font-size(30);
+		@include font-size(30);
+		color: #fff;
 		float: right;
+		font-family: $text-serif;
 		text-align: right;
 		margin-top: -65px;
 		margin-right: 53px;
 		position: relative;
 	}
 
-  	img {
+	img {
 		width: 100%;
-  	}
+	}
 }
 
 .tap-info {

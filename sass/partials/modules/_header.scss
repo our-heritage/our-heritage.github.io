@@ -1,66 +1,66 @@
 header {
-    height: auto;
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
+	height: auto;
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
 
-    h1 {
-        background: url(../img/logo.png) no-repeat center center;
-        background-size: contain;
-        height: 150px;
-        margin: 0 auto;
-        text-indent: -9999px;
-        width: 80%;
+	h1 {
+		background: url(../img/logo.png) no-repeat center center;
+		background-size: contain;
+		height: 150px;
+		margin: 0 auto;
+		text-indent: -9999px;
+		width: 80%;
 
-        @media screen and (min-width: 766px) {
-            display: none;
-        }
+		@media screen and (min-width: 766px) {
+			display: none;
+		}
 
-        @media (min-width: 1366px) {
-        	top: 20px;
-        	position: absolute;
-        	left: 36%;
-            display: block;
-            max-width: 544px;
-        }
-    }
+		@media (min-width: 1366px) {
+			display: block;
+			left: 36%;
+			max-width: 544px;
+			position: absolute;
+			top: 20px;
+		}
+	}
 }
 
 .play-btn-wrapper {
-    background: url(../img/bg/video-wrapper.png) no-repeat;
-    background-size: cover;
-    display: block;
-    margin: 0 auto;
-    padding-top: 80px;
-    text-align: center;
-    max-width: 337px;
+	background: url(../img/bg/video-wrapper.png) no-repeat;
+	background-size: cover;
+	display: block;
+	margin: 0 auto;
+	padding-top: 80px;
+	text-align: center;
+	max-width: 337px;
 
-    span {
-        @include font-size(40);
-        color: $light-color;
-        font-family: $text-serif;
-        display: block;
-        margin-top: 66px;
-    }
+	span {
+		@include font-size(40);
+		color: $light-color;
+		font-family: $text-serif;
+		display: block;
+		margin-top: 66px;
+	}
 }
 
 .welcome {
-    background: url(../img/bg/main-bg-small.png) no-repeat center bottom;
-    background-size: cover;
-    box-shadow: inset 0px 140px 211px -40px #000;
-    padding: 235px 0 40px;
+	background: url(../img/bg/main-bg-small.png) no-repeat center bottom;
+	background-size: cover;
+	box-shadow: inset 0px 140px 211px -40px #000;
+	padding: 235px 0 40px;
 
 
-    @media (min-width: 766px) {
-        background: url(../img/bg/main-bg.png) no-repeat center bottom;
-        height: 640px;
-        padding-bottom: 0;
-    }
+	@media (min-width: 766px) {
+		background: url(../img/bg/main-bg.png) no-repeat center bottom;
+		height: 640px;
+		padding-bottom: 0;
+	}
 
-    @media (min-width: 1024px) {
-        height: 810px;
-        padding-bottom: 80px;
-    }
+	@media (min-width: 1024px) {
+		height: 810px;
+		padding-bottom: 80px;
+	}
 }
