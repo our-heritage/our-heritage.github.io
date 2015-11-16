@@ -1,16 +1,16 @@
 (function() {
   $(document).ready(function() {
     var count = 0;
-    
+
     enquire.register('screen and (min-width: 768px) and (max-width: 1280px)', {
 
       match : function() {
-        if ($('#game-nav').length > 0) { 
+        if ($('#game-nav').length > 0) {
           navGameScroll();
         }
-        
+
         $('map').imageMapResize();
-      },  
+      },
       unmatch : function() {
         $('#game-nav').removeClass('nav-sticky');
         Waypoint.destroyAll();
@@ -21,7 +21,7 @@
 
       match: function() {
         showAboutInfo();
-        gallerySwipe(count);
+        gallerySwipe();
         menuLang();
         tapCharacter();
         navCreditos();
@@ -37,7 +37,7 @@
         gameScroll();
         charactersModal(count);
         galleryModal(count);
-      },  
+      },
       unmatch : function() {
         $('.gallery-imgs li').off('click');
       }
@@ -65,7 +65,7 @@
   function changeColorCreditos() {
     $('.display').click(function() {
       var id = this.id;
-      
+
       $('.team-content').removeClass('visible');
       $('#team' + id + '').addClass('visible');
     });
@@ -150,14 +150,14 @@
 
     $('.gallery-imgs li').on('click', function() {
       var pictureId = this.id;
-      
+
       showFullPicture(pictureId);
       displayModal('show', gallery);
     });
 
     $('#modal-gallery .previous-arrow').on('click', function() {
       count--;
-      
+
       if (count <= 0) {
         count = 9 - 1;
       }
@@ -176,46 +176,36 @@
     });
   }
 
-  function gallerySwipe(count) {
+  function gallerySwipe() {
     var initNumber = 1,
-      counterNumber,
       itemSwipe = $('.slider-content'),
-      counterSwipe = $('#counter-slider'),
-      contentSwipe = $('#gallery-container'),
-      countIteam = itemSwipe.length - 1;
+      contentSwipe = $('#gallery-container');
 
     contentSwipe.swipe({
-      swipeLeft: function(event, direction, distance, duration, fingerCount) {
-        if (count == countIteam) {
-          $('.first-pic').removeClass('first-pic');
-          $('.slider-content:first').addClass('first-pic');
-          counterNumber = '1';
-          initNumber = 1;
-          count = 0;
-        } else {
+      swipeLeft: function() {
+        if(initNumber != itemSwipe.length){
           $('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
-          counterNumber = initNumber + 1;
-          initNumber = initNumber + 1;
-          count = count + 1;
+            initNumber=initNumber+1;
+        }else{
+           $('.first-pic').removeClass('first-pic')
+           $('.slider-content:first').addClass('first-pic');
+            initNumber=1;
         }
-        $('.counterNumber').text(counterNumber);
+         $('.counterNumber').text(initNumber);
       },
-      swipeRight: function(event, direction, distance, duration, fingerCount) {
-        if (count == 0) {
-          $('.first-pic').removeClass('first-pic');
-          $('.slider-content:last').addClass('first-pic');
-          counterNumber = itemSwipe.length;
-          initNumber = itemSwipe.length;
-          count = countIteam;
-        } else {
-          $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
-          counterNumber = initNumber - 1;
-          initNumber = initNumber - 1;
-          count = count - 1;
-        }
-        $('.counterNumber').text(counterNumber);
+      swipeRight: function() {
+          if(initNumber != 1){
+             $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
+             initNumber=initNumber-1;
+          }else{
+             $('.first-pic').removeClass('first-pic')
+             $('.slider-content:last').addClass('first-pic');
+              initNumber=itemSwipe.length;
+          }
+           $('.counterNumber').text(initNumber);
       },
-      threshold: 0
+      threshold: 0,
+      triggerOnTouchEnd: false
     });
   }
 
