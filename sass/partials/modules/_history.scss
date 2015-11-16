@@ -4,7 +4,8 @@
     width: 90%;
     background: #fff;
 
-    &:before, &:after {
+    &:before,
+    &:after {
       content: "";
       height: 23px;
       width: 100%;
@@ -35,14 +36,14 @@
 
     @media (min-width: 768px) {
       background: url("../img/bg/history-wrapper.png") no-repeat;
-      background-position-x: -32px;
       background-size: 100% 100%;
       margin: 100px auto;
       min-width: 590px;
       padding: 65px 0;
       width: 75%;
 
-      &:before, &:after {
+      &:before,
+      &:after {
         content: none;
       }
     }

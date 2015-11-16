@@ -1,4 +1,5 @@
-.download-mac, .download-win { 
+.download-mac,
+.download-win {
     text-indent: -9999px;
     height: 54px;
     width: 68px;
@@ -13,7 +14,7 @@
 
 .download-section {
     display: none;
-  
+
     @media (min-width: 768px) {
       display: block;
       padding-top: 50px;

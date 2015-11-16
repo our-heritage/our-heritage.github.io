@@ -701,32 +701,47 @@ button:focus:active {
 .lang-item-position-3 {
   top: 205px; }
 
+.game-nav li {
+  height: 27px;
+  line-height: 27px; }
+  @media (min-width: 768px) {
+    .game-nav li {
+      display: inline-block; } }
+  @media (min-width: 1280px) {
+    .game-nav li {
+      display: block;
+      margin-bottom: 35%; } }
+
 .game-nav {
-  display: none; }
+  display: none;
+  text-align: center; }
   .game-nav a {
     font-size: 24px;
     font-size: 2.4rem;
-    padding: 0 20px;
     color: #f2f2f2;
     font-family: "Share Tech", serif;
+    line-height: 27px;
+    margin: 0 50px;
+    position: relative;
+    text-decoration: none;
     text-shadow: 1px 1px 4px #f2f2f2;
     text-transform: uppercase; }
     .game-nav a:before, .game-nav a:after {
       content: '';
       position: absolute;
-      transition: -webkit-transform .5s ease;
-      transition: transform .5s ease;
-      transition: transform .5s ease, -webkit-transform .5s ease; }
+      transition: -webkit-transform .3s ease;
+      transition: transform .3s ease;
+      transition: transform .3s ease, -webkit-transform .3s ease; }
     .game-nav a:before {
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
       background: #24C29F;
+      bottom: 0;
       box-shadow: 10px 10px 10px #24C29F;
+      height: 2px;
+      left: 0;
       -webkit-transform: scaleX(0);
           -ms-transform: scaleX(0);
-              transform: scaleX(0); }
+              transform: scaleX(0);
+      width: 100%; }
     .game-nav a:hover:before {
       -webkit-transform: scaleX(1);
           -ms-transform: scaleX(1);
@@ -734,51 +749,31 @@ button:focus:active {
     @media (min-width: 1280px) {
       .game-nav a {
         font-size: 30px;
-        font-size: 3rem; } }
+        font-size: 3rem;
+        margin: 0; } }
   @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .game-nav {
-      display: block;
       background-color: rgba(0, 0, 0, 0.6);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-      width: 100%;
-      text-align: center;
+      display: block;
+      padding: 10px;
       position: absolute;
+      text-align: center;
       top: 180px;
-      padding: 10px; } }
+      width: 100%; } }
   @media (min-width: 1280px) {
     .game-nav {
       display: block;
-      position: fixed;
-      margin-top: 13%;
-      margin-left: 7%; } }
-
-.game-nav li {
-  display: inline-block; }
-  @media (min-width: 1280px) {
-    .game-nav li {
-      text-align: center;
-      height: 44px;
-      margin: 19% 0;
-      display: block; } }
-
-.list-game {
-  text-align: center; }
-
-.list-game-item {
-  margin: 20px 40px; }
-  @media (min-width: 768px) {
-    .list-game-item {
-      display: inline-block; } }
-  @media (min-width: 1280px) {
-    .list-game-item {
-      display: block; } }
+      margin-left: 4%;
+      margin-top: 15%;
+      position: fixed; } }
 
 .nav-sticky {
   margin-top: 0;
   position: fixed;
   top: 0;
-  z-index: 2;
-  width: 100%; }
+  width: 100%;
+  z-index: 2; }
 
 .show-menu {
   font-size: 14px;
@@ -949,7 +944,8 @@ header {
     .embed-container embed {
       top: 0; } }
 
-.download-mac, .download-win {
+.download-mac,
+.download-win {
   text-indent: -9999px;
   height: 54px;
   width: 68px;
@@ -957,7 +953,8 @@ header {
   display: inline-block;
   vertical-align: -webkit-baseline-middle;
   margin-left: 15px; }
-  .download-mac:hover, .download-win:hover {
+  .download-mac:hover,
+  .download-win:hover {
     background-color: #24C29F; }
 
 .download-section {
@@ -1131,7 +1128,6 @@ header {
   @media (min-width: 768px) {
     .history-section {
       background: url("../img/bg/history-wrapper.png") no-repeat;
-      background-position-x: -32px;
       background-size: 100% 100%;
       margin: 100px auto;
       min-width: 590px;
