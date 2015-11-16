@@ -12,14 +12,6 @@
 	max-width: 993px;
 }
 
-.close-tap {
-  	float: right;
-  	margin: 5% 0;
-  	@media (min-width: 768px) {
-		display: none;
-  	}
-}
-
 .char-details {
 	color: $light-color;
 	margin: 2% auto;
@@ -108,12 +100,13 @@
 	}
 
 	li {
-		background-color: $unactive-color;
-		border-bottom: 1px solid $light-color;
+		background-color: #fff;
 	}
 
 	h3 {
+    color: #fff;
 		font-family: $text-serif;
+    @include font-size(30);
 		float: right;
 		text-align: right;
 		margin-top: -65px;
@@ -127,7 +120,7 @@
 }
 
 .tap-info {
-	background: $light-color;
+	background: #fff;
 	color: $dark-color;
 	display: block;
 	height: auto;
@@ -138,7 +131,7 @@
 	width: 100%;
 
 	p {
-		margin: 16px 0;
+		margin: 16px auto;
 		padding: 0;
 		width: 90%;
 	}

@@ -2,6 +2,14 @@ section {
     overflow: hidden;
 }
 
+.game-container {
+
+    @media (min-width: 768px) {
+      background-image: url(../img/bg/desktop-bg.png);
+      box-shadow: inset 0 85px 235px 102px rgba(49, 26, 4, .8);
+    }
+}
+
 .game-wrapper {
   width: 100%;
   padding-top: 50px;

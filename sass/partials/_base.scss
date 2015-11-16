@@ -13,14 +13,6 @@ body {
     box-sizing: inherit;
 }
 
-.mobil-game-wrapper {
-    display: block;
-
-    @media (min-width: 768px) {
-        display: none;
-    }
-}
-
 .ui-loading .ui-loader, 
 .ui-loader {
     display: none;
@@ -28,21 +20,18 @@ body {
 
 // Modal Desktop
 .modal {
-    display: none;
-    @media (min-width: 768px) {
-      transition: .10s;
-      background-color: rgba(0, 0, 0, .9);
-      display: block;
-      height: 100%;
-      left: 0;
-      opacity: 1;
-      padding: 5% 0;
-      position: fixed;
-      text-align: center;
-      top: 0;
-      width: 100%;
-      z-index: 999;
-    }
+    transition: .10s;
+    background-color: rgba(0, 0, 0, .9);
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    padding: 5% 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .hidden {
@@ -53,42 +42,13 @@ body {
     opacity: 0;
 }
 
-.download-mac, .download-win { 
-    text-indent: -9999px;
-    height: 54px;
-    width: 68px;
-    border-radius: 12px;
-    display: inline-block;
-    vertical-align: -webkit-baseline-middle;
-    margin-left: 15px;
-    &:hover {
-      background-color: $main-color;
-    }
-}
-
-.download-section {
-    display: none;
-  
-    @media (min-width: 768px) {
-      display: block;
-      padding-top: 50px;
-      div {
-        width: 438px;
-        margin: 0 auto;
-      }
-      p, span {
-        text-transform: uppercase;
-        font-family: $text-serif;
-        color: $light-color;
-        @include font-size(30);
-        vertical-align: middle;
-        text-align: center;
-      }
-  }
-}
-
 .section-title {
   display: block;
+  border-bottom: 5px solid $main-color;
+  width: 80%;
+  margin: 50px auto;
+  color: #fff;
+
   @media (min-width: 768px) {
     display: none;
   }

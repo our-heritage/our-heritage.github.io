@@ -367,32 +367,23 @@ body {
 *:after {
   box-sizing: inherit; }
 
-.mobil-game-wrapper {
-  display: block; }
-  @media (min-width: 768px) {
-    .mobil-game-wrapper {
-      display: none; } }
-
 .ui-loading .ui-loader,
 .ui-loader {
   display: none; }
 
 .modal {
-  display: none; }
-  @media (min-width: 768px) {
-    .modal {
-      transition: .10s;
-      background-color: rgba(0, 0, 0, 0.9);
-      display: block;
-      height: 100%;
-      left: 0;
-      opacity: 1;
-      padding: 5% 0;
-      position: fixed;
-      text-align: center;
-      top: 0;
-      width: 100%;
-      z-index: 999; } }
+  transition: .10s;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  padding: 5% 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 999; }
 
 .hidden {
   display: none; }
@@ -400,43 +391,23 @@ body {
 .hidden-image {
   opacity: 0; }
 
-.download-mac, .download-win {
-  text-indent: -9999px;
-  height: 54px;
-  width: 68px;
-  border-radius: 12px;
-  display: inline-block;
-  vertical-align: -webkit-baseline-middle;
-  margin-left: 15px; }
-  .download-mac:hover, .download-win:hover {
-    background-color: #24C29F; }
-
-.download-section {
-  display: none; }
-  @media (min-width: 768px) {
-    .download-section {
-      display: block;
-      padding-top: 50px; }
-      .download-section div {
-        width: 438px;
-        margin: 0 auto; }
-      .download-section p, .download-section span {
-        text-transform: uppercase;
-        font-family: "Share Tech", serif;
-        color: #f2f2f2;
-        font-size: 30px;
-        font-size: 3rem;
-        vertical-align: middle;
-        text-align: center; } }
-
 .section-title {
-  display: block; }
+  display: block;
+  border-bottom: 5px solid #24C29F;
+  width: 80%;
+  margin: 50px auto;
+  color: #fff; }
   @media (min-width: 768px) {
     .section-title {
       display: none; } }
 
 section {
   overflow: hidden; }
+
+@media (min-width: 768px) {
+  .game-container {
+    background-image: url(../img/bg/desktop-bg.png);
+    box-shadow: inset 0 85px 235px 102px rgba(49, 26, 4, 0.8); } }
 
 .game-wrapper {
   width: 100%;
@@ -920,10 +891,6 @@ header {
         display: block;
         max-width: 544px; } }
 
-.game-container {
-  background-image: url(../img/bg/desktop-bg.png);
-  box-shadow: inset 0px 85px 235px 102px rgba(49, 26, 4, 0.8); }
-
 .play-btn-wrapper {
   background: url(../img/bg/video-wrapper.png) no-repeat;
   background-size: cover;
@@ -955,25 +922,61 @@ header {
       height: 810px;
       padding-bottom: 80px; } }
 
-@media (min-width: 1280px) {
-  .teaser.modal {
-    padding: 5% 15%; } }
-
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%; }
+  @media (min-width: 1024px) {
+    .embed-container {
+      padding-bottom: 0;
+      margin: 0 auto;
+      max-width: 880px;
+      height: 80%; } }
 
 .embed-container iframe,
 .embed-container object,
 .embed-container embed {
   position: absolute;
-  top: 50px;
+  top: 70px;
   left: 0;
   width: 100%;
   height: 100%; }
+  @media (min-width: 1024px) {
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      top: 0; } }
+
+.download-mac, .download-win {
+  text-indent: -9999px;
+  height: 54px;
+  width: 68px;
+  border-radius: 12px;
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  margin-left: 15px; }
+  .download-mac:hover, .download-win:hover {
+    background-color: #24C29F; }
+
+.download-section {
+  display: none; }
+  @media (min-width: 768px) {
+    .download-section {
+      display: block;
+      padding-top: 50px; }
+      .download-section div {
+        width: 438px;
+        margin: 0 auto; }
+      .download-section p, .download-section span {
+        text-transform: uppercase;
+        font-family: "Share Tech", serif;
+        color: #f2f2f2;
+        font-size: 30px;
+        font-size: 3rem;
+        vertical-align: middle;
+        text-align: center; } }
 
 .download-section:before {
   content: "";
@@ -983,24 +986,15 @@ header {
   background: url(../img/bg/about-frame.png) center bottom;
   margin-top: -72px; }
 
-.about-image img {
-  position: absolute;
-  right: 0; }
-  @media (min-width: 1100px) {
-    .about-image img {
-      width: 100%; } }
-
 .about-image {
   margin: 20px auto;
   overflow: hidden;
   position: relative;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .45s ease-in-out;
   z-index: 1; }
   @media (min-width: 768px) {
     .about-image {
-      margin: 0; }
-      .about-image:after {
-        content: ""; } }
+      margin: 0; } }
   @media (min-width: 1100px) {
     .about-image {
       width: 52%; }
@@ -1019,11 +1013,9 @@ header {
             -ms-transform: rotate(-5deg);
                 transform: rotate(-5deg);
         left: 60px; } }
-
-.about-image > :first-child {
-  position: relative;
-  transition: opacity 1s ease-in-out;
-  z-index: 1; }
+  @media (min-width: 1100px) {
+    .about-image img {
+      width: 100%; } }
 
 .about-section li {
   margin: 0 auto;
@@ -1059,11 +1051,16 @@ header {
   text-shadow: 1px 1px 4px #f2f2f2;
   text-transform: uppercase;
   z-index: 3; }
+  .about-content h3:after {
+    content: "+";
+    margin-left: 18px; }
   @media (min-width: 768px) {
     .about-content h3 {
       background-color: transparent;
       margin-bottom: 0;
-      padding: 2% 4%; } }
+      padding: 2% 4%; }
+      .about-content h3:after {
+        content: none; } }
 
 .about-content p {
   font-size: 14px;
@@ -1104,16 +1101,25 @@ header {
         margin-left: 24px; } }
 
 .history-section {
-  background: url("../img/bg/history-wrapper.png") no-repeat;
-  background-position-x: -32px;
-  background-size: 100% 100%;
   margin: 50px auto;
   padding: 15px 0;
-  width: 90%; }
+  width: 90%;
+  background: #fff; }
+  .history-section:before, .history-section:after {
+    content: "";
+    height: 23px;
+    width: 100%;
+    position: absolute;
+    background: url(../img/bg/about-frame.png) center bottom; }
+  .history-section:before {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    margin-top: -20px; }
   .history-section h2 {
     color: #24C29F;
     margin: 0 auto;
-    padding-bottom: 30px;
+    padding: 30px 0;
     text-transform: uppercase;
     width: 75%; }
   .history-section p {
@@ -1124,10 +1130,15 @@ header {
     width: 75%; }
   @media (min-width: 768px) {
     .history-section {
+      background: url("../img/bg/history-wrapper.png") no-repeat;
+      background-position-x: -32px;
+      background-size: 100% 100%;
       margin: 100px auto;
       min-width: 590px;
       padding: 65px 0;
-      width: 75%; } }
+      width: 75%; }
+      .history-section:before, .history-section:after {
+        content: none; } }
   @media (min-width: 1280px) {
     .history-section {
       margin: 0 auto 100px auto;
@@ -1145,13 +1156,6 @@ header {
   margin: 5% auto;
   overflow: hidden;
   max-width: 993px; }
-
-.close-tap {
-  float: right;
-  margin: 5% 0; }
-  @media (min-width: 768px) {
-    .close-tap {
-      display: none; } }
 
 .char-details {
   color: #f2f2f2;
@@ -1225,10 +1229,12 @@ header {
     .taps-character {
       display: none; } }
   .taps-character li {
-    background-color: #8E8A8A;
-    border-bottom: 1px solid #f2f2f2; }
+    background-color: #fff; }
   .taps-character h3 {
+    color: #fff;
     font-family: "Share Tech", serif;
+    font-size: 30px;
+    font-size: 3rem;
     float: right;
     text-align: right;
     margin-top: -65px;
@@ -1238,7 +1244,7 @@ header {
     width: 100%; }
 
 .tap-info {
-  background: #f2f2f2;
+  background: #fff;
   color: #363434;
   display: block;
   height: auto;
@@ -1248,7 +1254,7 @@ header {
   transition: max-height .9s ease-in-out;
   width: 100%; }
   .tap-info p {
-    margin: 16px 0;
+    margin: 16px auto;
     padding: 0;
     width: 90%; }
 
@@ -1258,7 +1264,13 @@ header {
 
 .counter-slider {
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  color: #fff;
+  background: #24c29f;
+  padding-top: 15px; }
+  .counter-slider p {
+    font-size: 20px;
+    font-size: 2rem; }
   @media (min-width: 768px) {
     .counter-slider {
       display: none; } }

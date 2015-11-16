@@ -1,6 +1,13 @@
 .counter-slider {
 	text-align: center;
 	width: 100%;
+  color: #fff;
+  background: rgb(36, 194, 159);
+  padding-top: 15px;
+
+  p {
+    @include font-size(20);
+  }
 
 	@media (min-width: 768px) {
 		display: none;
