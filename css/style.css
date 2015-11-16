@@ -499,13 +499,13 @@ button:focus:active {
       display: none; } }
 
 .close {
-  background-position: -45px 4px;
-  height: 51px;
+  background-position: -42px 4px;
+  height: 52px;
   margin: 30px 40px;
   position: absolute;
   right: 0;
   top: 0;
-  width: 50px;
+  width: 51px;
   z-index: 1; }
   .close:hover {
     background-position: -201px -4px; }
@@ -587,7 +587,7 @@ button:focus:active {
   font-size: 1.8rem;
   display: inline-block;
   margin-left: 10px;
-  transition: all .5s ease; }
+  transition: all .35s ease; }
   @media (min-width: 768px) {
     .main-nav li {
       font-size: 20px;
@@ -599,14 +599,12 @@ button:focus:active {
     font-family: "Share Tech", serif;
     padding: 5px;
     text-decoration: none;
-    text-shadow: 1px 1px 4px #f2f2f2;
     text-transform: uppercase; }
     @media (min-width: 768px) {
       .main-nav li a {
         padding: 10px; } }
-    .main-nav li a:hover {
-      color: #24C29F;
-      text-shadow: 1px 1px 4px #24C29F; }
+  .main-nav li:hover {
+    background: #24C29F; }
 
 .main-nav {
   display: block;
@@ -649,7 +647,7 @@ button:focus:active {
   position: absolute;
   text-align: center;
   top: -11px;
-  transition: all 1s ease; }
+  transition: all .45s ease; }
   @media (min-width: 768px) {
     .list-lang-item {
       display: inline-block;
@@ -666,8 +664,7 @@ button:focus:active {
   color: #f2f2f2;
   font-family: "Share Tech", serif;
   text-decoration: none;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 4px #f2f2f2; }
+  text-transform: uppercase; }
 
 .list-lang li:first-child + li {
   -webkit-transform: rotate(10deg);
@@ -724,7 +721,6 @@ button:focus:active {
     margin: 0 50px;
     position: relative;
     text-decoration: none;
-    text-shadow: 1px 1px 4px #f2f2f2;
     text-transform: uppercase; }
     .game-nav a:before, .game-nav a:after {
       content: '';
@@ -884,7 +880,7 @@ header {
         left: 36%;
         max-width: 544px;
         position: absolute;
-        top: 20px; } }
+        top: 15px; } }
 
 .play-btn-wrapper {
   background: url(../img/bg/video-wrapper.png) no-repeat;
@@ -909,7 +905,7 @@ header {
   padding: 235px 0 40px; }
   @media (min-width: 766px) {
     .welcome {
-      background: url(../img/bg/main-bg.png) no-repeat center bottom;
+      background: url(../img/bg/main-bg.jpg) no-repeat center bottom;
       height: 640px;
       padding-bottom: 0; } }
   @media (min-width: 1024px) {
@@ -1046,7 +1042,6 @@ header {
   margin-bottom: 10px;
   padding: 3%;
   position: relative;
-  text-shadow: 1px 1px 4px #f2f2f2;
   text-transform: uppercase;
   z-index: 3; }
   .about-content h3:after {
@@ -1069,7 +1064,6 @@ header {
       font-size: 1.6rem;
       padding: 2% 4%;
       position: relative;
-      text-shadow: 1px 1px 4px #f2f2f2;
       z-index: 3; } }
 
 .about-content {
@@ -1099,7 +1093,7 @@ header {
         margin-left: 24px; } }
 
 .history-section {
-  background: #fff;
+  background: #F1E3D6;
   margin: 50px auto;
   padding: 15px 0;
   width: 90%; }
@@ -1179,7 +1173,18 @@ header {
     width: 55%; }
   .char-details img {
     position: absolute;
-    right: 64%; }
+    right: 64%;
+    /* &:before {
+			content:'';
+			position: absolute;
+			bottom: -50px;
+			left:20px;
+			width: 210px;
+			height: 30px;
+			background: #333;
+			border-radius: 200px / 30px;
+			box-shadow: 0 0 10px 10px #333;
+		} */ }
 
 .main-char-selection img {
   width: 100%; }

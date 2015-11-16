@@ -28,7 +28,7 @@
 	@include font-size(18);
 	display: inline-block;
 	margin-left: 10px;
-	transition: all .5s ease;
+	transition: all .35s ease;
 
 	@media (min-width: 768px) {
 		@include font-size(20);
@@ -41,17 +41,15 @@
 		font-family: $text-serif;
 		padding: 5px;
 		text-decoration: none;
-		text-shadow: 1px 1px 4px $light-color;
 		text-transform: uppercase;
 
 		@media (min-width: 768px) {
 			padding: 10px;
 		}
+	}
 
-		&:hover {
-			color: $main-color;
-			text-shadow: 1px 1px 4px $main-color;
-		}
+	&:hover {
+		background: $main-color;
 	}
 }
 

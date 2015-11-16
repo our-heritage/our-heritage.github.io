@@ -38,7 +38,7 @@
 	position: absolute;
 	text-align: center;
 	top: -11px;
-	transition: all 1s ease;
+	transition: all .45s ease;
 
 	@media(min-width: 768px){
 		display:inline-block;
@@ -61,7 +61,6 @@
 	font-family: $text-serif;
 	text-decoration: none;
 	text-transform: uppercase;
-	text-shadow: 1px 1px 4px $light-color;
 }
 
 .list-lang li:first-child + li {

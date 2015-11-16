@@ -75,7 +75,6 @@
 	margin-bottom: 10px;
 	padding: 3%;
 	position: relative;
-	text-shadow: 1px 1px 4px $light-color;
 	text-transform: uppercase;
 	z-index: 3;
 
@@ -101,7 +100,6 @@
 		@include font-size(16);
 		padding: 2% 4%;
 		position: relative;
-		text-shadow: 1px 1px 4px $light-color;
 		z-index: 3;
 	}
 }
