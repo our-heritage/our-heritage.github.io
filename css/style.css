@@ -170,6 +170,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -298,6 +299,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -667,24 +670,16 @@ button:focus:active {
   text-transform: uppercase; }
 
 .list-lang li:first-child + li {
-  -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:first-child + li {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
 
 .list-lang li:last-child {
-  -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:last-child {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
 
 .lang-item-position-0 {
   top: 42px; }
@@ -725,23 +720,17 @@ button:focus:active {
     .game-nav a:before, .game-nav a:after {
       content: '';
       position: absolute;
-      transition: -webkit-transform .3s ease;
-      transition: transform .3s ease;
-      transition: transform .3s ease, -webkit-transform .3s ease; }
+      transition: transform .3s ease; }
     .game-nav a:before {
       background: #24C29F;
       bottom: 0;
       box-shadow: 10px 10px 10px #24C29F;
       height: 2px;
       left: 0;
-      -webkit-transform: scaleX(0);
-          -ms-transform: scaleX(0);
-              transform: scaleX(0);
+      transform: scaleX(0);
       width: 100%; }
     .game-nav a:hover:before {
-      -webkit-transform: scaleX(1);
-          -ms-transform: scaleX(1);
-              transform: scaleX(1); }
+      transform: scaleX(1); }
     @media (min-width: 1280px) {
       .game-nav a {
         font-size: 30px;
@@ -994,14 +983,10 @@ header {
         z-index: 0; }
       .about-image.right {
         left: -60px;
-        -webkit-transform: rotate(5deg);
-            -ms-transform: rotate(5deg);
-                transform: rotate(5deg); }
+        transform: rotate(5deg); }
       .about-image.left {
         left: 60px;
-        -webkit-transform: rotate(-5deg);
-            -ms-transform: rotate(-5deg);
-                transform: rotate(-5deg); } }
+        transform: rotate(-5deg); } }
   @media (min-width: 1100px) {
     .about-image img {
       width: 100%; } }
@@ -1100,9 +1085,7 @@ header {
     width: 100%; }
   .history-section:before {
     margin-top: -20px;
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    transform: rotate(180deg); }
   .history-section h2 {
     color: #24C29F;
     margin: 0 auto;
@@ -1321,9 +1304,7 @@ header {
     vertical-align: top;
     width: 33%; }
     .gallery-imgs li:hover {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
   @media (min-width: 768px) and (max-width: 1024px) {
     .gallery-imgs li {
       padding: 5px 5px 25px; } }
@@ -1332,68 +1313,59 @@ header {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
+
   .gallery-imgs .pic-1 {
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
+    transform: rotate(-10deg); }
+
   .gallery-imgs .pic-2 {
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg);
+    transform: rotate(10deg);
     margin-top: 20px; }
+
   .gallery-imgs .pic-3 {
     left: 5px;
     margin-top: -25px;
     position: relative;
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
+    transform: rotate(-10deg); }
+
   .gallery-imgs .pic-4 {
     margin-top: -10px;
-    -webkit-transform: rotate(-15deg);
-        -ms-transform: rotate(-15deg);
-            transform: rotate(-15deg); }
+    transform: rotate(-15deg); }
+
   .gallery-imgs .pic-5 {
     right: 15px;
     position: relative;
-    -webkit-transform: rotate(-8deg);
-        -ms-transform: rotate(-8deg);
-            transform: rotate(-8deg); }
+    transform: rotate(-8deg); }
+
   .gallery-imgs .pic-6 {
     left: 5px;
     margin-top: -22px;
     position: relative;
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg); }
+    transform: rotate(10deg); }
+
   .gallery-imgs .pic-7 {
     margin-top: -40px;
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg); }
+    transform: rotate(10deg); }
+
   .gallery-imgs .pic-8 {
     margin-top: 25px;
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
+    transform: rotate(-10deg); }
+
   .gallery-imgs .pic-9 {
     margin-top: -60px;
-    -webkit-transform: rotate(15deg);
-        -ms-transform: rotate(15deg);
-            transform: rotate(15deg); }
+    transform: rotate(15deg); }
+
   .full-picture {
     height: 100%;
     max-width: 80%;
     text-align: center; } }
-
 .spon-list li {
   margin-top: 55px;
-  margin-right: 5px;
   width: 100%; }
   @media (min-width: 1100px) {
     .spon-list li {
       display: inline-block;
-      width: auto; } }
+      width: auto;
+      margin-right: 15px; } }
 
 .spon-list {
   margin: 0 auto;
@@ -1573,11 +1545,15 @@ header {
   display: inline-block; }
 
 footer {
-  background: #A5BBD1 url(../img/bg/footer.png) center bottom repeat-x;
   clear: both;
   color: #fff;
+  height: 400px;
   overflow: hidden;
-  padding: 200px 0 300px; }
+  background: #A5BBD1 url(../img/bg/footer-mobile.png) center bottom repeat-x; }
+  @media (min-width: 1100px) {
+    footer {
+      height: 600px;
+      background: #A5BBD1 url(../img/bg/footer.png) center bottom repeat-x; } }
 
 footer a {
   border-bottom: 2px solid #F2CD77;
@@ -1596,12 +1572,16 @@ footer p {
       font-size: 2rem; } }
 
 .footer-content {
-  margin: 0 auto;
+  margin: 200px auto;
   max-width: 650px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   text-align: center; }
+  @media (min-width: 1100px) {
+    .footer-content {
+      margin: 400px auto; } }
 
 .footer-game {
   background-color: transparent;
   color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
