@@ -20,7 +20,6 @@
 	width: 80%;
 	@media (min-width: 1024px) {
 		height: 583px;
-		margin: 5% auto;
 		max-width: 900px;
 	}
 
@@ -41,7 +40,8 @@
 
 	img {
 		position: absolute;
-		right: 64%;
+		right: 62%;
+		top: 4%;
 	}
 }
 
@@ -65,12 +65,11 @@
 
 .char-selection {
 	position: absolute;
-	top: 593px;
+	top: 62%;
 	width: 100%;
 	@media (min-width: 1280px) {
 		text-align: right;
-		margin-top: 30px;
-		width: 85%;
+		width: 82%;
 	}
 }
 
