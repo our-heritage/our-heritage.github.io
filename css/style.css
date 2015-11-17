@@ -1499,7 +1499,9 @@ header {
       padding: 14% 0 8% 0; } }
 
 .team-section-wrapper {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
 
 .team-content {
   box-sizing: border-box;
@@ -1543,12 +1545,11 @@ header {
 
 .team-credits {
   float: left;
-  height: auto;
-  max-height: 100%;
+  height: 100%;
   padding: 4%;
   width: 100%; }
   .team-credits h3 {
-    padding: 1em 0 0.5em; }
+    padding: 0 0 0.5em; }
   .team-credits li {
     font-size: 16px;
     font-size: 1.6rem;
@@ -1557,30 +1558,33 @@ header {
     font-size: 14px;
     font-size: 1.4rem;
     text-decoration: underline; }
-    .team-credits a:hover {
-      color: #f2f2f2; }
   @media (min-width: 1024px) {
     .team-credits {
-      float: right;
       height: 1024px;
       overflow: auto;
-      position: relative;
-      width: 50%; } }
+      padding: 4% 4% 4% 54%;
+      width: 102%; } }
 
 .team-cetav {
   background-color: #fff; }
   .team-cetav .team-details {
     background: #ed912e; }
+  .team-cetav .team-credits a:hover {
+    color: #d67812; }
 
 .team-fair {
   background-color: #fff; }
   .team-fair .team-details {
     background: #67be50; }
+  .team-fair .team-credits a:hover {
+    color: #50A03B; }
 
 .team-advisors {
   background-color: #fff; }
   .team-advisors .team-details {
     background: #3c94cc; }
+  .team-advisors .team-credits a:hover {
+    color: #2C78A9; }
 
 .visible {
   display: inline-block; }
