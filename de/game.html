@@ -5,7 +5,7 @@
     <!-- Apliquen lo que invesyigaron sobre SEO, mejores titles, meta description etc-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script>
     document.createElement("picture");
     </script>
@@ -17,17 +17,18 @@
       <div class="content-lang">
         <span class="close-lang"></span>
         <ul class="list-lang" id="list-lang">
-          <li class="list-lang-item"><a href="en.html">en</a></li>
-          <li class="list-lang-item selected"><a href="#">es</a></li>
-          <li class="list-lang-item"><a href="fr.html">fr</a></li>
-          <li class="list-lang-item"><a href="de.html">de</a></li>
+          <li class="list-lang-item"><a href="../game.html">en</a></li>
+          <li class="list-lang-item"><a href="../es/game.html">es</a></li>
+          <li class="list-lang-item"><a href="../fr/game.html">fr</a></li>
+          <li class="list-lang-item selected"><a href="#">de</a></li>
+          <!-- aplican los comentarios que estan en el index.html -->
         </ul>
       </div>
       <nav class="main-nav">
-        <a class="logo-nav" href="#"><img src="img/logo-nav.png"></a>
+        <a class="logo-nav" href="#"><img src="../img/logo-nav.png"></a>
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="juego.html">Juego</a></li>
+          <li><a href="game.html">Juego</a></li>
         </ul>
       </nav>
     </header>
@@ -54,9 +55,9 @@
         <li>
           <div class="tap-banner-amy">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/characters/body-amy.png">
-              <source media="(max-width: 768px)" srcset="img/characters/tap-amy.png">
-              <img srcset="img/characters/body-amy.png" alt="Imagen de Amy">
+              <source media="(min-width: 768px)" srcset="../img/characters/body-amy.png">
+              <source media="(max-width: 768px)" srcset="../img/characters/tap-amy.png">
+              <img srcset="../img/characters/body-amy.png" alt="Imagen de Amy">
             </picture>
             <h3>Amy</h3>
           </div>
@@ -68,9 +69,9 @@
         <li>
           <div class="tap-banner-mom">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/characters/body-mom.png">
-              <source media="(max-width: 768px)" srcset="img/characters/tap-mom.png">
-              <img srcset="img/characters/body-mom.png" alt="Imagen de la Mamá">
+              <source media="(min-width: 768px)" srcset="../img/characters/body-mom.png">
+              <source media="(max-width: 768px)" srcset="../img/characters/tap-mom.png">
+              <img srcset="../img/characters/body-mom.png" alt="Imagen de la Mamá">
             </picture>
             <h3>Mamá</h3>
           </div>
@@ -83,9 +84,9 @@
         <li>
           <div class="tap-banner-dad">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/characters/body-dad.png">
-              <source media="(max-width: 768px)" srcset="img/characters/tap-dad.png">
-              <img srcset="img/characters/body-dad.png" alt="Imagen del Papá">
+              <source media="(min-width: 768px)" srcset="../img/characters/body-dad.png">
+              <source media="(max-width: 768px)" srcset="../img/characters/tap-dad.png">
+              <img srcset="../img/characters/body-dad.png" alt="Imagen del Papá">
             </picture>
             <h3>Papá</h3>
           </div>
@@ -97,9 +98,9 @@
         <li>
           <div class="tap-banner-gramps">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/characters/body-gramps.png">
-              <source media="(max-width: 768px)" srcset="img/characters/tap-gramps.png">
-              <img srcset="img/characters/body-gramps.png" alt="Imagen del Abuelo">
+              <source media="(min-width: 768px)" srcset="../img/characters/body-gramps.png">
+              <source media="(max-width: 768px)" srcset="../img/characters/tap-gramps.png">
+              <img srcset="../img/characters/body-gramps.png" alt="Imagen del Abuelo">
             </picture>
             <h3>Abuelo</h3>
           </div>
@@ -114,7 +115,7 @@
        <!-- hover sobre personajes -->
         <div class="characters-wrapper">
           <div class="main-char-selection">
-            <img src="img/characters/family-photo.png" border="0" usemap="#Map" />
+            <img src="../img/characters/family-photo.png" border="0" usemap="#Map" />
             <map name="Map" id="Map">
               <area class="char_btn" alt="Amy" title="Amy" name="amy" shape="poly" coords="461,590,422,548,463,505,480,422,458,405,476,320,535,320,569,393,537,420,553,479,543,604,454,605" />
               <area class="char_btn" alt="Abuelo" title="Abuelo" name="gramps" shape="poly" coords="627,601,581,457,577,356,619,248,694,194,742,315,786,380,787,437,745,450,738,598" />
@@ -133,19 +134,19 @@
         <div class="char-details" id="char-details"></div>
         <div class="char-selection">
           <span class="char_btn preview-char" name="amy">
-            <img src="img/characters/head-amy.png">
+            <img src="../img/characters/head-amy.png">
             <h4>Amy</h4>
           </span>
           <span class="char_btn preview-char" name="mom">
-            <img src="img/characters/head-mom.png">
+            <img src="../img/characters/head-mom.png">
             <h4>Mamá</h4>
           </span>
           <span class="char_btn preview-char" name="dad">
-            <img src="img/characters/head-dad.png">
+            <img src="../img/characters/head-dad.png">
             <h4>Papá</h4>
           </span>
           <span class="char_btn preview-char" name="gramps">
-            <img src="img/characters/head-gramps.png">
+            <img src="../img/characters/head-gramps.png">
             <h4>Abuelo</h4>
           </span>
         </div>
@@ -156,31 +157,31 @@
         <div id="gallery-container" class="gallery-container">
           <ul id="slider" class="gallery-imgs">
             <li class="slider-content first-pic pic-1" id="pic-1">
-              <img src="img/gallery/pic-1.jpg" class="slider-image">
+              <img src="../img/gallery/pic-1.jpg" class="slider-image">
             </li>
             <li class="slider-content pic-2" id="pic-2">
-              <img src="img/gallery/pic-2.jpg" class="slider-image">
+              <img src="../img/gallery/pic-2.jpg" class="slider-image">
             </li>
             <li class="slider-content pic-3" id="pic-3">
-              <img src="img/gallery/pic-3.jpg" class="slider-image">
+              <img src="../img/gallery/pic-3.jpg" class="slider-image">
             </li>
             <li class="slider-content pic-4" id="pic-4">
-              <img src="img/gallery/pic-4.jpg" class="slider-image">
+              <img src="../img/gallery/pic-4.jpg" class="slider-image">
             </li>
             <li class="slider-content pic-5" id="pic-5">
-              <img src="img/gallery/pic-5.jpg" class="slider-image">
+              <img src="../img/gallery/pic-5.jpg" class="slider-image">
             </li>
             <li class="slider-content pic-6" id="pic-6">
-              <img src="img/gallery/pic-6.jpg" class="slider-image">
+              <img src="../img/gallery/pic-6.jpg" class="slider-image">
             </li>
             <li class="slider-content pic-7" id="pic-7">
-              <img src="img/gallery/pic-7.jpg" class="slider-image">
+              <img src="../img/gallery/pic-7.jpg" class="slider-image">
             </li>
             <li class="slider-content pic-8" id="pic-8">
-              <img src="img/gallery/pic-8.jpg" class="slider-image">
+              <img src="../img/gallery/pic-8.jpg" class="slider-image">
             </li>
             <li class="slider-content pic-9" id="pic-9">
-              <img src="img/gallery/pic-9.jpg" class="slider-image">
+              <img src="../img/gallery/pic-9.jpg" class="slider-image">
             </li>
           </ul>
         </div>
@@ -201,11 +202,11 @@
     <footer>
       <section class="footer-content">
         <p>Jugá y descubrí la experiencia climática del 2050.</p>
-        <p>Este proyecto fue desarrollado por un <a href="creditos.html" title="Creditos">equipo interdisciplinario</a>, gracias a todos por aportar su tiempo, recursos y conocimiento.</p>
+        <p>Este proyecto fue desarrollado por un <a href="credits.html" title="Creditos">equipo interdisciplinario</a>, gracias a todos por aportar su tiempo, recursos y conocimiento.</p>
         <p>&copy; 2015 Our Heritage</p>
       </section>
     </footer>
-    <script type="text/javascript" src="js/vendors.min.js"></script>
-    <script type="text/javascript" src="js/main.min.js"></script>
+    <script type="text/javascript" src="../js/vendors.min.js"></script>
+    <script type="text/javascript" src="../js/main.min.js"></script>
   </body>
 </html>
