@@ -3,6 +3,7 @@
 
 	@media (min-width: 768px) {
 		display: block;
+		position:relative;
 	}
 }
 
@@ -141,4 +142,24 @@
 .tap-expand-info {
 	height: 100%;
 	max-height: 480px;
+}
+
+.content-name{
+    position: absolute;
+}
+.amy{
+	top: 480px;
+  left: 560px;
+}
+.mom{
+	top: 305px;
+  left: 410px;
+}
+.dad{
+	top: 295px;
+  left: 560px;
+}
+.gramps{
+	top: 405px;
+  left: 715px;
 }

@@ -37,6 +37,7 @@
         gameScroll();
         charactersModal(count);
         galleryModal(count);
+        characterHover();
       },
       unmatch : function() {
         $('.gallery-imgs li').off('click');
@@ -289,5 +290,17 @@
       player.html('');
     });
   }
+  function characterHover(){
+      var character,
+          className;
 
+      $("area").hover(function(){
+        character = $(this).attr("title");
+        className = $(this).attr("name");
+        $("."+className+">h2").text(character);
+      },function(){
+        $("."+className+">h2").text("");
+    });
+
+  }
 }());
