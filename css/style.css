@@ -1173,18 +1173,7 @@ header {
     width: 55%; }
   .char-details img {
     position: absolute;
-    right: 64%;
-    /* &:before {
-			content:'';
-			position: absolute;
-			bottom: -50px;
-			left:20px;
-			width: 210px;
-			height: 30px;
-			background: #333;
-			border-radius: 200px / 30px;
-			box-shadow: 0 0 10px 10px #333;
-		} */ }
+    right: 64%; }
 
 .main-char-selection img {
   width: 100%; }
@@ -1203,7 +1192,7 @@ header {
 
 .char-selection {
   position: absolute;
-  top: 500px;
+  top: 593px;
   width: 100%; }
   @media (min-width: 1280px) {
     .char-selection {

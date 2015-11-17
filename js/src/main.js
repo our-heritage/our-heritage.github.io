@@ -1,16 +1,16 @@
 (function() {
   $(document).ready(function() {
     var count = 0;
-    
+
     enquire.register('screen and (min-width: 768px) and (max-width: 1280px)', {
 
       match : function() {
-        if ($('#game-nav').length > 0) { 
+        if ($('#game-nav').length > 0) {
           navGameScroll();
         }
-        
+
         $('map').imageMapResize();
-      },  
+      },
       unmatch : function() {
         $('#game-nav').removeClass('nav-sticky');
         Waypoint.destroyAll();
@@ -37,7 +37,7 @@
         gameScroll();
         charactersModal(count);
         galleryModal(count);
-      },  
+      },
       unmatch : function() {
         $('.gallery-imgs li').off('click');
       }
@@ -65,7 +65,7 @@
   function changeColorCreditos() {
     $('.display').click(function() {
       var id = this.id;
-      
+
       $('.team-content').removeClass('visible');
       $('#team' + id + '').addClass('visible');
     });
@@ -150,14 +150,14 @@
 
     $('.gallery-imgs li').on('click', function() {
       var pictureId = this.id;
-      
+
       showFullPicture(pictureId);
       displayModal('show', gallery);
     });
 
     $('#modal-gallery .previous-arrow').on('click', function() {
       count--;
-      
+
       if (count <= 0) {
         count = 9 - 1;
       }
