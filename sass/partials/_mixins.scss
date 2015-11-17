@@ -20,4 +20,9 @@
 	.team-details {
 		background: lighten($color, 10);
 	}
+	.team-credits{
+		a:hover{
+			color: $color;
+		}
+	}
 }
