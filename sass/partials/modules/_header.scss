@@ -1,9 +1,5 @@
 header {
-	height: auto;
-	display: block;
-	overflow: hidden;
 	position: absolute;
-	top: 0;
 	width: 100%;
 
 	h1 {
@@ -31,7 +27,6 @@ header {
 .play-btn-wrapper {
 	background: url(../img/bg/video-wrapper.png) no-repeat;
 	background-size: cover;
-	display: block;
 	margin: 0 auto;
 	padding-top: 80px;
 	text-align: center;
