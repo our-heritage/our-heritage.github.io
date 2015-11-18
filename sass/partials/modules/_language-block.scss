@@ -31,6 +31,8 @@
 
 .list-lang-item {
 	-webkit-backface-visibility: hidden;
+	background: rgba(0, 0, 0, .6);
+	border: 2px solid $main-color;
 	cursor: pointer;
 	left: 0;
 	margin-right: 4px;
