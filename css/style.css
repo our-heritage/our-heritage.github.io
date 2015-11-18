@@ -360,7 +360,7 @@ html {
   font-size: 10px; }
 
 body {
-  background-color: #1e2631; }
+  background-color: #1E2631; }
 
 *,
 *:before,
@@ -983,15 +983,15 @@ header {
   width: 100%; }
 
 .about-image {
-  background: #222;
+  background: #1E2631;
   margin: 20px auto;
   overflow: hidden;
   position: relative;
   transition: opacity .45s ease-in-out;
   z-index: 1; }
-  @media (max-width: 320px) {
+  @media (max-width: 420px) {
     .about-image {
-      height: 350px; } }
+      height: 360px; } }
   @media (min-width: 768px) {
     .about-image {
       margin: 0; } }
