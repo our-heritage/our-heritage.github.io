@@ -1,9 +1,14 @@
 .about-image {
+	background: $background-color;
 	margin: 20px auto;
 	overflow: hidden;
 	position: relative;
 	transition: opacity .45s ease-in-out;
 	z-index: 1;
+	
+	@media (max-width: 320px) {
+		height: 350px;
+	}
 
 	@media (min-width: 768px) {
 		margin: 0;
