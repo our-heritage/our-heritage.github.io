@@ -27,7 +27,7 @@
 .close {
 	background-position: -42px 4px;
 	height: 52px;
-	margin: 30px 40px;
+	margin: 20px 10px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -36,6 +36,10 @@
 
 	&:hover {
 		background-position: -201px -4px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		margin: 30px 40px;
 	}
 }
 
