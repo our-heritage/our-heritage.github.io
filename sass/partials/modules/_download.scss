@@ -1,40 +1,42 @@
 .download-mac,
 .download-win {
-	border-radius: 12px;
+	border-radius: 8px;
 	display: inline-block;
-	height: 54px;
-	margin-left: 15px;
+	height: 52px;
+	margin: 10px 0 0 40px;
 	text-indent: -9999px;
 	vertical-align: -webkit-baseline-middle;
 	width: 68px;
+	@media (min-width: 960px) {
+		margin: 0 0 0 15px;
+	}
 	&:hover {
 		background-color: $main-color;
 	}
 }
 
 .download-section {
-	display: none;
-
-	@media (min-width: 768px) {
-		display: block;
-		padding-top: 50px;
-		div {
-			margin: 0 auto;
+	display: block;
+	padding: 50px 0;
+	div {
+		margin: 0 auto;
+		width: 265px;
+		@media (min-width: 960px) {
 			width: 438px;
 		}
-		p,
-		span {
-			@include font-size(30);
-			color: $light-color;
-			font-family: $text-serif;
-			text-align: center;
-			text-transform: uppercase;
-			vertical-align: middle;
-		}
+	}
+	p,
+	span {
+		@include font-size(30);
+		color: $light-color;
+		font-family: $text-serif;
+		text-align: center;
+		text-transform: uppercase;
+		vertical-align: middle;
 	}
 }
 
-.download-section:before{
+.download-section:before {
 	background: url(../img/bg/about-frame.png) center bottom;
 	content: "";
 	height: 23px;

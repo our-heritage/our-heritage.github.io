@@ -936,35 +936,39 @@ header {
 
 .download-mac,
 .download-win {
-  border-radius: 12px;
+  border-radius: 8px;
   display: inline-block;
-  height: 54px;
-  margin-left: 15px;
+  height: 52px;
+  margin: 10px 0 0 40px;
   text-indent: -9999px;
   vertical-align: -webkit-baseline-middle;
   width: 68px; }
+  @media (min-width: 960px) {
+    .download-mac,
+    .download-win {
+      margin: 0 0 0 15px; } }
   .download-mac:hover,
   .download-win:hover {
     background-color: #24C29F; }
 
 .download-section {
-  display: none; }
-  @media (min-width: 768px) {
-    .download-section {
-      display: block;
-      padding-top: 50px; }
+  display: block;
+  padding: 50px 0; }
+  .download-section div {
+    margin: 0 auto;
+    width: 265px; }
+    @media (min-width: 960px) {
       .download-section div {
-        margin: 0 auto;
-        width: 438px; }
-      .download-section p,
-      .download-section span {
-        font-size: 30px;
-        font-size: 3rem;
-        color: #f2f2f2;
-        font-family: "Share Tech", serif;
-        text-align: center;
-        text-transform: uppercase;
-        vertical-align: middle; } }
+        width: 438px; } }
+  .download-section p,
+  .download-section span {
+    font-size: 30px;
+    font-size: 3rem;
+    color: #f2f2f2;
+    font-family: "Share Tech", serif;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle; }
 
 .download-section:before {
   background: url(../img/bg/about-frame.png) center bottom;
@@ -1013,7 +1017,7 @@ header {
   @media (min-width: 768px) {
     .about-section li {
       height: 320px;
-      margin: 150px 0;
+      margin: 24px 0 150px 0;
       max-width: 1100px; } }
 
 .about-section {
