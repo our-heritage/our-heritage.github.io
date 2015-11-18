@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-color: #1e2631;
+    background-color: $background-color;
 }
 
 *,
@@ -13,7 +13,7 @@ body {
     box-sizing: inherit;
 }
 
-.ui-loading .ui-loader, 
+.ui-loading .ui-loader,
 .ui-loader {
     display: none;
 }
