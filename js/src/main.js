@@ -10,6 +10,7 @@
         }
 
         $('map').imageMapResize();
+
       },
       unmatch : function() {
         $('#game-nav').removeClass('nav-sticky');
@@ -41,6 +42,7 @@
       },
       unmatch : function() {
         $('.gallery-imgs li').off('click');
+        $('.char_btn').off('hover');
       }
     });
 
@@ -298,15 +300,13 @@
   }
 
   function characterHover(){
-    var character,
-        className;
+    var className;
 
-    $('area').hover(function(){
-      character = $(this).attr('title');
+    $('.char_btn').hover(function(){
       className = $(this).attr('name');
-      $('.'+className+'>h2').text(character);
+      $('.'+className+'>h2').addClass('show');
     },function(){
-      $('.'+className+'>h2').text('');
+      $('.'+className+'>h2').removeClass('show');
     });
   }
 
