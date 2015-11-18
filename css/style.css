@@ -170,6 +170,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -298,6 +299,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -670,24 +673,16 @@ button:focus:active {
   text-shadow: 1px 1px 4px #f2f2f2; }
 
 .list-lang li:first-child + li {
-  -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:first-child + li {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
 
 .list-lang li:last-child {
-  -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:last-child {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
 
 .lang-item-position-0 {
   top: 42px; }
@@ -729,23 +724,17 @@ button:focus:active {
     .game-nav a:before, .game-nav a:after {
       content: '';
       position: absolute;
-      transition: -webkit-transform .3s ease;
-      transition: transform .3s ease;
-      transition: transform .3s ease, -webkit-transform .3s ease; }
+      transition: transform .3s ease; }
     .game-nav a:before {
       background: #24C29F;
       bottom: 0;
       box-shadow: 10px 10px 10px #24C29F;
       height: 2px;
       left: 0;
-      -webkit-transform: scaleX(0);
-          -ms-transform: scaleX(0);
-              transform: scaleX(0);
+      transform: scaleX(0);
       width: 100%; }
     .game-nav a:hover:before {
-      -webkit-transform: scaleX(1);
-          -ms-transform: scaleX(1);
-              transform: scaleX(1); }
+      transform: scaleX(1); }
     @media (min-width: 1280px) {
       .game-nav a {
         font-size: 30px;
@@ -867,7 +856,8 @@ header {
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
   header h1 {
     background: url(../img/logo.png) no-repeat center center;
     background-size: contain;
@@ -893,7 +883,8 @@ header {
   margin: 0 auto;
   padding-top: 80px;
   text-align: center;
-  max-width: 337px; }
+  max-width: 337px;
+  position: relative; }
   .play-btn-wrapper span {
     font-size: 40px;
     font-size: 4rem;
@@ -915,7 +906,15 @@ header {
   @media (min-width: 1024px) {
     .welcome {
       height: 810px;
-      padding-bottom: 80px; } }
+      padding-bottom: 80px; }
+      .welcome .container-parallax-header {
+        background: url(../img/bg/hologram.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        width: 100%;
+        height: 770px;
+        top: 0;
+        z-index: 0; } }
 
 .embed-container {
   height: 0;
@@ -1003,14 +1002,10 @@ header {
         z-index: 0; }
       .about-image.right {
         left: -60px;
-        -webkit-transform: rotate(5deg);
-            -ms-transform: rotate(5deg);
-                transform: rotate(5deg); }
+        transform: rotate(5deg); }
       .about-image.left {
         left: 60px;
-        -webkit-transform: rotate(-5deg);
-            -ms-transform: rotate(-5deg);
-                transform: rotate(-5deg); } }
+        transform: rotate(-5deg); } }
   @media (min-width: 1100px) {
     .about-image img {
       width: 100%; } }
@@ -1111,9 +1106,7 @@ header {
     width: 100%; }
   .history-section:before {
     margin-top: -20px;
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    transform: rotate(180deg); }
   .history-section h2 {
     color: #24C29F;
     margin: 0 auto;
@@ -1333,9 +1326,7 @@ header {
     vertical-align: top;
     width: 33%; }
     .gallery-imgs li:hover {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); } }
+      transform: rotate(0deg); } }
   @media (min-width: 768px) and (max-width: 1024px) {
     .gallery-imgs li {
       padding: 5px 5px 25px; } }
@@ -1344,60 +1335,51 @@ header {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
+
   .gallery-imgs .pic-1 {
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
+    transform: rotate(-10deg); }
+
   .gallery-imgs .pic-2 {
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg);
+    transform: rotate(10deg);
     margin-top: 20px; }
+
   .gallery-imgs .pic-3 {
     left: 5px;
     margin-top: -25px;
     position: relative;
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
+    transform: rotate(-10deg); }
+
   .gallery-imgs .pic-4 {
     margin-top: -10px;
-    -webkit-transform: rotate(-15deg);
-        -ms-transform: rotate(-15deg);
-            transform: rotate(-15deg); }
+    transform: rotate(-15deg); }
+
   .gallery-imgs .pic-5 {
     right: 15px;
     position: relative;
-    -webkit-transform: rotate(-8deg);
-        -ms-transform: rotate(-8deg);
-            transform: rotate(-8deg); }
+    transform: rotate(-8deg); }
+
   .gallery-imgs .pic-6 {
     left: 5px;
     margin-top: -22px;
     position: relative;
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg); }
+    transform: rotate(10deg); }
+
   .gallery-imgs .pic-7 {
     margin-top: -40px;
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg); }
+    transform: rotate(10deg); }
+
   .gallery-imgs .pic-8 {
     margin-top: 25px;
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
+    transform: rotate(-10deg); }
+
   .gallery-imgs .pic-9 {
     margin-top: -60px;
-    -webkit-transform: rotate(15deg);
-        -ms-transform: rotate(15deg);
-            transform: rotate(15deg); }
+    transform: rotate(15deg); }
+
   .full-picture {
     height: 100%;
     max-width: 80%;
     text-align: center; } }
-
 .spon-list li {
   margin-top: 55px;
   margin-right: 55px;
@@ -1612,4 +1594,5 @@ footer p {
 .footer-game {
   background-color: transparent;
   color: #fff; }
+
 /*# sourceMappingURL=style.css.map */

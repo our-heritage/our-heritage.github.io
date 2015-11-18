@@ -5,6 +5,7 @@ header {
 	position: absolute;
 	top: 0;
 	width: 100%;
+	z-index:1;
 
 	h1 {
 		background: url(../img/logo.png) no-repeat center center;
@@ -36,6 +37,7 @@ header {
 	padding-top: 80px;
 	text-align: center;
 	max-width: 337px;
+	position: relative;
 
 	span {
 		@include font-size(40);
@@ -62,5 +64,18 @@ header {
 	@media (min-width: 1024px) {
 		height: 810px;
 		padding-bottom: 80px;
+
+		.container-parallax-header {
+      background: url(../img/bg/hologram.png) no-repeat;
+      background-size:100%;
+      position: absolute;
+      width: 100%;
+      height: 770px;
+      top:0;
+      z-index: 0;
+    }
 	}
 }
+
+
+

@@ -46,6 +46,8 @@
     changeColorCreditos();
     controlsModal();
     videoTeaserModal();
+    parallaxHeader();
+
   });
 
   function navGameScroll() {
@@ -289,5 +291,11 @@
       player.html('');
     });
   }
-
+  function parallaxHeader(){
+    $('#parallax-header').mousemove(function(e) {
+       var amountMovedX = (e.pageX * 0.3 / 6);
+       var amountMovedY = (e.pageY * 0.4 / 6);
+        $(".container-parallax-header").css('background-position', amountMovedX + 'px ' + amountMovedY + 'px ');
+    });
+  }
 }());
