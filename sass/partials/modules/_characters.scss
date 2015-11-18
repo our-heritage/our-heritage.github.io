@@ -66,12 +66,9 @@
 
 .char-selection {
 	position: absolute;
-	top: 62%;
+	margin: 0 auto;
+	top: 75%;
 	width: 100%;
-	@media (min-width: 1280px) {
-		text-align: right;
-		width: 82%;
-	}
 }
 
 .preview-char {
