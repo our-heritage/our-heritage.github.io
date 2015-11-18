@@ -1159,7 +1159,6 @@ header {
   color: #f2f2f2;
   margin: 2% auto;
   text-align: left;
-  text-shadow: 1px 1px 4px #f2f2f2;
   width: 80%; }
   @media (min-width: 1024px) {
     .char-details {
@@ -1188,14 +1187,6 @@ header {
 .main-char-selection {
   height: 668px;
   max-width: 993px; }
-
-.main-char-selection .char_btn {
-  background-color: inherit;
-  border: none;
-  height: 450px;
-  margin-left: 20px;
-  padding: 0 2%;
-  width: 19%; }
 
 .char-selection {
   position: absolute;
@@ -1256,9 +1247,12 @@ header {
   height: 100%;
   max-height: 480px; }
 
-.content-name {
+.char-name {
+  visibility: hidden;
   position: absolute;
-  color: #fff; }
+  color: #fff;
+  z-index: 0;
+  cursor: pointer; }
 
 .amy {
   top: 59%;
@@ -1275,6 +1269,9 @@ header {
 .gramps {
   top: 50%;
   left: 63%; }
+
+.show {
+  visibility: visible; }
 
 .counter-slider {
   color: #fff;

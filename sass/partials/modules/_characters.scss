@@ -17,7 +17,6 @@
 	color: $light-color;
 	margin: 2% auto;
 	text-align: left;
-	text-shadow: 1px 1px 4px $light-color;
 	width: 80%;
 	@media (min-width: 1024px) {
 		height: 583px;
@@ -53,15 +52,6 @@
 .main-char-selection {
 	height: 668px;
 	max-width: 993px;
-}
-
-.main-char-selection .char_btn {
-	background-color: inherit;
-	border: none;
-	height: 450px;
-	margin-left: 20px;
-	padding: 0 2%;
-	width: 19%;
 }
 
 .char-selection {
@@ -141,9 +131,12 @@
 }
 
 
-.content-name {
+.char-name {
+	visibility: hidden;
 	position: absolute;
 	color: #fff;
+	z-index: 0;
+	cursor: pointer;
 }
 
 .amy{
@@ -161,4 +154,8 @@
 .gramps{
 	top: 50%;
 	left: 63%;
+}
+
+.show {
+	visibility: visible;
 }
