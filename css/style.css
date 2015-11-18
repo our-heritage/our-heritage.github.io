@@ -1139,7 +1139,8 @@ header {
   display: none; }
   @media (min-width: 768px) {
     .character-section {
-      display: block; } }
+      display: block;
+      position: relative; } }
 
 .characters-wrapper {
   margin: 5% auto;
@@ -1249,6 +1250,26 @@ header {
 .tap-expand-info {
   height: 100%;
   max-height: 480px; }
+
+.content-name {
+  position: absolute;
+  color: #fff; }
+
+.amy {
+  top: 59%;
+  left: 51%; }
+
+.mom {
+  top: 35%;
+  left: 42%; }
+
+.dad {
+  top: 31%;
+  left: 54%; }
+
+.gramps {
+  top: 50%;
+  left: 63%; }
 
 .counter-slider {
   color: #fff;
