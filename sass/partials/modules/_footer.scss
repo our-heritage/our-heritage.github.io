@@ -1,11 +1,14 @@
 footer {
-	background: #A5BBD1 url(../img/bg/footer.png) center bottom repeat-x;
 	clear: both;
 	color: #fff;
+	height: 400px;
 	overflow: hidden;
-	padding: 200px 0 300px;
+	background: #A5BBD1 url(../img/bg/footer-mobile.png) center bottom repeat-x;
+	@media (min-width: 1100px){
+		height: 600px;
+		background: #A5BBD1 url(../img/bg/footer.png) center bottom repeat-x;
+	}
 }
-
 footer a {
 	border-bottom: 2px solid #F2CD77;
 	color: #fff;
@@ -26,10 +29,13 @@ footer p  {
 }
 
 .footer-content {
-	margin: 0 auto;
+	margin: 200px auto;
 	max-width: 650px;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
 	text-align: center;
+	@media (min-width: 1100px){
+		margin: 400px auto;
+	}
 }
 
 .footer-game {
