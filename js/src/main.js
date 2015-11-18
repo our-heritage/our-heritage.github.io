@@ -37,6 +37,7 @@
         gameScroll();
         charactersModal(count);
         galleryModal(count);
+        characterHover();
       },
       unmatch : function() {
         $('.gallery-imgs li').off('click');
@@ -97,9 +98,9 @@
 
   function charactersModal(count) {
     var currentChar,
-        charBtn = $('.char_btn'),
-        details = $('#char-details'),
-        charContainers = $('.tap-info');
+    charBtn = $('.char_btn'),
+    details = $('#char-details'),
+    charContainers = $('.tap-info');
 
     charBtn.on('click', function() {
       chosen = $(this).attr('name');
@@ -116,12 +117,12 @@
 
     function detailsGenerator(count) {
       var currId = charContainers[count].id,
-          overallCharContainer = $('#modal-char'),
-          charIntro = $('.tap-banner-' + currId).html(),
-          charBrief = $('#' + currId).html();
+      overallCharContainer = $('#modal-char'),
+      charIntro = $('.tap-banner-' + currId).html(),
+      charBrief = $('#' + currId).html();
 
-          details.html(charIntro + charBrief);
-          displayModal('show', overallCharContainer);
+      details.html(charIntro + charBrief);
+      displayModal('show', overallCharContainer);
     }
 
     $('#modal-char .previous-arrow').on('click', function() {
@@ -147,13 +148,19 @@
 
   function galleryModal(count) {
     var gallery = $('#modal-gallery');
+    var picturePath;
 
     $('.gallery-imgs li').on('click', function() {
       var pictureId = this.id;
+      picturePath = $(this).children().attr('src');
 
-      showFullPicture(pictureId);
+      showFullPicture(picturePath);
       displayModal('show', gallery);
     });
+
+    function makePicturePath(count) {
+      return picturePath.substring(0, picturePath.indexOf('-')) + '-' + count + '.jpg';
+    }
 
     $('#modal-gallery .previous-arrow').on('click', function() {
       count--;
@@ -162,7 +169,7 @@
         count = 9 - 1;
       }
 
-      showFullPicture('pic-' + count);
+      showFullPicture(makePicturePath(count));
     });
 
     $('#modal-gallery .next-arrow').on('click', function() {
@@ -172,50 +179,40 @@
         count = 1;
       }
 
-      showFullPicture('pic-' + count);
+      showFullPicture(makePicturePath(count));
     });
   }
 
   function gallerySwipe(count) {
     var initNumber = 1,
-      counterNumber,
       itemSwipe = $('.slider-content'),
-      counterSwipe = $('#counter-slider'),
-      contentSwipe = $('#gallery-container'),
-      countIteam = itemSwipe.length - 1;
+      contentSwipe = $('#gallery-container');
 
     contentSwipe.swipe({
-      swipeLeft: function(event, direction, distance, duration, fingerCount) {
-        if (count == countIteam) {
-          $('.first-pic').removeClass('first-pic');
-          $('.slider-content:first').addClass('first-pic');
-          counterNumber = '1';
-          initNumber = 1;
-          count = 0;
-        } else {
+      swipeLeft: function() {
+        if(initNumber != itemSwipe.length){
           $('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
-          counterNumber = initNumber + 1;
-          initNumber = initNumber + 1;
-          count = count + 1;
+            initNumber=initNumber+1;
+        }else{
+           $('.first-pic').removeClass('first-pic')
+           $('.slider-content:first').addClass('first-pic');
+            initNumber=1;
         }
-        $('.counterNumber').text(counterNumber);
+         $('.counterNumber').text(initNumber);
       },
-      swipeRight: function(event, direction, distance, duration, fingerCount) {
-        if (count == 0) {
-          $('.first-pic').removeClass('first-pic');
-          $('.slider-content:last').addClass('first-pic');
-          counterNumber = itemSwipe.length;
-          initNumber = itemSwipe.length;
-          count = countIteam;
-        } else {
-          $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
-          counterNumber = initNumber - 1;
-          initNumber = initNumber - 1;
-          count = count - 1;
-        }
-        $('.counterNumber').text(counterNumber);
+      swipeRight: function() {
+          if(initNumber != 1){
+             $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
+             initNumber=initNumber-1;
+          }else{
+             $('.first-pic').removeClass('first-pic')
+             $('.slider-content:last').addClass('first-pic');
+              initNumber=itemSwipe.length;
+          }
+           $('.counterNumber').text(initNumber);
       },
-      threshold: 0
+      threshold: 0,
+      triggerOnTouchEnd: false
     });
   }
 
@@ -230,8 +227,8 @@
 
   function menuLang() {
     var closeNavLang = $('.close-lang'),
-        listLang = $('#list-lang'),
-        listLangItem = $('.list-lang-item')
+    listLang = $('#list-lang'),
+    listLangItem = $('.list-lang-item')
 
     listLang.on('click', function() {
       for (var i = 0; i < listLangItem.length; i++) {
@@ -244,10 +241,10 @@
     closeNavLang.on('click', function() {
       for (var m = 0; m < listLangItem.length; m++) {
         listLangItem.removeClass(function(m) {
-        return 'list-lang-item lang-item-position-' + m;
-      });
+          return 'list-lang-item lang-item-position-' + m;
+        });
 
-      listLangItem.addClass('list-lang-item');
+        listLangItem.addClass('list-lang-item');
       };
     });
   }
@@ -265,13 +262,13 @@
     });
   }
 
-  function showFullPicture(id) {
-    $('#gallery-picture').attr('src', 'img/gallery/' + id + '.jpg');
+  function showFullPicture(path) {
+    $('#gallery-picture').attr('src', path);
   }
 
   function tapCharacter() {
     var expandTap = 'tap-expand-info',
-        tapCharacter = $('.taps-character div');
+    tapCharacter = $('.taps-character div');
 
     tapCharacter.on('click', function() {
       if ($(this).next().hasClass( expandTap )) {
@@ -285,10 +282,10 @@
 
   function videoTeaserModal() {
     var video = $('.teaser'),
-        close = $('.teaser .close'),
-        btn = $('#btn-play-js'),
-        player = $('#ytplayer'),
-        content = '<iframe src="https://www.youtube.com/embed/DLzxrzFCyOs' + "?autoplay=1&amp;rel=0&amp;" + 'controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
+    close = $('.teaser .close'),
+    btn = $('#btn-play-js'),
+    player = $('#ytplayer'),
+    content = '<iframe src="https://www.youtube.com/embed/DLzxrzFCyOs' + "?autoplay=1&amp;rel=0&amp;" + 'controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
 
     btn.click(function(){
       displayModal('show', video);
@@ -297,6 +294,19 @@
 
     close.click(function(){
       player.html('');
+    });
+  }
+
+  function characterHover(){
+    var character,
+        className;
+
+    $('area').hover(function(){
+      character = $(this).attr('title');
+      className = $(this).attr('name');
+      $('.'+className+'>h2').text(character);
+    },function(){
+      $('.'+className+'>h2').text('');
     });
   }
 
