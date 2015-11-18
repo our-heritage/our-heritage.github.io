@@ -652,6 +652,8 @@ button:focus:active {
   transition: all .45s ease; }
   @media (min-width: 768px) {
     .list-lang-item {
+      background: none;
+      border: none;
       display: inline-block;
       position: static; } }
   .list-lang-item.selected {

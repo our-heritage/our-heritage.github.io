@@ -43,6 +43,8 @@
 	transition: all .45s ease;
 
 	@media(min-width: 768px){
+    background: none;
+    border: none;
 		display:inline-block;
 		position: static;
 	}
