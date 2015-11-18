@@ -170,7 +170,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -299,8 +298,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -670,16 +667,24 @@ button:focus:active {
   text-transform: uppercase; }
 
 .list-lang li:first-child + li {
-  transform: rotate(10deg); }
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:first-child + li {
-      transform: rotate(0deg); } }
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); } }
 
 .list-lang li:last-child {
-  transform: rotate(10deg); }
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg); }
   @media (min-width: 768px) {
     .list-lang li:last-child {
-      transform: rotate(0deg); } }
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); } }
 
 .lang-item-position-0 {
   top: 42px; }
@@ -720,6 +725,7 @@ button:focus:active {
     .game-nav a:before, .game-nav a:after {
       content: '';
       position: absolute;
+      transition: -webkit-transform .3s ease;
       transition: transform .3s ease; }
     .game-nav a:before {
       background: #24C29F;
@@ -727,10 +733,14 @@ button:focus:active {
       box-shadow: 10px 10px 10px #24C29F;
       height: 2px;
       left: 0;
-      transform: scaleX(0);
+      -webkit-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+              transform: scaleX(0);
       width: 100%; }
     .game-nav a:hover:before {
-      transform: scaleX(1); }
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1); }
     @media (min-width: 1280px) {
       .game-nav a {
         font-size: 30px;
@@ -926,35 +936,39 @@ header {
 
 .download-mac,
 .download-win {
-  border-radius: 12px;
+  border-radius: 8px;
   display: inline-block;
-  height: 54px;
-  margin-left: 15px;
+  height: 52px;
+  margin: 10px 0 0 40px;
   text-indent: -9999px;
   vertical-align: -webkit-baseline-middle;
   width: 68px; }
+  @media (min-width: 960px) {
+    .download-mac,
+    .download-win {
+      margin: 0 0 0 15px; } }
   .download-mac:hover,
   .download-win:hover {
     background-color: #24C29F; }
 
 .download-section {
-  display: none; }
-  @media (min-width: 768px) {
-    .download-section {
-      display: block;
-      padding-top: 50px; }
+  display: block;
+  padding: 50px 0; }
+  .download-section div {
+    margin: 0 auto;
+    width: 265px; }
+    @media (min-width: 960px) {
       .download-section div {
-        margin: 0 auto;
-        width: 438px; }
-      .download-section p,
-      .download-section span {
-        font-size: 30px;
-        font-size: 3rem;
-        color: #f2f2f2;
-        font-family: "Share Tech", serif;
-        text-align: center;
-        text-transform: uppercase;
-        vertical-align: middle; } }
+        width: 438px; } }
+  .download-section p,
+  .download-section span {
+    font-size: 30px;
+    font-size: 3rem;
+    color: #f2f2f2;
+    font-family: "Share Tech", serif;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle; }
 
 .download-section:before {
   background: url(../img/bg/about-frame.png) center bottom;
@@ -983,10 +997,14 @@ header {
         z-index: 0; }
       .about-image.right {
         left: -60px;
-        transform: rotate(5deg); }
+        -webkit-transform: rotate(5deg);
+            -ms-transform: rotate(5deg);
+                transform: rotate(5deg); }
       .about-image.left {
         left: 60px;
-        transform: rotate(-5deg); } }
+        -webkit-transform: rotate(-5deg);
+            -ms-transform: rotate(-5deg);
+                transform: rotate(-5deg); } }
   @media (min-width: 1100px) {
     .about-image img {
       width: 100%; } }
@@ -999,7 +1017,7 @@ header {
   @media (min-width: 768px) {
     .about-section li {
       height: 320px;
-      margin: 150px 0;
+      margin: 24px 0 150px 0;
       max-width: 1100px; } }
 
 .about-section {
@@ -1085,7 +1103,9 @@ header {
     width: 100%; }
   .history-section:before {
     margin-top: -20px;
-    transform: rotate(180deg); }
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
   .history-section h2 {
     color: #24C29F;
     margin: 0 auto;
@@ -1304,7 +1324,9 @@ header {
     vertical-align: top;
     width: 33%; }
     .gallery-imgs li:hover {
-      transform: rotate(0deg); } }
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); } }
   @media (min-width: 768px) and (max-width: 1024px) {
     .gallery-imgs li {
       padding: 5px 5px 25px; } }
@@ -1313,51 +1335,60 @@ header {
   .gallery-imgs li img {
     height: auto;
     max-width: 100%; }
-
   .gallery-imgs .pic-1 {
-    transform: rotate(-10deg); }
-
+    -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg); }
   .gallery-imgs .pic-2 {
-    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg);
     margin-top: 20px; }
-
   .gallery-imgs .pic-3 {
     left: 5px;
     margin-top: -25px;
     position: relative;
-    transform: rotate(-10deg); }
-
+    -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg); }
   .gallery-imgs .pic-4 {
     margin-top: -10px;
-    transform: rotate(-15deg); }
-
+    -webkit-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+            transform: rotate(-15deg); }
   .gallery-imgs .pic-5 {
     right: 15px;
     position: relative;
-    transform: rotate(-8deg); }
-
+    -webkit-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+            transform: rotate(-8deg); }
   .gallery-imgs .pic-6 {
     left: 5px;
     margin-top: -22px;
     position: relative;
-    transform: rotate(10deg); }
-
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg); }
   .gallery-imgs .pic-7 {
     margin-top: -40px;
-    transform: rotate(10deg); }
-
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg); }
   .gallery-imgs .pic-8 {
     margin-top: 25px;
-    transform: rotate(-10deg); }
-
+    -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg); }
   .gallery-imgs .pic-9 {
     margin-top: -60px;
-    transform: rotate(15deg); }
-
+    -webkit-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+            transform: rotate(15deg); }
   .full-picture {
     height: 100%;
     max-width: 80%;
     text-align: center; } }
+
 .spon-list li {
   margin-top: 55px;
   width: 100%; }
@@ -1583,5 +1614,4 @@ footer p {
 .footer-game {
   background-color: transparent;
   color: #fff; }
-
 /*# sourceMappingURL=style.css.map */
