@@ -384,6 +384,9 @@ body {
   top: 0;
   width: 100%;
   z-index: 999; }
+  @media screen and (min-width: 1024px) {
+    .modal {
+      padding: 5% 0; } }
 
 .hidden {
   display: none; }
@@ -509,6 +512,9 @@ button:focus:active {
   z-index: 1; }
   .close:hover {
     background-position: -201px -4px; }
+  @media screen and (min-width: 1024px) {
+    .close {
+      margin: 30px 40px; } }
 
 .down-arrow {
   background-position: 1px -1px;
