@@ -1098,6 +1098,68 @@ header {
       .about-content.left:before {
         margin-left: 24px; } }
 
+.working-prototype-section {
+  background: #F1E3D6;
+  margin: 50px auto;
+  padding: 15px 0;
+  width: 70%; }
+  .working-prototype-section:before, .working-prototype-section:after {
+    background: url(../img/bg/about-frame.png) center bottom;
+    content: "";
+    height: 23px;
+    position: absolute;
+    width: 100%; }
+  .working-prototype-section:before {
+    margin-top: -20px;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .working-prototype-section p {
+    color: #363434;
+    line-height: 22px;
+    margin: 0 auto;
+    padding: 16px 0;
+    width: 75%; }
+    .working-prototype-section p strong {
+      text-shadow: 0 0 0 #363434; }
+  @media (min-width: 768px) {
+    .working-prototype-section {
+      -webkit-backface-visibility: hidden;
+      background: url("../img/bg/history-wrapper.png") no-repeat;
+      background-size: 100% 100%;
+      margin: 100px auto 0 auto;
+      min-width: 590px;
+      padding: 30px 0;
+      text-align: center;
+      -webkit-transform: rotate(4deg);
+          -ms-transform: rotate(4deg);
+              transform: rotate(4deg); }
+      .working-prototype-section p {
+        padding-bottom: 16px; }
+      .working-prototype-section:before, .working-prototype-section:after {
+        background: none;
+        height: 0;
+        position: absolute;
+        width: 0; }
+      .working-prototype-section:before {
+        content: url(../img/tape-1.png);
+        left: -30px;
+        margin-top: 0;
+        top: 35px;
+        -webkit-transform: rotate(-38deg);
+            -ms-transform: rotate(-38deg);
+                transform: rotate(-38deg); }
+      .working-prototype-section:after {
+        bottom: 15px;
+        content: url(../img/tape-2.png);
+        right: 120px;
+        -webkit-transform: rotate(-22deg);
+            -ms-transform: rotate(-22deg);
+                transform: rotate(-22deg); } }
+  @media (min-width: 1280px) {
+    .working-prototype-section {
+      width: 60%; } }
+
 .history-section {
   background: #F1E3D6;
   margin: 50px auto;
@@ -1130,7 +1192,7 @@ header {
     .history-section {
       background: url("../img/bg/history-wrapper.png") no-repeat;
       background-size: 100% 100%;
-      margin: 100px auto;
+      margin: 0 auto 100px auto;
       min-width: 590px;
       padding: 65px 0;
       width: 75%; }
@@ -1138,9 +1200,6 @@ header {
         content: none; } }
   @media (min-width: 1280px) {
     .history-section {
-      margin: 0 auto 100px auto;
-      min-width: 590px;
-      padding: 65px 0;
       width: 65%; } }
 
 .character-section {
