@@ -839,10 +839,10 @@ button:focus:active {
       width: 33.333%; } }
 
 .cetav-item {
-  color: #204573; }
+  color: #6EB2D2; }
   @media screen and (min-width: 766px) {
     .cetav-item:hover {
-      background-color: #204573; } }
+      background-color: #6EB2D2; } }
 
 .fair-item {
   color: #50A03B; }
@@ -851,10 +851,10 @@ button:focus:active {
       background-color: #50A03B; } }
 
 .advisors-item {
-  color: #ED912E; }
+  color: #ff9119; }
   @media screen and (min-width: 766px) {
     .advisors-item:hover {
-      background-color: #ED912E; } }
+      background-color: #ff9119; } }
 
 header {
   position: absolute;
@@ -1546,8 +1546,9 @@ header {
       top: 0;
       width: 50%; }
       .team-details .team-logo {
-        margin: 60% auto;
-        max-width: 60%; }
+        margin: 50% auto;
+        width: 80;
+        max-width: 80%; }
       .team-details h2 {
         font-size: 8em; } }
 
@@ -1576,9 +1577,9 @@ header {
 .team-cetav {
   background-color: #fff; }
   .team-cetav .team-details {
-    background: #204573; }
+    background: #6eb2d2; }
   .team-cetav .team-credits a:hover {
-    color: #152d4b; }
+    color: #479dc6; }
 
 .team-fair {
   background-color: #fff; }
@@ -1590,9 +1591,9 @@ header {
 .team-advisors {
   background-color: #fff; }
   .team-advisors .team-details {
-    background: #f1aa5d; }
+    background: #ffa94c; }
   .team-advisors .team-credits a:hover {
-    color: #ED912E; }
+    color: #ff9119; }
 
 .visible {
   display: inline-block; }
