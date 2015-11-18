@@ -378,7 +378,7 @@ body {
   height: 100%;
   left: 0;
   opacity: 1;
-  padding: 5% 0;
+  padding: 2% 0;
   position: fixed;
   text-align: center;
   top: 0;
@@ -501,7 +501,7 @@ button:focus:active {
 .close {
   background-position: -42px 4px;
   height: 52px;
-  margin: 30px 40px;
+  margin: 20px 10px;
   position: absolute;
   right: 0;
   top: 0;
@@ -913,16 +913,16 @@ header {
 
 .embed-container {
   height: 0;
-  padding-bottom: 56.25%;
-  position: relative;
   max-width: 100%;
   overflow: hidden; }
   @media (min-width: 1024px) {
     .embed-container {
       height: 80%;
       margin: 0 auto;
+      max-height: 950px;
       max-width: 880px;
-      padding-bottom: 0; } }
+      padding-bottom: 0;
+      position: relative; } }
 
 .embed-container iframe,
 .embed-container object,
@@ -930,13 +930,13 @@ header {
   height: 100%;
   left: 0;
   position: absolute;
-  top: 70px;
+  top: 20px;
   width: 100%; }
   @media (min-width: 1024px) {
     .embed-container iframe,
     .embed-container object,
     .embed-container embed {
-      top: 0; } }
+      top: 70px; } }
 
 .download-mac,
 .download-win {
