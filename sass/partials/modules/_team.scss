@@ -19,6 +19,8 @@
 	}
 
 	@media screen and (min-width: 768px) {
+		background: url(../img/bg/main-bg-credits.png) no-repeat center bottom;
+		background-size: cover;
 		padding: 14% 0 8% 0;
 	}
 }
@@ -26,7 +28,7 @@
 .team-section-wrapper {
 	width: 100%;
 	overflow: hidden;
-	position: relative;	
+	position: relative;
 }
 
 .team-content {

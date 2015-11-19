@@ -132,30 +132,43 @@
 
 
 .char-name {
-	visibility: hidden;
 	position: absolute;
-	color: #fff;
+	color: $dark-color;
 	z-index: 0;
 	cursor: pointer;
+
+	h2 {
+		@include font-size(20);
+		background: url(../img/tape-1.png) no-repeat center center;
+		background-size: contain;
+		font-family: $hand-serif;
+		transition: all .3s ease;
+		overflow: hidden;
+		width: 0;
+	}
+
+	.show {
+		padding: 10px 12px;
+		width: 100%;
+	}
 }
 
 .amy{
-	top: 59%;
-	left: 51%;
-}
-.mom{
-	top: 35%;
-	left: 42%;
-}
-.dad{
-	top: 31%;
-	left: 54%;
-}
-.gramps{
-	top: 50%;
-	left: 63%;
+	left: 55%;
+	top: 47%;
 }
 
-.show {
-	visibility: visible;
+.mom{
+	left: 30%;
+	top: 32%;
+}
+
+.dad{
+	left: 54%;
+	top: 18%;
+}
+
+.gramps{
+	left: 68%;
+	top: 38%;
 }

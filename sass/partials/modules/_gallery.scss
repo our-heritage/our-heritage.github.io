@@ -161,3 +161,31 @@
 		text-align: center;
 	}
 }
+
+.gallery-type {
+	color: #fff;
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 50px;
+
+	span {
+		@include font-size(20);
+		background: url(../img/tape-1.png) no-repeat center center;
+		background-size: cover;
+		color: $dark-color;
+		cursor: pointer;
+		display: inline-block;
+		font-family: $hand-serif;
+		padding: 4px 28px;
+		text-decoration: line-through;
+	}
+
+	span:hover {
+		text-shadow: 1px 1px 4px #A7A1A1;
+		text-decoration: none;
+	}
+
+	.gallery-selected {
+		text-decoration: none;
+	}
+}

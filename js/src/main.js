@@ -1,313 +1,339 @@
 (function() {
-  $(document).ready(function() {
-    var count = 0;
+	$(document).ready(function() {
+		var count = 0;
 
-    enquire.register('screen and (min-width: 768px) and (max-width: 1280px)', {
+		enquire.register('screen and (min-width: 766px) and (max-width: 1280px)', {
 
-      match : function() {
-        if ($('#game-nav').length > 0) {
-          navGameScroll();
-        }
+			match : function() {
+				if ($('#game-nav').length > 0) {
+					navGameScroll();
+				}
+				$('map').imageMapResize();
+				$('.char-name h2').addClass('show');
+			},
+			unmatch : function() {
+				$('#game-nav').removeClass('nav-sticky');
+				$('.char-name h2').removeClass('show');
+				Waypoint.destroyAll();
+			}
+		});
 
-        $('map').imageMapResize();
+		enquire.register('(max-width: 766px)', {
 
-      },
-      unmatch : function() {
-        $('#game-nav').removeClass('nav-sticky');
-        Waypoint.destroyAll();
-      }
-    });
+			match: function() {
+				showAboutInfo();
+				gallerySwipe(count);
+				menuLang();
+				tapCharacter();
+				navCreditos();
+			},
+			unmatch: function() {
+				$('.about-image').off('click');
+			}
+		});
 
-    enquire.register('(max-width: 766px)', {
+		enquire.register('screen and (min-width: 768px)', {
 
-      match: function() {
-        showAboutInfo();
-        gallerySwipe(count);
-        menuLang();
-        tapCharacter();
-        navCreditos();
-      },
-      unmatch: function() {
-        $('.about-image').off('click');
-      }
-    });
+			match : function() {
+				gameScroll();
+				charactersModal(count);
+				galleryModal(count);
+				characterHover();
+			},
+			unmatch : function() {
+				$('.gallery-imgs li').off('click');
+				$('.char_btn').on('mouseenter, mouseleave');
+			}
+		});
 
-    enquire.register('screen and (min-width: 768px)', {
+		changeColorCreditos();
+		controlsModal();
+		galleryTypeAction();
+		videoTeaserModal();
+	});
 
-      match : function() {
-        gameScroll();
-        charactersModal(count);
-        galleryModal(count);
-        characterHover();
-      },
-      unmatch : function() {
-        $('.gallery-imgs li').off('click');
-        $('.char_btn').off('hover');
-      }
-    });
+	function navGameScroll() {
+		var waypoint = new Waypoint({
+			element: $('#game-nav'),
+			handler: function(direction) {
+				if (direction === 'down') {
+					$('#game-nav').addClass('nav-sticky');
+				} else {
+					$('#game-nav').removeClass('nav-sticky');
+				}
+			},
+			offset: 0
+		})
+	}
 
-    changeColorCreditos();
-    controlsModal();
-    videoTeaserModal();
-  });
+	function characterHover(){
+		var className;
 
-  function navGameScroll() {
-    var waypoint = new Waypoint({
-      element: $('#game-nav'),
-      handler: function(direction) {
-        if (direction === 'down') {
-          $('#game-nav').addClass('nav-sticky');
-        } else {
-          $('#game-nav').removeClass('nav-sticky');
-        }
-      },
-      offset: 0
-    })
-  }
+		$('.char_btn').on({
+			mouseenter: function () {
+				className = $(this).attr('name');
+				$('.'+className+'>h2').addClass('show');
+			},
+			mouseleave: function () {
+				$('.'+className+'>h2').removeClass('show');
+			}
+		});
+	}
 
-  function changeColorCreditos() {
-    $('.display').click(function() {
-      var id = this.id;
+	function changeColorCreditos() {
+		$('.display').click(function() {
+			var id = this.id;
 
-      $('.team-content').removeClass('visible');
-      $('#team' + id + '').addClass('visible');
-    });
-  }
+			$('.team-content').removeClass('visible');
+			$('#team' + id + '').addClass('visible');
+		});
+	}
 
-  function displayModal(option, container) {
-    var container = container;
-    if (option == 'show') {
-      container.removeClass('hidden');
-    } else {
-      $('.modal').addClass('hidden');
-    }
-  }
+	function displayModal(option, container) {
+		var container = container;
+		if (option == 'show') {
+			container.removeClass('hidden');
+		} else {
+			$('.modal').addClass('hidden');
+		}
+	}
 
-  function controlsModal() {
+	function galleryTypeAction() {
+		var eachImage = $('.slider-image');
+		var galleryType = $('.gallery-type span');
 
-    $('.close').on('click', function() {
-      displayModal('hide');
-    });
-  }
+		galleryType.on('click', function() {
+			galleryType.removeClass('gallery-selected')
 
-  function showAboutInfo() {
+			$(this).addClass('gallery-selected');
 
-    $('.about-image').on('click', function() {
-      $('.about-image').removeClass('hidden-image');
-      $(this).toggleClass('hidden-image');
-    });
-  }
+			var option = $(this).text();
+			if (option == 'Concept Art') {
+				eachImage.each(function () {
+					$(this).attr('src', $(this).attr('src').replace('screenshot', 'concept'));
+				});
+			} else {
+				eachImage.each(function () {
+					$(this).attr('src', $(this).attr('src').replace('concept', 'screenshot'));
+				});
+			}
+		})
+	}
 
-  function charactersModal(count) {
-    var currentChar,
-    charBtn = $('.char_btn'),
-    details = $('#char-details'),
-    charContainers = $('.tap-info');
+	function controlsModal() {
 
-    charBtn.on('click', function() {
-      chosen = $(this).attr('name');
+		$('.close').on('click', function() {
+			displayModal('hide');
+		});
+	}
 
-      for (var i = 0; i < charContainers.length; i++) {
-        currentChar = charContainers[i].id;
+	function showAboutInfo() {
 
-        if (chosen == currentChar) {
-          count = i;
-          detailsGenerator(i);
-        }
-      }
-    });
+		$('.about-image').on('click', function() {
+			$('.about-image').removeClass('hidden-image');
+			$(this).toggleClass('hidden-image');
+		});
+	}
 
-    function detailsGenerator(count) {
-      var currId = charContainers[count].id,
-      overallCharContainer = $('#modal-char'),
-      charIntro = $('.tap-banner-' + currId).html(),
-      charBrief = $('#' + currId).html();
+	function charactersModal(count) {
+		var currentChar,
+		charBtn = $('.char_btn'),
+		details = $('#char-details'),
+		charContainers = $('.tap-info');
 
-      details.html(charIntro + charBrief);
-      displayModal('show', overallCharContainer);
-    }
+		charBtn.on('click', function() {
+			chosen = $(this).attr('name');
 
-    $('#modal-char .previous-arrow').on('click', function() {
-      count--;
+			for (var i = 0; i < charContainers.length; i++) {
+				currentChar = charContainers[i].id;
 
-      if (count < 0) {
-        count = 3;
-      }
+				if (chosen == currentChar) {
+					count = i;
+					detailsGenerator(i);
+				}
+			}
+		});
 
-      detailsGenerator(count);
-    });
+		function detailsGenerator(count) {
+			var currId = charContainers[count].id,
+			overallCharContainer = $('#modal-char'),
+			charIntro = $('.tap-banner-' + currId).html(),
+			charBrief = $('#' + currId).html();
 
-    $('#modal-char .next-arrow').on('click', function() {
-      count++;
+			details.html(charIntro + charBrief);
+			displayModal('show', overallCharContainer);
+		}
 
-      if (count == 4) {
-        count = 0;
-      }
+		$('#modal-char .previous-arrow').on('click', function() {
+			count--;
 
-      detailsGenerator(count);
-    });
-  }
+			if (count < 0) {
+				count = 3;
+			}
 
-  function galleryModal(count) {
-    var gallery = $('#modal-gallery');
-    var picturePath;
+			detailsGenerator(count);
+		});
 
-    $('.gallery-imgs li').on('click', function() {
-      var pictureId = this.id;
-      picturePath = $(this).children().attr('src');
+		$('#modal-char .next-arrow').on('click', function() {
+			count++;
 
-      showFullPicture(picturePath);
-      displayModal('show', gallery);
-    });
+			if (count == 4) {
+				count = 0;
+			}
 
-    function makePicturePath(count) {
-      return picturePath.substring(0, picturePath.indexOf('-')) + '-' + count + '.jpg';
-    }
+			detailsGenerator(count);
+		});
+	}
 
-    $('#modal-gallery .previous-arrow').on('click', function() {
-      count--;
+	function galleryModal(count) {
+		var gallery = $('#modal-gallery');
+		var picturePath;
 
-      if (count <= 0) {
-        count = 9 - 1;
-      }
+		$('.gallery-imgs li').on('click', function() {
+			var pictureId = this.id;
+			picturePath = $(this).children().attr('src');
 
-      showFullPicture(makePicturePath(count));
-    });
+			showFullPicture(picturePath);
+			displayModal('show', gallery);
+		});
 
-    $('#modal-gallery .next-arrow').on('click', function() {
-      count++;
+		function makePicturePath(count) {
+			return picturePath.substring(0, picturePath.indexOf('-')) + '-' + count + '.jpg';
+		}
 
-      if (count >= 9) {
-        count = 1;
-      }
+		$('#modal-gallery .previous-arrow').on('click', function() {
+			count--;
 
-      showFullPicture(makePicturePath(count));
-    });
-  }
+			if (count <= 0) {
+				count = 9 - 1;
+			}
 
-  function gallerySwipe(count) {
-    var initNumber = 1,
-      itemSwipe = $('.slider-content'),
-      contentSwipe = $('#gallery-container');
+			showFullPicture(makePicturePath(count));
+		});
 
-    contentSwipe.swipe({
-      swipeLeft: function() {
-        if(initNumber != itemSwipe.length){
-          $('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
-            initNumber=initNumber+1;
-        }else{
-           $('.first-pic').removeClass('first-pic')
-           $('.slider-content:first').addClass('first-pic');
-            initNumber=1;
-        }
-         $('.counterNumber').text(initNumber);
-      },
-      swipeRight: function() {
-          if(initNumber != 1){
-             $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
-             initNumber=initNumber-1;
-          }else{
-             $('.first-pic').removeClass('first-pic')
-             $('.slider-content:last').addClass('first-pic');
-              initNumber=itemSwipe.length;
-          }
-           $('.counterNumber').text(initNumber);
-      },
-      threshold: 0,
-      triggerOnTouchEnd: false
-    });
-  }
+		$('#modal-gallery .next-arrow').on('click', function() {
+			count++;
 
-  function gameScroll() {
-    $('.game-nav a').click(function() {
-      $('html, body').stop().animate({
-        scrollTop: $($(this).attr('href')).offset().top - -10
-      }, 800);
-      return false;
-    });
-  }
+			if (count >= 9) {
+				count = 1;
+			}
 
-  function menuLang() {
-    var closeNavLang = $('.close-lang'),
-    listLang = $('#list-lang'),
-    listLangItem = $('.list-lang-item')
+			showFullPicture(makePicturePath(count));
+		});
+	}
 
-    listLang.on('click', function() {
-      for (var i = 0; i < listLangItem.length; i++) {
-        listLangItem.addClass(function(i) {
-          return 'list-lang-item lang-item-position-' + i;
-        });
-      };
-    });
+	function gallerySwipe(count) {
+		var initNumber = 1,
+		itemSwipe = $('.slider-content'),
+		contentSwipe = $('#gallery-container');
 
-    closeNavLang.on('click', function() {
-      for (var m = 0; m < listLangItem.length; m++) {
-        listLangItem.removeClass(function(m) {
-          return 'list-lang-item lang-item-position-' + m;
-        });
+		contentSwipe.swipe({
+			swipeLeft: function() {
+				if(initNumber != itemSwipe.length){
+					$('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
+					initNumber=initNumber+1;
+				}else{
+					$('.first-pic').removeClass('first-pic')
+					$('.slider-content:first').addClass('first-pic');
+					initNumber=1;
+				}
+				$('.counterNumber').text(initNumber);
+			},
+			swipeRight: function() {
+				if(initNumber != 1){
+					$('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
+					initNumber=initNumber-1;
+				}else{
+					$('.first-pic').removeClass('first-pic')
+					$('.slider-content:last').addClass('first-pic');
+					initNumber=itemSwipe.length;
+				}
+				$('.counterNumber').text(initNumber);
+			},
+			threshold: 0,
+			triggerOnTouchEnd: false
+		});
+	}
 
-        listLangItem.addClass('list-lang-item');
-      };
-    });
-  }
+	function gameScroll() {
+		$('.game-nav a').click(function() {
+			$('html, body').stop().animate({
+				scrollTop: $($(this).attr('href')).offset().top - -10
+			}, 800);
+			return false;
+		});
+	}
 
-  function navCreditos() {
-    var openCreditsMenu = $('.show-menu, .display');
+	function menuLang() {
+		var closeNavLang = $('.close-lang'),
+		listLang = $('#list-lang'),
+		listLangItem = $('.list-lang-item')
 
-    openCreditsMenu.on('click', function() {
-      $('.team-nav-content').toggleClass('expanded');
-      $('#show-menu-arrow').removeClass('up-arrow');
+		listLang.on('click', function() {
+			for (var i = 0; i < listLangItem.length; i++) {
+				listLangItem.addClass(function(i) {
+					return 'list-lang-item lang-item-position-' + i;
+				});
+			};
+		});
 
-      if ($('.team-nav-content').hasClass('expanded')) {
-        $('#show-menu-arrow').addClass('up-arrow');
-      };
-    });
-  }
+		closeNavLang.on('click', function() {
+			for (var m = 0; m < listLangItem.length; m++) {
+				listLangItem.removeClass(function(m) {
+					return 'list-lang-item lang-item-position-' + m;
+				});
 
-  function showFullPicture(path) {
-    $('#gallery-picture').attr('src', path);
-  }
+				listLangItem.addClass('list-lang-item');
+			};
+		});
+	}
 
-  function tapCharacter() {
-    var expandTap = 'tap-expand-info',
-    tapCharacter = $('.taps-character div');
+	function navCreditos() {
+		var openCreditsMenu = $('.show-menu, .display');
 
-    tapCharacter.on('click', function() {
-      if ($(this).next().hasClass( expandTap )) {
-        $(this).next().removeClass( expandTap );
-      }else {
-        $(".tap-info").removeClass( expandTap );
-        $(this).next().addClass( expandTap );
-      }
-    });
-  }
+		openCreditsMenu.on('click', function() {
+			$('.team-nav-content').toggleClass('expanded');
+			$('#show-menu-arrow').removeClass('up-arrow');
 
-  function videoTeaserModal() {
-    var video = $('.teaser'),
-    close = $('.teaser .close'),
-    btn = $('#btn-play-js'),
-    player = $('#ytplayer'),
-    content = '<iframe src="https://www.youtube.com/embed/DLzxrzFCyOs' + "?autoplay=1&amp;rel=0&amp;" + 'controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
+			if ($('.team-nav-content').hasClass('expanded')) {
+				$('#show-menu-arrow').addClass('up-arrow');
+			};
+		});
+	}
 
-    btn.click(function(){
-      displayModal('show', video);
-      player.html(content);
-    });
+	function showFullPicture(path) {
+		$('#gallery-picture').attr('src', path);
+	}
 
-    close.click(function(){
-      player.html('');
-    });
-  }
+	function tapCharacter() {
+		var expandTap = 'tap-expand-info',
+		tapCharacter = $('.taps-character div');
 
-  function characterHover(){
-    var className;
+		tapCharacter.on('click', function() {
+			if ($(this).next().hasClass( expandTap )) {
+				$(this).next().removeClass( expandTap );
+			}else {
+				$(".tap-info").removeClass( expandTap );
+				$(this).next().addClass( expandTap );
+			}
+		});
+	}
 
-    $('.char_btn').hover(function(){
-      className = $(this).attr('name');
-      $('.'+className+'>h2').addClass('show');
-    },function(){
-      $('.'+className+'>h2').removeClass('show');
-    });
-  }
+	function videoTeaserModal() {
+		var video = $('.teaser'),
+		close = $('.teaser .close'),
+		btn = $('#btn-play-js'),
+		player = $('#ytplayer'),
+		content = '<iframe src="https://www.youtube.com/embed/DLzxrzFCyOs' + "?autoplay=1&amp;rel=0&amp;" + 'controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
+
+		btn.click(function(){
+			displayModal('show', video);
+			player.html(content);
+		});
+
+		close.click(function(){
+			player.html('');
+		});
+	}
 
 }());

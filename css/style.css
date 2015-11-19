@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Share+Tech|Muli);
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint|Share+Tech|Muli);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1248,30 +1248,38 @@ header {
   max-height: 480px; }
 
 .char-name {
-  visibility: hidden;
   position: absolute;
-  color: #fff;
+  color: #363434;
   z-index: 0;
   cursor: pointer; }
+  .char-name h2 {
+    font-size: 20px;
+    font-size: 2rem;
+    background: url(../img/tape-1.png) no-repeat center center;
+    background-size: contain;
+    font-family: "Finger Paint", serif;
+    transition: all .3s ease;
+    overflow: hidden;
+    width: 0; }
+  .char-name .show {
+    padding: 10px 12px;
+    width: 100%; }
 
 .amy {
-  top: 59%;
-  left: 51%; }
+  left: 55%;
+  top: 47%; }
 
 .mom {
-  top: 35%;
-  left: 42%; }
+  left: 30%;
+  top: 32%; }
 
 .dad {
-  top: 31%;
-  left: 54%; }
+  left: 54%;
+  top: 18%; }
 
 .gramps {
-  top: 50%;
-  left: 63%; }
-
-.show {
-  visibility: visible; }
+  left: 68%;
+  top: 38%; }
 
 .counter-slider {
   color: #fff;
@@ -1412,6 +1420,28 @@ header {
     max-width: 80%;
     text-align: center; } }
 
+.gallery-type {
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 50px; }
+  .gallery-type span {
+    font-size: 20px;
+    font-size: 2rem;
+    background: url(../img/tape-1.png) no-repeat center center;
+    background-size: cover;
+    color: #363434;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Finger Paint", serif;
+    padding: 4px 28px;
+    text-decoration: line-through; }
+  .gallery-type span:hover {
+    text-shadow: 1px 1px 4px #A7A1A1;
+    text-decoration: none; }
+  .gallery-type .gallery-selected {
+    text-decoration: none; }
+
 .spon-list li {
   margin-top: 55px;
   width: 100%; }
@@ -1505,6 +1535,8 @@ header {
         width: 50%; } }
   @media screen and (min-width: 768px) {
     .brief {
+      background: url(../img/bg/main-bg-credits.png) no-repeat center bottom;
+      background-size: cover;
       padding: 14% 0 8% 0; } }
 
 .team-section-wrapper {
