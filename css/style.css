@@ -365,8 +365,7 @@ body {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-  overflow-x: hidden; }
+  box-sizing: inherit; }
 
 .ui-loading .ui-loader,
 .ui-loader {
