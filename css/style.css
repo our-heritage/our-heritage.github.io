@@ -1108,7 +1108,7 @@ header {
   background: #F1E3D6;
   margin: 50px auto;
   padding: 15px 0;
-  width: 70%; }
+  width: 100%; }
   .working-prototype-section:before, .working-prototype-section:after {
     background: url(../img/bg/about-frame.png) center bottom;
     content: "";
@@ -1139,7 +1139,8 @@ header {
       text-align: center;
       -webkit-transform: rotate(4deg);
           -ms-transform: rotate(4deg);
-              transform: rotate(4deg); }
+              transform: rotate(4deg);
+      width: 65%; }
       .working-prototype-section p {
         padding-bottom: 16px; }
       .working-prototype-section:before, .working-prototype-section:after {
@@ -1162,21 +1163,18 @@ header {
         -webkit-transform: rotate(-22deg);
             -ms-transform: rotate(-22deg);
                 transform: rotate(-22deg); } }
-  @media (min-width: 1280px) {
-    .working-prototype-section {
-      width: 60%; } }
 
 .history-section {
   background: #F1E3D6;
   margin: 50px auto;
   padding: 15px 0;
-  width: 90%; }
+  width: 100%; }
   .history-section:before, .history-section:after {
     background: url(../img/bg/about-frame.png) center bottom;
     content: "";
     height: 23px;
     position: absolute;
-    width: 90%; }
+    width: 100%; }
   .history-section:before {
     margin-top: -20px;
     -webkit-transform: rotate(180deg);
@@ -1203,8 +1201,7 @@ header {
       padding: 65px 0;
       width: 75%; }
       .history-section:before, .history-section:after {
-        content: none;
-        width: 100%; } }
+        content: none; } }
   @media (min-width: 1280px) {
     .history-section {
       width: 65%; } }

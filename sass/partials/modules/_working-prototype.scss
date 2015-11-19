@@ -2,7 +2,7 @@
 	background: $wooden-color;
 	margin: 50px auto;
 	padding: 15px 0;
-	width: 70%;
+	width: 100%;
 
 	&:before,
 	&:after {
@@ -39,6 +39,7 @@
 		padding: 30px 0;
 		text-align: center;
 		transform: rotate(4deg);
+		width: 65%;
 
 		p {
 			padding-bottom: 16px;
@@ -66,9 +67,5 @@
 			right: 120px;
 			transform: rotate(-22deg);
 		}
-	}
-
-	@media (min-width: 1280px) {
-		width: 60%;
 	}
 }
