@@ -10,10 +10,12 @@
 				}
 				$('map').imageMapResize();
 				$('.char-name h2').addClass('show');
+        $('.char_btn').off('mouseenter mouseleave');
 			},
 			unmatch : function() {
 				$('#game-nav').removeClass('nav-sticky');
 				$('.char-name h2').removeClass('show');
+        characterHover();
 				Waypoint.destroyAll();
 			}
 		});
@@ -37,12 +39,11 @@
 			match : function() {
 				gameScroll();
 				charactersModal(count);
+        characterHover();
 				galleryModal(count);
-				characterHover();
 			},
 			unmatch : function() {
 				$('.gallery-imgs li').off('click');
-				$('.char_btn').on('mouseenter, mouseleave');
 			}
 		});
 
@@ -306,17 +307,15 @@
 	}
 
 	function tapCharacter() {
-		var expandTap = 'tap-expand-info',
-		tapCharacter = $('.taps-character div');
+		tapCharacter = $('.taps-character');
+    tapCharacter.find('.tap-info').hide();
 
-		tapCharacter.on('click', function() {
-			if ($(this).next().hasClass( expandTap )) {
-				$(this).next().removeClass( expandTap );
-			}else {
-				$(".tap-info").removeClass( expandTap );
-				$(this).next().addClass( expandTap );
-			}
-		});
+    tapCharacter.find('.tap-banner').click(function () {
+      var next = $(this).next();
+      next.slideToggle('slow');
+      $('.tap-info').not(next).slideUp('slow');
+      return false;
+    });
 	}
 
 	function videoTeaserModal() {
