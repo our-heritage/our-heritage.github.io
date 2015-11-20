@@ -568,6 +568,10 @@ button:focus:active {
 .download-win {
   background-position: -68px -123px; }
 
+@media (min-width: 768px) {
+  .logo-mobile {
+    display: none; } }
+
 .logo-nav {
   display: none; }
   @media (min-width: 768px) {
@@ -1106,7 +1110,7 @@ header {
 
 .working-prototype-section {
   background: #F1E3D6;
-  margin: 50px auto;
+  margin: 180px 0 50px;
   padding: 15px 0;
   width: 100%; }
   .working-prototype-section:before, .working-prototype-section:after {
@@ -1133,7 +1137,7 @@ header {
       -webkit-backface-visibility: hidden;
       background: url("../img/bg/history-wrapper.png") no-repeat;
       background-size: 100% 100%;
-      margin: 100px auto 0 auto;
+      margin: 100px auto 0;
       min-width: 590px;
       padding: 30px 0;
       text-align: center;
