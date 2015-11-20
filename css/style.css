@@ -1210,8 +1210,7 @@ header {
   display: none; }
   @media (min-width: 768px) {
     .character-section {
-      display: block;
-      position: relative; } }
+      display: block; } }
 
 .characters-wrapper {
   margin: 5% auto;
@@ -1249,7 +1248,8 @@ header {
 
 .main-char-selection {
   height: 668px;
-  max-width: 993px; }
+  max-width: 993px;
+  position: relative; }
 
 .char-selection {
   position: absolute;
@@ -1296,19 +1296,13 @@ header {
   color: #363434;
   display: block;
   height: auto;
-  max-height: 0;
   overflow: hidden;
   padding: 0 15px;
-  transition: max-height .9s ease-in-out;
   width: 100%; }
   .tap-info p {
     margin: 16px auto;
     padding: 0;
     width: 90%; }
-
-.tap-expand-info {
-  height: 100%;
-  max-height: 565px; }
 
 .char-name {
   position: absolute;
@@ -1333,7 +1327,7 @@ header {
   top: 47%; }
 
 .mom {
-  left: 30%;
+  left: 22%;
   top: 32%; }
 
 .dad {
@@ -1341,7 +1335,7 @@ header {
   top: 18%; }
 
 .gramps {
-  left: 68%;
+  left: 73%;
   top: 38%; }
 
 .counter-slider {

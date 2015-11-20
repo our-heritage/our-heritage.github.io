@@ -3,7 +3,6 @@
 
 	@media (min-width: 768px) {
 		display: block;
-		position: relative;
 	}
 }
 
@@ -52,6 +51,7 @@
 .main-char-selection {
 	height: 668px;
 	max-width: 993px;
+    position: relative;
 }
 
 .char-selection {
@@ -112,10 +112,8 @@
 	color: $dark-color;
 	display: block;
 	height: auto;
-	max-height: 0;
 	overflow: hidden;
 	padding: 0 15px;
-	transition: max-height .9s ease-in-out;
 	width: 100%;
 
 	p {
@@ -123,11 +121,6 @@
 		padding: 0;
 		width: 90%;
 	}
-}
-
-.tap-expand-info {
-	height: 100%;
-	max-height: 565px;
 }
 
 
@@ -159,7 +152,7 @@
 }
 
 .mom{
-	left: 30%;
+	left: 22%;
 	top: 32%;
 }
 
@@ -169,6 +162,6 @@
 }
 
 .gramps{
-	left: 68%;
+	left: 73%;
 	top: 38%;
 }
