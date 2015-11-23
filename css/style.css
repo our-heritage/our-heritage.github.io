@@ -516,6 +516,13 @@ button:focus:active {
     .close {
       margin: 30px 40px; } }
 
+.up-arrow {
+  background-position: -14px -1px;
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  margin-left: 10px; }
+
 .down-arrow {
   background-position: 1px -1px;
   height: 9px;
@@ -556,11 +563,6 @@ button:focus:active {
   @media (min-width: 1280px) {
     .previous-arrow {
       left: 5%; } }
-
-.up-arrow {
-  background-position: -14px -1px;
-  height: 9px;
-  width: 9px; }
 
 .download-mac {
   background-position: 0px -123px; }
@@ -831,7 +833,7 @@ button:focus:active {
     font-size: 18px;
     font-size: 1.8rem;
     font-family: "Share Tech", serif;
-    transition: all .5s linear; }
+    transition: all .3s linear; }
     .team-nav-item a:hover {
       color: #f2f2f2; }
     @media screen and (min-width: 766px) {
@@ -940,13 +942,7 @@ header {
   height: 100%;
   left: 0;
   position: absolute;
-  top: 20px;
   width: 100%; }
-  @media (min-width: 1024px) {
-    .embed-container iframe,
-    .embed-container object,
-    .embed-container embed {
-      top: 70px; } }
 
 .download-mac,
 .download-win {
@@ -981,11 +977,13 @@ header {
     color: #f2f2f2;
     font-family: "Share Tech", serif;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase; }
+  .download-section span {
+    color: #24C29F;
     vertical-align: middle; }
 
 .download-section:before {
-  background: url(../img/bg/about-frame.png) center bottom;
+  background: url(../img/bg/paper-frame.png) center bottom;
   content: "";
   height: 23px;
   margin-top: -72px;
@@ -999,6 +997,10 @@ header {
   position: relative;
   transition: opacity .45s ease-in-out;
   z-index: 1; }
+  .about-image:after {
+    content: "+";
+    margin-top: -18px;
+    position: relative; }
   @media (max-width: 420px) {
     .about-image {
       height: 360px; } }
@@ -1060,9 +1062,6 @@ header {
   position: relative;
   text-transform: uppercase;
   z-index: 3; }
-  .about-content h3:after {
-    content: "+";
-    margin-left: 18px; }
   @media (min-width: 768px) {
     .about-content h3 {
       background-color: transparent;
@@ -1114,7 +1113,7 @@ header {
   padding: 15px 0;
   width: 100%; }
   .working-prototype-section:before, .working-prototype-section:after {
-    background: url(../img/bg/about-frame.png) center bottom;
+    background: url(../img/bg/paper-frame.png) center bottom;
     content: "";
     height: 23px;
     position: absolute;
@@ -1153,7 +1152,7 @@ header {
         position: absolute;
         width: 0; }
       .working-prototype-section:before {
-        content: url(../img/tape-1.png);
+        content: url(../img/bg/tape-shape.png);
         left: -30px;
         margin-top: 0;
         top: 35px;
@@ -1162,8 +1161,8 @@ header {
                 transform: rotate(-38deg); }
       .working-prototype-section:after {
         bottom: 15px;
-        content: url(../img/tape-2.png);
-        right: 120px;
+        content: url(../img/bg/tape-shape.png);
+        right: 83px;
         -webkit-transform: rotate(-22deg);
             -ms-transform: rotate(-22deg);
                 transform: rotate(-22deg); } }
@@ -1174,7 +1173,7 @@ header {
   padding: 15px 0;
   width: 100%; }
   .history-section:before, .history-section:after {
-    background: url(../img/bg/about-frame.png) center bottom;
+    background: url(../img/bg/paper-frame.png) center bottom;
     content: "";
     height: 23px;
     position: absolute;
@@ -1246,12 +1245,13 @@ header {
     position: absolute;
     right: 62%;
     top: 4%; }
+  .char-details span {
+    display: none; }
 
 .main-char-selection img {
   width: 100%; }
 
 .main-char-selection {
-  height: 668px;
   max-width: 993px;
   position: relative; }
 
@@ -1268,18 +1268,13 @@ header {
   .preview-char h4 {
     color: #f2f2f2;
     margin-top: 10px;
-    text-align: center;
-    text-shadow: 1px 1px 4px #f2f2f2; }
+    text-align: center; }
   .preview-char:hover > h4 {
-    color: #24C29F;
-    text-shadow: 1px 1px 4px #24C29F; }
+    color: #24C29F; }
 
 .taps-character {
   margin: 0 auto;
   max-width: 100%; }
-  @media (min-width: 768px) {
-    .taps-character {
-      display: none; } }
   .taps-character li {
     background-color: #fff; }
   .taps-character h3 {
@@ -1290,10 +1285,15 @@ header {
     font-family: "Share Tech", serif;
     text-align: right;
     margin-top: -65px;
-    margin-right: 53px;
+    margin-right: 50px;
     position: relative; }
   .taps-character img {
     width: 100%; }
+  .taps-character .down-arrow, .taps-character .up-arrow {
+    margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    .taps-character {
+      display: none; } }
 
 .tap-info {
   background: #fff;
@@ -1316,14 +1316,14 @@ header {
   .char-name h2 {
     font-size: 20px;
     font-size: 2rem;
-    background: url(../img/tape-1.png) no-repeat center center;
+    background: url(../img/bg/tape-shape.png) no-repeat center center;
     background-size: contain;
     font-family: "Finger Paint", serif;
     transition: all .3s ease;
     overflow: hidden;
     width: 0; }
   .char-name .show {
-    padding: 10px 12px;
+    padding: 17px;
     width: 100%; }
 
 .amy {
@@ -1489,7 +1489,7 @@ header {
   .gallery-type span {
     font-size: 20px;
     font-size: 2rem;
-    background: url(../img/tape-1.png) no-repeat center center;
+    background: url(../img/bg/tape-shape.png) no-repeat center center;
     background-size: cover;
     color: #363434;
     cursor: pointer;
@@ -1736,7 +1736,10 @@ footer p {
   clear: both;
   height: 400px;
   width: 100%;
-  background: linear-gradient(rgba(165, 187, 209, 0) 0%, rgba(165, 187, 209, 0.32) 13%, rgba(165, 187, 209, 0.6) 24%, rgba(165, 187, 209, 0.82) 33%, #a5bbd1 42%, #a5bbd1 99%); }
+  background: #A5BBD1; }
+  @media (min-width: 768px) {
+    .footer-game-bg {
+      background: linear-gradient(rgba(165, 187, 209, 0) 0%, rgba(165, 187, 209, 0.32) 13%, rgba(165, 187, 209, 0.6) 24%, rgba(165, 187, 209, 0.82) 33%, #a5bbd1 42%, #a5bbd1 99%); } }
   @media (min-width: 1100px) {
     .footer-game-bg {
       height: 700px; } }

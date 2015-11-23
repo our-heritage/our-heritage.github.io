@@ -17,9 +17,6 @@ footer {
 	}
 }
 
-
-
-
 footer p  {
 	@include font-size(16);
 	font-family: $text-sans;
@@ -29,6 +26,7 @@ footer p  {
 		@include font-size(20);
 	}
 }
+
 .footer-home {
 	background-color: #A5BBD1;
 }
@@ -48,8 +46,13 @@ footer p  {
 	clear: both;
 	height: 400px;
 	width: 100%;
-	background: linear-gradient(rgba(165,187,209,0) 0%, rgba(165,187,209,0.32) 13%, rgba(165,187,209,0.6) 24%, rgba(165,187,209,0.82) 33%, rgba(165,187,209,1) 42%, rgba(165,187,209,1) 99%);
-	@media (min-width: 1100px){
-		height: 700px;
+	background: #A5BBD1;
+
+	@media (min-width: 768px){
+    background: linear-gradient(rgba(165,187,209,0) 0%, rgba(165,187,209,0.32) 13%, rgba(165,187,209,0.6) 24%, rgba(165,187,209,0.82) 33%, rgba(165,187,209,1) 42%, rgba(165,187,209,1) 99%);
 	}
+
+  @media (min-width: 1100px){
+    height: 700px;
+  }
 }

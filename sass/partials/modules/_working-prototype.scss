@@ -6,7 +6,7 @@
 
 	&:before,
 	&:after {
-		background: url(../img/bg/about-frame.png) center bottom;
+		background: url(../img/bg/paper-frame.png) center bottom;
 		content: "";
 		height: 23px;
 		position: absolute;
@@ -54,7 +54,7 @@
 		}
 
 		&:before {
-			content: url(../img/tape-1.png);
+			content: url(../img/bg/tape-shape.png);
 			left: -30px;
 			margin-top: 0;
 			top: 35px;
@@ -63,8 +63,8 @@
 
 		&:after {
 			bottom: 15px;
-			content: url(../img/tape-2.png);
-			right: 120px;
+			content: url(../img/bg/tape-shape.png);
+			right: 83px;
 			transform: rotate(-22deg);
 		}
 	}

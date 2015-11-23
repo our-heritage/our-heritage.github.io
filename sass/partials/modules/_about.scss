@@ -6,6 +6,12 @@
 	transition: opacity .45s ease-in-out;
 	z-index: 1;
 
+  &:after {
+    content: "+";
+    margin-top: -18px;
+    position: relative;
+  }
+
 	@media (max-width: 420px) {
 		height: 360px;
 	}
@@ -82,11 +88,6 @@
 	position: relative;
 	text-transform: uppercase;
 	z-index: 3;
-
-	&:after {
-		content: "+";
-		margin-left: 18px;
-	}
 
 	@media (min-width: 768px) {
 		background-color: transparent;

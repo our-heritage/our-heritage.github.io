@@ -50,7 +50,7 @@
 	a {
 		@include font-size(18);
 		font-family: $text-serif;
-		transition: all .5s linear;
+		transition: all .3s linear;
 
 		&:hover {
 			color: #f2f2f2;

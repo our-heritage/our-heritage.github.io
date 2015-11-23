@@ -42,6 +42,10 @@
 		right: 62%;
 		top: 4%;
 	}
+
+  span {
+    display: none;
+  }
 }
 
 .main-char-selection img {
@@ -49,9 +53,8 @@
 }
 
 .main-char-selection {
-	height: 668px;
 	max-width: 993px;
-    position: relative;
+  position: relative;
 }
 
 .char-selection {
@@ -70,22 +73,16 @@
 		color: $light-color;
 		margin-top: 10px;
 		text-align: center;
-		text-shadow: 1px 1px 4px $light-color;
 	}
 
 	&:hover > h4 {
 		color: $main-color;
-		text-shadow: 1px 1px 4px $main-color;
 	}
 }
 
 .taps-character {
 	margin: 0 auto;
 	max-width: 100%;
-
-	@media (min-width: 768px) {
-		display: none;
-	}
 
 	li {
 		background-color: #fff;
@@ -98,13 +95,21 @@
 		font-family: $text-serif;
 		text-align: right;
 		margin-top: -65px;
-		margin-right: 53px;
+		margin-right: 50px;
 		position: relative;
 	}
 
 	img {
 		width: 100%;
 	}
+
+  .down-arrow, .up-arrow {
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .tap-info {
@@ -132,7 +137,7 @@
 
 	h2 {
 		@include font-size(20);
-		background: url(../img/tape-1.png) no-repeat center center;
+		background: url(../img/bg/tape-shape.png) no-repeat center center;
 		background-size: contain;
 		font-family: $hand-serif;
 		transition: all .3s ease;
@@ -141,7 +146,7 @@
 	}
 
 	.show {
-		padding: 10px 12px;
+		padding: 17px;
 		width: 100%;
 	}
 }
