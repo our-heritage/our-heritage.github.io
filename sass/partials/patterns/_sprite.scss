@@ -43,6 +43,14 @@
 	}
 }
 
+.up-arrow {
+  background-position: -14px -1px;
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  margin-left: 10px;
+}
+
 .down-arrow {
 	background-position: 1px -1px;
 	height: 9px;
@@ -94,12 +102,6 @@
 	@media (min-width: 1280px) {
 		left: 5%;
 	}
-}
-
-.up-arrow {
-	background-position: -14px -1px;
-	height: 9px;
-	width: 9px;
 }
 
 .download-mac {
