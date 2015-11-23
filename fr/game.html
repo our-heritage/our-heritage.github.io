@@ -62,7 +62,7 @@
               <source media="(max-width: 768px)" srcset="../img/characters/tap-amy.png">
               <img srcset="../img/characters/body-amy.png" alt="Amy Our Heritage Protagonist">
             </picture>
-            <h3>Amy</h3>
+            <h3>Amy<span class="down-arrow"></span></h3>
           </div>
           <div class="tap-info" id="amy">
             <p>Amy est une petite fille de 8 ans, jolie, douce, optimiste, et très intelligente. Cependant, comme elle n'a pas connu le monde d'avant, elle ne se rend pas compte à quel point le monde actuel va mal.</p>
@@ -76,7 +76,7 @@
               <source media="(max-width: 768px)" srcset="../img/characters/tap-mom.png">
               <img srcset="../img/characters/body-mom.png" alt="Amy's Mom">
             </picture>
-            <h3>Maman</h3>
+            <h3>Maman<span class="down-arrow"></span></h3>
           </div>
           <div class="tap-info" id="mom">
             <p>Cette activiste environnementale de 35 ans a toujours eu conscience que les mauvaises habitudes de l'Homme causeraient du tort à l'environnement. Elle considère que le changement climatique est dû à cette négligence et non pas au destin.</p>
@@ -91,7 +91,7 @@
               <source media="(max-width: 768px)" srcset="../img/characters/tap-dad.png">
               <img srcset="../img/characters/body-dad.png" alt="Amy's Dad">
             </picture>
-            <h3>Papa</h3>
+            <h3>Papa<span class="down-arrow"></span></h3>
           </div>
           <div class="tap-info" id="dad">
             <p>Cet ingénieur des constructions de 40 ans est à la retraite. Contrairement à son père, il a cru depuis très jeune à la thèse du changement climatique. Le monde était cependant déjà trop touché selon lui, la seule chose que l'on pouvait faire était de se préparer à affronter le futur.</p>
@@ -105,7 +105,7 @@
               <source media="(max-width: 768px)" srcset="../img/characters/tap-gramps.png">
               <img srcset="../img/characters/body-gramps.png" alt="Amy's Grandpa">
             </picture>
-            <h3>Grand-père</h3>
+            <h3>Grand-père<span class="down-arrow"></span></h3>
           </div>
           <div class="tap-info" id="gramps">
             <p>Cet homme de 70 ans a passé presque toute sa vie à nier le changement climatique. Il en a seulement pris conscience lorsqu'il a lui-même fait l’expérience de ses conséquences dramatiques. Son langage corporel reflète sa frustration et ses regrets vis à vis de l'état actuel du monde.</p>
@@ -136,8 +136,8 @@
             <!-- Modal -->
       <div class="modal hidden" id="modal-char">
         <span class="close"></span>
-        <span class="previous-arrow"></span>
-        <span class="next-arrow"></span>
+        <span id="previous-char" class="previous-arrow"></span>
+        <span id="next-char" class="next-arrow"></span>
         <div class="char-details" id="char-details"></div>
         <div class="char-selection">
           <span class="char_btn preview-char" name="amy">
@@ -200,8 +200,8 @@
       <!-- Modal -->
       <div class="modal hidden" id="modal-gallery">
         <span class="close"></span>
-        <span class="previous-arrow"></span>
-        <span class="next-arrow"></span>
+        <span id="previous-pic" class="previous-arrow"></span>
+        <span id="next-pic" class="next-arrow"></span>
         <img id="gallery-picture" class="full-picture" src="">
       </div>
       <!-- Modal -->
