@@ -5,7 +5,7 @@
 		enquire.register('screen and (min-width: 766px) and (max-width: 1280px)', {
 
 			match : function() {
-				if ($('#game-nav').length > 0) {
+				if ($('#game-nav').length) {
 					navGameScroll();
 				}
 				$('map').imageMapResize();
@@ -109,6 +109,7 @@
 			$(this).addClass('gallery-selected');
 
 			var option = $(this).text();
+
 			if (option == 'Concept Art') {
 				eachImage.each(function () {
 					$(this).attr('src', $(this).attr('src').replace('screenshot', 'concept'));
@@ -165,7 +166,7 @@
 			displayModal('show', overallCharContainer);
 		}
 
-		$('#modal-char .previous-arrow').on('click', function() {
+		$('#previous-char').on('click', function() {
 			count--;
 
 			if (count < 0) {
@@ -175,7 +176,7 @@
 			detailsGenerator(count);
 		});
 
-		$('#modal-char .next-arrow').on('click', function() {
+		$('#next-char').on('click', function() {
 			count++;
 
 			if (count == 4) {
@@ -187,11 +188,11 @@
 	}
 
 	function galleryModal(count) {
-		var gallery = $('#modal-gallery');
-		var picturePath;
+		var gallery = $('#modal-gallery'),
+        galleryItems = $('.gallery-imgs').find('li'),
+        picturePath;
 
-		$('.gallery-imgs li').on('click', function() {
-			var pictureId = this.id;
+		galleryItems.on('click', function() {
 			picturePath = $(this).children().attr('src');
 
 			showFullPicture(picturePath);
@@ -202,7 +203,7 @@
 			return picturePath.substring(0, picturePath.indexOf('-')) + '-' + count + '.jpg';
 		}
 
-		$('#modal-gallery .previous-arrow').on('click', function() {
+		$('#previous-pic').on('click', function() {
 			count--;
 
 			if (count <= 0) {
@@ -212,7 +213,7 @@
 			showFullPicture(makePicturePath(count));
 		});
 
-		$('#modal-gallery .next-arrow').on('click', function() {
+		$('#next-pic').on('click', function() {
 			count++;
 
 			if (count >= 9) {
@@ -223,41 +224,42 @@
 		});
 	}
 
-	function gallerySwipe(count) {
-		var initNumber = 1,
-		itemSwipe = $('.slider-content'),
-		contentSwipe = $('#gallery-container');
+	var gallerySwipe = function() {
+    var initNumber = 1,
+        itemSwipe = $('.slider-content'),
+        contentSwipe = $('#gallery-container');
 
-		contentSwipe.swipe({
-			swipeLeft: function() {
-				if(initNumber != itemSwipe.length){
-					$('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
-					initNumber=initNumber+1;
-				}else{
-					$('.first-pic').removeClass('first-pic')
-					$('.slider-content:first').addClass('first-pic');
-					initNumber=1;
-				}
-				$('.counterNumber').text(initNumber);
-			},
-			swipeRight: function() {
-				if(initNumber != 1){
-					$('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
-					initNumber=initNumber-1;
-				}else{
-					$('.first-pic').removeClass('first-pic')
-					$('.slider-content:last').addClass('first-pic');
-					initNumber=itemSwipe.length;
-				}
-				$('.counterNumber').text(initNumber);
-			},
-			threshold: 0,
-			triggerOnTouchEnd: false
-		});
-	}
+    contentSwipe.swipe({
+      swipeLeft: function() {
+        if(initNumber != itemSwipe.length){
+          $('.first-pic').removeClass('first-pic').next('.slider-content').addClass('first-pic');
+          initNumber=initNumber+1;
+        }else{
+          $('.first-pic').removeClass('first-pic')
+          $('.slider-content:first').addClass('first-pic');
+          initNumber=1;
+        }
+        $('.counterNumber').text(initNumber);
+      },
+      swipeRight: function() {
+        if(initNumber != 1){
+          $('.first-pic').removeClass('first-pic').prev('.slider-content').addClass('first-pic');
+          initNumber=initNumber-1;
+        }else{
+          $('.first-pic').removeClass('first-pic')
+          $('.slider-content:last').addClass('first-pic');
+          initNumber=itemSwipe.length;
+        }
+        $('.counterNumber').text(initNumber);
+      },
+      threshold: 0,
+      triggerOnTouchEnd: false
+    });
+  }
 
 	function gameScroll() {
-		$('.game-nav a').click(function() {
+    var items = $('.game-nav a');
+		items.click(function() {
 			$('html, body').stop().animate({
 				scrollTop: $($(this).attr('href')).offset().top - -10
 			}, 800);
@@ -290,29 +292,33 @@
 	}
 
 	function navCreditos() {
-		var openCreditsMenu = $('.show-menu, .display');
+		var openCreditsMenu = $('.show-menu').find('.display'),
+        content = $('.team-nav-content'),
+        arrow = $('#show-menu-arrow');
 
 		openCreditsMenu.on('click', function() {
-			$('.team-nav-content').toggleClass('expanded');
-			$('#show-menu-arrow').removeClass('up-arrow');
+			content.toggleClass('expanded');
+			arrow.removeClass('up-arrow');
 
-			if ($('.team-nav-content').hasClass('expanded')) {
-				$('#show-menu-arrow').addClass('up-arrow');
+			if (content.hasClass('expanded')) {
+				arrow.addClass('up-arrow');
 			};
 		});
 	}
 
 	function showFullPicture(path) {
-		$('#gallery-picture').attr('src', path);
+    var galleryPicture = $('#gallery-picture');
+		galleryPicture.attr('src', path);
 	}
 
 	function tapCharacter() {
-		tapCharacter = $('.taps-character');
+		var tapCharacter = $('.taps-character');
     tapCharacter.find('.tap-info').hide();
 
     tapCharacter.find('.tap-banner').click(function () {
       var next = $(this).next();
       next.slideToggle('slow');
+      $(this).find('span').toggleClass('down-arrow').addClass('up-arrow');
       $('.tap-info').not(next).slideUp('slow');
       return false;
     });
@@ -323,11 +329,11 @@
 		close = $('.teaser .close'),
 		btn = $('#btn-play-js'),
 		player = $('#ytplayer'),
-		content = '<iframe src="https://www.youtube.com/embed/DLzxrzFCyOs' + "?autoplay=1&amp;rel=0&amp;" + 'controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
+		content = '<iframe src="https://player.vimeo.com/video/146402139?autoplay=1&color=24C29F&title=0&byline=0&portrait=0" frameborder="0"></iframe>';
 
 		btn.click(function(){
+      player.html(content);
 			displayModal('show', video);
-			player.html(content);
 		});
 
 		close.click(function(){
