@@ -62,7 +62,7 @@
               <source media="(max-width: 768px)" srcset="img/characters/tap-amy.png">
               <img srcset="img/characters/body-amy.png" alt="Amy Our Heritage Protagonist">
             </picture>
-            <h3>Amy</h3>
+            <h3>Amy<span class="down-arrow"></span></h3>
           </div>
           <div class="tap-info" id="amy">
             <p>A cute, sweet and optimist, 8 year old girl. Amy is very intelligent, and because of her ignorance of how the world was in the past, she is rather naive to understand how bad it is today.</p>
@@ -76,7 +76,7 @@
               <source media="(max-width: 768px)" srcset="img/characters/tap-mom.png">
               <img srcset="img/characters/body-mom.png" alt="Amy's Mom">
             </picture>
-            <h3>Mom</h3>
+            <h3>Mom<span class="down-arrow"></span></h3>
           </div>
           <div class="tap-info" id="mom">
             <p>Environmental activist, 35 years old. She always knew that the bad habits of mankind, would cause environmental damage. She believes that climate change is a matter of negligence, not destination.</p>
@@ -91,7 +91,7 @@
               <source media="(max-width: 768px)" srcset="img/characters/tap-dad.png">
               <img srcset="img/characters/body-dad.png" alt="Amy's Dad">
             </picture>
-            <h3>Dad</h3>
+            <h3>Dad<span class="down-arrow"></span></h3>
           </div>
           <div class="tap-info" id="dad">
             <p>Retired engineer, 40 years old. He dedicated his professional career to structural engineering. Unlike his father, he did believe in climate change since he was young, but to him, the world was too damaged and all I could be done was to be prepare for the future.</p>
@@ -105,7 +105,7 @@
               <source media="(max-width: 768px)" srcset="img/characters/tap-gramps.png">
               <img srcset="img/characters/body-gramps.png" alt="Amy's Grandpa">
             </picture>
-            <h3>Grandpa</h3>
+            <h3>Grandpa<span class="down-arrow"></span></h3>
           </div>
           <div class="tap-info" id="gramps">
             <p>A 70 year old man who spent most of his life denying climate change. After seeing and experiencing the disastrous consequences, he came to his senses. His body language reflects his frustration and regret about the current state of the world.</p>
@@ -135,8 +135,8 @@
             <!-- Modal -->
       <div class="modal hidden" id="modal-char">
         <span class="close"></span>
-        <span class="previous-arrow"></span>
-        <span class="next-arrow"></span>
+        <span id="previous-char" class="previous-arrow"></span>
+        <span id="next-char" class="next-arrow"></span>
         <div class="char-details" id="char-details"></div>
         <div class="char-selection">
           <span class="char_btn preview-char" name="amy">
@@ -199,8 +199,8 @@
       <!-- Modal -->
       <div class="modal hidden" id="modal-gallery">
         <span class="close"></span>
-        <span class="previous-arrow"></span>
-        <span class="next-arrow"></span>
+        <span id="previous-pic" class="previous-arrow"></span>
+        <span id="next-pic" class="next-arrow"></span>
         <img id="gallery-picture" class="full-picture" src="">
       </div>
       <!-- Modal -->
