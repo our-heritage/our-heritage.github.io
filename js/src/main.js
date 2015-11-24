@@ -130,10 +130,11 @@
 	}
 
 	function showAboutInfo() {
+    var aboutCover = $('.about-content');
 
-		$('.about-image').on('click', function() {
+		aboutCover.on('click', function() {
 			$('.about-image').removeClass('hidden-image');
-			$(this).toggleClass('hidden-image');
+			$(this).parent().children('.about-image').toggleClass('hidden-image');
 		});
 	}
 
@@ -292,17 +293,13 @@
 	}
 
 	function navCreditos() {
-		var openCreditsMenu = $('.show-menu').find('.display'),
+		var openCreditsMenu = $('.show-menu'),
         content = $('.team-nav-content'),
         arrow = $('#show-menu-arrow');
 
 		openCreditsMenu.on('click', function() {
 			content.toggleClass('expanded');
-			arrow.removeClass('up-arrow');
-
-			if (content.hasClass('expanded')) {
-				arrow.addClass('up-arrow');
-			};
+			arrow.toggleClass('down-arrow').addClass('up-arrow');
 		});
 	}
 
