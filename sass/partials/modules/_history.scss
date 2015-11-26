@@ -1,22 +1,7 @@
 .history-section {
-	background: $wooden-color;
 	margin: 50px auto;
 	padding: 15px 0;
 	width: 100%;
-
-	&:before,
-	&:after {
-		background: url(../img/bg/paper-frame.png) center bottom;
-		content: "";
-		height: 23px;
-		position: absolute;
-		width: 100%;
-	}
-
-	&:before {
-		margin-top: -20px;
-		transform: rotate(180deg);
-	}
 
 	h2 {
 		color: $main-color;
@@ -35,8 +20,6 @@
 	}
 
 	@media (min-width: 768px) {
-		background: url("../img/bg/history-wrapper.png") no-repeat;
-		background-size: 100% 100%;
 		margin: 0 auto 100px auto;
 		min-width: 590px;
 		padding: 65px 0;

@@ -163,15 +163,23 @@
 }
 
 .gallery-type {
-	color: #fff;
-	font-size: 26px;
-	text-align: center;
-	margin-bottom: 50px;
+    margin: 0 auto 70px;
+    padding: 15px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    &:before,
+	&:after {
+		left: 0;
+	}
+
+    &:after {
+		bottom: -6px;
+	}
 
 	span {
 		@include font-size(20);
-		background: url(../img/bg/tape-shape.png) no-repeat center center;
-		background-size: cover;
 		color: $dark-color;
 		cursor: pointer;
 		display: inline-block;
@@ -187,5 +195,33 @@
 
 	.gallery-selected {
 		text-decoration: none;
+	}
+
+	@media (min-width: 768px) {
+        
+        transform: rotate(-2deg);
+        width: 440px;
+
+	    &:before,
+	    &:after {
+            content: "";
+            background: url(../img/bg/tape-shape.png);
+            background-size: cover;
+            height: 31px;
+            position: absolute;
+            width: 78px;
+	    }
+
+	    &:before {
+            left: -27px;
+            top: 9px;
+		    transform: rotate(-38deg);
+	    }
+
+	    &:after {
+		    bottom: 0;
+		    left: 386px;
+		    transform: rotate(-30deg);
+	    }
 	}
 }

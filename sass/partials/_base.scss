@@ -1,59 +1,89 @@
 html {
-    box-sizing: border-box;
-    font-size: 10px;
+	box-sizing: border-box;
+	font-size: 10px;
 }
 
 body {
-    background-color: $background-color;
+	background-color: $background-color;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 .ui-loading .ui-loader,
 .ui-loader {
-    display: none;
+	display: none;
 }
 
 // Modal Desktop
-.modal {
-    transition: .10s;
-    background-color: rgba(0, 0, 0, .9);
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 1;
-    padding: 2% 0;
-    position: fixed;
-    text-align: center;
-    top: 0;
-    width: 100%;
-    z-index: 999;
 
-    @media screen and (min-width: 1024px) {
-        padding: 5% 0;
-    }
+.modal {
+	transition: .10s;
+	background-color: rgba(0, 0, 0, .9);
+	display: block;
+	height: 100%;
+	left: 0;
+	opacity: 1;
+	padding: 2% 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+	@media screen and (min-width: 1024px) {
+		padding: 5% 0;
+	}
 }
 
 .hidden {
-    display: none;
+	display: none;
 }
 
 .hidden-image {
-    opacity: 0;
+	opacity: 0;
 }
 
-.section-title {
-  display: block;
-  border-bottom: 2px solid $main-color;
-  width: 80%;
-  margin: 50px auto;
-  color: #fff;
+// Papel Texture
 
-  @media (min-width: 768px) {
-    display: none;
-  }
+.papel-texture {
+    background: $wooden-color;
+
+	&:before,
+	&:after {
+		background: url(../img/bg/paper-frame.png) center bottom;
+		content: "";
+		height: 23px;
+		position: absolute;
+		width: 100%;
+	}
+
+	&:before {
+		margin-top: -20px;
+		transform: rotate(180deg);
+	}
+
+	@media (min-width: 768px) {
+		-webkit-backface-visibility: hidden;
+	    background: url(../img/bg/paper-wrapper.png) no-repeat;
+	    background-size: 100% 100%;
+    }
+}
+
+
+// Section title Mobile
+
+.section-title {
+	display: block;
+	border-bottom: 2px solid $main-color;
+	width: 80%;
+	margin: 50px auto;
+	color: #fff;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
 }
