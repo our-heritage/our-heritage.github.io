@@ -1,5 +1,5 @@
 .show-menu {
-	@include font-size(14);
+	@include font-size(18);
 	background: none;
 	border: 1px solid $light-color;
 	color: $light-color;
@@ -39,16 +39,19 @@
 }
 
 .expanded {
-	height: 123px
+	height: 204px;
+  @media screen and (min-width: 766px){
+    height: auto;
+  }
 }
 
 .team-nav-item {
 	border-bottom: 1px solid #f2f2f2;
-	padding: 10px 0;
+	padding: 20px 0;
 	width: 100%;
 
 	a {
-		@include font-size(18);
+		@include font-size(24);
 		font-family: $text-serif;
 		transition: all .3s linear;
 
@@ -57,7 +60,6 @@
 		}
 
 		@media screen and (min-width: 766px) {
-			@include font-size(24);
 			display: block;
 			height: 50%;
 			padding: 24px 0 52px;

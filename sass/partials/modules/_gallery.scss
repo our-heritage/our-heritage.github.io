@@ -184,17 +184,16 @@
 		cursor: pointer;
 		display: inline-block;
 		font-family: $hand-serif;
-		padding: 4px 28px;
-		text-decoration: line-through;
+		margin: 4px 28px;
 	}
 
 	span:hover {
 		text-shadow: 1px 1px 4px #A7A1A1;
-		text-decoration: none;
+		border-bottom: 1px solid #000;
 	}
 
 	.gallery-selected {
-		text-decoration: none;
+		border-bottom: 1px solid #000;
 	}
 
 	@media (min-width: 768px) {
