@@ -9,14 +9,13 @@
 					navGameScroll();
 				}
 				$('map').imageMapResize();
-				$('.char-name h2').addClass('show');
-        $('.char_btn').off('mouseenter mouseleave');
+				$('h2.char_btn').addClass('show');
 			},
 			unmatch : function() {
 				$('#game-nav').removeClass('nav-sticky');
-				$('.char-name h2').removeClass('show');
-        characterHover();
+				$('h2.char_btn').removeClass('show');
 				Waypoint.destroyAll();
+        characterHover();
 			}
 		});
 
@@ -69,16 +68,19 @@
 
 	function characterHover(){
 		var className;
+    var charClass = $('.char_btn');
 
-		$('.char_btn').on({
-			mouseenter: function () {
-				className = $(this).attr('name');
-				$('.'+className+'>h2').addClass('show');
-			},
-			mouseleave: function () {
-				$('.'+className+'>h2').removeClass('show');
-			}
-		});
+    if ($('h2.char_btn').hasClass('show') === false) {
+		  charClass.on({
+			  mouseenter: function () {
+				  className = $(this).attr('name');
+				  $('.'+className+'>h2').addClass('show');
+			  },
+			  mouseleave: function () {
+				  $('.'+className+'>h2').removeClass('show');
+			  }
+		  });
+    }
 	}
 
 	function changeColorCreditos() {
