@@ -1,25 +1,18 @@
 .brief {
-	padding: 60% 0 8% 0;
+	padding: 60% 0 15% 0;
 
-	p {
-		@include font-size(18);
-		background-color: rgba(255, 255, 255, .1);
+	h2 {
+		@include font-size(40);
+		border-bottom: 1px solid #fff;
 		box-sizing: border-box;
 		color: $light-color;
 		font-family: $text-serif;
 		margin: 0 auto;
-		padding: 26px;
-		width: 85%;
-
-		@media screen and (min-width: 768px) {
-			@include font-size(24);
-			padding: 30px;
-			width: 50%;
-		}
+		width: 150px;
 	}
 
   @media screen and (min-width: 420px) {
-    padding: 38% 0 8% 0;
+    padding: 44% 0 8% 0;
   }
 
 	@media screen and (min-width: 768px) {
