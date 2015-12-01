@@ -1564,14 +1564,16 @@ header {
 .brief {
   padding: 60% 0 15% 0; }
   .brief h2 {
-    font-size: 40px;
-    font-size: 4rem;
-    border-bottom: 1px solid #fff;
+    font-size: 30px;
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     color: #f2f2f2;
     font-family: "Share Tech", serif;
     margin: 0 auto;
-    width: 150px; }
+    min-width: 300px;
+    padding: 10px 0;
+    width: 10%; }
   @media screen and (min-width: 420px) {
     .brief {
       padding: 44% 0 8% 0; } }

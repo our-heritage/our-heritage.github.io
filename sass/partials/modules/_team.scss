@@ -2,13 +2,15 @@
 	padding: 60% 0 15% 0;
 
 	h2 {
-		@include font-size(40);
-		border-bottom: 1px solid #fff;
+		@include font-size(30);
+		background: rgba(255, 255, 255, .2);
 		box-sizing: border-box;
 		color: $light-color;
 		font-family: $text-serif;
 		margin: 0 auto;
-		width: 150px;
+		min-width: 300px;
+		padding: 10px 0;
+		width: 10%;
 	}
 
   @media screen and (min-width: 420px) {
