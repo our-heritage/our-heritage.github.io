@@ -295,7 +295,7 @@
 	}
 
 	function navCreditos() {
-		var openCreditsMenu = $('.show-menu'),
+		var openCreditsMenu = $('.show-menu, .display'),
         content = $('.team-nav-content'),
         arrow = $('#show-menu-arrow');
 
