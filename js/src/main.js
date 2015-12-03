@@ -6,7 +6,7 @@
 
 			match : function() {
 				if ($('#game-nav').length) {
-					navGameScroll();
+					changeGameNavStyle();
 				}
 				$('map').imageMapResize();
 				$('h2.char_btn').addClass('show');
@@ -15,7 +15,7 @@
 				$('#game-nav').removeClass('nav-sticky');
 				$('h2.char_btn').removeClass('show');
 				Waypoint.destroyAll();
-        characterHover();
+				showCharacterHover();
 			}
 		});
 
@@ -24,9 +24,9 @@
 			match: function() {
 				showAboutInfo();
 				gallerySwipe(count);
-				menuLang();
-				tapCharacter();
-				navCreditos();
+				showLanguageNav();
+				tapCharacterExpand();
+				showNavCreditos();
 			},
 			unmatch: function() {
 				$('.about-image').off('click');
@@ -36,9 +36,9 @@
 		enquire.register('screen and (min-width: 768px)', {
 
 			match : function() {
-				gameScroll();
+				navScrollAnimate();
 				charactersModal(count);
-        characterHover();
+				showCharacterHover();
 				galleryModal(count);
 			},
 			unmatch : function() {
@@ -48,11 +48,11 @@
 
 		changeColorCreditos();
 		controlsModal();
-		galleryTypeAction();
+		changeGalley();
 		videoTeaserModal();
 	});
 
-	function navGameScroll() {
+	function changeGameNavStyle() {
 		var waypoint = new Waypoint({
 			element: $('#game-nav'),
 			handler: function(direction) {
@@ -66,21 +66,21 @@
 		})
 	}
 
-	function characterHover(){
+	function showCharacterHover(){
 		var className;
-    var charClass = $('.char_btn');
+		var charClass = $('.char_btn');
 
-    if ($('h2.char_btn').hasClass('show') === false) {
-		  charClass.on({
-			  mouseenter: function () {
-				  className = $(this).attr('name');
-				  $('.'+className+'>h2').addClass('show');
-			  },
-			  mouseleave: function () {
-				  $('.'+className+'>h2').removeClass('show');
-			  }
-		  });
-    }
+		if ($('h2.char_btn').hasClass('show') === false) {
+			charClass.on({
+				mouseenter: function () {
+					className = $(this).attr('name');
+					$('.'+className+'>h2').addClass('show');
+				},
+				mouseleave: function () {
+					$('.'+className+'>h2').removeClass('show');
+				}
+			});
+		}
 	}
 
 	function changeColorCreditos() {
@@ -101,8 +101,7 @@
 		}
 	}
 
-	function galleryTypeAction() {
-		var eachImage = $('.slider-image');
+	function changeGalley() {
 		var galleryType = $('.gallery-type span');
 
 		galleryType.on('click', function() {
@@ -113,16 +112,24 @@
 			var option = $(this).text();
 
 			if (option == 'Concept Art') {
-				eachImage.each(function () {
-					$(this).attr('src', $(this).attr('src').replace('screenshot', 'concept'));
-				});
+				changeGalleryImg('screenshot', 'concept');
 			} else {
-				eachImage.each(function () {
-					$(this).attr('src', $(this).attr('src').replace('concept', 'screenshot'));
-				});
+				changeGalleryImg('concept', 'screenshot');
 			}
 		})
 	}
+
+	function changeGalleryImg(current, replace){
+		var eachImage = $('.slider-image');
+
+		eachImage.each(function () {
+			$(this).fadeOut(300);
+
+			$(this).attr('src', $(this).attr('src').replace(current, replace)).load(function() {
+				if (this.complete) $(this).fadeIn(300);
+			});
+		});
+	};
 
 	function controlsModal() {
 
@@ -260,7 +267,7 @@
     });
   }
 
-	function gameScroll() {
+	function navScrollAnimate() {
     var items = $('.game-nav a');
 		items.click(function() {
 			$('html, body').stop().animate({
@@ -270,7 +277,7 @@
 		});
 	}
 
-	function menuLang() {
+	function showLanguageNav() {
 		var closeNavLang = $('.close-lang'),
 		listLang = $('#list-lang'),
 		listLangItem = $('.list-lang-item')
@@ -294,10 +301,10 @@
 		});
 	}
 
-	function navCreditos() {
+	function showNavCreditos() {
 		var openCreditsMenu = $('.show-menu, .display'),
-        content = $('.team-nav-content'),
-        arrow = $('#show-menu-arrow');
+			content = $('.team-nav-content'),
+			arrow = $('#show-menu-arrow');
 
 		openCreditsMenu.on('click', function() {
 			content.toggleClass('expanded');
@@ -310,17 +317,17 @@
 		galleryPicture.attr('src', path);
 	}
 
-	function tapCharacter() {
+	function tapCharacterExpand() {
 		var tapCharacter = $('.taps-character');
-    tapCharacter.find('.tap-info').hide();
+		tapCharacter.find('.tap-info').hide();
 
-    tapCharacter.find('.tap-banner').click(function () {
-      var next = $(this).next();
-      next.slideToggle('slow');
-      $(this).find('span').toggleClass('down-arrow').addClass('up-arrow');
-      $('.tap-info').not(next).slideUp('slow');
-      return false;
-    });
+		tapCharacter.find('.tap-banner').click(function () {
+			var next = $(this).next();
+			next.slideToggle('slow');
+			$(this).find('span').toggleClass('down-arrow').toggleClass('up-arrow');
+			$('.tap-info').not(next).slideUp('slow');
+			return false;
+		});
 	}
 
 	function videoTeaserModal() {
@@ -328,7 +335,7 @@
 		close = $('.teaser .close'),
 		btn = $('#btn-play-js'),
 		player = $('#ytplayer'),
-		content =  '<iframe src="https://www.youtube.com/embed/BeLZicohxl4' + "?autoplay=1&amp;rel=0&amp;" + 'controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
+		content =  '<iframe src="https://www.youtube.com/embed/BeLZicohxl4?autoplay=1&amp;rel=0&amp;controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
 
 		btn.click(function(){
       player.html(content);
