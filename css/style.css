@@ -874,10 +874,10 @@ button:focus:active {
       width: 33.333%; } }
 
 .cetav-item {
-  color: #6EB2D2; }
+  color: #9D9FA2; }
   @media screen and (min-width: 766px) {
     .cetav-item:hover {
-      background-color: #6EB2D2; } }
+      background-color: #9D9FA2; } }
 
 .fair-item {
   color: #50A03B; }
@@ -886,10 +886,10 @@ button:focus:active {
       background-color: #50A03B; } }
 
 .advisors-item {
-  color: #ff9119; }
+  color: #FF9119; }
   @media screen and (min-width: 766px) {
     .advisors-item:hover {
-      background-color: #ff9119; } }
+      background-color: #FF9119; } }
 
 header {
   position: absolute;
@@ -1594,6 +1594,14 @@ header {
       background-size: cover;
       padding: 14% 0 8% 0; } }
 
+.credits-external-link {
+  padding: 0 0 16px 0; }
+
+.credits-role {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "Share Tech", serif; }
+
 .team-section-wrapper {
   width: 100%;
   overflow: hidden;
@@ -1615,14 +1623,6 @@ header {
   overflow: hidden;
   padding: 0 10%;
   width: 100%; }
-  .team-details .team-logo {
-    display: block;
-    margin: 10% auto;
-    width: 100%;
-    max-width: 450px; }
-    @media (min-width: 1024px) {
-      .team-details .team-logo {
-        margin: 450px auto; } }
   .team-details h2 {
     font-size: 24px;
     font-size: 2.4rem;
@@ -1632,6 +1632,14 @@ header {
     padding: 30px 0;
     text-align: center;
     vertical-align: middle; }
+  .team-details .team-logo {
+    display: block;
+    margin: 10% auto;
+    width: 100%;
+    max-width: 450px; }
+    @media (min-width: 1024px) {
+      .team-details .team-logo {
+        margin: 450px auto; } }
   @media (min-width: 1024px) {
     .team-details {
       height: 1024px;
@@ -1647,16 +1655,23 @@ header {
   height: 100%;
   padding: 4%;
   width: 100%; }
-  .team-credits h3 {
-    padding: 0 0 0.5em; }
-  .team-credits li {
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-family: "Muli", sans-serif; }
   .team-credits a {
     font-size: 14px;
     font-size: 1.4rem;
     text-decoration: underline; }
+  .team-credits h3, .team-credits h4 {
+    padding-bottom: 16px; }
+  .team-credits h4 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    padding-top: 20px; }
+  .team-credits li {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: "Muli", sans-serif;
+    padding-bottom: 10px; }
+  .team-credits ul {
+    margin: 0; }
   @media (min-width: 1024px) {
     .team-credits {
       height: 1024px;
@@ -1667,9 +1682,9 @@ header {
 .team-cetav {
   background-color: #fff; }
   .team-cetav .team-details {
-    background: #6eb2d2; }
+    background: #b7b9bb; }
   .team-cetav .team-credits a:hover {
-    color: #479dc6; }
+    color: #9D9FA2; }
 
 .team-fair {
   background-color: #fff; }
@@ -1683,7 +1698,7 @@ header {
   .team-advisors .team-details {
     background: #ffa94c; }
   .team-advisors .team-credits a:hover {
-    color: #ff9119; }
+    color: #FF9119; }
 
 .visible {
   display: inline-block; }

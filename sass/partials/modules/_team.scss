@@ -13,15 +13,24 @@
 		width: 10%;
 	}
 
-  @media screen and (min-width: 420px) {
-    padding: 44% 0 8% 0;
-  }
+	@media screen and (min-width: 420px) {
+		padding: 44% 0 8% 0;
+	}
 
 	@media screen and (min-width: 768px) {
 		background: url(../img/bg/main-bg-credits.png) no-repeat center bottom;
 		background-size: cover;
 		padding: 14% 0 8% 0;
 	}
+}
+
+.credits-external-link {
+	padding: 0 0 16px 0;
+}
+
+.credits-role {
+	@include font-size(18);
+	font-family: $text-serif;
 }
 
 .team-section-wrapper {
@@ -45,28 +54,28 @@
 	display: table;
 	float: left;
 	overflow: hidden;
-  padding: 0 10%;
+	padding: 0 10%;
 	width: 100%;
-
-	.team-logo {
-		display: block;
-		margin: 10% auto;
-    width: 100%;
-    max-width: 450px;
-
-    @media (min-width: 1024px){
-      margin: 450px auto;
-    }
-	}
 
 	h2 {
 		@include font-size($title-mob-size);
 		display: table-cell;
 		font-family: $text-serif;
 		font-size: 4em;
-    padding: 30px 0;
+		padding: 30px 0;
 		text-align: center;
 		vertical-align: middle;
+	}
+
+	.team-logo {
+		display: block;
+		margin: 10% auto;
+		width: 100%;
+		max-width: 450px;
+
+		@media (min-width: 1024px){
+			margin: 450px auto;
+		}
 	}
 
 	@media (min-width: 1024px){
@@ -88,18 +97,28 @@
 	padding: 4%;
 	width: 100%;
 
-	h3 {
-		padding: 0 0 0.5em;
+	a {
+		@include font-size ($links-size);
+		text-decoration: underline;
+	}
+
+	h3, h4 {
+		padding-bottom: 16px;
+	}
+
+	h4 {
+		@include font-size (24);
+		padding-top: 20px;
 	}
 
 	li {
 		@include font-size ($list-item-size);
 		font-family: $text-sans;
+		padding-bottom: 10px;
 	}
 
-	a {
-		@include font-size ($links-size);
-		text-decoration: underline;
+	ul {
+		margin: 0;
 	}
 
 	@media (min-width: 1024px){
@@ -111,7 +130,7 @@
 }
 
 .team-cetav {
-	@include team-color-scheme(darken($cetav-color, 10));
+	@include team-color-scheme($cetav-color);
 }
 
 .team-fair {
