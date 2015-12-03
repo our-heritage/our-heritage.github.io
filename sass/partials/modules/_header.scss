@@ -25,19 +25,36 @@ header {
 }
 
 .play-btn-wrapper {
-	background: url(../img/bg/video-wrapper.png) no-repeat;
-	background-size: cover;
 	margin: 0 auto;
-	padding-top: 80px;
 	text-align: center;
 	max-width: 337px;
-
+	height: 268px;
+	img {
+		text-align: center;
+		position: relative;
+		width: 100%;
+		height: auto;
+		box-shadow:  5px 5px 10px #6e7b4b;
+	}
+	button {
+		position: absolute;
+    margin: -140px 0 0 -40px ;
+	}
 	span {
 		@include font-size(40);
 		color: $light-color;
 		font-family: $text-serif;
 		display: block;
-		margin-top: 66px;
+    margin: 0 110px;
+    position: absolute;
+	}
+	&:hover{
+		img {
+			box-shadow: 10px 10px 10px rgba(80, 88, 58, 0.8);
+		}
+		.play-arrow{
+			background-color: rgba(0, 0, 0, .4);
+		}
 	}
 }
 
