@@ -567,8 +567,6 @@ button:focus:active {
   border-radius: 100%;
   height: 77px;
   width: 77px; }
-  .play-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.4); }
 
 .previous-arrow {
   background-position: -225px -69px;
@@ -915,19 +913,31 @@ header {
         top: 15px; } }
 
 .play-btn-wrapper {
-  background: url(../img/bg/video-wrapper.png) no-repeat;
-  background-size: cover;
   margin: 0 auto;
-  padding-top: 80px;
   text-align: center;
-  max-width: 337px; }
+  max-width: 337px;
+  height: 268px; }
+  .play-btn-wrapper img {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 10px #6e7b4b; }
+  .play-btn-wrapper button {
+    position: absolute;
+    margin: -140px 0 0 -40px; }
   .play-btn-wrapper span {
     font-size: 40px;
     font-size: 4rem;
     color: #f2f2f2;
     font-family: "Share Tech", serif;
     display: block;
-    margin-top: 66px; }
+    margin: 0 110px;
+    position: absolute; }
+  .play-btn-wrapper:hover img {
+    box-shadow: 10px 10px 10px rgba(80, 88, 58, 0.8); }
+  .play-btn-wrapper:hover .play-arrow {
+    background-color: rgba(0, 0, 0, 0.4); }
 
 .welcome {
   background: url(../img/bg/main-bg-small.png) no-repeat center bottom;
@@ -986,10 +996,11 @@ header {
   padding: 50px 0; }
   .download-section div {
     margin: 0 auto;
-    width: 265px; }
+    width: 265px;
+    text-align: center; }
     @media (min-width: 960px) {
       .download-section div {
-        width: 438px; } }
+        width: 550px; } }
   .download-section p,
   .download-section span {
     font-size: 30px;
