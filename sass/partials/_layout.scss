@@ -25,3 +25,23 @@ section {
 		padding-top: 200px;
 	}
 }
+
+.welcome {
+  background: url(../img/bg/main-bg-small.png) no-repeat center bottom;
+  background-size: cover;
+  box-shadow: inset 0px 160px 211px -40px #000;
+  padding: 235px 0 40px;
+
+
+  @media (min-width: 766px) {
+    background: url(../img/bg/main-bg.jpg) no-repeat center bottom;
+    height: 772px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 1024px) {
+    height: 810px;
+    padding-bottom: 80px;
+  }
+}
+
