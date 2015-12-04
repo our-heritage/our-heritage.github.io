@@ -43,20 +43,20 @@
 	}
 }
 
+.up-arrow {
+  background-position: -14px -1px;
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  margin-left: 10px;
+}
+
 .down-arrow {
 	background-position: 1px -1px;
 	height: 9px;
 	width: 10px;
 	margin-left: 10px;
 	display: inline-block;
-}
-
-.up-arrow {
-	background-position: -14px -1px;
-	display: inline-block;
-	height: 9px;
-	width: 9px;
-	margin-left: 10px;
 }
 
 .next-arrow {

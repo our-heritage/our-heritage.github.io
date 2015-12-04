@@ -535,19 +535,19 @@ button:focus:active {
     .close {
       margin: 30px 40px; } }
 
-.down-arrow {
-  background-position: 1px -1px;
-  height: 9px;
-  width: 10px;
-  margin-left: 10px;
-  display: inline-block; }
-
 .up-arrow {
   background-position: -14px -1px;
   display: inline-block;
   height: 9px;
   width: 9px;
   margin-left: 10px; }
+
+.down-arrow {
+  background-position: 1px -1px;
+  height: 9px;
+  width: 10px;
+  margin-left: 10px;
+  display: inline-block; }
 
 .next-arrow {
   background-position: 0px -21px;
@@ -922,7 +922,7 @@ header {
     position: relative;
     width: 100%;
     height: auto;
-    box-shadow: 5px 5px 10px #6e7b4b; }
+    box-shadow: 0 29px 54px 0px #807C50; }
   .play-btn-wrapper button {
     position: absolute;
     margin: -140px 0 0 -40px; }
@@ -935,7 +935,7 @@ header {
     margin: 0 110px;
     position: absolute; }
   .play-btn-wrapper:hover img {
-    box-shadow: 10px 10px 10px rgba(80, 88, 58, 0.8); }
+    box-shadow: 0 29px 54px 0px #585636; }
   .play-btn-wrapper:hover .play-arrow {
     background-color: rgba(0, 0, 0, 0.4); }
 
@@ -979,7 +979,7 @@ header {
   border-radius: 8px;
   display: inline-block;
   height: 52px;
-  margin: 10px 0 0 40px;
+  margin: 10px 0 0 10px;
   text-indent: -9999px;
   vertical-align: -webkit-baseline-middle;
   width: 68px; }
