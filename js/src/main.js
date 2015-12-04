@@ -301,7 +301,7 @@
 
 		openCreditsMenu.on('click', function() {
 			content.toggleClass('expanded');
-			arrow.toggleClass('down-arrow').addClass('up-arrow');
+			arrow.toggleClass('down-arrow').toggleClass('up-arrow');
 		});
 	}
 
@@ -315,9 +315,13 @@
 		tapCharacter.find('.tap-info').hide();
 
 		tapCharacter.find('.tap-banner').click(function () {
+      
 			var next = $(this).next();
 			next.slideToggle('slow');
-			$(this).find('span').toggleClass('down-arrow').toggleClass('up-arrow');
+
+      $(this).find('span').toggleClass('up-arrow')
+      $('.tap-banner').not($(this)).find('span').removeClass('up-arrow');
+    
 			$('.tap-info').not(next).slideUp('slow');
 			return false;
 		});
