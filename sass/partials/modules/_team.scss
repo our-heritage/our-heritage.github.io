@@ -61,7 +61,6 @@
 		@include font-size($title-mob-size);
 		display: table-cell;
 		font-family: $text-serif;
-		font-size: 4em;
 		padding: 30px 0;
 		text-align: center;
 		vertical-align: middle;
@@ -86,7 +85,7 @@
 		width: 50%;
 
 		h2 {
-			font-size: 8em;
+			@include font-size(60);
 		}
 	}
 }
