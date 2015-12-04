@@ -102,7 +102,8 @@
 	}
 
 	function changeGalley() {
-		var galleryType = $('.gallery-type span');
+		var eachImage = $('.slider-image');
+    var galleryType = $('.gallery-type span');
 
 		galleryType.on('click', function() {
 			galleryType.removeClass('gallery-selected')
@@ -111,25 +112,17 @@
 
 			var option = $(this).text();
 
-			if (option == 'Concept Art') {
-				changeGalleryImg('screenshot', 'concept');
-			} else {
-				changeGalleryImg('concept', 'screenshot');
-			}
+		  if (option == 'Concept Art') {
+        eachImage.each(function () {
+          $(this).attr('src', $(this).attr('src').replace('screenshot', 'concept'));
+        });
+      } else {
+        eachImage.each(function () {
+          $(this).attr('src', $(this).attr('src').replace('concept', 'screenshot'));
+        });
+      }
 		})
 	}
-
-	function changeGalleryImg(current, replace){
-		var eachImage = $('.slider-image');
-
-		eachImage.each(function () {
-			$(this).fadeOut(300);
-
-			$(this).attr('src', $(this).attr('src').replace(current, replace)).load(function() {
-				if (this.complete) $(this).fadeIn(300);
-			});
-		});
-	};
 
 	function controlsModal() {
 
