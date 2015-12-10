@@ -25,11 +25,12 @@ header {
 }
 
 .play-btn-wrapper {
-  cursor: pointer;
-  height: 268px;
+	cursor: pointer;
+	height: 268px;
 	margin: 0 auto;
 	text-align: center;
 	max-width: 337px;
+	position: relative;
 
 	img {
 		text-align: center;
@@ -40,8 +41,11 @@ header {
 	}
 
 	button {
+		left: 0;
+		margin-left: 38%;
+		margin-top: 22%;
 		position: absolute;
-    margin: -140px 0 0 -40px ;
+		top: 0;
 	}
 
 	span {
@@ -49,15 +53,15 @@ header {
 		color: $light-color;
 		font-family: $text-serif;
 		display: block;
-    margin: 0 110px;
-    position: absolute;
+		margin: 0 110px;
+		position: absolute;
 	}
 
 	&:hover{
 		img {
 			box-shadow: 0 29px 54px 0px #585636;
 		}
-    
+
 		.play-arrow{
 			background-color: rgba(0, 0, 0, .4);
 		}
